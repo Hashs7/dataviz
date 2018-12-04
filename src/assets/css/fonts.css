@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Cera Basic';
+    src: url('../fonts/subset-CeraBasic-Regular.woff2') format('woff2'),
+     url('../fonts/subset-CeraBasic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Basic';
+    src: url('../fonts/subset-CeraBasic-BoldItalic.woff2') format('woff2'),
+     url('../fonts/subset-CeraBasic-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cera Basic';
+    src: url('../fonts/subset-CeraBasic-RegularItalic.woff2') format('woff2'),
+    url('../fonts/subset-CeraBasic-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cera Basic';
+    src: url('../fonts/subset-CeraBasic-Bold.woff2') format('woff2'),
+     url('../fonts/subset-CeraBasic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Basic';
+    src: url('../fonts/subset-CeraBasic-Black.woff2') format('woff2'),
+    url('../fonts/subset-CeraBasic-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Basic';
+    src: url('../fonts/subset-CeraBasic-BlackItalic.woff2') format('woff2'),
+    url('../fonts/subset-CeraBasic-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Eksell';
+    src: url('../fonts/subset-EksellDisplayWeb-Medium.woff2') format('woff2'),
+    url('../fonts/subset-EksellDisplayWeb-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Demos Next Pro';
+    src: url('../fonts/subset-DemosNextPro-Regular.woff2') format('woff2'),
+    url('../fonts/subset-DemosNextPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

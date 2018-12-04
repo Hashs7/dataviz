@@ -1,0 +1,56 @@
+html{
+  font-size: 62.5%
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+div{
+  box-sizing: border-box;
+}
+button{
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+button:focus{
+  outline: none;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+a:focus{
+  outline: none;
+}
+
+tspan{
+    pointer-events: none;
+    font-weight: 900;
+    font-family: "Cera Basic", sans-serif !important;
+    transition: fill .2s ease-in;
+}
+.VictoryContainer svg{
+    filter: drop-shadow( 0px 5px 0px #000 );
+}
+.VictoryContainer path {
+    cursor: pointer;
+    transition: stroke-width .2s ease-in;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
