@@ -2,11 +2,10 @@ import React from 'react';
 import styled from "styled-components";
 import SVG from "react-inlinesvg";
 import TweenMax, { Power1 } from "gsap/TweenMax";
-import ReactDOM from "react-dom";
-import TransitionGroup from 'react-transition-group/TransitionGroup';
 import Transition from 'react-transition-group/Transition'
 
 const StyledSVG = styled(SVG)`
+    backface-visibility: hidden;
     position: absolute;
     top: ${props => props.top ? props.top : ""};
     bottom: ${props => props.bottom ? props.bottom : ""};
@@ -26,7 +25,6 @@ const animate = {
             scaleY: 3,
             force3D: true,
             ease: Power1.easeOut,
-
         })
     },
     leave(target, direction, cb){
@@ -39,7 +37,6 @@ const animate = {
     }
 };
 
-
 class Shape extends React.Component {
     constructor(props){
         super(props);
@@ -47,7 +44,6 @@ class Shape extends React.Component {
     }
 
     componentDidMount(){
-        console.log(this.elRef.current)
         animate.enter(this.elRef.current, () => {});
     }
 
@@ -64,11 +60,11 @@ const AnimatedShape = (props) => {
             in={props.in}
             timeout={1500}
             onEnter={node => {
-                console.log('wow')
+                console.log('entering')
                 animate.enter(node, props.direction, () => {});
             }}
             onExit={node => {
-                console.log('wowww')
+                console.log('exit')
                 animate.leave(node, props.direction, () => {});
             }}
             mountOnEnter

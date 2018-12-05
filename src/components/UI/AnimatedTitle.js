@@ -20,6 +20,7 @@ const AnimatedTitle = ({size, weight, children}) => {
     const Title = styled.h2`
         font-size: ${size}px;
         font-weight: ${weight};
+        backface-visibility: hidden;
     `;
     return (
         <Title>

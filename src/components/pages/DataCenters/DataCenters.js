@@ -13,13 +13,23 @@ const TitleUnderline = styled(SVG)`
     width: 230px;
 `;
 
+const Description = styled.p`
+    font: 20px 'Demos Next Pro';
+    line-height: 1.6;
+`;
+
+const PieChartTitle = styled.p`
+    font: 28px 'Cera Basic';
+    font-weight: bold;
+    line-height: 1.25;
+`;
+
 const Container = styled.div`
     position: relative;
     text-align: left;
     z-index: 6;
-    margin: 210px 0 0 220px;
+    margin: 180px 0 0 200px;
     max-width: 440px;
-    font: 20px 'Demos Next Pro';
 `;
 
 class DataCenters extends React.Component {
@@ -54,12 +64,20 @@ class DataCenters extends React.Component {
                     </AnimatedTitle>
                 </Title>
                 <TitleUnderline src="./assets/img/svg/wave-underline.svg"/>
-                <p>{this.state.desc}</p>
+                <Description>
+                    {this.state.desc}
+                </Description>
+
+                {this.props.vueIndex === 3 ?
+                    <PieChartTitle>
+                        Répartition du gaz à effet de serre généré par le numérique
+                    </PieChartTitle>
+                : null}
 
                 <button onClick={this.discoverHandler}>découpe sa mer</button>
             </Container>
         );
     }
-};
+}
 
 export default DataCenters;

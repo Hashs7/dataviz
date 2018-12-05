@@ -47,6 +47,15 @@ tspan{
     cursor: pointer;
     transition: stroke-width .2s ease-in;
 }
+.VictoryContainer text:last-child {
+    transform: translate(14px, -22px);
+}
+.VictoryContainer text:nth-last-child(2) {
+    transform: translateX(-13px);
+}
+.VictoryContainer text:nth-last-child(3){
+    transform: translateX(-16px);
+}
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;

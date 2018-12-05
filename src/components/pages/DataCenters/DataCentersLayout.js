@@ -2,8 +2,9 @@ import React from 'react';
 import AnimatedShape from '../../UI/Shape';
 import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
+import {STUFF} from "../../../constantes";
 
-const SVGDot2 = styled(SVG)`
+const SVGDot = styled(SVG)`
     position: absolute;
     top: -3px;
     left: -3px;
@@ -52,19 +53,50 @@ const Wifi = styled(SVG)`
     z-index: 3;
 `;
 
-const DataCentersLayout = (props) => {
+const LegendContainer = styled.div`
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: ${props => props.visible ? '1' : '0'}
+    transition: opacity .2s ease-in-out;
+`;
+
+const LegendComputer = styled(LegendContainer)`
+    right: 105px;
+    bottom: 66px;
+    transform: translateX(100%);
+`;
+
+const LegendWifi = styled(LegendContainer)`
+    top: 80px;
+    right: 65px;
+    transform: translateX(100%);
+`;
+
+const DataCentersLayout = ({ vueIndex, stuffHover }) => {
     return (
         <div>
-            <SVGDot2 src="./assets/img/svg/shapes/vue-2/shape-dot.svg" />
+            <SVGDot src="./assets/img/svg/shapes/vue-2/shape-dot.svg" />
             <ComputerContainer>
                 <ComputerSubContainer>
                     <Computer src="./assets/img/svg/computer.svg" />
+                    <LegendComputer visible={stuffHover === STUFF.PERSO}>
+                        Equipements personnels
+                    </LegendComputer>
                     <Wifi src="./assets/img/svg/wifi.svg" />
+                    <LegendWifi visible={stuffHover === STUFF.RESEAU}>
+                        Infrastructures réseaux
+                    </LegendWifi>
                 </ComputerSubContainer>
             </ComputerContainer>
-            <Cloud src="./assets/img/svg/shapes/vue-2/cloud.svg" />
+
+            {vueIndex === 2 ?
+                <Cloud src="./assets/img/svg/shapes/vue-2/cloud.svg" /> :
+                <Cloud src="./assets/img/svg/shapes/vue-2/cloud-after.svg" />
+            }
+
             <AnimatedShape
-                in={props.in}
+                in={vueIndex === 2 || vueIndex === 3}
                 src="./assets/img/svg/shapes/vue-2/shape-orange.svg"
                 maxWidth="1052px"
                 width="55%"
