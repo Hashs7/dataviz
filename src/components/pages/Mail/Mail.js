@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import AnimatedTitle from '../../UI/AnimatedTitle';
 import { VUE } from '../../../store/actions/index';
 import SVG from 'react-inlinesvg';
+import Slider from 'react-rangeslider'
+import '../../../assets/css/range.css'
 
 const Title = styled.div`
     font: 48px "Cera Basic", sans-serif;
@@ -18,49 +20,41 @@ const Description = styled.p`
     line-height: 1.6;
 `;
 
-const PieChartTitle = styled.p`
-    font: 28px 'Cera Basic';
-    font-weight: bold;
-    line-height: 1.25;
-`;
-
-const PieChartUnderline = styled(SVG)`
-    display: block;
-    width: 120px;
-`;
-
 const Container = styled.div`
+    color: #fff;
     position: relative;
     text-align: left;
     z-index: 6;
     margin: 180px 0 0 200px;
-    max-width: 440px;
+    max-width: 450px;
     & polyline{
-        stroke: #000;
+        stroke: #fff;
     }
 `;
 
-class DataCenters extends React.Component {
+class Mail extends React.Component {
     constructor(props){
         super(props);
         this.state = {
+            mailAmount: 0,
             txt: '',
-            desc: 'Découpez le nuage à l’aide de votre curseur pour le découvrir.'
+            desc: 'Répondez aux questions  pour avoir une estimation de votre impact sur l’environnement.'
         };
         this.discoverHandler = this.discoverHandler.bind(this);
     }
 
     componentDidMount(){
-        setTimeout(() => this.setState({txt: 'Pourquoi ?'}), 1700);
+        setTimeout(() => this.setState({txt: 'En quelle quantité ?'}), 1700);
     }
 
     discoverHandler(){
         this.props.changeVue(VUE.DISCOVER);
+
+    }
+    handleOnChange = (value) => {
         this.setState({
-            desc: 'Car derrière Internet et des termes comme « Cloud » se cache toute une infrastructure réseau ainsi' +
-                ' que de multiples data centers stockant tous le contenu d’Internet.' +
-                ' Ces équipements ainsi que vos ordinateurs et smartphones personnelles génèrent du gaz à effet de serre.'
-        });
+            mailAmount: value
+        })
     }
 
     render(){
@@ -75,18 +69,16 @@ class DataCenters extends React.Component {
                 <Description>
                     {this.state.desc}
                 </Description>
-
-                {this.props.vueIndex === 3 ?
-                    <PieChartTitle>
-                        Répartition du gaz à effet de serre généré par le numérique
-                        <PieChartUnderline src="./assets/svg/wave-line-right.svg"/>
-                    </PieChartTitle>
-                : null}
-
-                <button onClick={this.discoverHandler}>découpe sa mer</button>
+                <Slider
+                    min={0}
+                    max={80}
+                    step={20}
+                    value={this.state.mailAmount}
+                    onChange={this.handleOnChange}
+                />
             </Container>
         );
     }
 }
 
-export default DataCenters;
+export default Mail;

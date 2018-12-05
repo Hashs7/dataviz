@@ -28,12 +28,13 @@ const StyledSVG = styled(SVG)`
     top: 0; bottom: 0;
     left: 0; right: 0;
     margin: auto;
+    z-index: 10;
 `;
 
-const ArrowButton = () => {
+const ArrowButton = ({ action }) => {
     return (
-        <Button>
-            <StyledSVG src="./assets/img/svg/arrow.svg"/>
+        <Button onClick={action}>
+            <StyledSVG src="./assets/svg/arrow.svg"/>
         </Button>
     );
 };

@@ -66,16 +66,16 @@ const StyledButton = styled.button`
 const TextButton = (props) => {
     return (
         <ButtonContainer>
-            <Lines src="./assets/img/svg/wave-line-left.svg"/>
+            <Lines src="./assets/svg/wave-line-left.svg"/>
             <Link to={props.link}>
                 <StyledButton onClick={() => props.changeVue(VUE.WHY)}>
                     <Text>
                         {props.children}
                     </Text>
-                    <Plane src="./assets/img/svg/paper-plane.svg"/>
+                    <Plane src="./assets/svg/paper-plane.svg"/>
                 </StyledButton>
             </Link>
-            <Lines src="./assets/img/svg/wave-line-right.svg"/>
+            <Lines src="./assets/svg/wave-line-right.svg"/>
         </ButtonContainer>
 
     );

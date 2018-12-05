@@ -33,12 +33,8 @@ const PieChart = (props) => {
         <Transition
             in={enter === 3}
             timeout={1500}
-            onEnter={node => {
-                animate.enter(node);
-            }}
-            onExit={node => {
-                animate.leave(node);
-            }}
+            onEnter={ node => animate.enter(node) }
+            onExit={ node => animate.leave(node) }
             mountOnEnter
             unmountOnExit
         >
@@ -67,20 +63,16 @@ const PieChart = (props) => {
                                         changeStuff(props.index);
                                         switch (props.index) {
                                             case 0:
-                                                console.log('équipements perso')
                                                 return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.blue }};
                                             case 1:
-                                                console.log('infra réso')
                                                 return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.orange }};
                                             case 2:
-                                                console.log('le cloud')
                                                 return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.white }};
                                         }
                                     }
                                 }, {
                                     target: "labels",
                                     mutation: (props) => {
-                                        console.log('unhover')
                                         switch (props.index) {
                                             case 0:
                                                 return { style: { fill: "#fff", fontSize: 32 }};

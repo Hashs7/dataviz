@@ -40,6 +40,7 @@ tspan{
     font-family: "Cera Basic", sans-serif !important;
     transition: fill .2s ease-in;
 }
+
 .VictoryContainer svg{
     filter: drop-shadow( 0px 5px 0px #000 );
 }
@@ -56,6 +57,7 @@ tspan{
 .VictoryContainer text:nth-last-child(3){
     transform: translateX(-16px);
 }
+
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;

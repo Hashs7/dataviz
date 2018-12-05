@@ -7,7 +7,7 @@ const HomeLayout = (props) => {
         <div>
             <AnimatedShape
                 in={props.in}
-                src="./assets/img/svg/shapes/vue-1/shape-blue-left.svg"
+                src="./assets/svg/shapes/vue-1/shape-blue-left.svg"
                 direction={DIRECTION.BOTTOM_LEFT}
                 maxWidth="870px"
                 width="45%"
@@ -17,7 +17,7 @@ const HomeLayout = (props) => {
             />
             <AnimatedShape
                 in={props.in}
-                src="./assets/img/svg/shapes/vue-1/shape-orange-top.svg"
+                src="./assets/svg/shapes/vue-1/shape-orange-top.svg"
                 direction={DIRECTION.TOP_LEFT}
                 maxWidth="1045px"
                 width="55%"
@@ -27,7 +27,7 @@ const HomeLayout = (props) => {
             />
             <AnimatedShape
                 in={props.in}
-                src="./assets/img/svg/shapes/vue-1/shape-blue-right.svg"
+                src="./assets/svg/shapes/vue-1/shape-blue-right.svg"
                 direction={DIRECTION.TOP_RIGHT}
                 maxWidth="1050px"
                 width="55%"

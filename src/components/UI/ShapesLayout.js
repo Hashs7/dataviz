@@ -1,13 +1,18 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
 import { theme, greenPath, bluePath } from '../../constantes';
+import { VUE } from "../../store/actions";
 import posed from 'react-pose';
 import { tween, easing } from 'popmotion';
 import { interpolate } from 'flubber';
 import HomeLayout from "../pages/Home/HomeLayout";
 import DataCentersLayoutContainer from "../../containers/DataCentersLayoutContainer";
+import MailLayoutContainer from "../../containers/MailLayoutContainer";
 import PieChartContainer from "../../containers/PieChartContainer";
+import MorphingShape from './MorphingShape';
+import ArrowButton from './ArrowButton';
 
 const Layout = styled.div`
     position: relative;
@@ -31,7 +36,12 @@ const About = styled.button`
     color: ${props => props.color};
     transition: all .2s ease;
 `;
-
+const NextButton = styled.div`
+    position: absolute;
+    right: 100px;
+    bottom: 80px;
+    z-index: 6;
+`;
 // Vue 1
 const SVGDot = styled(SVG)`
     position: absolute;
@@ -59,7 +69,6 @@ const SVGLine = styled(SVG)`
     width: 30%;
     height: 550px;
 `;
-
 
 const morphTransition = ({ from, to }) =>
     tween({
@@ -100,6 +109,7 @@ class ShapesLayout extends React.Component {
         this.state = {
             pathIndex: props.vueIndex - 1,
             styleSvgGreen: {
+                pointerEvents: 'none',
                 backfaceVisibility: 'hidden',
                 position: "absolute",
                 bottom: 0,
@@ -116,7 +126,7 @@ class ShapesLayout extends React.Component {
                 left: 'auto',
                 height: '100%',
                 margin: 'auto',
-                zIndex: 4,
+                zIndex: 5,
             },
         };
         this.morphShape = this.morphShape.bind(this);
@@ -131,6 +141,7 @@ class ShapesLayout extends React.Component {
         if(nextIndex === 1){
             this.setState({
                 styleSvgGreen: {
+                    pointerEvents: 'none',
                     backfaceVisibility: 'hidden',
                     right: 'auto',
                     left: 0,
@@ -138,15 +149,13 @@ class ShapesLayout extends React.Component {
                     bottom: 0,
                     height: '100%',
                     margin: 'auto',
-                    zIndex: 4
+                    zIndex: 5
                 }
             });
         }
-        console.log('morph', nextIndex);
     }
 
     componentDidUpdate(prevProps, prevState){
-        console.log(prevProps, prevState);
         if(prevState.pathIndex === 0 && prevProps.vueIndex === 1){
             setTimeout(this.morphShape, 400);
         }
@@ -167,21 +176,30 @@ class ShapesLayout extends React.Component {
 
                 {this.props.vueIndex === 1 ?
                     <div>
-                        <SVGDot src="./assets/img/svg/shapes/vue-1/shape-dot.svg" />
-                        <SVGLine src="./assets/img/svg/shapes/vue-1/shape-line.svg" />
-                        <SVGWave src="./assets/img/svg/shapes/vue-1/shape-wave.svg" />
+                        <SVGDot src="./assets/svg/shapes/vue-1/shape-dot.svg" />
+                        <SVGLine src="./assets/svg/shapes/vue-1/shape-line.svg" />
+                        <SVGWave src="./assets/svg/shapes/vue-1/shape-wave.svg" />
                     </div>
                 : null}
 
                 {this.props.vueIndex === 2 || this.props.vueIndex === 3 ?
                     <div>
-                        <DataCentersLayoutContainer vueIndex={this.props.vueIndex}/>
+                        <DataCentersLayoutContainer />
                         <PieChartContainer enter={this.props.vueIndex}/>
-
-                        {/*<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" style={this.state.styleSvgBlue}>
-                            <IconBlue style={{fill: "#1C1CAF"}} pose={pathIdsBlue[this.state.pathIndex]} />
-                        </svg>*/}
                     </div>
+                : null}
+                {this.props.vueIndex === 2 || this.props.vueIndex === 3 || this.props.vueIndex === 4 ?
+                    <MorphingShape pathObj={bluePath} event={this.props.vueIndex === 4} color={theme.color.blue}/>
+                : null}
+                { this.props.vueIndex === 3 ?
+                    <NextButton>
+                        <Link to="/mail">
+                            <ArrowButton action={() => this.props.changeVue(VUE.MAIL)}/>
+                        </Link>
+                    </NextButton>
+                : null }
+                { this.props.vueIndex === 4 ?
+                    <MailLayoutContainer />
                 : null}
 
                 {this.props.children}
