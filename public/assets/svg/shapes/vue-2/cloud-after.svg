@@ -1,3 +1,1469 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 961.63 561.97">
-  <path d="M324.13,38.49c-11,10.58-57.56,24.08-72.69,29.09-25.69,8.51-69.65,29-93.1,74.07-24.4,46.87-53.73,62.75-68.77,68-12.56,4.41-24.64,9.9-35.2,17.41C24.68,248.19-17,291.76,13.18,357.8c44.29,97.06,123.94,99.26,123.94,99.26s107.33,6.62,191,72.79c40,31.66,99.75,33,151.17,25.84,50.12-7,96.88-26.39,136.88-54.36,32.21-22.53,84.62-50,147.44-48.68a205.54,205.54,0,0,0,69.23-10.1c49.91-16.48,88-53.38,105.92-98.26,19.56-48.88,29.67-107-12-149.83-45.72-32.87-87.47-48.83-125.61-57.87-75-17.77-101.84-70.87-150.08-90-37.26-14.77-97.68-2.28-134.47-18.77C442.68-5.33,373.57-9.07,324.13,38.49Z" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 961.63 561.97">
+  <defs>
+    <clipPath id="clip-path">
+      <path d="M324.13,38.49c-11,10.58-57.56,24.08-72.69,29.09-25.69,8.51-69.65,29-93.1,74.07-24.4,46.87-53.73,62.75-68.77,68-12.56,4.41-24.64,9.9-35.2,17.41C24.68,248.19-17,291.76,13.18,357.8c44.29,97.06,123.94,99.26,123.94,99.26s107.33,6.62,191,72.79c40,31.66,99.75,33,151.17,25.84,50.12-7,96.88-26.39,136.88-54.36,32.21-22.53,84.62-50,147.44-48.68a205.54,205.54,0,0,0,69.23-10.1c49.91-16.48,88-53.38,105.92-98.26,19.56-48.88,29.67-107-12-149.83-45.72-32.87-87.47-48.83-125.61-57.87-75-17.77-101.84-70.87-150.08-90-37.26-14.77-97.68-2.28-134.47-18.77C442.68-5.33,373.57-9.07,324.13,38.49Z" style="fill: none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <polygon points="61.32 414.6 961.63 381.78 961.63 561.97 61.32 561.97 61.32 414.6" style="fill: none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <polygon points="628.56 246.14 668.56 239.28 668.56 410.29 628.56 402.07 628.56 246.14" style="fill: none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <polygon points="854.1 213.27 940.26 225.69 940.26 429.87 854.1 441.88 854.1 213.27" style="fill: none"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <polygon points="287.42 220.06 339.92 211.07 339.92 435.5 287.42 424.71 287.42 220.06" style="fill: none"/>
+    </clipPath>
+    <clipPath id="clip-path-6">
+      <polygon points="582.68 174.54 697.55 191.1 697.55 463.31 582.68 479.33 582.68 174.54" style="fill: none"/>
+    </clipPath>
+  </defs>
+  <title>NuageData</title>
+  <g>
+    <g style="clip-path: url(#clip-path)">
+      <g>
+        <path d="M324.13,38.49c-11,10.58-57.56,24.08-72.69,29.09-25.69,8.51-69.65,29-93.1,74.07-24.4,46.87-53.73,62.75-68.77,68-12.56,4.41-24.64,9.9-35.2,17.41C24.68,248.19-17,291.76,13.18,357.8c44.29,97.06,123.94,99.26,123.94,99.26s107.33,6.62,191,72.79c40,31.66,99.75,33,151.17,25.84,50.12-7,96.88-26.39,136.88-54.36,32.21-22.53,84.62-50,147.44-48.68a205.54,205.54,0,0,0,69.23-10.1c49.91-16.48,88-53.38,105.92-98.26,19.56-48.88,29.67-107-12-149.83-45.72-32.87-87.47-48.83-125.61-57.87-75-17.77-101.84-70.87-150.08-90-37.26-14.77-97.68-2.28-134.47-18.77C442.68-5.33,373.57-9.07,324.13,38.49Z" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+        <g id="Sol">
+          <g style="clip-path: url(#clip-path-2)">
+            <g>
+              <g>
+                <circle id="Ellipse_1468" data-name="Ellipse 1468" cx="-1.25" cy="394.88" r="2.61"/>
+                <circle id="Ellipse_1517" data-name="Ellipse 1517" cx="20.91" cy="394.88" r="2.61"/>
+                <circle id="Ellipse_1518" data-name="Ellipse 1518" cx="9.83" cy="405.96" r="2.61"/>
+                <circle id="Ellipse_1519" data-name="Ellipse 1519" cx="-1.25" cy="417.09" r="2.61"/>
+                <circle id="Ellipse_1566" data-name="Ellipse 1566" cx="43.12" cy="394.88" r="2.61"/>
+                <circle id="Ellipse_1567" data-name="Ellipse 1567" cx="32.04" cy="405.96" r="2.61"/>
+                <circle id="Ellipse_1568" data-name="Ellipse 1568" cx="20.91" cy="417.09" r="2.61"/>
+                <circle id="Ellipse_1569" data-name="Ellipse 1569" cx="9.83" cy="428.17" r="2.61"/>
+                <circle id="Ellipse_1570" data-name="Ellipse 1570" cx="-1.3" cy="439.25" r="2.61"/>
+                <circle id="Ellipse_1615" data-name="Ellipse 1615" cx="65.27" cy="394.88" r="2.61"/>
+                <circle id="Ellipse_1616" data-name="Ellipse 1616" cx="54.19" cy="405.96" r="2.61"/>
+                <circle id="Ellipse_1617" data-name="Ellipse 1617" cx="43.12" cy="417.04" r="2.61"/>
+                <circle id="Ellipse_1618" data-name="Ellipse 1618" cx="31.99" cy="428.17" r="2.61"/>
+                <circle id="Ellipse_1619" data-name="Ellipse 1619" cx="20.91" cy="439.25" r="2.61"/>
+                <circle id="Ellipse_1620" data-name="Ellipse 1620" cx="9.78" cy="450.32" r="2.61"/>
+                <circle id="Ellipse_1621" data-name="Ellipse 1621" cx="-1.3" cy="461.46" r="2.61"/>
+                <circle id="Ellipse_1664" data-name="Ellipse 1664" cx="87.48" cy="394.83" r="2.61"/>
+                <circle id="Ellipse_1665" data-name="Ellipse 1665" cx="76.35" cy="405.96" r="2.61"/>
+                <circle id="Ellipse_1666" data-name="Ellipse 1666" cx="65.27" cy="417.04" r="2.61"/>
+                <circle id="Ellipse_1667" data-name="Ellipse 1667" cx="54.19" cy="428.12" r="2.61"/>
+                <circle id="Ellipse_1668" data-name="Ellipse 1668" cx="43.06" cy="439.25" r="2.61"/>
+                <circle id="Ellipse_1669" data-name="Ellipse 1669" cx="31.99" cy="450.32" r="2.61"/>
+                <circle id="Ellipse_1670" data-name="Ellipse 1670" cx="20.91" cy="461.4" r="2.61"/>
+                <circle id="Ellipse_1671" data-name="Ellipse 1671" cx="9.78" cy="472.53" r="2.61"/>
+                <circle id="Ellipse_1672" data-name="Ellipse 1672" cx="-1.3" cy="483.61" r="2.61"/>
+                <circle id="Ellipse_1713" data-name="Ellipse 1713" cx="109.64" cy="394.83" r="2.61"/>
+                <circle id="Ellipse_1714" data-name="Ellipse 1714" cx="98.56" cy="405.91" r="2.61"/>
+                <circle id="Ellipse_1715" data-name="Ellipse 1715" cx="87.43" cy="417.04" r="2.61"/>
+                <circle id="Ellipse_1716" data-name="Ellipse 1716" cx="76.35" cy="428.12" r="2.61"/>
+                <circle id="Ellipse_1717" data-name="Ellipse 1717" cx="65.27" cy="439.19" r="2.61"/>
+                <circle id="Ellipse_1718" data-name="Ellipse 1718" cx="54.14" cy="450.32" r="2.61"/>
+                <circle id="Ellipse_1719" data-name="Ellipse 1719" cx="43.06" cy="461.4" r="2.61"/>
+                <circle id="Ellipse_1720" data-name="Ellipse 1720" cx="31.99" cy="472.48" r="2.61"/>
+                <circle id="Ellipse_1721" data-name="Ellipse 1721" cx="20.85" cy="483.61" r="2.61"/>
+                <circle id="Ellipse_1722" data-name="Ellipse 1722" cx="9.78" cy="494.69" r="2.61"/>
+                <circle id="Ellipse_1723" data-name="Ellipse 1723" cx="-1.3" cy="505.82" r="2.61"/>
+                <circle id="Ellipse_1762" data-name="Ellipse 1762" cx="131.85" cy="394.83" r="2.61"/>
+                <circle id="Ellipse_1763" data-name="Ellipse 1763" cx="120.72" cy="405.91" r="2.61"/>
+                <circle id="Ellipse_1764" data-name="Ellipse 1764" cx="109.64" cy="416.98" r="2.61"/>
+                <circle id="Ellipse_1765" data-name="Ellipse 1765" cx="98.51" cy="428.12" r="2.61"/>
+                <circle id="Ellipse_1766" data-name="Ellipse 1766" cx="87.43" cy="439.19" r="2.61"/>
+                <circle id="Ellipse_1767" data-name="Ellipse 1767" cx="76.35" cy="450.27" r="2.61"/>
+                <circle id="Ellipse_1768" data-name="Ellipse 1768" cx="65.22" cy="461.4" r="2.61"/>
+                <circle id="Ellipse_1769" data-name="Ellipse 1769" cx="54.14" cy="472.48" r="2.61"/>
+                <circle id="Ellipse_1770" data-name="Ellipse 1770" cx="43.06" cy="483.61" r="2.61"/>
+                <circle id="Ellipse_1771" data-name="Ellipse 1771" cx="31.93" cy="494.69" r="2.61"/>
+                <circle id="Ellipse_1772" data-name="Ellipse 1772" cx="20.85" cy="505.77" r="2.61"/>
+                <circle id="Ellipse_1773" data-name="Ellipse 1773" cx="9.78" cy="516.9" r="2.61"/>
+                <circle id="Ellipse_1774" data-name="Ellipse 1774" cx="-1.36" cy="527.98" r="2.61"/>
+                <circle id="Ellipse_1811" data-name="Ellipse 1811" cx="154.01" cy="394.77" r="2.61"/>
+                <circle id="Ellipse_1812" data-name="Ellipse 1812" cx="142.93" cy="405.91" r="2.61"/>
+                <circle id="Ellipse_1813" data-name="Ellipse 1813" cx="131.8" cy="416.98" r="2.61"/>
+                <circle id="Ellipse_1814" data-name="Ellipse 1814" cx="120.72" cy="428.06" r="2.61"/>
+                <circle id="Ellipse_1815" data-name="Ellipse 1815" cx="109.64" cy="439.19" r="2.61"/>
+                <circle id="Ellipse_1816" data-name="Ellipse 1816" cx="98.51" cy="450.27" r="2.61"/>
+                <circle id="Ellipse_1817" data-name="Ellipse 1817" cx="87.43" cy="461.35" r="2.61"/>
+                <circle id="Ellipse_1818" data-name="Ellipse 1818" cx="76.3" cy="472.48" r="2.61"/>
+                <circle id="Ellipse_1819" data-name="Ellipse 1819" cx="65.22" cy="483.56" r="2.61"/>
+                <circle id="Ellipse_1820" data-name="Ellipse 1820" cx="54.14" cy="494.69" r="2.61"/>
+                <circle id="Ellipse_1821" data-name="Ellipse 1821" cx="43.01" cy="505.77" r="2.61"/>
+                <circle id="Ellipse_1822" data-name="Ellipse 1822" cx="31.93" cy="516.85" r="2.61"/>
+                <circle id="Ellipse_1823" data-name="Ellipse 1823" cx="20.85" cy="527.98" r="2.61"/>
+                <circle id="Ellipse_1824" data-name="Ellipse 1824" cx="9.72" cy="539.06" r="2.61"/>
+                <circle id="Ellipse_1825" data-name="Ellipse 1825" cx="-1.36" cy="550.14" r="2.61"/>
+                <circle id="Ellipse_1860" data-name="Ellipse 1860" cx="176.16" cy="394.77" r="2.61"/>
+                <circle id="Ellipse_1861" data-name="Ellipse 1861" cx="165.09" cy="405.85" r="2.61"/>
+                <circle id="Ellipse_1862" data-name="Ellipse 1862" cx="154.01" cy="416.98" r="2.61"/>
+                <circle id="Ellipse_1863" data-name="Ellipse 1863" cx="142.88" cy="428.06" r="2.61"/>
+                <circle id="Ellipse_1864" data-name="Ellipse 1864" cx="131.8" cy="439.14" r="2.61"/>
+                <circle id="Ellipse_1865" data-name="Ellipse 1865" cx="120.72" cy="450.27" r="2.61"/>
+                <circle id="Ellipse_1866" data-name="Ellipse 1866" cx="109.59" cy="461.35" r="2.61"/>
+                <circle id="Ellipse_1867" data-name="Ellipse 1867" cx="98.51" cy="472.48" r="2.61"/>
+                <circle id="Ellipse_1868" data-name="Ellipse 1868" cx="87.43" cy="483.56" r="2.61"/>
+                <circle id="Ellipse_1869" data-name="Ellipse 1869" cx="76.3" cy="494.64" r="2.61"/>
+                <circle id="Ellipse_1870" data-name="Ellipse 1870" cx="65.22" cy="505.77" r="2.61"/>
+                <circle id="Ellipse_1871" data-name="Ellipse 1871" cx="54.09" cy="516.85" r="2.61"/>
+                <circle id="Ellipse_1872" data-name="Ellipse 1872" cx="43.01" cy="527.93" r="2.61"/>
+                <circle id="Ellipse_1873" data-name="Ellipse 1873" cx="31.93" cy="539.06" r="2.61"/>
+                <circle id="Ellipse_1874" data-name="Ellipse 1874" cx="20.8" cy="550.14" r="2.61"/>
+                <circle id="Ellipse_1875" data-name="Ellipse 1875" cx="9.72" cy="561.22" r="2.61"/>
+                <circle id="Ellipse_1909" data-name="Ellipse 1909" cx="198.37" cy="394.77" r="2.61"/>
+                <circle id="Ellipse_1910" data-name="Ellipse 1910" cx="187.24" cy="405.85" r="2.61"/>
+                <circle id="Ellipse_1911" data-name="Ellipse 1911" cx="176.16" cy="416.93" r="2.61"/>
+                <circle id="Ellipse_1912" data-name="Ellipse 1912" cx="165.09" cy="428.06" r="2.61"/>
+                <circle id="Ellipse_1913" data-name="Ellipse 1913" cx="153.95" cy="439.14" r="2.61"/>
+                <circle id="Ellipse_1914" data-name="Ellipse 1914" cx="142.88" cy="450.27" r="2.61"/>
+                <circle id="Ellipse_1915" data-name="Ellipse 1915" cx="131.8" cy="461.35" r="2.61"/>
+                <circle id="Ellipse_1916" data-name="Ellipse 1916" cx="120.67" cy="472.43" r="2.61"/>
+                <circle id="Ellipse_1917" data-name="Ellipse 1917" cx="109.59" cy="483.56" r="2.61"/>
+                <circle id="Ellipse_1918" data-name="Ellipse 1918" cx="98.51" cy="494.64" r="2.61"/>
+                <circle id="Ellipse_1919" data-name="Ellipse 1919" cx="87.38" cy="505.72" r="2.61"/>
+                <circle id="Ellipse_1920" data-name="Ellipse 1920" cx="76.3" cy="516.85" r="2.61"/>
+                <circle id="Ellipse_1921" data-name="Ellipse 1921" cx="65.22" cy="527.93" r="2.61"/>
+                <circle id="Ellipse_1922" data-name="Ellipse 1922" cx="54.09" cy="539.01" r="2.61"/>
+                <circle id="Ellipse_1923" data-name="Ellipse 1923" cx="43.01" cy="550.14" r="2.61"/>
+                <circle id="Ellipse_1924" data-name="Ellipse 1924" cx="31.88" cy="561.22" r="2.61"/>
+                <circle id="Ellipse_1958" data-name="Ellipse 1958" cx="220.53" cy="394.72" r="2.61"/>
+                <circle id="Ellipse_1959" data-name="Ellipse 1959" cx="209.45" cy="405.85" r="2.61"/>
+                <circle id="Ellipse_1960" data-name="Ellipse 1960" cx="198.37" cy="416.93" r="2.61"/>
+                <circle id="Ellipse_1961" data-name="Ellipse 1961" cx="187.24" cy="428.06" r="2.61"/>
+                <circle id="Ellipse_1962" data-name="Ellipse 1962" cx="176.16" cy="439.14" r="2.61"/>
+                <circle id="Ellipse_1963" data-name="Ellipse 1963" cx="165.03" cy="450.22" r="2.61"/>
+                <circle id="Ellipse_1964" data-name="Ellipse 1964" cx="153.95" cy="461.35" r="2.61"/>
+                <circle id="Ellipse_1965" data-name="Ellipse 1965" cx="142.88" cy="472.43" r="2.61"/>
+                <circle id="Ellipse_1966" data-name="Ellipse 1966" cx="131.75" cy="483.51" r="2.61"/>
+                <circle id="Ellipse_1967" data-name="Ellipse 1967" cx="120.67" cy="494.64" r="2.61"/>
+                <circle id="Ellipse_1968" data-name="Ellipse 1968" cx="109.59" cy="505.72" r="2.61"/>
+                <circle id="Ellipse_1969" data-name="Ellipse 1969" cx="98.46" cy="516.8" r="2.61"/>
+                <circle id="Ellipse_1970" data-name="Ellipse 1970" cx="87.38" cy="527.93" r="2.61"/>
+                <circle id="Ellipse_1971" data-name="Ellipse 1971" cx="76.3" cy="539.01" r="2.61"/>
+                <circle id="Ellipse_1972" data-name="Ellipse 1972" cx="65.17" cy="550.08" r="2.61"/>
+                <circle id="Ellipse_1973" data-name="Ellipse 1973" cx="54.09" cy="561.22" r="2.61"/>
+                <circle id="Ellipse_2007" data-name="Ellipse 2007" cx="242.74" cy="394.72" r="2.61"/>
+                <circle id="Ellipse_2008" data-name="Ellipse 2008" cx="231.61" cy="405.85" r="2.61"/>
+                <circle id="Ellipse_2009" data-name="Ellipse 2009" cx="220.53" cy="416.93" r="2.61"/>
+                <circle id="Ellipse_2010" data-name="Ellipse 2010" cx="209.45" cy="428.01" r="2.61"/>
+                <circle id="Ellipse_2011" data-name="Ellipse 2011" cx="198.32" cy="439.14" r="2.61"/>
+                <circle id="Ellipse_2012" data-name="Ellipse 2012" cx="187.24" cy="450.22" r="2.61"/>
+                <circle id="Ellipse_2013" data-name="Ellipse 2013" cx="176.16" cy="461.3" r="2.61"/>
+                <circle id="Ellipse_2014" data-name="Ellipse 2014" cx="165.03" cy="472.43" r="2.61"/>
+                <circle id="Ellipse_2015" data-name="Ellipse 2015" cx="153.95" cy="483.51" r="2.61"/>
+                <circle id="Ellipse_2016" data-name="Ellipse 2016" cx="142.82" cy="494.59" r="2.61"/>
+                <circle id="Ellipse_2017" data-name="Ellipse 2017" cx="131.75" cy="505.72" r="2.61"/>
+                <circle id="Ellipse_2018" data-name="Ellipse 2018" cx="120.67" cy="516.8" r="2.61"/>
+                <circle id="Ellipse_2019" data-name="Ellipse 2019" cx="109.54" cy="527.88" r="2.61"/>
+                <circle id="Ellipse_2020" data-name="Ellipse 2020" cx="98.46" cy="539.01" r="2.61"/>
+                <circle id="Ellipse_2021" data-name="Ellipse 2021" cx="87.38" cy="550.08" r="2.61"/>
+                <circle id="Ellipse_2022" data-name="Ellipse 2022" cx="76.25" cy="561.22" r="2.61"/>
+                <circle id="Ellipse_2056" data-name="Ellipse 2056" cx="264.9" cy="394.72" r="2.61"/>
+                <circle id="Ellipse_2057" data-name="Ellipse 2057" cx="253.82" cy="405.8" r="2.61"/>
+                <circle id="Ellipse_2058" data-name="Ellipse 2058" cx="242.69" cy="416.93" r="2.61"/>
+                <circle id="Ellipse_2059" data-name="Ellipse 2059" cx="231.61" cy="428.01" r="2.61"/>
+                <circle id="Ellipse_2060" data-name="Ellipse 2060" cx="220.53" cy="439.09" r="2.61"/>
+                <circle id="Ellipse_2061" data-name="Ellipse 2061" cx="209.4" cy="450.22" r="2.61"/>
+                <circle id="Ellipse_2062" data-name="Ellipse 2062" cx="198.32" cy="461.3" r="2.61"/>
+                <circle id="Ellipse_2063" data-name="Ellipse 2063" cx="187.24" cy="472.38" r="2.61"/>
+                <circle id="Ellipse_2064" data-name="Ellipse 2064" cx="176.11" cy="483.51" r="2.61"/>
+                <circle id="Ellipse_2065" data-name="Ellipse 2065" cx="165.03" cy="494.59" r="2.61"/>
+                <circle id="Ellipse_2066" data-name="Ellipse 2066" cx="153.9" cy="505.67" r="2.61"/>
+                <circle id="Ellipse_2067" data-name="Ellipse 2067" cx="142.82" cy="516.8" r="2.61"/>
+                <circle id="Ellipse_2068" data-name="Ellipse 2068" cx="131.75" cy="527.88" r="2.61"/>
+                <circle id="Ellipse_2069" data-name="Ellipse 2069" cx="120.61" cy="539.01" r="2.61"/>
+                <circle id="Ellipse_2070" data-name="Ellipse 2070" cx="109.54" cy="550.08" r="2.61"/>
+                <circle id="Ellipse_2071" data-name="Ellipse 2071" cx="98.46" cy="561.16" r="2.61"/>
+                <circle id="Ellipse_2105" data-name="Ellipse 2105" cx="287.06" cy="394.72" r="2.61"/>
+                <circle id="Ellipse_2106" data-name="Ellipse 2106" cx="275.98" cy="405.8" r="2.61"/>
+                <circle id="Ellipse_2107" data-name="Ellipse 2107" cx="264.9" cy="416.88" r="2.61"/>
+                <circle id="Ellipse_2108" data-name="Ellipse 2108" cx="253.77" cy="428.01" r="2.61"/>
+                <circle id="Ellipse_2109" data-name="Ellipse 2109" cx="242.69" cy="439.09" r="2.61"/>
+                <circle id="Ellipse_2110" data-name="Ellipse 2110" cx="231.61" cy="450.17" r="2.61"/>
+                <circle id="Ellipse_2111" data-name="Ellipse 2111" cx="220.48" cy="461.3" r="2.61"/>
+                <circle id="Ellipse_2112" data-name="Ellipse 2112" cx="209.4" cy="472.38" r="2.61"/>
+                <circle id="Ellipse_2113" data-name="Ellipse 2113" cx="198.32" cy="483.46" r="2.61"/>
+                <circle id="Ellipse_2114" data-name="Ellipse 2114" cx="187.19" cy="494.59" r="2.61"/>
+                <circle id="Ellipse_2115" data-name="Ellipse 2115" cx="176.11" cy="505.67" r="2.61"/>
+                <circle id="Ellipse_2116" data-name="Ellipse 2116" cx="165.03" cy="516.8" r="2.61"/>
+                <circle id="Ellipse_2117" data-name="Ellipse 2117" cx="153.9" cy="527.88" r="2.61"/>
+                <circle id="Ellipse_2118" data-name="Ellipse 2118" cx="142.82" cy="538.95" r="2.61"/>
+                <circle id="Ellipse_2119" data-name="Ellipse 2119" cx="131.69" cy="550.08" r="2.61"/>
+                <circle id="Ellipse_2120" data-name="Ellipse 2120" cx="120.61" cy="561.16" r="2.61"/>
+                <circle id="Ellipse_2154" data-name="Ellipse 2154" cx="309.26" cy="394.67" r="2.61"/>
+                <circle id="Ellipse_2155" data-name="Ellipse 2155" cx="298.19" cy="405.8" r="2.61"/>
+                <circle id="Ellipse_2156" data-name="Ellipse 2156" cx="287.06" cy="416.88" r="2.61"/>
+                <circle id="Ellipse_2157" data-name="Ellipse 2157" cx="275.98" cy="427.96" r="2.61"/>
+                <circle id="Ellipse_2158" data-name="Ellipse 2158" cx="264.85" cy="439.09" r="2.61"/>
+                <circle id="Ellipse_2159" data-name="Ellipse 2159" cx="253.77" cy="450.17" r="2.61"/>
+                <circle id="Ellipse_2160" data-name="Ellipse 2160" cx="242.69" cy="461.25" r="2.61"/>
+                <circle id="Ellipse_2161" data-name="Ellipse 2161" cx="231.56" cy="472.38" r="2.61"/>
+                <circle id="Ellipse_2162" data-name="Ellipse 2162" cx="220.48" cy="483.46" r="2.61"/>
+                <circle id="Ellipse_2163" data-name="Ellipse 2163" cx="209.4" cy="494.53" r="2.61"/>
+                <circle id="Ellipse_2164" data-name="Ellipse 2164" cx="198.27" cy="505.67" r="2.61"/>
+                <circle id="Ellipse_2165" data-name="Ellipse 2165" cx="187.19" cy="516.74" r="2.61"/>
+                <circle id="Ellipse_2166" data-name="Ellipse 2166" cx="176.11" cy="527.88" r="2.61"/>
+                <circle id="Ellipse_2167" data-name="Ellipse 2167" cx="164.98" cy="538.95" r="2.61"/>
+                <circle id="Ellipse_2168" data-name="Ellipse 2168" cx="153.9" cy="550.03" r="2.61"/>
+                <circle id="Ellipse_2169" data-name="Ellipse 2169" cx="142.82" cy="561.16" r="2.61"/>
+                <circle id="Ellipse_2203" data-name="Ellipse 2203" cx="331.42" cy="394.67" r="2.61"/>
+                <circle id="Ellipse_2204" data-name="Ellipse 2204" cx="320.34" cy="405.75" r="2.61"/>
+                <circle id="Ellipse_2205" data-name="Ellipse 2205" cx="309.26" cy="416.88" r="2.61"/>
+                <circle id="Ellipse_2206" data-name="Ellipse 2206" cx="298.13" cy="427.96" r="2.61"/>
+                <circle id="Ellipse_2207" data-name="Ellipse 2207" cx="287.06" cy="439.04" r="2.61"/>
+                <circle id="Ellipse_2208" data-name="Ellipse 2208" cx="275.98" cy="450.17" r="2.61"/>
+                <circle id="Ellipse_2209" data-name="Ellipse 2209" cx="264.85" cy="461.25" r="2.61"/>
+                <circle id="Ellipse_2210" data-name="Ellipse 2210" cx="253.77" cy="472.33" r="2.61"/>
+                <circle id="Ellipse_2211" data-name="Ellipse 2211" cx="242.64" cy="483.46" r="2.61"/>
+                <circle id="Ellipse_2212" data-name="Ellipse 2212" cx="231.56" cy="494.53" r="2.61"/>
+                <circle id="Ellipse_2213" data-name="Ellipse 2213" cx="220.48" cy="505.67" r="2.61"/>
+                <circle id="Ellipse_2214" data-name="Ellipse 2214" cx="209.35" cy="516.74" r="2.61"/>
+                <circle id="Ellipse_2215" data-name="Ellipse 2215" cx="198.27" cy="527.82" r="2.61"/>
+                <circle id="Ellipse_2216" data-name="Ellipse 2216" cx="187.19" cy="538.95" r="2.61"/>
+                <circle id="Ellipse_2217" data-name="Ellipse 2217" cx="176.06" cy="550.03" r="2.61"/>
+                <circle id="Ellipse_2218" data-name="Ellipse 2218" cx="164.98" cy="561.11" r="2.61"/>
+                <circle id="Ellipse_2252" data-name="Ellipse 2252" cx="353.63" cy="394.67" r="2.61"/>
+                <circle id="Ellipse_2253" data-name="Ellipse 2253" cx="342.5" cy="405.75" r="2.61"/>
+                <circle id="Ellipse_2254" data-name="Ellipse 2254" cx="331.42" cy="416.83" r="2.61"/>
+                <circle id="Ellipse_2255" data-name="Ellipse 2255" cx="320.34" cy="427.96" r="2.61"/>
+                <circle id="Ellipse_2256" data-name="Ellipse 2256" cx="309.21" cy="439.04" r="2.61"/>
+                <circle id="Ellipse_2257" data-name="Ellipse 2257" cx="298.13" cy="450.12" r="2.61"/>
+                <circle id="Ellipse_2258" data-name="Ellipse 2258" cx="287.06" cy="461.25" r="2.61"/>
+                <circle id="Ellipse_2259" data-name="Ellipse 2259" cx="275.92" cy="472.33" r="2.61"/>
+                <circle id="Ellipse_2260" data-name="Ellipse 2260" cx="264.85" cy="483.46" r="2.61"/>
+                <circle id="Ellipse_2261" data-name="Ellipse 2261" cx="253.77" cy="494.53" r="2.61"/>
+                <circle id="Ellipse_2262" data-name="Ellipse 2262" cx="242.64" cy="505.61" r="2.61"/>
+                <circle id="Ellipse_2263" data-name="Ellipse 2263" cx="231.56" cy="516.74" r="2.61"/>
+                <circle id="Ellipse_2264" data-name="Ellipse 2264" cx="220.43" cy="527.82" r="2.61"/>
+                <circle id="Ellipse_2265" data-name="Ellipse 2265" cx="209.35" cy="538.9" r="2.61"/>
+                <circle id="Ellipse_2266" data-name="Ellipse 2266" cx="198.27" cy="550.03" r="2.61"/>
+                <circle id="Ellipse_2267" data-name="Ellipse 2267" cx="187.14" cy="561.11" r="2.61"/>
+                <circle id="Ellipse_2302" data-name="Ellipse 2302" cx="364.71" cy="405.75" r="2.61"/>
+                <circle id="Ellipse_2303" data-name="Ellipse 2303" cx="353.58" cy="416.83" r="2.61"/>
+                <circle id="Ellipse_2304" data-name="Ellipse 2304" cx="342.5" cy="427.91" r="2.61"/>
+                <circle id="Ellipse_2305" data-name="Ellipse 2305" cx="331.42" cy="439.04" r="2.61"/>
+                <circle id="Ellipse_2306" data-name="Ellipse 2306" cx="320.29" cy="450.12" r="2.61"/>
+                <circle id="Ellipse_2307" data-name="Ellipse 2307" cx="309.21" cy="461.25" r="2.61"/>
+                <circle id="Ellipse_2308" data-name="Ellipse 2308" cx="298.13" cy="472.33" r="2.61"/>
+                <circle id="Ellipse_2309" data-name="Ellipse 2309" cx="287" cy="483.4" r="2.61"/>
+                <circle id="Ellipse_2310" data-name="Ellipse 2310" cx="275.92" cy="494.53" r="2.61"/>
+                <circle id="Ellipse_2311" data-name="Ellipse 2311" cx="264.85" cy="505.61" r="2.61"/>
+                <circle id="Ellipse_2312" data-name="Ellipse 2312" cx="253.71" cy="516.69" r="2.61"/>
+                <circle id="Ellipse_2313" data-name="Ellipse 2313" cx="242.64" cy="527.82" r="2.61"/>
+                <circle id="Ellipse_2314" data-name="Ellipse 2314" cx="231.56" cy="538.9" r="2.61"/>
+                <circle id="Ellipse_2315" data-name="Ellipse 2315" cx="220.43" cy="549.98" r="2.61"/>
+                <circle id="Ellipse_2316" data-name="Ellipse 2316" cx="209.35" cy="561.11" r="2.61"/>
+                <circle id="Ellipse_2353" data-name="Ellipse 2353" cx="364.71" cy="427.91" r="2.61"/>
+                <circle id="Ellipse_2354" data-name="Ellipse 2354" cx="353.58" cy="439.04" r="2.61"/>
+                <circle id="Ellipse_2355" data-name="Ellipse 2355" cx="342.5" cy="450.12" r="2.61"/>
+                <circle id="Ellipse_2356" data-name="Ellipse 2356" cx="331.37" cy="461.19" r="2.61"/>
+                <circle id="Ellipse_2357" data-name="Ellipse 2357" cx="320.29" cy="472.33" r="2.61"/>
+                <circle id="Ellipse_2358" data-name="Ellipse 2358" cx="309.21" cy="483.4" r="2.61"/>
+                <circle id="Ellipse_2359" data-name="Ellipse 2359" cx="298.08" cy="494.48" r="2.61"/>
+                <circle id="Ellipse_2360" data-name="Ellipse 2360" cx="287" cy="505.61" r="2.61"/>
+                <circle id="Ellipse_2361" data-name="Ellipse 2361" cx="275.92" cy="516.69" r="2.61"/>
+                <circle id="Ellipse_2362" data-name="Ellipse 2362" cx="264.79" cy="527.77" r="2.61"/>
+                <circle id="Ellipse_2363" data-name="Ellipse 2363" cx="253.71" cy="538.9" r="2.61"/>
+                <circle id="Ellipse_2364" data-name="Ellipse 2364" cx="242.64" cy="549.98" r="2.61"/>
+                <circle id="Ellipse_2365" data-name="Ellipse 2365" cx="231.51" cy="561.06" r="2.61"/>
+                <circle id="Ellipse_2404" data-name="Ellipse 2404" cx="364.66" cy="450.12" r="2.61"/>
+                <circle id="Ellipse_2405" data-name="Ellipse 2405" cx="353.58" cy="461.19" r="2.61"/>
+                <circle id="Ellipse_2406" data-name="Ellipse 2406" cx="342.5" cy="472.27" r="2.61"/>
+                <circle id="Ellipse_2407" data-name="Ellipse 2407" cx="331.37" cy="483.4" r="2.61"/>
+                <circle id="Ellipse_2408" data-name="Ellipse 2408" cx="320.29" cy="494.48" r="2.61"/>
+                <circle id="Ellipse_2409" data-name="Ellipse 2409" cx="309.16" cy="505.56" r="2.61"/>
+                <circle id="Ellipse_2410" data-name="Ellipse 2410" cx="298.08" cy="516.69" r="2.61"/>
+                <circle id="Ellipse_2411" data-name="Ellipse 2411" cx="287" cy="527.77" r="2.61"/>
+                <circle id="Ellipse_2412" data-name="Ellipse 2412" cx="275.87" cy="538.85" r="2.61"/>
+                <circle id="Ellipse_2413" data-name="Ellipse 2413" cx="264.79" cy="549.98" r="2.61"/>
+                <circle id="Ellipse_2414" data-name="Ellipse 2414" cx="253.71" cy="561.06" r="2.61"/>
+                <circle id="Ellipse_2455" data-name="Ellipse 2455" cx="364.66" cy="472.27" r="2.61"/>
+                <circle id="Ellipse_2456" data-name="Ellipse 2456" cx="353.58" cy="483.35" r="2.61"/>
+                <circle id="Ellipse_2457" data-name="Ellipse 2457" cx="342.45" cy="494.48" r="2.61"/>
+                <circle id="Ellipse_2458" data-name="Ellipse 2458" cx="331.37" cy="505.56" r="2.61"/>
+                <circle id="Ellipse_2459" data-name="Ellipse 2459" cx="320.24" cy="516.64" r="2.61"/>
+                <circle id="Ellipse_2460" data-name="Ellipse 2460" cx="309.16" cy="527.77" r="2.61"/>
+                <circle id="Ellipse_2461" data-name="Ellipse 2461" cx="298.08" cy="538.85" r="2.61"/>
+                <circle id="Ellipse_2462" data-name="Ellipse 2462" cx="286.95" cy="549.98" r="2.61"/>
+                <circle id="Ellipse_2463" data-name="Ellipse 2463" cx="275.87" cy="561.06" r="2.61"/>
+                <circle id="Ellipse_2506" data-name="Ellipse 2506" cx="364.66" cy="494.43" r="2.61"/>
+                <circle id="Ellipse_2507" data-name="Ellipse 2507" cx="353.53" cy="505.56" r="2.61"/>
+                <circle id="Ellipse_2508" data-name="Ellipse 2508" cx="342.45" cy="516.64" r="2.61"/>
+                <circle id="Ellipse_2509" data-name="Ellipse 2509" cx="331.37" cy="527.77" r="2.61"/>
+                <circle id="Ellipse_2510" data-name="Ellipse 2510" cx="320.24" cy="538.85" r="2.61"/>
+                <circle id="Ellipse_2511" data-name="Ellipse 2511" cx="309.16" cy="549.93" r="2.61"/>
+                <circle id="Ellipse_2512" data-name="Ellipse 2512" cx="298.03" cy="561.06" r="2.61"/>
+                <circle id="Ellipse_2557" data-name="Ellipse 2557" cx="364.61" cy="516.64" r="2.61"/>
+                <circle id="Ellipse_2558" data-name="Ellipse 2558" cx="353.53" cy="527.72" r="2.61"/>
+                <circle id="Ellipse_2559" data-name="Ellipse 2559" cx="342.45" cy="538.85" r="2.61"/>
+                <circle id="Ellipse_2560" data-name="Ellipse 2560" cx="331.32" cy="549.93" r="2.61"/>
+                <circle id="Ellipse_2561" data-name="Ellipse 2561" cx="320.24" cy="561.01" r="2.61"/>
+                <circle id="Ellipse_2608" data-name="Ellipse 2608" cx="364.61" cy="538.8" r="2.61"/>
+                <circle id="Ellipse_2609" data-name="Ellipse 2609" cx="353.53" cy="549.93" r="2.61"/>
+                <circle id="Ellipse_2610" data-name="Ellipse 2610" cx="342.4" cy="561.01" r="2.61"/>
+                <circle id="Ellipse_2659" data-name="Ellipse 2659" cx="364.61" cy="561.01" r="2.61"/>
+              </g>
+              <g>
+                <circle id="Ellipse_1468-2" data-name="Ellipse 1468" cx="375.76" cy="394.63" r="2.61"/>
+                <circle id="Ellipse_1469" data-name="Ellipse 1469" cx="364.69" cy="405.76" r="2.61"/>
+                <circle id="Ellipse_1517-2" data-name="Ellipse 1517" cx="397.92" cy="394.63" r="2.61"/>
+                <circle id="Ellipse_1518-2" data-name="Ellipse 1518" cx="386.84" cy="405.71" r="2.61"/>
+                <circle id="Ellipse_1519-2" data-name="Ellipse 1519" cx="375.76" cy="416.84" r="2.61"/>
+                <circle id="Ellipse_1520" data-name="Ellipse 1520" cx="364.63" cy="427.92" r="2.61"/>
+                <circle id="Ellipse_1566-2" data-name="Ellipse 1566" cx="420.13" cy="394.63" r="2.61"/>
+                <circle id="Ellipse_1567-2" data-name="Ellipse 1567" cx="409.05" cy="405.71" r="2.61"/>
+                <circle id="Ellipse_1568-2" data-name="Ellipse 1568" cx="397.92" cy="416.84" r="2.61"/>
+                <circle id="Ellipse_1569-2" data-name="Ellipse 1569" cx="386.84" cy="427.92" r="2.61"/>
+                <circle id="Ellipse_1570-2" data-name="Ellipse 1570" cx="375.71" cy="438.99" r="2.61"/>
+                <circle id="Ellipse_1571" data-name="Ellipse 1571" cx="364.63" cy="450.13" r="2.61"/>
+                <circle id="Ellipse_1615-2" data-name="Ellipse 1615" cx="442.29" cy="394.63" r="2.61"/>
+                <circle id="Ellipse_1616-2" data-name="Ellipse 1616" cx="431.21" cy="405.71" r="2.61"/>
+                <circle id="Ellipse_1617-2" data-name="Ellipse 1617" cx="420.13" cy="416.79" r="2.61"/>
+                <circle id="Ellipse_1618-2" data-name="Ellipse 1618" cx="409" cy="427.92" r="2.61"/>
+                <circle id="Ellipse_1619-2" data-name="Ellipse 1619" cx="397.92" cy="438.99" r="2.61"/>
+                <circle id="Ellipse_1620-2" data-name="Ellipse 1620" cx="386.79" cy="450.07" r="2.61"/>
+                <circle id="Ellipse_1621-2" data-name="Ellipse 1621" cx="375.71" cy="461.2" r="2.61"/>
+                <circle id="Ellipse_1622" data-name="Ellipse 1622" cx="364.63" cy="472.28" r="2.61"/>
+                <circle id="Ellipse_1664-2" data-name="Ellipse 1664" cx="464.5" cy="394.58" r="2.61"/>
+                <circle id="Ellipse_1665-2" data-name="Ellipse 1665" cx="453.37" cy="405.71" r="2.61"/>
+                <circle id="Ellipse_1666-2" data-name="Ellipse 1666" cx="442.29" cy="416.79" r="2.61"/>
+                <circle id="Ellipse_1667-2" data-name="Ellipse 1667" cx="431.21" cy="427.86" r="2.61"/>
+                <circle id="Ellipse_1668-2" data-name="Ellipse 1668" cx="420.08" cy="438.99" r="2.61"/>
+                <circle id="Ellipse_1669-2" data-name="Ellipse 1669" cx="409" cy="450.07" r="2.61"/>
+                <circle id="Ellipse_1670-2" data-name="Ellipse 1670" cx="397.92" cy="461.15" r="2.61"/>
+                <circle id="Ellipse_1671-2" data-name="Ellipse 1671" cx="386.79" cy="472.28" r="2.61"/>
+                <circle id="Ellipse_1672-2" data-name="Ellipse 1672" cx="375.71" cy="483.36" r="2.61"/>
+                <circle id="Ellipse_1673" data-name="Ellipse 1673" cx="364.58" cy="494.44" r="2.61"/>
+                <circle id="Ellipse_1713-2" data-name="Ellipse 1713" cx="486.66" cy="394.58" r="2.61"/>
+                <circle id="Ellipse_1714-2" data-name="Ellipse 1714" cx="475.58" cy="405.65" r="2.61"/>
+                <circle id="Ellipse_1715-2" data-name="Ellipse 1715" cx="464.45" cy="416.79" r="2.61"/>
+                <circle id="Ellipse_1716-2" data-name="Ellipse 1716" cx="453.37" cy="427.86" r="2.61"/>
+                <circle id="Ellipse_1717-2" data-name="Ellipse 1717" cx="442.29" cy="438.94" r="2.61"/>
+                <circle id="Ellipse_1718-2" data-name="Ellipse 1718" cx="431.16" cy="450.07" r="2.61"/>
+                <circle id="Ellipse_1719-2" data-name="Ellipse 1719" cx="420.08" cy="461.15" r="2.61"/>
+                <circle id="Ellipse_1720-2" data-name="Ellipse 1720" cx="409" cy="472.23" r="2.61"/>
+                <circle id="Ellipse_1721-2" data-name="Ellipse 1721" cx="397.87" cy="483.36" r="2.61"/>
+                <circle id="Ellipse_1722-2" data-name="Ellipse 1722" cx="386.79" cy="494.44" r="2.61"/>
+                <circle id="Ellipse_1723-2" data-name="Ellipse 1723" cx="375.71" cy="505.57" r="2.61"/>
+                <circle id="Ellipse_1724" data-name="Ellipse 1724" cx="364.58" cy="516.65" r="2.61"/>
+                <circle id="Ellipse_1762-2" data-name="Ellipse 1762" cx="508.86" cy="394.58" r="2.61"/>
+                <circle id="Ellipse_1763-2" data-name="Ellipse 1763" cx="497.73" cy="405.65" r="2.61"/>
+                <circle id="Ellipse_1764-2" data-name="Ellipse 1764" cx="486.66" cy="416.73" r="2.61"/>
+                <circle id="Ellipse_1765-2" data-name="Ellipse 1765" cx="475.52" cy="427.86" r="2.61"/>
+                <circle id="Ellipse_1766-2" data-name="Ellipse 1766" cx="464.45" cy="438.94" r="2.61"/>
+                <circle id="Ellipse_1767-2" data-name="Ellipse 1767" cx="453.37" cy="450.02" r="2.61"/>
+                <circle id="Ellipse_1768-2" data-name="Ellipse 1768" cx="442.24" cy="461.15" r="2.61"/>
+                <circle id="Ellipse_1769-2" data-name="Ellipse 1769" cx="431.16" cy="472.23" r="2.61"/>
+                <circle id="Ellipse_1770-2" data-name="Ellipse 1770" cx="420.08" cy="483.36" r="2.61"/>
+                <circle id="Ellipse_1771-2" data-name="Ellipse 1771" cx="408.95" cy="494.44" r="2.61"/>
+                <circle id="Ellipse_1772-2" data-name="Ellipse 1772" cx="397.87" cy="505.52" r="2.61"/>
+                <circle id="Ellipse_1773-2" data-name="Ellipse 1773" cx="386.79" cy="516.65" r="2.61"/>
+                <circle id="Ellipse_1774-2" data-name="Ellipse 1774" cx="375.66" cy="527.73" r="2.61"/>
+                <circle id="Ellipse_1775" data-name="Ellipse 1775" cx="364.58" cy="538.81" r="2.61"/>
+                <circle id="Ellipse_1811-2" data-name="Ellipse 1811" cx="531.02" cy="394.52" r="2.61"/>
+                <circle id="Ellipse_1812-2" data-name="Ellipse 1812" cx="519.94" cy="405.65" r="2.61"/>
+                <circle id="Ellipse_1813-2" data-name="Ellipse 1813" cx="508.81" cy="416.73" r="2.61"/>
+                <circle id="Ellipse_1814-2" data-name="Ellipse 1814" cx="497.73" cy="427.81" r="2.61"/>
+                <circle id="Ellipse_1815-2" data-name="Ellipse 1815" cx="486.66" cy="438.94" r="2.61"/>
+                <circle id="Ellipse_1816-2" data-name="Ellipse 1816" cx="475.52" cy="450.02" r="2.61"/>
+                <circle id="Ellipse_1817-2" data-name="Ellipse 1817" cx="464.45" cy="461.1" r="2.61"/>
+                <circle id="Ellipse_1818-2" data-name="Ellipse 1818" cx="453.31" cy="472.23" r="2.61"/>
+                <circle id="Ellipse_1819-2" data-name="Ellipse 1819" cx="442.24" cy="483.31" r="2.61"/>
+                <circle id="Ellipse_1820-2" data-name="Ellipse 1820" cx="431.16" cy="494.44" r="2.61"/>
+                <circle id="Ellipse_1821-2" data-name="Ellipse 1821" cx="420.03" cy="505.52" r="2.61"/>
+                <circle id="Ellipse_1822-2" data-name="Ellipse 1822" cx="408.95" cy="516.6" r="2.61"/>
+                <circle id="Ellipse_1823-2" data-name="Ellipse 1823" cx="397.87" cy="527.73" r="2.61"/>
+                <circle id="Ellipse_1824-2" data-name="Ellipse 1824" cx="386.74" cy="538.81" r="2.61"/>
+                <circle id="Ellipse_1825-2" data-name="Ellipse 1825" cx="375.66" cy="549.89" r="2.61"/>
+                <circle id="Ellipse_1826" data-name="Ellipse 1826" cx="364.58" cy="561.02" r="2.61"/>
+                <circle id="Ellipse_1860-2" data-name="Ellipse 1860" cx="553.18" cy="394.52" r="2.61"/>
+                <circle id="Ellipse_1861-2" data-name="Ellipse 1861" cx="542.1" cy="405.6" r="2.61"/>
+                <circle id="Ellipse_1862-2" data-name="Ellipse 1862" cx="531.02" cy="416.73" r="2.61"/>
+                <circle id="Ellipse_1863-2" data-name="Ellipse 1863" cx="519.89" cy="427.81" r="2.61"/>
+                <circle id="Ellipse_1864-2" data-name="Ellipse 1864" cx="508.81" cy="438.89" r="2.61"/>
+                <circle id="Ellipse_1865-2" data-name="Ellipse 1865" cx="497.73" cy="450.02" r="2.61"/>
+                <circle id="Ellipse_1866-2" data-name="Ellipse 1866" cx="486.6" cy="461.1" r="2.61"/>
+                <circle id="Ellipse_1867-2" data-name="Ellipse 1867" cx="475.52" cy="472.23" r="2.61"/>
+                <circle id="Ellipse_1868-2" data-name="Ellipse 1868" cx="464.45" cy="483.31" r="2.61"/>
+                <circle id="Ellipse_1869-2" data-name="Ellipse 1869" cx="453.31" cy="494.39" r="2.61"/>
+                <circle id="Ellipse_1870-2" data-name="Ellipse 1870" cx="442.24" cy="505.52" r="2.61"/>
+                <circle id="Ellipse_1871-2" data-name="Ellipse 1871" cx="431.11" cy="516.6" r="2.61"/>
+                <circle id="Ellipse_1872-2" data-name="Ellipse 1872" cx="420.03" cy="527.68" r="2.61"/>
+                <circle id="Ellipse_1873-2" data-name="Ellipse 1873" cx="408.95" cy="538.81" r="2.61"/>
+                <circle id="Ellipse_1874-2" data-name="Ellipse 1874" cx="397.82" cy="549.89" r="2.61"/>
+                <circle id="Ellipse_1875-2" data-name="Ellipse 1875" cx="386.74" cy="560.96" r="2.61"/>
+                <circle id="Ellipse_1909-2" data-name="Ellipse 1909" cx="575.39" cy="394.52" r="2.61"/>
+                <circle id="Ellipse_1910-2" data-name="Ellipse 1910" cx="564.26" cy="405.6" r="2.61"/>
+                <circle id="Ellipse_1911-2" data-name="Ellipse 1911" cx="553.18" cy="416.68" r="2.61"/>
+                <circle id="Ellipse_1912-2" data-name="Ellipse 1912" cx="542.1" cy="427.81" r="2.61"/>
+                <circle id="Ellipse_1913-2" data-name="Ellipse 1913" cx="530.97" cy="438.89" r="2.61"/>
+                <circle id="Ellipse_1914-2" data-name="Ellipse 1914" cx="519.89" cy="450.02" r="2.61"/>
+                <circle id="Ellipse_1915-2" data-name="Ellipse 1915" cx="508.81" cy="461.1" r="2.61"/>
+                <circle id="Ellipse_1916-2" data-name="Ellipse 1916" cx="497.68" cy="472.18" r="2.61"/>
+                <circle id="Ellipse_1917-2" data-name="Ellipse 1917" cx="486.6" cy="483.31" r="2.61"/>
+                <circle id="Ellipse_1918-2" data-name="Ellipse 1918" cx="475.52" cy="494.39" r="2.61"/>
+                <circle id="Ellipse_1919-2" data-name="Ellipse 1919" cx="464.39" cy="505.47" r="2.61"/>
+                <circle id="Ellipse_1920-2" data-name="Ellipse 1920" cx="453.31" cy="516.6" r="2.61"/>
+                <circle id="Ellipse_1921-2" data-name="Ellipse 1921" cx="442.24" cy="527.68" r="2.61"/>
+                <circle id="Ellipse_1922-2" data-name="Ellipse 1922" cx="431.11" cy="538.75" r="2.61"/>
+                <circle id="Ellipse_1923-2" data-name="Ellipse 1923" cx="420.03" cy="549.89" r="2.61"/>
+                <circle id="Ellipse_1924-2" data-name="Ellipse 1924" cx="408.9" cy="560.96" r="2.61"/>
+                <circle id="Ellipse_1958-2" data-name="Ellipse 1958" cx="597.55" cy="394.47" r="2.61"/>
+                <circle id="Ellipse_1959-2" data-name="Ellipse 1959" cx="586.47" cy="405.6" r="2.61"/>
+                <circle id="Ellipse_1960-2" data-name="Ellipse 1960" cx="575.39" cy="416.68" r="2.61"/>
+                <circle id="Ellipse_1961-2" data-name="Ellipse 1961" cx="564.26" cy="427.81" r="2.61"/>
+                <circle id="Ellipse_1962-2" data-name="Ellipse 1962" cx="553.18" cy="438.89" r="2.61"/>
+                <circle id="Ellipse_1963-2" data-name="Ellipse 1963" cx="542.05" cy="449.97" r="2.61"/>
+                <circle id="Ellipse_1964-2" data-name="Ellipse 1964" cx="530.97" cy="461.1" r="2.61"/>
+                <circle id="Ellipse_1965-2" data-name="Ellipse 1965" cx="519.89" cy="472.18" r="2.61"/>
+                <circle id="Ellipse_1966-2" data-name="Ellipse 1966" cx="508.76" cy="483.26" r="2.61"/>
+                <circle id="Ellipse_1967-2" data-name="Ellipse 1967" cx="497.68" cy="494.39" r="2.61"/>
+                <circle id="Ellipse_1968-2" data-name="Ellipse 1968" cx="486.6" cy="505.47" r="2.61"/>
+                <circle id="Ellipse_1969-2" data-name="Ellipse 1969" cx="475.47" cy="516.55" r="2.61"/>
+                <circle id="Ellipse_1970-2" data-name="Ellipse 1970" cx="464.39" cy="527.68" r="2.61"/>
+                <circle id="Ellipse_1971-2" data-name="Ellipse 1971" cx="453.31" cy="538.75" r="2.61"/>
+                <circle id="Ellipse_1972-2" data-name="Ellipse 1972" cx="442.18" cy="549.83" r="2.61"/>
+                <circle id="Ellipse_1973-2" data-name="Ellipse 1973" cx="431.11" cy="560.96" r="2.61"/>
+                <circle id="Ellipse_2007-2" data-name="Ellipse 2007" cx="619.76" cy="394.47" r="2.61"/>
+                <circle id="Ellipse_2008-2" data-name="Ellipse 2008" cx="608.62" cy="405.6" r="2.61"/>
+                <circle id="Ellipse_2009-2" data-name="Ellipse 2009" cx="597.55" cy="416.68" r="2.61"/>
+                <circle id="Ellipse_2010-2" data-name="Ellipse 2010" cx="586.47" cy="427.76" r="2.61"/>
+                <circle id="Ellipse_2011-2" data-name="Ellipse 2011" cx="575.34" cy="438.89" r="2.61"/>
+                <circle id="Ellipse_2012-2" data-name="Ellipse 2012" cx="564.26" cy="449.97" r="2.61"/>
+                <circle id="Ellipse_2013-2" data-name="Ellipse 2013" cx="553.18" cy="461.05" r="2.61"/>
+                <circle id="Ellipse_2014-2" data-name="Ellipse 2014" cx="542.05" cy="472.18" r="2.61"/>
+                <circle id="Ellipse_2015-2" data-name="Ellipse 2015" cx="530.97" cy="483.26" r="2.61"/>
+                <circle id="Ellipse_2016-2" data-name="Ellipse 2016" cx="519.84" cy="494.34" r="2.61"/>
+                <circle id="Ellipse_2017-2" data-name="Ellipse 2017" cx="508.76" cy="505.47" r="2.61"/>
+                <circle id="Ellipse_2018-2" data-name="Ellipse 2018" cx="497.68" cy="516.55" r="2.61"/>
+                <circle id="Ellipse_2019-2" data-name="Ellipse 2019" cx="486.55" cy="527.62" r="2.61"/>
+                <circle id="Ellipse_2020-2" data-name="Ellipse 2020" cx="475.47" cy="538.75" r="2.61"/>
+                <circle id="Ellipse_2021-2" data-name="Ellipse 2021" cx="464.39" cy="549.83" r="2.61"/>
+                <circle id="Ellipse_2022-2" data-name="Ellipse 2022" cx="453.26" cy="560.96" r="2.61"/>
+                <circle id="Ellipse_2056-2" data-name="Ellipse 2056" cx="641.91" cy="394.47" r="2.61"/>
+                <circle id="Ellipse_2057-2" data-name="Ellipse 2057" cx="630.83" cy="405.55" r="2.61"/>
+                <circle id="Ellipse_2058-2" data-name="Ellipse 2058" cx="619.7" cy="416.68" r="2.61"/>
+                <circle id="Ellipse_2059-2" data-name="Ellipse 2059" cx="608.62" cy="427.76" r="2.61"/>
+                <circle id="Ellipse_2060-2" data-name="Ellipse 2060" cx="597.55" cy="438.84" r="2.61"/>
+                <circle id="Ellipse_2061-2" data-name="Ellipse 2061" cx="586.42" cy="449.97" r="2.61"/>
+                <circle id="Ellipse_2062-2" data-name="Ellipse 2062" cx="575.34" cy="461.05" r="2.61"/>
+                <circle id="Ellipse_2063-2" data-name="Ellipse 2063" cx="564.26" cy="472.13" r="2.61"/>
+                <circle id="Ellipse_2064-2" data-name="Ellipse 2064" cx="553.13" cy="483.26" r="2.61"/>
+                <circle id="Ellipse_2065-2" data-name="Ellipse 2065" cx="542.05" cy="494.34" r="2.61"/>
+                <circle id="Ellipse_2066-2" data-name="Ellipse 2066" cx="530.92" cy="505.41" r="2.61"/>
+                <circle id="Ellipse_2067-2" data-name="Ellipse 2067" cx="519.84" cy="516.55" r="2.61"/>
+                <circle id="Ellipse_2068-2" data-name="Ellipse 2068" cx="508.76" cy="527.62" r="2.61"/>
+                <circle id="Ellipse_2069-2" data-name="Ellipse 2069" cx="497.63" cy="538.75" r="2.61"/>
+                <circle id="Ellipse_2070-2" data-name="Ellipse 2070" cx="486.55" cy="549.83" r="2.61"/>
+                <circle id="Ellipse_2071-2" data-name="Ellipse 2071" cx="475.47" cy="560.91" r="2.61"/>
+                <circle id="Ellipse_2105-2" data-name="Ellipse 2105" cx="664.07" cy="394.47" r="2.61"/>
+                <circle id="Ellipse_2106-2" data-name="Ellipse 2106" cx="652.99" cy="405.55" r="2.61"/>
+                <circle id="Ellipse_2107-2" data-name="Ellipse 2107" cx="641.91" cy="416.63" r="2.61"/>
+                <circle id="Ellipse_2108-2" data-name="Ellipse 2108" cx="630.78" cy="427.76" r="2.61"/>
+                <circle id="Ellipse_2109-2" data-name="Ellipse 2109" cx="619.7" cy="438.84" r="2.61"/>
+                <circle id="Ellipse_2110-2" data-name="Ellipse 2110" cx="608.62" cy="449.92" r="2.61"/>
+                <circle id="Ellipse_2111-2" data-name="Ellipse 2111" cx="597.49" cy="461.05" r="2.61"/>
+                <circle id="Ellipse_2112-2" data-name="Ellipse 2112" cx="586.42" cy="472.13" r="2.61"/>
+                <circle id="Ellipse_2113-2" data-name="Ellipse 2113" cx="575.34" cy="483.2" r="2.61"/>
+                <circle id="Ellipse_2114-2" data-name="Ellipse 2114" cx="564.21" cy="494.34" r="2.61"/>
+                <circle id="Ellipse_2115-2" data-name="Ellipse 2115" cx="553.13" cy="505.41" r="2.61"/>
+                <circle id="Ellipse_2116-2" data-name="Ellipse 2116" cx="542.05" cy="516.55" r="2.61"/>
+                <circle id="Ellipse_2117-2" data-name="Ellipse 2117" cx="530.92" cy="527.62" r="2.61"/>
+                <circle id="Ellipse_2118-2" data-name="Ellipse 2118" cx="519.84" cy="538.7" r="2.61"/>
+                <circle id="Ellipse_2119-2" data-name="Ellipse 2119" cx="508.71" cy="549.83" r="2.61"/>
+                <circle id="Ellipse_2120-2" data-name="Ellipse 2120" cx="497.63" cy="560.91" r="2.61"/>
+                <circle id="Ellipse_2154-2" data-name="Ellipse 2154" cx="686.28" cy="394.42" r="2.61"/>
+                <circle id="Ellipse_2155-2" data-name="Ellipse 2155" cx="675.2" cy="405.55" r="2.61"/>
+                <circle id="Ellipse_2156-2" data-name="Ellipse 2156" cx="664.07" cy="416.63" r="2.61"/>
+                <circle id="Ellipse_2157-2" data-name="Ellipse 2157" cx="652.99" cy="427.71" r="2.61"/>
+                <circle id="Ellipse_2158-2" data-name="Ellipse 2158" cx="641.86" cy="438.84" r="2.61"/>
+                <circle id="Ellipse_2159-2" data-name="Ellipse 2159" cx="630.78" cy="449.92" r="2.61"/>
+                <circle id="Ellipse_2160-2" data-name="Ellipse 2160" cx="619.7" cy="461" r="2.61"/>
+                <circle id="Ellipse_2161-2" data-name="Ellipse 2161" cx="608.57" cy="472.13" r="2.61"/>
+                <circle id="Ellipse_2162-2" data-name="Ellipse 2162" cx="597.49" cy="483.2" r="2.61"/>
+                <circle id="Ellipse_2163-2" data-name="Ellipse 2163" cx="586.42" cy="494.28" r="2.61"/>
+                <circle id="Ellipse_2164-2" data-name="Ellipse 2164" cx="575.28" cy="505.41" r="2.61"/>
+                <circle id="Ellipse_2165-2" data-name="Ellipse 2165" cx="564.21" cy="516.49" r="2.61"/>
+                <circle id="Ellipse_2166-2" data-name="Ellipse 2166" cx="553.13" cy="527.62" r="2.61"/>
+                <circle id="Ellipse_2167-2" data-name="Ellipse 2167" cx="542" cy="538.7" r="2.61"/>
+                <circle id="Ellipse_2168-2" data-name="Ellipse 2168" cx="530.92" cy="549.78" r="2.61"/>
+                <circle id="Ellipse_2169-2" data-name="Ellipse 2169" cx="519.84" cy="560.91" r="2.61"/>
+                <circle id="Ellipse_2203-2" data-name="Ellipse 2203" cx="708.44" cy="394.42" r="2.61"/>
+                <circle id="Ellipse_2204-2" data-name="Ellipse 2204" cx="697.36" cy="405.5" r="2.61"/>
+                <circle id="Ellipse_2205-2" data-name="Ellipse 2205" cx="686.28" cy="416.63" r="2.61"/>
+                <circle id="Ellipse_2206-2" data-name="Ellipse 2206" cx="675.15" cy="427.71" r="2.61"/>
+                <circle id="Ellipse_2207-2" data-name="Ellipse 2207" cx="664.07" cy="438.79" r="2.61"/>
+                <circle id="Ellipse_2208-2" data-name="Ellipse 2208" cx="652.99" cy="449.92" r="2.61"/>
+                <circle id="Ellipse_2209-2" data-name="Ellipse 2209" cx="641.86" cy="461" r="2.61"/>
+                <circle id="Ellipse_2210-2" data-name="Ellipse 2210" cx="630.78" cy="472.07" r="2.61"/>
+                <circle id="Ellipse_2211-2" data-name="Ellipse 2211" cx="619.65" cy="483.2" r="2.61"/>
+                <circle id="Ellipse_2212-2" data-name="Ellipse 2212" cx="608.57" cy="494.28" r="2.61"/>
+                <circle id="Ellipse_2213-2" data-name="Ellipse 2213" cx="597.49" cy="505.41" r="2.61"/>
+                <circle id="Ellipse_2214-2" data-name="Ellipse 2214" cx="586.36" cy="516.49" r="2.61"/>
+                <circle id="Ellipse_2215-2" data-name="Ellipse 2215" cx="575.28" cy="527.57" r="2.61"/>
+                <circle id="Ellipse_2216-2" data-name="Ellipse 2216" cx="564.21" cy="538.7" r="2.61"/>
+                <circle id="Ellipse_2217-2" data-name="Ellipse 2217" cx="553.07" cy="549.78" r="2.61"/>
+                <circle id="Ellipse_2218-2" data-name="Ellipse 2218" cx="542" cy="560.86" r="2.61"/>
+                <circle id="Ellipse_2252-2" data-name="Ellipse 2252" cx="730.65" cy="394.42" r="2.61"/>
+                <circle id="Ellipse_2253-2" data-name="Ellipse 2253" cx="719.52" cy="405.5" r="2.61"/>
+                <circle id="Ellipse_2254-2" data-name="Ellipse 2254" cx="708.44" cy="416.58" r="2.61"/>
+                <circle id="Ellipse_2255-2" data-name="Ellipse 2255" cx="697.36" cy="427.71" r="2.61"/>
+                <circle id="Ellipse_2256-2" data-name="Ellipse 2256" cx="686.23" cy="438.79" r="2.61"/>
+                <circle id="Ellipse_2257-2" data-name="Ellipse 2257" cx="675.15" cy="449.86" r="2.61"/>
+                <circle id="Ellipse_2258-2" data-name="Ellipse 2258" cx="664.07" cy="461" r="2.61"/>
+                <circle id="Ellipse_2259-2" data-name="Ellipse 2259" cx="652.94" cy="472.07" r="2.61"/>
+                <circle id="Ellipse_2260-2" data-name="Ellipse 2260" cx="641.86" cy="483.2" r="2.61"/>
+                <circle id="Ellipse_2261-2" data-name="Ellipse 2261" cx="630.78" cy="494.28" r="2.61"/>
+                <circle id="Ellipse_2262-2" data-name="Ellipse 2262" cx="619.65" cy="505.36" r="2.61"/>
+                <circle id="Ellipse_2263-2" data-name="Ellipse 2263" cx="608.57" cy="516.49" r="2.61"/>
+                <circle id="Ellipse_2264-2" data-name="Ellipse 2264" cx="597.44" cy="527.57" r="2.61"/>
+                <circle id="Ellipse_2265-2" data-name="Ellipse 2265" cx="586.36" cy="538.65" r="2.61"/>
+                <circle id="Ellipse_2266-2" data-name="Ellipse 2266" cx="575.28" cy="549.78" r="2.61"/>
+                <circle id="Ellipse_2267-2" data-name="Ellipse 2267" cx="564.15" cy="560.86" r="2.61"/>
+                <circle id="Ellipse_2302-2" data-name="Ellipse 2302" cx="741.73" cy="405.5" r="2.61"/>
+                <circle id="Ellipse_2303-2" data-name="Ellipse 2303" cx="730.59" cy="416.58" r="2.61"/>
+                <circle id="Ellipse_2304-2" data-name="Ellipse 2304" cx="719.52" cy="427.65" r="2.61"/>
+                <circle id="Ellipse_2305-2" data-name="Ellipse 2305" cx="708.44" cy="438.79" r="2.61"/>
+                <circle id="Ellipse_2306-2" data-name="Ellipse 2306" cx="697.31" cy="449.86" r="2.61"/>
+                <circle id="Ellipse_2307-2" data-name="Ellipse 2307" cx="686.23" cy="461" r="2.61"/>
+                <circle id="Ellipse_2308-2" data-name="Ellipse 2308" cx="675.15" cy="472.07" r="2.61"/>
+                <circle id="Ellipse_2309-2" data-name="Ellipse 2309" cx="664.02" cy="483.15" r="2.61"/>
+                <circle id="Ellipse_2310-2" data-name="Ellipse 2310" cx="652.94" cy="494.28" r="2.61"/>
+                <circle id="Ellipse_2311-2" data-name="Ellipse 2311" cx="641.86" cy="505.36" r="2.61"/>
+                <circle id="Ellipse_2312-2" data-name="Ellipse 2312" cx="630.73" cy="516.44" r="2.61"/>
+                <circle id="Ellipse_2313-2" data-name="Ellipse 2313" cx="619.65" cy="527.57" r="2.61"/>
+                <circle id="Ellipse_2314-2" data-name="Ellipse 2314" cx="608.57" cy="538.65" r="2.61"/>
+                <circle id="Ellipse_2315-2" data-name="Ellipse 2315" cx="597.44" cy="549.73" r="2.61"/>
+                <circle id="Ellipse_2316-2" data-name="Ellipse 2316" cx="586.36" cy="560.86" r="2.61"/>
+                <circle id="Ellipse_2353-2" data-name="Ellipse 2353" cx="741.73" cy="427.65" r="2.61"/>
+                <circle id="Ellipse_2354-2" data-name="Ellipse 2354" cx="730.59" cy="438.79" r="2.61"/>
+                <circle id="Ellipse_2355-2" data-name="Ellipse 2355" cx="719.52" cy="449.86" r="2.61"/>
+                <circle id="Ellipse_2356-2" data-name="Ellipse 2356" cx="708.38" cy="460.94" r="2.61"/>
+                <circle id="Ellipse_2357-2" data-name="Ellipse 2357" cx="697.31" cy="472.07" r="2.61"/>
+                <circle id="Ellipse_2358-2" data-name="Ellipse 2358" cx="686.23" cy="483.15" r="2.61"/>
+                <circle id="Ellipse_2359-2" data-name="Ellipse 2359" cx="675.1" cy="494.23" r="2.61"/>
+                <circle id="Ellipse_2360-2" data-name="Ellipse 2360" cx="664.02" cy="505.36" r="2.61"/>
+                <circle id="Ellipse_2361-2" data-name="Ellipse 2361" cx="652.94" cy="516.44" r="2.61"/>
+                <circle id="Ellipse_2362-2" data-name="Ellipse 2362" cx="641.81" cy="527.52" r="2.61"/>
+                <circle id="Ellipse_2363-2" data-name="Ellipse 2363" cx="630.73" cy="538.65" r="2.61"/>
+                <circle id="Ellipse_2364-2" data-name="Ellipse 2364" cx="619.65" cy="549.73" r="2.61"/>
+                <circle id="Ellipse_2365-2" data-name="Ellipse 2365" cx="608.52" cy="560.81" r="2.61"/>
+                <circle id="Ellipse_2404-2" data-name="Ellipse 2404" cx="741.67" cy="449.86" r="2.61"/>
+                <circle id="Ellipse_2405-2" data-name="Ellipse 2405" cx="730.59" cy="460.94" r="2.61"/>
+                <circle id="Ellipse_2406-2" data-name="Ellipse 2406" cx="719.52" cy="472.02" r="2.61"/>
+                <circle id="Ellipse_2407-2" data-name="Ellipse 2407" cx="708.38" cy="483.15" r="2.61"/>
+                <circle id="Ellipse_2408-2" data-name="Ellipse 2408" cx="697.31" cy="494.23" r="2.61"/>
+                <circle id="Ellipse_2409-2" data-name="Ellipse 2409" cx="686.18" cy="505.31" r="2.61"/>
+                <circle id="Ellipse_2410-2" data-name="Ellipse 2410" cx="675.1" cy="516.44" r="2.61"/>
+                <circle id="Ellipse_2411-2" data-name="Ellipse 2411" cx="664.02" cy="527.52" r="2.61"/>
+                <circle id="Ellipse_2412-2" data-name="Ellipse 2412" cx="652.89" cy="538.6" r="2.61"/>
+                <circle id="Ellipse_2413-2" data-name="Ellipse 2413" cx="641.81" cy="549.73" r="2.61"/>
+                <circle id="Ellipse_2414-2" data-name="Ellipse 2414" cx="630.73" cy="560.81" r="2.61"/>
+                <circle id="Ellipse_2455-2" data-name="Ellipse 2455" cx="741.67" cy="472.02" r="2.61"/>
+                <circle id="Ellipse_2456-2" data-name="Ellipse 2456" cx="730.59" cy="483.1" r="2.61"/>
+                <circle id="Ellipse_2457-2" data-name="Ellipse 2457" cx="719.46" cy="494.23" r="2.61"/>
+                <circle id="Ellipse_2458-2" data-name="Ellipse 2458" cx="708.38" cy="505.31" r="2.61"/>
+                <circle id="Ellipse_2459-2" data-name="Ellipse 2459" cx="697.25" cy="516.39" r="2.61"/>
+                <circle id="Ellipse_2460-2" data-name="Ellipse 2460" cx="686.18" cy="527.52" r="2.61"/>
+                <circle id="Ellipse_2461-2" data-name="Ellipse 2461" cx="675.1" cy="538.6" r="2.61"/>
+                <circle id="Ellipse_2462-2" data-name="Ellipse 2462" cx="663.97" cy="549.73" r="2.61"/>
+                <circle id="Ellipse_2463-2" data-name="Ellipse 2463" cx="652.89" cy="560.81" r="2.61"/>
+                <circle id="Ellipse_2506-2" data-name="Ellipse 2506" cx="741.67" cy="494.18" r="2.61"/>
+                <circle id="Ellipse_2507-2" data-name="Ellipse 2507" cx="730.54" cy="505.31" r="2.61"/>
+                <circle id="Ellipse_2508-2" data-name="Ellipse 2508" cx="719.46" cy="516.39" r="2.61"/>
+                <circle id="Ellipse_2509-2" data-name="Ellipse 2509" cx="708.38" cy="527.52" r="2.61"/>
+                <circle id="Ellipse_2510-2" data-name="Ellipse 2510" cx="697.25" cy="538.6" r="2.61"/>
+                <circle id="Ellipse_2511-2" data-name="Ellipse 2511" cx="686.18" cy="549.68" r="2.61"/>
+                <circle id="Ellipse_2512-2" data-name="Ellipse 2512" cx="675.04" cy="560.81" r="2.61"/>
+                <circle id="Ellipse_2557-2" data-name="Ellipse 2557" cx="741.62" cy="516.39" r="2.61"/>
+                <circle id="Ellipse_2558-2" data-name="Ellipse 2558" cx="730.54" cy="527.47" r="2.61"/>
+                <circle id="Ellipse_2559-2" data-name="Ellipse 2559" cx="719.46" cy="538.6" r="2.61"/>
+                <circle id="Ellipse_2560-2" data-name="Ellipse 2560" cx="708.33" cy="549.68" r="2.61"/>
+                <circle id="Ellipse_2561-2" data-name="Ellipse 2561" cx="697.25" cy="560.76" r="2.61"/>
+                <circle id="Ellipse_2608-2" data-name="Ellipse 2608" cx="741.62" cy="538.55" r="2.61"/>
+                <circle id="Ellipse_2609-2" data-name="Ellipse 2609" cx="730.54" cy="549.68" r="2.61"/>
+                <circle id="Ellipse_2610-2" data-name="Ellipse 2610" cx="719.41" cy="560.76" r="2.61"/>
+                <circle id="Ellipse_2659-2" data-name="Ellipse 2659" cx="741.62" cy="560.76" r="2.61"/>
+              </g>
+              <g>
+                <circle id="Ellipse_1468-3" data-name="Ellipse 1468" cx="752.8" cy="394.37" r="2.61"/>
+                <circle id="Ellipse_1469-2" data-name="Ellipse 1469" cx="741.73" cy="405.5" r="2.61"/>
+                <circle id="Ellipse_1517-3" data-name="Ellipse 1517" cx="774.96" cy="394.37" r="2.61"/>
+                <circle id="Ellipse_1518-3" data-name="Ellipse 1518" cx="763.88" cy="405.45" r="2.61"/>
+                <circle id="Ellipse_1519-3" data-name="Ellipse 1519" cx="752.8" cy="416.58" r="2.61"/>
+                <circle id="Ellipse_1520-2" data-name="Ellipse 1520" cx="741.67" cy="427.66" r="2.61"/>
+                <circle id="Ellipse_1566-3" data-name="Ellipse 1566" cx="797.17" cy="394.37" r="2.61"/>
+                <circle id="Ellipse_1567-3" data-name="Ellipse 1567" cx="786.09" cy="405.45" r="2.61"/>
+                <circle id="Ellipse_1568-3" data-name="Ellipse 1568" cx="774.96" cy="416.58" r="2.61"/>
+                <circle id="Ellipse_1569-3" data-name="Ellipse 1569" cx="763.88" cy="427.66" r="2.61"/>
+                <circle id="Ellipse_1570-3" data-name="Ellipse 1570" cx="752.75" cy="438.73" r="2.61"/>
+                <circle id="Ellipse_1571-2" data-name="Ellipse 1571" cx="741.67" cy="449.86" r="2.61"/>
+                <circle id="Ellipse_1615-3" data-name="Ellipse 1615" cx="819.33" cy="394.37" r="2.61"/>
+                <circle id="Ellipse_1616-3" data-name="Ellipse 1616" cx="808.25" cy="405.45" r="2.61"/>
+                <circle id="Ellipse_1617-3" data-name="Ellipse 1617" cx="797.17" cy="416.52" r="2.61"/>
+                <circle id="Ellipse_1618-3" data-name="Ellipse 1618" cx="786.04" cy="427.66" r="2.61"/>
+                <circle id="Ellipse_1619-3" data-name="Ellipse 1619" cx="774.96" cy="438.73" r="2.61"/>
+                <circle id="Ellipse_1620-3" data-name="Ellipse 1620" cx="763.83" cy="449.81" r="2.61"/>
+                <circle id="Ellipse_1621-3" data-name="Ellipse 1621" cx="752.75" cy="460.94" r="2.61"/>
+                <circle id="Ellipse_1622-2" data-name="Ellipse 1622" cx="741.67" cy="472.02" r="2.61"/>
+                <circle id="Ellipse_1664-3" data-name="Ellipse 1664" cx="841.54" cy="394.31" r="2.61"/>
+                <circle id="Ellipse_1665-3" data-name="Ellipse 1665" cx="830.41" cy="405.45" r="2.61"/>
+                <circle id="Ellipse_1666-3" data-name="Ellipse 1666" cx="819.33" cy="416.52" r="2.61"/>
+                <circle id="Ellipse_1667-3" data-name="Ellipse 1667" cx="808.25" cy="427.6" r="2.61"/>
+                <circle id="Ellipse_1668-3" data-name="Ellipse 1668" cx="797.12" cy="438.73" r="2.61"/>
+                <circle id="Ellipse_1669-3" data-name="Ellipse 1669" cx="786.04" cy="449.81" r="2.61"/>
+                <circle id="Ellipse_1670-3" data-name="Ellipse 1670" cx="774.96" cy="460.89" r="2.61"/>
+                <circle id="Ellipse_1671-3" data-name="Ellipse 1671" cx="763.83" cy="472.02" r="2.61"/>
+                <circle id="Ellipse_1672-3" data-name="Ellipse 1672" cx="752.75" cy="483.1" r="2.61"/>
+                <circle id="Ellipse_1673-2" data-name="Ellipse 1673" cx="741.62" cy="494.18" r="2.61"/>
+                <circle id="Ellipse_1713-3" data-name="Ellipse 1713" cx="863.7" cy="394.31" r="2.61"/>
+                <circle id="Ellipse_1714-3" data-name="Ellipse 1714" cx="852.62" cy="405.39" r="2.61"/>
+                <circle id="Ellipse_1715-3" data-name="Ellipse 1715" cx="841.49" cy="416.52" r="2.61"/>
+                <circle id="Ellipse_1716-3" data-name="Ellipse 1716" cx="830.41" cy="427.6" r="2.61"/>
+                <circle id="Ellipse_1717-3" data-name="Ellipse 1717" cx="819.33" cy="438.68" r="2.61"/>
+                <circle id="Ellipse_1718-3" data-name="Ellipse 1718" cx="808.2" cy="449.81" r="2.61"/>
+                <circle id="Ellipse_1719-3" data-name="Ellipse 1719" cx="797.12" cy="460.89" r="2.61"/>
+                <circle id="Ellipse_1720-3" data-name="Ellipse 1720" cx="786.04" cy="471.97" r="2.61"/>
+                <circle id="Ellipse_1721-3" data-name="Ellipse 1721" cx="774.91" cy="483.1" r="2.61"/>
+                <circle id="Ellipse_1722-3" data-name="Ellipse 1722" cx="763.83" cy="494.18" r="2.61"/>
+                <circle id="Ellipse_1723-3" data-name="Ellipse 1723" cx="752.75" cy="505.31" r="2.61"/>
+                <circle id="Ellipse_1724-2" data-name="Ellipse 1724" cx="741.62" cy="516.39" r="2.61"/>
+                <circle id="Ellipse_1762-3" data-name="Ellipse 1762" cx="885.9" cy="394.31" r="2.61"/>
+                <circle id="Ellipse_1763-3" data-name="Ellipse 1763" cx="874.77" cy="405.39" r="2.61"/>
+                <circle id="Ellipse_1764-3" data-name="Ellipse 1764" cx="863.7" cy="416.47" r="2.61"/>
+                <circle id="Ellipse_1765-3" data-name="Ellipse 1765" cx="852.56" cy="427.6" r="2.61"/>
+                <circle id="Ellipse_1766-3" data-name="Ellipse 1766" cx="841.49" cy="438.68" r="2.61"/>
+                <circle id="Ellipse_1767-3" data-name="Ellipse 1767" cx="830.41" cy="449.76" r="2.61"/>
+                <circle id="Ellipse_1768-3" data-name="Ellipse 1768" cx="819.28" cy="460.89" r="2.61"/>
+                <circle id="Ellipse_1769-3" data-name="Ellipse 1769" cx="808.2" cy="471.97" r="2.61"/>
+                <circle id="Ellipse_1770-3" data-name="Ellipse 1770" cx="797.12" cy="483.1" r="2.61"/>
+                <circle id="Ellipse_1771-3" data-name="Ellipse 1771" cx="785.99" cy="494.18" r="2.61"/>
+                <circle id="Ellipse_1772-3" data-name="Ellipse 1772" cx="774.91" cy="505.26" r="2.61"/>
+                <circle id="Ellipse_1773-3" data-name="Ellipse 1773" cx="763.83" cy="516.39" r="2.61"/>
+                <circle id="Ellipse_1774-3" data-name="Ellipse 1774" cx="752.7" cy="527.47" r="2.61"/>
+                <circle id="Ellipse_1775-2" data-name="Ellipse 1775" cx="741.62" cy="538.55" r="2.61"/>
+                <circle id="Ellipse_1811-3" data-name="Ellipse 1811" cx="908.06" cy="394.26" r="2.61"/>
+                <circle id="Ellipse_1812-3" data-name="Ellipse 1812" cx="896.98" cy="405.39" r="2.61"/>
+                <circle id="Ellipse_1813-3" data-name="Ellipse 1813" cx="885.85" cy="416.47" r="2.61"/>
+                <circle id="Ellipse_1814-3" data-name="Ellipse 1814" cx="874.77" cy="427.55" r="2.61"/>
+                <circle id="Ellipse_1815-3" data-name="Ellipse 1815" cx="863.7" cy="438.68" r="2.61"/>
+                <circle id="Ellipse_1816-3" data-name="Ellipse 1816" cx="852.56" cy="449.76" r="2.61"/>
+                <circle id="Ellipse_1817-3" data-name="Ellipse 1817" cx="841.49" cy="460.84" r="2.61"/>
+                <circle id="Ellipse_1818-3" data-name="Ellipse 1818" cx="830.35" cy="471.97" r="2.61"/>
+                <circle id="Ellipse_1819-3" data-name="Ellipse 1819" cx="819.28" cy="483.05" r="2.61"/>
+                <circle id="Ellipse_1820-3" data-name="Ellipse 1820" cx="808.2" cy="494.18" r="2.61"/>
+                <circle id="Ellipse_1821-3" data-name="Ellipse 1821" cx="797.07" cy="505.26" r="2.61"/>
+                <circle id="Ellipse_1822-3" data-name="Ellipse 1822" cx="785.99" cy="516.34" r="2.61"/>
+                <circle id="Ellipse_1823-3" data-name="Ellipse 1823" cx="774.91" cy="527.47" r="2.61"/>
+                <circle id="Ellipse_1824-3" data-name="Ellipse 1824" cx="763.78" cy="538.55" r="2.61"/>
+                <circle id="Ellipse_1825-3" data-name="Ellipse 1825" cx="752.7" cy="549.62" r="2.61"/>
+                <circle id="Ellipse_1826-2" data-name="Ellipse 1826" cx="741.62" cy="560.76" r="2.61"/>
+                <circle id="Ellipse_1860-3" data-name="Ellipse 1860" cx="930.22" cy="394.26" r="2.61"/>
+                <circle id="Ellipse_1861-3" data-name="Ellipse 1861" cx="919.14" cy="405.34" r="2.61"/>
+                <circle id="Ellipse_1862-3" data-name="Ellipse 1862" cx="908.06" cy="416.47" r="2.61"/>
+                <circle id="Ellipse_1863-3" data-name="Ellipse 1863" cx="896.93" cy="427.55" r="2.61"/>
+                <circle id="Ellipse_1864-3" data-name="Ellipse 1864" cx="885.85" cy="438.63" r="2.61"/>
+                <circle id="Ellipse_1865-3" data-name="Ellipse 1865" cx="874.77" cy="449.76" r="2.61"/>
+                <circle id="Ellipse_1866-3" data-name="Ellipse 1866" cx="863.64" cy="460.84" r="2.61"/>
+                <circle id="Ellipse_1867-3" data-name="Ellipse 1867" cx="852.56" cy="471.97" r="2.61"/>
+                <circle id="Ellipse_1868-3" data-name="Ellipse 1868" cx="841.49" cy="483.05" r="2.61"/>
+                <circle id="Ellipse_1869-3" data-name="Ellipse 1869" cx="830.35" cy="494.13" r="2.61"/>
+                <circle id="Ellipse_1870-3" data-name="Ellipse 1870" cx="819.28" cy="505.26" r="2.61"/>
+                <circle id="Ellipse_1871-3" data-name="Ellipse 1871" cx="808.15" cy="516.34" r="2.61"/>
+                <circle id="Ellipse_1872-3" data-name="Ellipse 1872" cx="797.07" cy="527.42" r="2.61"/>
+                <circle id="Ellipse_1873-3" data-name="Ellipse 1873" cx="785.99" cy="538.55" r="2.61"/>
+                <circle id="Ellipse_1874-3" data-name="Ellipse 1874" cx="774.86" cy="549.62" r="2.61"/>
+                <circle id="Ellipse_1875-3" data-name="Ellipse 1875" cx="763.78" cy="560.7" r="2.61"/>
+                <circle id="Ellipse_1909-3" data-name="Ellipse 1909" cx="952.43" cy="394.26" r="2.61"/>
+                <circle id="Ellipse_1910-3" data-name="Ellipse 1910" cx="941.3" cy="405.34" r="2.61"/>
+                <circle id="Ellipse_1911-3" data-name="Ellipse 1911" cx="930.22" cy="416.42" r="2.61"/>
+                <circle id="Ellipse_1912-3" data-name="Ellipse 1912" cx="919.14" cy="427.55" r="2.61"/>
+                <circle id="Ellipse_1913-3" data-name="Ellipse 1913" cx="908.01" cy="438.63" r="2.61"/>
+                <circle id="Ellipse_1914-3" data-name="Ellipse 1914" cx="896.93" cy="449.76" r="2.61"/>
+                <circle id="Ellipse_1915-3" data-name="Ellipse 1915" cx="885.85" cy="460.84" r="2.61"/>
+                <circle id="Ellipse_1916-3" data-name="Ellipse 1916" cx="874.72" cy="471.92" r="2.61"/>
+                <circle id="Ellipse_1917-3" data-name="Ellipse 1917" cx="863.64" cy="483.05" r="2.61"/>
+                <circle id="Ellipse_1918-3" data-name="Ellipse 1918" cx="852.56" cy="494.13" r="2.61"/>
+                <circle id="Ellipse_1919-3" data-name="Ellipse 1919" cx="841.43" cy="505.21" r="2.61"/>
+                <circle id="Ellipse_1920-3" data-name="Ellipse 1920" cx="830.35" cy="516.34" r="2.61"/>
+                <circle id="Ellipse_1921-3" data-name="Ellipse 1921" cx="819.28" cy="527.42" r="2.61"/>
+                <circle id="Ellipse_1922-3" data-name="Ellipse 1922" cx="808.15" cy="538.49" r="2.61"/>
+                <circle id="Ellipse_1923-3" data-name="Ellipse 1923" cx="797.07" cy="549.62" r="2.61"/>
+                <circle id="Ellipse_1924-3" data-name="Ellipse 1924" cx="785.94" cy="560.7" r="2.61"/>
+                <circle id="Ellipse_1959-3" data-name="Ellipse 1959" cx="963.51" cy="405.34" r="2.61"/>
+                <circle id="Ellipse_1960-3" data-name="Ellipse 1960" cx="952.43" cy="416.42" r="2.61"/>
+                <circle id="Ellipse_1961-3" data-name="Ellipse 1961" cx="941.3" cy="427.55" r="2.61"/>
+                <circle id="Ellipse_1962-3" data-name="Ellipse 1962" cx="930.22" cy="438.63" r="2.61"/>
+                <circle id="Ellipse_1963-3" data-name="Ellipse 1963" cx="919.09" cy="449.71" r="2.61"/>
+                <circle id="Ellipse_1964-3" data-name="Ellipse 1964" cx="908.01" cy="460.84" r="2.61"/>
+                <circle id="Ellipse_1965-3" data-name="Ellipse 1965" cx="896.93" cy="471.92" r="2.61"/>
+                <circle id="Ellipse_1966-3" data-name="Ellipse 1966" cx="885.8" cy="483" r="2.61"/>
+                <circle id="Ellipse_1967-3" data-name="Ellipse 1967" cx="874.72" cy="494.13" r="2.61"/>
+                <circle id="Ellipse_1968-3" data-name="Ellipse 1968" cx="863.64" cy="505.21" r="2.61"/>
+                <circle id="Ellipse_1969-3" data-name="Ellipse 1969" cx="852.51" cy="516.28" r="2.61"/>
+                <circle id="Ellipse_1970-3" data-name="Ellipse 1970" cx="841.43" cy="527.42" r="2.61"/>
+                <circle id="Ellipse_1971-3" data-name="Ellipse 1971" cx="830.35" cy="538.49" r="2.61"/>
+                <circle id="Ellipse_1972-3" data-name="Ellipse 1972" cx="819.22" cy="549.57" r="2.61"/>
+                <circle id="Ellipse_1973-3" data-name="Ellipse 1973" cx="808.15" cy="560.7" r="2.61"/>
+                <circle id="Ellipse_2010-3" data-name="Ellipse 2010" cx="963.51" cy="427.5" r="2.61"/>
+                <circle id="Ellipse_2011-3" data-name="Ellipse 2011" cx="952.38" cy="438.63" r="2.61"/>
+                <circle id="Ellipse_2012-3" data-name="Ellipse 2012" cx="941.3" cy="449.71" r="2.61"/>
+                <circle id="Ellipse_2013-3" data-name="Ellipse 2013" cx="930.22" cy="460.79" r="2.61"/>
+                <circle id="Ellipse_2014-3" data-name="Ellipse 2014" cx="919.09" cy="471.92" r="2.61"/>
+                <circle id="Ellipse_2015-3" data-name="Ellipse 2015" cx="908.01" cy="483" r="2.61"/>
+                <circle id="Ellipse_2016-3" data-name="Ellipse 2016" cx="896.88" cy="494.07" r="2.61"/>
+                <circle id="Ellipse_2017-3" data-name="Ellipse 2017" cx="885.8" cy="505.21" r="2.61"/>
+                <circle id="Ellipse_2018-3" data-name="Ellipse 2018" cx="874.72" cy="516.28" r="2.61"/>
+                <circle id="Ellipse_2019-3" data-name="Ellipse 2019" cx="863.59" cy="527.36" r="2.61"/>
+                <circle id="Ellipse_2020-3" data-name="Ellipse 2020" cx="852.51" cy="538.49" r="2.61"/>
+                <circle id="Ellipse_2021-3" data-name="Ellipse 2021" cx="841.43" cy="549.57" r="2.61"/>
+                <circle id="Ellipse_2022-3" data-name="Ellipse 2022" cx="830.3" cy="560.7" r="2.61"/>
+                <circle id="Ellipse_2061-3" data-name="Ellipse 2061" cx="963.46" cy="449.71" r="2.61"/>
+                <circle id="Ellipse_2062-3" data-name="Ellipse 2062" cx="952.38" cy="460.79" r="2.61"/>
+                <circle id="Ellipse_2063-3" data-name="Ellipse 2063" cx="941.3" cy="471.87" r="2.61"/>
+                <circle id="Ellipse_2064-3" data-name="Ellipse 2064" cx="930.17" cy="483" r="2.61"/>
+                <circle id="Ellipse_2065-3" data-name="Ellipse 2065" cx="919.09" cy="494.07" r="2.61"/>
+                <circle id="Ellipse_2066-3" data-name="Ellipse 2066" cx="907.96" cy="505.15" r="2.61"/>
+                <circle id="Ellipse_2067-3" data-name="Ellipse 2067" cx="896.88" cy="516.28" r="2.61"/>
+                <circle id="Ellipse_2068-3" data-name="Ellipse 2068" cx="885.8" cy="527.36" r="2.61"/>
+                <circle id="Ellipse_2069-3" data-name="Ellipse 2069" cx="874.67" cy="538.49" r="2.61"/>
+                <circle id="Ellipse_2070-3" data-name="Ellipse 2070" cx="863.59" cy="549.57" r="2.61"/>
+                <circle id="Ellipse_2071-3" data-name="Ellipse 2071" cx="852.51" cy="560.65" r="2.61"/>
+                <circle id="Ellipse_2112-3" data-name="Ellipse 2112" cx="963.46" cy="471.87" r="2.61"/>
+                <circle id="Ellipse_2113-3" data-name="Ellipse 2113" cx="952.38" cy="482.94" r="2.61"/>
+                <circle id="Ellipse_2114-3" data-name="Ellipse 2114" cx="941.25" cy="494.07" r="2.61"/>
+                <circle id="Ellipse_2115-3" data-name="Ellipse 2115" cx="930.17" cy="505.15" r="2.61"/>
+                <circle id="Ellipse_2116-3" data-name="Ellipse 2116" cx="919.09" cy="516.28" r="2.61"/>
+                <circle id="Ellipse_2117-3" data-name="Ellipse 2117" cx="907.96" cy="527.36" r="2.61"/>
+                <circle id="Ellipse_2118-3" data-name="Ellipse 2118" cx="896.88" cy="538.44" r="2.61"/>
+                <circle id="Ellipse_2119-3" data-name="Ellipse 2119" cx="885.75" cy="549.57" r="2.61"/>
+                <circle id="Ellipse_2120-3" data-name="Ellipse 2120" cx="874.67" cy="560.65" r="2.61"/>
+                <circle id="Ellipse_2163-3" data-name="Ellipse 2163" cx="963.46" cy="494.02" r="2.61"/>
+                <circle id="Ellipse_2164-3" data-name="Ellipse 2164" cx="952.32" cy="505.15" r="2.61"/>
+                <circle id="Ellipse_2165-3" data-name="Ellipse 2165" cx="941.25" cy="516.23" r="2.61"/>
+                <circle id="Ellipse_2166-3" data-name="Ellipse 2166" cx="930.17" cy="527.36" r="2.61"/>
+                <circle id="Ellipse_2167-3" data-name="Ellipse 2167" cx="919.04" cy="538.44" r="2.61"/>
+                <circle id="Ellipse_2168-3" data-name="Ellipse 2168" cx="907.96" cy="549.52" r="2.61"/>
+                <circle id="Ellipse_2169-3" data-name="Ellipse 2169" cx="896.88" cy="560.65" r="2.61"/>
+                <circle id="Ellipse_2214-3" data-name="Ellipse 2214" cx="963.4" cy="516.23" r="2.61"/>
+                <circle id="Ellipse_2215-3" data-name="Ellipse 2215" cx="952.32" cy="527.31" r="2.61"/>
+                <circle id="Ellipse_2216-3" data-name="Ellipse 2216" cx="941.25" cy="538.44" r="2.61"/>
+                <circle id="Ellipse_2217-3" data-name="Ellipse 2217" cx="930.11" cy="549.52" r="2.61"/>
+                <circle id="Ellipse_2218-3" data-name="Ellipse 2218" cx="919.04" cy="560.6" r="2.61"/>
+                <circle id="Ellipse_2265-3" data-name="Ellipse 2265" cx="963.4" cy="538.39" r="2.61"/>
+                <circle id="Ellipse_2266-3" data-name="Ellipse 2266" cx="952.32" cy="549.52" r="2.61"/>
+                <circle id="Ellipse_2267-3" data-name="Ellipse 2267" cx="941.19" cy="560.6" r="2.61"/>
+                <circle id="Ellipse_2316-3" data-name="Ellipse 2316" cx="963.4" cy="560.6" r="2.61"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Data_Center_2" data-name="Data Center 2">
+          <polygon points="842.51 455.12 620.12 409.4 620.12 238.12 842.51 200.02 842.51 455.12" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="949.18 439.88 842.51 455.12 842.51 200.02 949.18 215.26 949.18 439.88" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="750.99" y1="216.36" x2="750.99" y2="435.52" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="675.55" y1="228.55" x2="675.55" y2="421.04" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="759.86 395.4 831.03 405.06 831.03 443.69 759.86 429.06 759.86 395.4" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="831.03 405.06 759.86 395.4 759.55 361.29 831.03 366.36 831.03 405.06" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="831.03 327.57 831.03 366.36 759.55 361.29 759.55 327.57 831.03 327.57" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="831.03 288.86 831.03 327.57 759.55 327.57 759.55 292.95 831.03 288.86" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="831.03 250.16 831.03 288.86 759.55 292.95 759.55 258.34 831.03 250.16" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="831.03 211.45 831.03 250.16 759.55 258.34 759.55 223.7 831.03 211.45" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="743.01 226.53 742.9 260.13 683.03 267.1 683.18 236.78 743.01 226.53" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="742.73 293.98 742.9 260.13 683.03 267.1 683.03 297.33 742.73 293.98" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="742.73 293.98 742.9 327.57 683.03 327.57 683.03 297.33 742.73 293.98" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="742.9 360.24 742.9 327.57 683.03 327.57 683.03 356.08 742.9 360.24" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="742.9 392.96 742.9 360.24 683.03 356.08 683.03 384.73 742.9 392.96" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="742.9 425.57 742.9 392.96 683.03 384.73 683.03 413.26 742.9 425.57" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="668.56 239.28 668.56 268.75 628.56 273.33 628.56 246.14 668.56 239.28" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="668.56 268.75 668.4 298.2 628.56 300.45 628.56 273.33 668.56 268.75" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="668.4 298.2 668.4 327.57 628.56 327.57 628.56 300.45 668.4 298.2" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="668.4 327.57 668.4 355.07 628.56 352.3 628.56 327.57 668.4 327.57" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="668.4 355.07 668.4 382.72 628.56 377.25 628.56 352.3 668.4 355.07" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="668.4 382.72 668.56 410.29 628.56 402.07 628.56 377.25 668.4 382.72" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <g style="clip-path: url(#clip-path-3)">
+            <g>
+              <circle id="Ellipse_1664-4" data-name="Ellipse 1664" cx="618.35" cy="403.74" r="1.56"/>
+              <circle id="Ellipse_1665-4" data-name="Ellipse 1665" cx="624.99" cy="410.38" r="1.56"/>
+              <circle id="Ellipse_1713-4" data-name="Ellipse 1713" cx="618.35" cy="390.53" r="1.56"/>
+              <circle id="Ellipse_1714-4" data-name="Ellipse 1714" cx="624.96" cy="397.13" r="1.56"/>
+              <circle id="Ellipse_1715-4" data-name="Ellipse 1715" cx="631.59" cy="403.77" r="1.56"/>
+              <circle id="Ellipse_1716-4" data-name="Ellipse 1716" cx="638.2" cy="410.38" r="1.56"/>
+              <circle id="Ellipse_1762-4" data-name="Ellipse 1762" cx="618.35" cy="377.28" r="1.56"/>
+              <circle id="Ellipse_1763-4" data-name="Ellipse 1763" cx="624.96" cy="383.92" r="1.56"/>
+              <circle id="Ellipse_1764-4" data-name="Ellipse 1764" cx="631.56" cy="390.53" r="1.56"/>
+              <circle id="Ellipse_1765-4" data-name="Ellipse 1765" cx="638.2" cy="397.16" r="1.56"/>
+              <circle id="Ellipse_1766-4" data-name="Ellipse 1766" cx="644.81" cy="403.77" r="1.56"/>
+              <circle id="Ellipse_1767-4" data-name="Ellipse 1767" cx="651.41" cy="410.38" r="1.56"/>
+              <circle id="Ellipse_1811-4" data-name="Ellipse 1811" cx="618.32" cy="364.07" r="1.56"/>
+              <circle id="Ellipse_1812-4" data-name="Ellipse 1812" cx="624.96" cy="370.68" r="1.56"/>
+              <circle id="Ellipse_1813-4" data-name="Ellipse 1813" cx="631.56" cy="377.31" r="1.56"/>
+              <circle id="Ellipse_1814-4" data-name="Ellipse 1814" cx="638.17" cy="383.92" r="1.56"/>
+              <circle id="Ellipse_1815-4" data-name="Ellipse 1815" cx="644.81" cy="390.53" r="1.56"/>
+              <circle id="Ellipse_1816-4" data-name="Ellipse 1816" cx="651.41" cy="397.16" r="1.56"/>
+              <circle id="Ellipse_1817-4" data-name="Ellipse 1817" cx="658.02" cy="403.77" r="1.56"/>
+              <circle id="Ellipse_1818-4" data-name="Ellipse 1818" cx="664.66" cy="410.41" r="1.56"/>
+              <circle id="Ellipse_1860-4" data-name="Ellipse 1860" cx="618.32" cy="350.86" r="1.56"/>
+              <circle id="Ellipse_1861-4" data-name="Ellipse 1861" cx="624.93" cy="357.46" r="1.56"/>
+              <circle id="Ellipse_1862-4" data-name="Ellipse 1862" cx="631.56" cy="364.07" r="1.56"/>
+              <circle id="Ellipse_1863-4" data-name="Ellipse 1863" cx="638.17" cy="370.71" r="1.56"/>
+              <circle id="Ellipse_1864-4" data-name="Ellipse 1864" cx="644.78" cy="377.31" r="1.56"/>
+              <circle id="Ellipse_1865-4" data-name="Ellipse 1865" cx="651.41" cy="383.92" r="1.56"/>
+              <circle id="Ellipse_1866-4" data-name="Ellipse 1866" cx="658.02" cy="390.56" r="1.56"/>
+              <circle id="Ellipse_1867-4" data-name="Ellipse 1867" cx="664.66" cy="397.16" r="1.56"/>
+              <circle id="Ellipse_1868-4" data-name="Ellipse 1868" cx="671.26" cy="403.77" r="1.56"/>
+              <circle id="Ellipse_1869-4" data-name="Ellipse 1869" cx="677.87" cy="410.41" r="1.56"/>
+              <circle id="Ellipse_1909-4" data-name="Ellipse 1909" cx="618.32" cy="337.61" r="1.56"/>
+              <circle id="Ellipse_1910-4" data-name="Ellipse 1910" cx="624.93" cy="344.25" r="1.56"/>
+              <circle id="Ellipse_1911-4" data-name="Ellipse 1911" cx="631.53" cy="350.86" r="1.56"/>
+              <circle id="Ellipse_1912-4" data-name="Ellipse 1912" cx="638.17" cy="357.46" r="1.56"/>
+              <circle id="Ellipse_1913-4" data-name="Ellipse 1913" cx="644.78" cy="364.1" r="1.56"/>
+              <circle id="Ellipse_1914-4" data-name="Ellipse 1914" cx="651.41" cy="370.71" r="1.56"/>
+              <circle id="Ellipse_1915-4" data-name="Ellipse 1915" cx="658.02" cy="377.31" r="1.56"/>
+              <circle id="Ellipse_1916-4" data-name="Ellipse 1916" cx="664.63" cy="383.95" r="1.56"/>
+              <circle id="Ellipse_1917-4" data-name="Ellipse 1917" cx="671.26" cy="390.56" r="1.56"/>
+              <circle id="Ellipse_1918-4" data-name="Ellipse 1918" cx="677.87" cy="397.16" r="1.56"/>
+              <circle id="Ellipse_1919-4" data-name="Ellipse 1919" cx="684.48" cy="403.8" r="1.56"/>
+              <circle id="Ellipse_1920-4" data-name="Ellipse 1920" cx="691.11" cy="410.41" r="1.56"/>
+              <circle id="Ellipse_1958-3" data-name="Ellipse 1958" cx="618.29" cy="324.4" r="1.56"/>
+              <circle id="Ellipse_1959-4" data-name="Ellipse 1959" cx="624.93" cy="331.01" r="1.56"/>
+              <circle id="Ellipse_1960-4" data-name="Ellipse 1960" cx="631.53" cy="337.61" r="1.56"/>
+              <circle id="Ellipse_1961-4" data-name="Ellipse 1961" cx="638.17" cy="344.25" r="1.56"/>
+              <circle id="Ellipse_1962-4" data-name="Ellipse 1962" cx="644.78" cy="350.86" r="1.56"/>
+              <circle id="Ellipse_1963-4" data-name="Ellipse 1963" cx="651.38" cy="357.49" r="1.56"/>
+              <circle id="Ellipse_1964-4" data-name="Ellipse 1964" cx="658.02" cy="364.1" r="1.56"/>
+              <circle id="Ellipse_1965-4" data-name="Ellipse 1965" cx="664.63" cy="370.71" r="1.56"/>
+              <circle id="Ellipse_1966-4" data-name="Ellipse 1966" cx="671.23" cy="377.34" r="1.56"/>
+              <circle id="Ellipse_1967-4" data-name="Ellipse 1967" cx="677.87" cy="383.95" r="1.56"/>
+              <circle id="Ellipse_1968-4" data-name="Ellipse 1968" cx="684.48" cy="390.56" r="1.56"/>
+              <circle id="Ellipse_1969-4" data-name="Ellipse 1969" cx="691.08" cy="397.19" r="1.56"/>
+              <circle id="Ellipse_2007-3" data-name="Ellipse 2007" cx="618.29" cy="311.16" r="1.56"/>
+              <circle id="Ellipse_2008-3" data-name="Ellipse 2008" cx="624.93" cy="317.79" r="1.56"/>
+              <circle id="Ellipse_2009-3" data-name="Ellipse 2009" cx="631.53" cy="324.4" r="1.56"/>
+              <circle id="Ellipse_2010-4" data-name="Ellipse 2010" cx="638.14" cy="331.01" r="1.56"/>
+              <circle id="Ellipse_2011-4" data-name="Ellipse 2011" cx="644.78" cy="337.64" r="1.56"/>
+              <circle id="Ellipse_2012-4" data-name="Ellipse 2012" cx="651.38" cy="344.25" r="1.56"/>
+              <circle id="Ellipse_2013-4" data-name="Ellipse 2013" cx="657.99" cy="350.86" r="1.56"/>
+              <circle id="Ellipse_2014-4" data-name="Ellipse 2014" cx="664.63" cy="357.49" r="1.56"/>
+              <circle id="Ellipse_2015-4" data-name="Ellipse 2015" cx="671.23" cy="364.1" r="1.56"/>
+              <circle id="Ellipse_2016-4" data-name="Ellipse 2016" cx="677.84" cy="370.74" r="1.56"/>
+              <circle id="Ellipse_2017-4" data-name="Ellipse 2017" cx="684.48" cy="377.34" r="1.56"/>
+              <circle id="Ellipse_2018-4" data-name="Ellipse 2018" cx="691.08" cy="383.95" r="1.56"/>
+              <circle id="Ellipse_2056-3" data-name="Ellipse 2056" cx="618.29" cy="297.94" r="1.56"/>
+              <circle id="Ellipse_2057-3" data-name="Ellipse 2057" cx="624.89" cy="304.55" r="1.56"/>
+              <circle id="Ellipse_2058-3" data-name="Ellipse 2058" cx="631.53" cy="311.19" r="1.56"/>
+              <circle id="Ellipse_2059-3" data-name="Ellipse 2059" cx="638.14" cy="317.79" r="1.56"/>
+              <circle id="Ellipse_2060-3" data-name="Ellipse 2060" cx="644.75" cy="324.4" r="1.56"/>
+              <circle id="Ellipse_2061-4" data-name="Ellipse 2061" cx="651.38" cy="331.04" r="1.56"/>
+              <circle id="Ellipse_2062-4" data-name="Ellipse 2062" cx="657.99" cy="337.64" r="1.56"/>
+              <circle id="Ellipse_2063-4" data-name="Ellipse 2063" cx="664.6" cy="344.25" r="1.56"/>
+              <circle id="Ellipse_2064-4" data-name="Ellipse 2064" cx="671.23" cy="350.89" r="1.56"/>
+              <circle id="Ellipse_2065-4" data-name="Ellipse 2065" cx="677.84" cy="357.49" r="1.56"/>
+              <circle id="Ellipse_2066-4" data-name="Ellipse 2066" cx="684.45" cy="364.13" r="1.56"/>
+              <circle id="Ellipse_2067-4" data-name="Ellipse 2067" cx="691.08" cy="370.74" r="1.56"/>
+              <circle id="Ellipse_2105-3" data-name="Ellipse 2105" cx="618.29" cy="284.73" r="1.56"/>
+              <circle id="Ellipse_2106-3" data-name="Ellipse 2106" cx="624.89" cy="291.34" r="1.56"/>
+              <circle id="Ellipse_2107-3" data-name="Ellipse 2107" cx="631.5" cy="297.94" r="1.56"/>
+              <circle id="Ellipse_2108-3" data-name="Ellipse 2108" cx="638.14" cy="304.58" r="1.56"/>
+              <circle id="Ellipse_2109-3" data-name="Ellipse 2109" cx="644.75" cy="311.19" r="1.56"/>
+              <circle id="Ellipse_2110-3" data-name="Ellipse 2110" cx="651.35" cy="317.79" r="1.56"/>
+              <circle id="Ellipse_2111-3" data-name="Ellipse 2111" cx="657.99" cy="324.43" r="1.56"/>
+              <circle id="Ellipse_2112-4" data-name="Ellipse 2112" cx="664.6" cy="331.04" r="1.56"/>
+              <circle id="Ellipse_2113-4" data-name="Ellipse 2113" cx="671.2" cy="337.64" r="1.56"/>
+              <circle id="Ellipse_2114-4" data-name="Ellipse 2114" cx="677.84" cy="344.28" r="1.56"/>
+              <circle id="Ellipse_2115-4" data-name="Ellipse 2115" cx="684.45" cy="350.89" r="1.56"/>
+              <circle id="Ellipse_2116-4" data-name="Ellipse 2116" cx="691.08" cy="357.49" r="1.56"/>
+              <circle id="Ellipse_2154-3" data-name="Ellipse 2154" cx="618.26" cy="271.49" r="1.56"/>
+              <circle id="Ellipse_2155-3" data-name="Ellipse 2155" cx="624.89" cy="278.09" r="1.56"/>
+              <circle id="Ellipse_2156-3" data-name="Ellipse 2156" cx="631.5" cy="284.73" r="1.56"/>
+              <circle id="Ellipse_2157-3" data-name="Ellipse 2157" cx="638.11" cy="291.34" r="1.56"/>
+              <circle id="Ellipse_2158-3" data-name="Ellipse 2158" cx="644.75" cy="297.97" r="1.56"/>
+              <circle id="Ellipse_2159-3" data-name="Ellipse 2159" cx="651.35" cy="304.58" r="1.56"/>
+              <circle id="Ellipse_2160-3" data-name="Ellipse 2160" cx="657.96" cy="311.19" r="1.56"/>
+              <circle id="Ellipse_2161-3" data-name="Ellipse 2161" cx="664.6" cy="317.82" r="1.56"/>
+              <circle id="Ellipse_2162-3" data-name="Ellipse 2162" cx="671.2" cy="324.43" r="1.56"/>
+              <circle id="Ellipse_2163-4" data-name="Ellipse 2163" cx="677.81" cy="331.04" r="1.56"/>
+              <circle id="Ellipse_2164-4" data-name="Ellipse 2164" cx="684.45" cy="337.68" r="1.56"/>
+              <circle id="Ellipse_2165-4" data-name="Ellipse 2165" cx="691.05" cy="344.28" r="1.56"/>
+              <circle id="Ellipse_2203-3" data-name="Ellipse 2203" cx="618.26" cy="258.27" r="1.56"/>
+              <circle id="Ellipse_2204-3" data-name="Ellipse 2204" cx="624.86" cy="264.88" r="1.56"/>
+              <circle id="Ellipse_2205-3" data-name="Ellipse 2205" cx="631.5" cy="271.49" r="1.56"/>
+              <circle id="Ellipse_2206-3" data-name="Ellipse 2206" cx="638.11" cy="278.12" r="1.56"/>
+              <circle id="Ellipse_2207-3" data-name="Ellipse 2207" cx="644.71" cy="284.73" r="1.56"/>
+              <circle id="Ellipse_2208-3" data-name="Ellipse 2208" cx="651.35" cy="291.34" r="1.56"/>
+              <circle id="Ellipse_2209-3" data-name="Ellipse 2209" cx="657.96" cy="297.97" r="1.56"/>
+              <circle id="Ellipse_2210-3" data-name="Ellipse 2210" cx="664.56" cy="304.58" r="1.56"/>
+              <circle id="Ellipse_2211-3" data-name="Ellipse 2211" cx="671.2" cy="311.22" r="1.56"/>
+              <circle id="Ellipse_2212-3" data-name="Ellipse 2212" cx="677.81" cy="317.82" r="1.56"/>
+              <circle id="Ellipse_2213-3" data-name="Ellipse 2213" cx="684.45" cy="324.43" r="1.56"/>
+              <circle id="Ellipse_2214-4" data-name="Ellipse 2214" cx="691.05" cy="331.07" r="1.56"/>
+              <circle id="Ellipse_2252-3" data-name="Ellipse 2252" cx="618.26" cy="245.03" r="1.56"/>
+              <circle id="Ellipse_2253-3" data-name="Ellipse 2253" cx="624.86" cy="251.67" r="1.56"/>
+              <circle id="Ellipse_2254-3" data-name="Ellipse 2254" cx="631.47" cy="258.27" r="1.56"/>
+              <circle id="Ellipse_2255-3" data-name="Ellipse 2255" cx="638.11" cy="264.88" r="1.56"/>
+              <circle id="Ellipse_2256-3" data-name="Ellipse 2256" cx="644.71" cy="271.52" r="1.56"/>
+              <circle id="Ellipse_2257-3" data-name="Ellipse 2257" cx="651.32" cy="278.12" r="1.56"/>
+              <circle id="Ellipse_2258-3" data-name="Ellipse 2258" cx="657.96" cy="284.73" r="1.56"/>
+              <circle id="Ellipse_2259-3" data-name="Ellipse 2259" cx="664.56" cy="291.37" r="1.56"/>
+              <circle id="Ellipse_2260-3" data-name="Ellipse 2260" cx="671.2" cy="297.97" r="1.56"/>
+              <circle id="Ellipse_2261-3" data-name="Ellipse 2261" cx="677.81" cy="304.58" r="1.56"/>
+              <circle id="Ellipse_2262-3" data-name="Ellipse 2262" cx="684.41" cy="311.22" r="1.56"/>
+              <circle id="Ellipse_2263-3" data-name="Ellipse 2263" cx="691.05" cy="317.82" r="1.56"/>
+              <circle id="Ellipse_2302-3" data-name="Ellipse 2302" cx="624.86" cy="238.42" r="1.56"/>
+              <circle id="Ellipse_2303-3" data-name="Ellipse 2303" cx="631.47" cy="245.06" r="1.56"/>
+              <circle id="Ellipse_2304-3" data-name="Ellipse 2304" cx="638.08" cy="251.67" r="1.56"/>
+              <circle id="Ellipse_2305-3" data-name="Ellipse 2305" cx="644.71" cy="258.27" r="1.56"/>
+              <circle id="Ellipse_2306-3" data-name="Ellipse 2306" cx="651.32" cy="264.91" r="1.56"/>
+              <circle id="Ellipse_2307-3" data-name="Ellipse 2307" cx="657.96" cy="271.52" r="1.56"/>
+              <circle id="Ellipse_2308-3" data-name="Ellipse 2308" cx="664.56" cy="278.12" r="1.56"/>
+              <circle id="Ellipse_2309-3" data-name="Ellipse 2309" cx="671.17" cy="284.76" r="1.56"/>
+              <circle id="Ellipse_2310-3" data-name="Ellipse 2310" cx="677.81" cy="291.37" r="1.56"/>
+              <circle id="Ellipse_2311-3" data-name="Ellipse 2311" cx="684.41" cy="297.97" r="1.56"/>
+              <circle id="Ellipse_2312-3" data-name="Ellipse 2312" cx="691.02" cy="304.61" r="1.56"/>
+              <circle id="Ellipse_2353-3" data-name="Ellipse 2353" cx="638.08" cy="238.42" r="1.56"/>
+              <circle id="Ellipse_2354-3" data-name="Ellipse 2354" cx="644.71" cy="245.06" r="1.56"/>
+              <circle id="Ellipse_2355-3" data-name="Ellipse 2355" cx="651.32" cy="251.67" r="1.56"/>
+              <circle id="Ellipse_2356-3" data-name="Ellipse 2356" cx="657.93" cy="258.3" r="1.56"/>
+              <circle id="Ellipse_2357-3" data-name="Ellipse 2357" cx="664.56" cy="264.91" r="1.56"/>
+              <circle id="Ellipse_2358-3" data-name="Ellipse 2358" cx="671.17" cy="271.52" r="1.56"/>
+              <circle id="Ellipse_2359-3" data-name="Ellipse 2359" cx="677.78" cy="278.16" r="1.56"/>
+              <circle id="Ellipse_2360-3" data-name="Ellipse 2360" cx="684.41" cy="284.76" r="1.56"/>
+              <circle id="Ellipse_2361-3" data-name="Ellipse 2361" cx="691.02" cy="291.37" r="1.56"/>
+              <circle id="Ellipse_2404-3" data-name="Ellipse 2404" cx="651.32" cy="238.45" r="1.56"/>
+              <circle id="Ellipse_2405-3" data-name="Ellipse 2405" cx="657.93" cy="245.06" r="1.56"/>
+              <circle id="Ellipse_2406-3" data-name="Ellipse 2406" cx="664.53" cy="251.67" r="1.56"/>
+              <circle id="Ellipse_2407-3" data-name="Ellipse 2407" cx="671.17" cy="258.3" r="1.56"/>
+              <circle id="Ellipse_2408-3" data-name="Ellipse 2408" cx="677.78" cy="264.91" r="1.56"/>
+              <circle id="Ellipse_2409-3" data-name="Ellipse 2409" cx="684.38" cy="271.55" r="1.56"/>
+              <circle id="Ellipse_2410-3" data-name="Ellipse 2410" cx="691.02" cy="278.16" r="1.56"/>
+              <circle id="Ellipse_2455-3" data-name="Ellipse 2455" cx="664.53" cy="238.45" r="1.56"/>
+              <circle id="Ellipse_2456-3" data-name="Ellipse 2456" cx="671.14" cy="245.06" r="1.56"/>
+              <circle id="Ellipse_2457-3" data-name="Ellipse 2457" cx="677.78" cy="251.7" r="1.56"/>
+              <circle id="Ellipse_2458-3" data-name="Ellipse 2458" cx="684.38" cy="258.3" r="1.56"/>
+              <circle id="Ellipse_2459-3" data-name="Ellipse 2459" cx="690.99" cy="264.94" r="1.56"/>
+              <circle id="Ellipse_2506-3" data-name="Ellipse 2506" cx="677.75" cy="238.45" r="1.56"/>
+              <circle id="Ellipse_2507-3" data-name="Ellipse 2507" cx="684.38" cy="245.09" r="1.56"/>
+              <circle id="Ellipse_2508-3" data-name="Ellipse 2508" cx="690.99" cy="251.7" r="1.56"/>
+              <circle id="Ellipse_2557-3" data-name="Ellipse 2557" cx="690.99" cy="238.49" r="1.56"/>
+            </g>
+          </g>
+          <polygon points="736.18 252.54 720.64 254.83 720.64 237.76 736.18 235.47 736.18 252.54" style="fill: #1c1caf"/>
+          <polygon points="736.18 286.58 720.64 287.34 720.64 270.27 736.18 268.75 736.18 286.58" style="fill: #1c1caf"/>
+          <polygon points="736.18 320.07 720.64 320.07 720.64 303 736.18 302.24 736.18 320.07" style="fill: #1c1caf"/>
+          <polygon points="736.18 352.3 720.64 351.54 720.64 335.24 736.18 335.24 736.18 352.3" style="fill: #1c1caf"/>
+          <polygon points="736.18 385.34 720.64 383.05 720.64 365.99 736.18 367.51 736.18 385.34" style="fill: #1c1caf"/>
+          <polygon points="736.18 416.85 720.64 413.81 720.64 396.74 736.18 399.02 736.18 416.85" style="fill: #1c1caf"/>
+          <line x1="711.14" y1="231.99" x2="711.14" y2="419.04" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <rect x="638.77" y="254.65" width="14.46" height="5.33" transform="translate(-29.77 93.4) rotate(-8.08)" style="fill: #99ffd3"/>
+          <rect x="638.81" y="282.64" width="14.39" height="5.33" transform="translate(-24.96 65.02) rotate(-5.65)" style="fill: #99ffd3"/>
+          <rect x="638.84" y="311.34" width="14.32" height="5.33" style="fill: #99ffd3"/>
+          <rect x="643.33" y="333.75" width="5.33" height="14.34" transform="translate(269.61 966.91) rotate(-86.81)" style="fill: #99ffd3"/>
+          <rect x="643.33" y="359.75" width="5.33" height="14.36" transform="matrix(0.08, -1, 1, 0.08, 228.22, 981.28)" style="fill: #99ffd3"/>
+          <rect x="643.33" y="386.23" width="5.33" height="14.55" transform="translate(142.95 958.39) rotate(-79.66)" style="fill: #99ffd3"/>
+          <line x1="687.89" y1="243.67" x2="705.84" y2="240.81" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="249.01" x2="705.84" y2="246.14" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="254.34" x2="705.84" y2="251.47" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="259.67" x2="705.84" y2="256.81" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="274.36" x2="705.84" y2="272.39" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="279.7" x2="705.84" y2="277.73" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="285.03" x2="705.84" y2="283.06" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="290.36" x2="705.84" y2="288.39" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="304.73" x2="705.84" y2="304.22" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="310.07" x2="705.84" y2="309.56" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="315.4" x2="705.84" y2="314.89" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="320.73" x2="705.84" y2="320.23" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="334.96" x2="705.84" y2="335.31" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="340.29" x2="705.84" y2="340.64" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="345.63" x2="705.84" y2="345.98" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="350.96" x2="705.84" y2="351.31" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="362.72" x2="705.84" y2="364.46" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="368.06" x2="705.84" y2="369.79" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="373.39" x2="705.84" y2="375.12" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="378.72" x2="705.84" y2="380.46" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="391.91" x2="705.84" y2="394.63" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="397.25" x2="705.84" y2="399.97" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="402.58" x2="705.84" y2="405.3" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="687.89" y1="407.92" x2="705.84" y2="410.64" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="764.4 228.55 826.54 217.73 826.54 228.55 764.4 238.03 764.4 228.55" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="764.4 263.19 826.54 256.31 826.54 267.1 764.4 272.39 764.4 263.19" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="764.4 298.2 826.54 295.25 826.54 306.12 764.4 308.22 764.4 298.2" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="764.4 334.2 826.54 335.24 826.54 346.96 764.4 344.68 764.4 334.2" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="764.4 368.06 826.54 372.61 826.54 383.18 764.4 377.2 764.4 368.06" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <polygon points="764.4 402.58 826.54 411.88 826.54 421.8 764.4 411.81 764.4 402.58" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M821.9,224.06s-4.45,11,0,16.48" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M815,225.35s-1.17,11.26,2.93,15.19" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M807.08,226.53s-.88,11.25,5,14" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M799.76,227.88s.88,12.2,5.27,14.83" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M793,229.26s1.17,10.82,6.72,13.45" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M787.25,229.8s.79,10.22,4,13.85" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M781.23,230.6s.57,9.81,3.52,14.55" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M774.88,231.85s1.81,10.32,4,14" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M768.75,232.94s-.57,9.35,3.06,12.87" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M822.41,261.2s-5,10.77-.82,16.46" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M815.42,262.15s-1.72,11.19,2.17,15.31" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M807.48,262.93s-1.44,11.2,4.27,14.24" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M800.11,263.92s.27,12.23,4.52,15.08" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M793.32,265s.64,10.86,6,13.77" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M787.51,265.22s.29,10.24,3.28,14" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M781.46,265.72s.09,9.83,2.8,14.71" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M775.06,266.65s1.3,10.41,3.27,14.14" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M768.88,267.45s-1,9.3,2.42,13" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M823,300.26s-5.65,10.43-1.84,16.37" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M815.92,300.76s-2.42,11.06,1.2,15.42" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M807.94,301.05s-2.13,11.08,3.37,14.48" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M800.53,301.57s-.5,12.23,3.57,15.33" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M793.69,302.19s-.05,10.88,5.17,14.12" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M787.87,302.08s-.35,10.24,2.4,14.2" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M781.81,302.2s-.54,9.81,1.86,14.85" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M775.35,302.72s.65,10.47,2.39,14.32" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M769.14,303.13s-1.61,9.22,1.6,13.12" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M823.44,340.37s-6.39,10-3,16.2" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M816.4,340.36s-3.22,10.86.08,15.47" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M808.42,340.08s-2.93,10.9,2.32,14.68" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M801,340.06s-1.37,12.16,2.46,15.55" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M794.12,340.19s-.84,10.85,4.14,14.45" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M788.33,339.66s-1.1,10.18,1.36,14.34" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M782.27,339.34s-1.24,9.74.79,15" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M775.79,339.4s-.11,10.48,1.35,14.45" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M769.56,339.35s-2.27,9.08.66,13.21" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M823.84,377.9s-7.24,9.4-4.42,15.87" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M816.82,377.28s-4.15,10.53-1.26,15.42" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M808.9,376.29s-3.87,12.13,1,16.36" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M801.5,375.63s-2.44,12,1.08,15.7" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M794.65,375.16s-1.78,10.73,2.86,14.76" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M788.92,374.12s-2,10.05.11,14.41" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M782.92,373.27s-2.09,9.61-.52,15" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M776.46,372.77s-1,10.43.07,14.51" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M770.26,372.18s-3.32,9.78-.86,14.5" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M824,417.33s-7.91,8.84-5.57,15.5" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M817.05,416.19s-4.9,10.21-2.38,15.29" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M809.22,414.63s-4.63,10.3-.05,14.87" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M801.89,413.44s-3.3,11.77-.06,15.73" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M795.09,412.46s-2.56,10.58,1.78,14.93" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M789.46,411s-2.71,9.88-1,14.38" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M783.53,409.73s-2.78,9.42-1.61,14.88" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M777.13,408.75s-1.79,10.34-1,14.48" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <path d="M771,407.71s-4,9.6-2,14.51" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="764.4" y1="247.57" x2="826.54" y2="239.38" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="764.4" y1="282.31" x2="826.54" y2="277.17" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="764.4" y1="317.05" x2="826.54" y2="316.18" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="764.4" y1="352.56" x2="826.54" y2="356.57" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="764.4" y1="386.6" x2="826.54" y2="394.63" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <line x1="764.4" y1="421.3" x2="826.54" y2="432.83" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <g>
+            <g style="clip-path: url(#clip-path-4)">
+              <g>
+                <line x1="714.07" y1="324.69" x2="894.58" y2="515.61" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="719.51" y1="319.54" x2="900.02" y2="510.47" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="724.95" y1="314.4" x2="905.46" y2="505.33" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="730.39" y1="309.26" x2="910.9" y2="500.18" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="735.83" y1="304.11" x2="916.34" y2="495.04" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="741.27" y1="298.97" x2="921.78" y2="489.89" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="746.71" y1="293.83" x2="927.22" y2="484.75" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="752.15" y1="288.68" x2="932.66" y2="479.61" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="757.59" y1="283.54" x2="938.1" y2="474.46" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="763.03" y1="278.39" x2="943.54" y2="469.32" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="768.48" y1="273.25" x2="948.98" y2="464.18" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="773.92" y1="268.11" x2="954.42" y2="459.03" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="779.36" y1="262.96" x2="959.87" y2="453.89" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="784.8" y1="257.82" x2="965.31" y2="448.75" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="790.24" y1="252.68" x2="970.75" y2="443.6" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="795.68" y1="247.53" x2="976.19" y2="438.46" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="801.12" y1="242.39" x2="981.63" y2="433.31" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="806.56" y1="237.24" x2="987.07" y2="428.17" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="812" y1="232.1" x2="992.51" y2="423.03" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="817.44" y1="226.96" x2="997.95" y2="417.88" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="822.88" y1="221.81" x2="1003.39" y2="412.74" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="828.32" y1="216.67" x2="1008.83" y2="407.6" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="833.76" y1="211.53" x2="1014.27" y2="402.45" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="839.2" y1="206.38" x2="1019.71" y2="397.31" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="844.64" y1="201.24" x2="1025.15" y2="392.16" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="850.08" y1="196.1" x2="1030.59" y2="387.02" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="855.52" y1="190.95" x2="1036.03" y2="381.88" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="860.96" y1="185.81" x2="1041.47" y2="376.73" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="866.4" y1="180.66" x2="1046.91" y2="371.59" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="871.85" y1="175.52" x2="1052.35" y2="366.45" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="877.29" y1="170.38" x2="1057.79" y2="361.3" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="882.73" y1="165.23" x2="1063.24" y2="356.16" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="888.17" y1="160.09" x2="1068.68" y2="351.02" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="893.61" y1="154.95" x2="1074.12" y2="345.87" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="899.05" y1="149.8" x2="1079.56" y2="340.73" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+              </g>
+            </g>
+            <polygon points="854.1 213.27 940.26 225.69 940.26 429.87 854.1 441.88 854.1 213.27" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          </g>
+        </g>
+        <g id="Data_Center_1" data-name="Data Center 1">
+          <polygon points="708.2 474.33 568.22 494.33 568.22 159.55 708.2 179.55 708.2 474.33" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          <g>
+            <polygon points="568.22 494.33 276.35 434.33 276.35 209.55 568.22 159.55 568.22 494.33" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <line x1="448.1" y1="180.98" x2="448.1" y2="468.61" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <line x1="349.1" y1="196.98" x2="349.1" y2="449.61" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          </g>
+          <g>
+            <polygon points="339.92 249.74 339.71 288.39 287.42 291.34 287.42 255.75 339.92 249.74" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <polygon points="339.71 288.39 339.71 326.94 287.42 326.94 287.42 291.34 339.71 288.39" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <polygon points="339.71 326.94 339.71 363.03 287.42 359.4 287.42 326.94 339.71 326.94" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <polygon points="339.71 363.03 339.71 399.32 287.42 392.14 287.42 359.4 339.71 363.03" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <polygon points="339.71 399.32 339.92 435.5 287.42 424.71 287.42 392.14 339.71 399.32" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <g style="clip-path: url(#clip-path-5)">
+              <g>
+                <circle id="Ellipse_1664-5" data-name="Ellipse 1664" cx="274.02" cy="426.9" r="2.04"/>
+                <circle id="Ellipse_1665-5" data-name="Ellipse 1665" cx="282.73" cy="435.61" r="2.04"/>
+                <circle id="Ellipse_1713-5" data-name="Ellipse 1713" cx="274.02" cy="409.56" r="2.04"/>
+                <circle id="Ellipse_1714-5" data-name="Ellipse 1714" cx="282.69" cy="418.23" r="2.04"/>
+                <circle id="Ellipse_1715-5" data-name="Ellipse 1715" cx="291.4" cy="426.94" r="2.04"/>
+                <circle id="Ellipse_1716-5" data-name="Ellipse 1716" cx="300.07" cy="435.61" r="2.04"/>
+                <circle id="Ellipse_1762-5" data-name="Ellipse 1762" cx="274.02" cy="392.18" r="2.04"/>
+                <circle id="Ellipse_1763-5" data-name="Ellipse 1763" cx="282.69" cy="400.89" r="2.04"/>
+                <circle id="Ellipse_1764-5" data-name="Ellipse 1764" cx="291.36" cy="409.56" r="2.04"/>
+                <circle id="Ellipse_1765-5" data-name="Ellipse 1765" cx="300.07" cy="418.27" r="2.04"/>
+                <circle id="Ellipse_1766-5" data-name="Ellipse 1766" cx="308.74" cy="426.94" r="2.04"/>
+                <circle id="Ellipse_1767-5" data-name="Ellipse 1767" cx="317.41" cy="435.61" r="2.04"/>
+                <circle id="Ellipse_1811-5" data-name="Ellipse 1811" cx="273.98" cy="374.84" r="2.04"/>
+                <circle id="Ellipse_1812-5" data-name="Ellipse 1812" cx="282.69" cy="383.51" r="2.04"/>
+                <circle id="Ellipse_1813-5" data-name="Ellipse 1813" cx="291.36" cy="392.22" r="2.04"/>
+                <circle id="Ellipse_1814-5" data-name="Ellipse 1814" cx="300.03" cy="400.89" r="2.04"/>
+                <circle id="Ellipse_1815-5" data-name="Ellipse 1815" cx="308.74" cy="409.56" r="2.04"/>
+                <circle id="Ellipse_1816-5" data-name="Ellipse 1816" cx="317.41" cy="418.27" r="2.04"/>
+                <circle id="Ellipse_1817-5" data-name="Ellipse 1817" cx="326.08" cy="426.94" r="2.04"/>
+                <circle id="Ellipse_1818-5" data-name="Ellipse 1818" cx="334.79" cy="435.66" r="2.04"/>
+                <circle id="Ellipse_1860-5" data-name="Ellipse 1860" cx="273.98" cy="357.5" r="2.04"/>
+                <circle id="Ellipse_1861-5" data-name="Ellipse 1861" cx="282.65" cy="366.17" r="2.04"/>
+                <circle id="Ellipse_1862-5" data-name="Ellipse 1862" cx="291.36" cy="374.84" r="2.04"/>
+                <circle id="Ellipse_1863-5" data-name="Ellipse 1863" cx="300.03" cy="383.55" r="2.04"/>
+                <circle id="Ellipse_1864-5" data-name="Ellipse 1864" cx="308.7" cy="392.22" r="2.04"/>
+                <circle id="Ellipse_1865-5" data-name="Ellipse 1865" cx="317.41" cy="400.89" r="2.04"/>
+                <circle id="Ellipse_1866-5" data-name="Ellipse 1866" cx="326.08" cy="409.6" r="2.04"/>
+                <circle id="Ellipse_1867-5" data-name="Ellipse 1867" cx="334.79" cy="418.27" r="2.04"/>
+                <circle id="Ellipse_1868-5" data-name="Ellipse 1868" cx="343.47" cy="426.94" r="2.04"/>
+                <circle id="Ellipse_1869-5" data-name="Ellipse 1869" cx="352.14" cy="435.66" r="2.04"/>
+                <circle id="Ellipse_1909-5" data-name="Ellipse 1909" cx="273.98" cy="340.12" r="2.04"/>
+                <circle id="Ellipse_1910-5" data-name="Ellipse 1910" cx="282.65" cy="348.83" r="2.04"/>
+                <circle id="Ellipse_1911-5" data-name="Ellipse 1911" cx="291.32" cy="357.5" r="2.04"/>
+                <circle id="Ellipse_1912-5" data-name="Ellipse 1912" cx="300.03" cy="366.17" r="2.04"/>
+                <circle id="Ellipse_1913-5" data-name="Ellipse 1913" cx="308.7" cy="374.88" r="2.04"/>
+                <circle id="Ellipse_1914-5" data-name="Ellipse 1914" cx="317.41" cy="383.55" r="2.04"/>
+                <circle id="Ellipse_1915-5" data-name="Ellipse 1915" cx="326.08" cy="392.22" r="2.04"/>
+                <circle id="Ellipse_1916-5" data-name="Ellipse 1916" cx="334.75" cy="400.93" r="2.04"/>
+                <circle id="Ellipse_1917-5" data-name="Ellipse 1917" cx="343.47" cy="409.6" r="2.04"/>
+                <circle id="Ellipse_1918-5" data-name="Ellipse 1918" cx="352.14" cy="418.27" r="2.04"/>
+                <circle id="Ellipse_1919-5" data-name="Ellipse 1919" cx="360.81" cy="426.99" r="2.04"/>
+                <circle id="Ellipse_1920-5" data-name="Ellipse 1920" cx="369.52" cy="435.66" r="2.04"/>
+                <circle id="Ellipse_1958-4" data-name="Ellipse 1958" cx="273.94" cy="322.78" r="2.04"/>
+                <circle id="Ellipse_1959-5" data-name="Ellipse 1959" cx="282.65" cy="331.45" r="2.04"/>
+                <circle id="Ellipse_1960-5" data-name="Ellipse 1960" cx="291.32" cy="340.12" r="2.04"/>
+                <circle id="Ellipse_1961-5" data-name="Ellipse 1961" cx="300.03" cy="348.83" r="2.04"/>
+                <circle id="Ellipse_1962-5" data-name="Ellipse 1962" cx="308.7" cy="357.5" r="2.04"/>
+                <circle id="Ellipse_1963-5" data-name="Ellipse 1963" cx="317.37" cy="366.21" r="2.04"/>
+                <circle id="Ellipse_1964-5" data-name="Ellipse 1964" cx="326.08" cy="374.88" r="2.04"/>
+                <circle id="Ellipse_1965-5" data-name="Ellipse 1965" cx="334.75" cy="383.55" r="2.04"/>
+                <circle id="Ellipse_1966-5" data-name="Ellipse 1966" cx="343.42" cy="392.26" r="2.04"/>
+                <circle id="Ellipse_1967-5" data-name="Ellipse 1967" cx="352.14" cy="400.93" r="2.04"/>
+                <circle id="Ellipse_1968-5" data-name="Ellipse 1968" cx="360.81" cy="409.6" r="2.04"/>
+                <circle id="Ellipse_1969-5" data-name="Ellipse 1969" cx="369.48" cy="418.31" r="2.04"/>
+                <circle id="Ellipse_2007-4" data-name="Ellipse 2007" cx="273.94" cy="305.4" r="2.04"/>
+                <circle id="Ellipse_2008-4" data-name="Ellipse 2008" cx="282.65" cy="314.11" r="2.04"/>
+                <circle id="Ellipse_2009-4" data-name="Ellipse 2009" cx="291.32" cy="322.78" r="2.04"/>
+                <circle id="Ellipse_2010-5" data-name="Ellipse 2010" cx="299.99" cy="331.45" r="2.04"/>
+                <circle id="Ellipse_2011-5" data-name="Ellipse 2011" cx="308.7" cy="340.16" r="2.04"/>
+                <circle id="Ellipse_2012-5" data-name="Ellipse 2012" cx="317.37" cy="348.83" r="2.04"/>
+                <circle id="Ellipse_2013-5" data-name="Ellipse 2013" cx="326.04" cy="357.5" r="2.04"/>
+                <circle id="Ellipse_2014-5" data-name="Ellipse 2014" cx="334.75" cy="366.21" r="2.04"/>
+                <circle id="Ellipse_2015-5" data-name="Ellipse 2015" cx="343.42" cy="374.88" r="2.04"/>
+                <circle id="Ellipse_2016-5" data-name="Ellipse 2016" cx="352.09" cy="383.59" r="2.04"/>
+                <circle id="Ellipse_2017-5" data-name="Ellipse 2017" cx="360.81" cy="392.26" r="2.04"/>
+                <circle id="Ellipse_2018-5" data-name="Ellipse 2018" cx="369.48" cy="400.93" r="2.04"/>
+                <circle id="Ellipse_2056-4" data-name="Ellipse 2056" cx="273.94" cy="288.06" r="2.04"/>
+                <circle id="Ellipse_2057-4" data-name="Ellipse 2057" cx="282.61" cy="296.73" r="2.04"/>
+                <circle id="Ellipse_2058-4" data-name="Ellipse 2058" cx="291.32" cy="305.44" r="2.04"/>
+                <circle id="Ellipse_2059-4" data-name="Ellipse 2059" cx="299.99" cy="314.11" r="2.04"/>
+                <circle id="Ellipse_2060-4" data-name="Ellipse 2060" cx="308.66" cy="322.78" r="2.04"/>
+                <circle id="Ellipse_2061-5" data-name="Ellipse 2061" cx="317.37" cy="331.49" r="2.04"/>
+                <circle id="Ellipse_2062-5" data-name="Ellipse 2062" cx="326.04" cy="340.16" r="2.04"/>
+                <circle id="Ellipse_2063-5" data-name="Ellipse 2063" cx="334.71" cy="348.83" r="2.04"/>
+                <circle id="Ellipse_2064-5" data-name="Ellipse 2064" cx="343.42" cy="357.54" r="2.04"/>
+                <circle id="Ellipse_2065-5" data-name="Ellipse 2065" cx="352.09" cy="366.21" r="2.04"/>
+                <circle id="Ellipse_2066-5" data-name="Ellipse 2066" cx="360.76" cy="374.92" r="2.04"/>
+                <circle id="Ellipse_2067-5" data-name="Ellipse 2067" cx="369.48" cy="383.59" r="2.04"/>
+                <circle id="Ellipse_2105-4" data-name="Ellipse 2105" cx="273.94" cy="270.72" r="2.04"/>
+                <circle id="Ellipse_2106-4" data-name="Ellipse 2106" cx="282.61" cy="279.39" r="2.04"/>
+                <circle id="Ellipse_2107-4" data-name="Ellipse 2107" cx="291.28" cy="288.06" r="2.04"/>
+                <circle id="Ellipse_2108-4" data-name="Ellipse 2108" cx="299.99" cy="296.77" r="2.04"/>
+                <circle id="Ellipse_2109-4" data-name="Ellipse 2109" cx="308.66" cy="305.44" r="2.04"/>
+                <circle id="Ellipse_2110-4" data-name="Ellipse 2110" cx="317.33" cy="314.11" r="2.04"/>
+                <circle id="Ellipse_2111-4" data-name="Ellipse 2111" cx="326.04" cy="322.82" r="2.04"/>
+                <circle id="Ellipse_2112-5" data-name="Ellipse 2112" cx="334.71" cy="331.49" r="2.04"/>
+                <circle id="Ellipse_2113-5" data-name="Ellipse 2113" cx="343.38" cy="340.16" r="2.04"/>
+                <circle id="Ellipse_2114-5" data-name="Ellipse 2114" cx="352.09" cy="348.87" r="2.04"/>
+                <circle id="Ellipse_2115-5" data-name="Ellipse 2115" cx="360.76" cy="357.54" r="2.04"/>
+                <circle id="Ellipse_2116-5" data-name="Ellipse 2116" cx="369.48" cy="366.21" r="2.04"/>
+                <circle id="Ellipse_2154-4" data-name="Ellipse 2154" cx="273.9" cy="253.33" r="2.04"/>
+                <circle id="Ellipse_2155-4" data-name="Ellipse 2155" cx="282.61" cy="262" r="2.04"/>
+                <circle id="Ellipse_2156-4" data-name="Ellipse 2156" cx="291.28" cy="270.72" r="2.04"/>
+                <circle id="Ellipse_2157-4" data-name="Ellipse 2157" cx="299.95" cy="279.39" r="2.04"/>
+                <circle id="Ellipse_2158-4" data-name="Ellipse 2158" cx="308.66" cy="288.1" r="2.04"/>
+                <circle id="Ellipse_2159-4" data-name="Ellipse 2159" cx="317.33" cy="296.77" r="2.04"/>
+                <circle id="Ellipse_2160-4" data-name="Ellipse 2160" cx="326" cy="305.44" r="2.04"/>
+                <circle id="Ellipse_2161-4" data-name="Ellipse 2161" cx="334.71" cy="314.15" r="2.04"/>
+                <circle id="Ellipse_2162-4" data-name="Ellipse 2162" cx="343.38" cy="322.82" r="2.04"/>
+                <circle id="Ellipse_2163-5" data-name="Ellipse 2163" cx="352.05" cy="331.49" r="2.04"/>
+                <circle id="Ellipse_2164-5" data-name="Ellipse 2164" cx="360.76" cy="340.2" r="2.04"/>
+                <circle id="Ellipse_2165-5" data-name="Ellipse 2165" cx="369.44" cy="348.87" r="2.04"/>
+                <circle id="Ellipse_2203-4" data-name="Ellipse 2203" cx="273.9" cy="235.99" r="2.04"/>
+                <circle id="Ellipse_2204-4" data-name="Ellipse 2204" cx="282.57" cy="244.66" r="2.04"/>
+                <circle id="Ellipse_2205-4" data-name="Ellipse 2205" cx="291.28" cy="253.33" r="2.04"/>
+                <circle id="Ellipse_2206-4" data-name="Ellipse 2206" cx="299.95" cy="262.05" r="2.04"/>
+                <circle id="Ellipse_2207-4" data-name="Ellipse 2207" cx="308.62" cy="270.72" r="2.04"/>
+                <circle id="Ellipse_2208-4" data-name="Ellipse 2208" cx="317.33" cy="279.39" r="2.04"/>
+                <circle id="Ellipse_2209-4" data-name="Ellipse 2209" cx="326" cy="288.1" r="2.04"/>
+                <circle id="Ellipse_2210-4" data-name="Ellipse 2210" cx="334.67" cy="296.77" r="2.04"/>
+                <circle id="Ellipse_2211-4" data-name="Ellipse 2211" cx="343.38" cy="305.48" r="2.04"/>
+                <circle id="Ellipse_2212-4" data-name="Ellipse 2212" cx="352.05" cy="314.15" r="2.04"/>
+                <circle id="Ellipse_2213-4" data-name="Ellipse 2213" cx="360.76" cy="322.82" r="2.04"/>
+                <circle id="Ellipse_2214-5" data-name="Ellipse 2214" cx="369.44" cy="331.53" r="2.04"/>
+                <circle id="Ellipse_2252-4" data-name="Ellipse 2252" cx="273.9" cy="218.61" r="2.04"/>
+                <circle id="Ellipse_2253-4" data-name="Ellipse 2253" cx="282.57" cy="227.32" r="2.04"/>
+                <circle id="Ellipse_2254-4" data-name="Ellipse 2254" cx="291.24" cy="235.99" r="2.04"/>
+                <circle id="Ellipse_2255-4" data-name="Ellipse 2255" cx="299.95" cy="244.66" r="2.04"/>
+                <circle id="Ellipse_2256-4" data-name="Ellipse 2256" cx="308.62" cy="253.38" r="2.04"/>
+                <circle id="Ellipse_2257-4" data-name="Ellipse 2257" cx="317.29" cy="262.05" r="2.04"/>
+                <circle id="Ellipse_2258-4" data-name="Ellipse 2258" cx="326" cy="270.72" r="2.04"/>
+                <circle id="Ellipse_2259-4" data-name="Ellipse 2259" cx="334.67" cy="279.43" r="2.04"/>
+                <circle id="Ellipse_2260-4" data-name="Ellipse 2260" cx="343.38" cy="288.1" r="2.04"/>
+                <circle id="Ellipse_2261-4" data-name="Ellipse 2261" cx="352.05" cy="296.77" r="2.04"/>
+                <circle id="Ellipse_2262-4" data-name="Ellipse 2262" cx="360.72" cy="305.48" r="2.04"/>
+                <circle id="Ellipse_2263-4" data-name="Ellipse 2263" cx="369.44" cy="314.15" r="2.04"/>
+                <circle id="Ellipse_2302-4" data-name="Ellipse 2302" cx="282.57" cy="209.94" r="2.04"/>
+                <circle id="Ellipse_2303-4" data-name="Ellipse 2303" cx="291.24" cy="218.65" r="2.04"/>
+                <circle id="Ellipse_2304-4" data-name="Ellipse 2304" cx="299.91" cy="227.32" r="2.04"/>
+                <circle id="Ellipse_2305-4" data-name="Ellipse 2305" cx="308.62" cy="235.99" r="2.04"/>
+                <circle id="Ellipse_2306-4" data-name="Ellipse 2306" cx="317.29" cy="244.7" r="2.04"/>
+                <circle id="Ellipse_2307-4" data-name="Ellipse 2307" cx="326" cy="253.38" r="2.04"/>
+                <circle id="Ellipse_2308-4" data-name="Ellipse 2308" cx="334.67" cy="262.05" r="2.04"/>
+                <circle id="Ellipse_2309-4" data-name="Ellipse 2309" cx="343.34" cy="270.76" r="2.04"/>
+                <circle id="Ellipse_2310-4" data-name="Ellipse 2310" cx="352.05" cy="279.43" r="2.04"/>
+                <circle id="Ellipse_2311-4" data-name="Ellipse 2311" cx="360.72" cy="288.1" r="2.04"/>
+                <circle id="Ellipse_2312-4" data-name="Ellipse 2312" cx="369.39" cy="296.81" r="2.04"/>
+                <circle id="Ellipse_2353-4" data-name="Ellipse 2353" cx="299.91" cy="209.94" r="2.04"/>
+                <circle id="Ellipse_2354-4" data-name="Ellipse 2354" cx="308.62" cy="218.65" r="2.04"/>
+                <circle id="Ellipse_2355-4" data-name="Ellipse 2355" cx="317.29" cy="227.32" r="2.04"/>
+                <circle id="Ellipse_2356-4" data-name="Ellipse 2356" cx="325.96" cy="236.03" r="2.04"/>
+                <circle id="Ellipse_2357-4" data-name="Ellipse 2357" cx="334.67" cy="244.7" r="2.04"/>
+                <circle id="Ellipse_2358-4" data-name="Ellipse 2358" cx="343.34" cy="253.38" r="2.04"/>
+                <circle id="Ellipse_2359-4" data-name="Ellipse 2359" cx="352.01" cy="262.09" r="2.04"/>
+                <circle id="Ellipse_2360-4" data-name="Ellipse 2360" cx="360.72" cy="270.76" r="2.04"/>
+                <circle id="Ellipse_2361-4" data-name="Ellipse 2361" cx="369.39" cy="279.43" r="2.04"/>
+                <circle id="Ellipse_2404-4" data-name="Ellipse 2404" cx="317.29" cy="209.98" r="2.04"/>
+                <circle id="Ellipse_2405-4" data-name="Ellipse 2405" cx="325.96" cy="218.65" r="2.04"/>
+                <circle id="Ellipse_2406-4" data-name="Ellipse 2406" cx="334.63" cy="227.32" r="2.04"/>
+                <circle id="Ellipse_2407-4" data-name="Ellipse 2407" cx="343.34" cy="236.03" r="2.04"/>
+                <circle id="Ellipse_2408-4" data-name="Ellipse 2408" cx="352.01" cy="244.7" r="2.04"/>
+                <circle id="Ellipse_2409-4" data-name="Ellipse 2409" cx="360.68" cy="253.42" r="2.04"/>
+                <circle id="Ellipse_2410-4" data-name="Ellipse 2410" cx="369.39" cy="262.09" r="2.04"/>
+                <circle id="Ellipse_2455-4" data-name="Ellipse 2455" cx="334.63" cy="209.98" r="2.04"/>
+                <circle id="Ellipse_2456-4" data-name="Ellipse 2456" cx="343.3" cy="218.65" r="2.04"/>
+                <circle id="Ellipse_2457-4" data-name="Ellipse 2457" cx="352.01" cy="227.36" r="2.04"/>
+                <circle id="Ellipse_2458-4" data-name="Ellipse 2458" cx="360.68" cy="236.03" r="2.04"/>
+                <circle id="Ellipse_2459-4" data-name="Ellipse 2459" cx="369.35" cy="244.75" r="2.04"/>
+                <circle id="Ellipse_2506-4" data-name="Ellipse 2506" cx="351.97" cy="209.98" r="2.04"/>
+                <circle id="Ellipse_2507-4" data-name="Ellipse 2507" cx="360.68" cy="218.69" r="2.04"/>
+                <circle id="Ellipse_2508-4" data-name="Ellipse 2508" cx="369.35" cy="227.36" r="2.04"/>
+                <circle id="Ellipse_2557-4" data-name="Ellipse 2557" cx="369.35" cy="210.02" r="2.04"/>
+              </g>
+            </g>
+            <polygon points="339.92 211.07 339.92 249.74 287.42 255.75 287.42 220.06 339.92 211.07" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          </g>
+          <polygon id="Screen_6" data-name="Screen 6" points="428.67 228.47 408.27 231.47 408.27 209.07 428.67 206.07 428.67 228.47" style="fill: #1c1caf"/>
+          <polygon id="Screen_5" data-name="Screen 5" points="428.67 273.14 408.27 274.14 408.27 251.74 428.67 249.74 428.67 273.14" style="fill: #1c1caf"/>
+          <polygon id="Screen_4" data-name="Screen 4" points="428.67 317.1 408.27 317.1 408.27 294.7 428.67 293.7 428.67 317.1" style="fill: #1c1caf"/>
+          <polygon id="Screen_3" data-name="Screen 3" points="428.67 359.4 408.27 358.4 408.27 337 428.67 337 428.67 359.4" style="fill: #1c1caf"/>
+          <polygon id="Screen_2" data-name="Screen 2" points="428.67 402.76 408.27 399.76 408.27 377.36 428.67 379.36 428.67 402.76" style="fill: #1c1caf"/>
+          <polygon id="Screen_1" data-name="Screen 1" points="428.67 444.11 408.27 440.11 408.27 417.72 428.67 420.72 428.67 444.11" style="fill: #1c1caf"/>
+          <rect id="Light_6" data-name="Light 6" x="300.82" y="231.24" width="18.98" height="7" transform="translate(-29.93 45.97) rotate(-8.08)" style="fill: #99ffd3"/>
+          <rect id="Light_5" data-name="Light 5" x="300.87" y="267.97" width="18.88" height="7" transform="translate(-25.23 31.88) rotate(-5.65)" style="fill: #99ffd3"/>
+          <rect id="Light_4" data-name="Light 4" x="300.91" y="305.64" width="18.79" height="7" style="fill: #99ffd3"/>
+          <rect id="Light_3" data-name="Light 3" x="306.81" y="335.05" width="7" height="18.82" transform="translate(-50.91 635.09) rotate(-86.81)" style="fill: #99ffd3"/>
+          <rect id="Light_2" data-name="Light 2" x="306.81" y="369.18" width="7" height="18.85" transform="translate(-92.06 657.4) rotate(-85.38)" style="fill: #99ffd3"/>
+          <rect id="Light_1" data-name="Light 1" x="306.81" y="403.92" width="7" height="19.1" transform="translate(-152.14 644.54) rotate(-79.66)" style="fill: #99ffd3"/>
+          <g>
+            <polygon points="437.62 194.33 437.48 238.43 358.9 247.58 359.1 207.78 437.62 194.33" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <polygon points="437.26 282.85 437.48 238.43 358.9 247.58 358.9 287.25 437.26 282.85" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <polygon points="437.26 282.85 437.48 326.94 358.9 326.94 358.9 287.25 437.26 282.85" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <polygon points="437.48 369.81 437.48 326.94 358.9 326.94 358.9 364.36 437.48 369.81" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <polygon points="437.48 412.75 437.48 369.81 358.9 364.36 358.9 401.96 437.48 412.75" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <polygon points="437.48 455.56 437.48 412.75 358.9 401.96 358.9 439.4 437.48 455.56" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <line x1="395.79" y1="201.5" x2="395.79" y2="446.99" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <g>
+              <line x1="365.28" y1="216.83" x2="388.85" y2="213.07" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="223.83" x2="388.85" y2="220.07" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="230.83" x2="388.85" y2="227.07" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="237.83" x2="388.85" y2="234.07" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            </g>
+            <g>
+              <line x1="365.28" y1="257.11" x2="388.85" y2="254.52" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="264.11" x2="388.85" y2="261.52" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="271.11" x2="388.85" y2="268.52" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="278.11" x2="388.85" y2="275.52" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            </g>
+            <g>
+              <line x1="365.28" y1="296.97" x2="388.85" y2="296.3" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="303.97" x2="388.85" y2="303.3" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="310.97" x2="388.85" y2="310.3" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="317.97" x2="388.85" y2="317.3" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            </g>
+            <g>
+              <line x1="365.28" y1="336.64" x2="388.85" y2="337.09" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="343.64" x2="388.85" y2="344.09" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="350.64" x2="388.85" y2="351.09" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="357.64" x2="388.85" y2="358.09" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            </g>
+            <g>
+              <line x1="365.28" y1="373.07" x2="388.85" y2="375.35" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="380.07" x2="388.85" y2="382.35" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="387.07" x2="388.85" y2="389.35" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="394.07" x2="388.85" y2="396.35" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            </g>
+            <g>
+              <line x1="365.28" y1="411.38" x2="388.85" y2="414.95" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="418.38" x2="388.85" y2="421.95" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="425.38" x2="388.85" y2="428.95" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <line x1="365.28" y1="432.38" x2="388.85" y2="435.95" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            </g>
+          </g>
+          <g>
+            <polygon points="553.14 326.94 553.14 377.84 459.33 371.2 459.33 326.94 553.14 326.94" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <polygon points="553.14 225.34 553.14 276.14 459.33 281.51 459.33 236.08 553.14 225.34" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+            <g>
+              <polygon points="459.73 415.96 553.14 428.64 553.14 479.33 459.73 460.13 459.73 415.96" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <polygon points="553.14 428.64 459.73 415.96 459.33 371.2 553.14 377.84 553.14 428.64" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <polygon points="553.14 276.14 553.14 326.94 459.33 326.94 459.33 281.51 553.14 276.14" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <polygon points="553.14 174.54 553.14 225.34 459.33 236.08 459.33 190.62 553.14 174.54" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+              <g>
+                <g>
+                  <polygon points="465.69 196.98 547.25 182.78 547.25 196.98 465.69 209.43 465.69 196.98" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M541.16,191.1s-5.84,14.43,0,21.62" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M532.07,192.78s-1.54,14.78,3.83,19.94" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M521.7,194.33s-1.15,14.77,6.53,18.39" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M512.11,196.11s1.15,16,6.91,19.46" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M503.28,197.92s1.54,14.2,8.83,17.65" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M495.68,198.63s1.05,13.4,5.22,18.17" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M487.79,199.67s.74,12.88,4.62,19.1" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M479.45,201.31s2.38,13.55,5.21,18.32" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M471.41,202.75s-.75,12.26,4,16.88" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <line x1="465.69" y1="221.95" x2="547.25" y2="211.19" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                </g>
+                <g>
+                  <polygon points="465.69 242.45 547.25 233.41 547.25 247.58 465.69 254.52 465.69 242.45" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M541.83,239.84s-6.55,14.13-1.07,21.6" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M532.66,241.08s-2.27,14.68,2.84,20.1" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M522.23,242.11s-1.88,14.69,5.61,18.69" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M512.56,243.41s.36,16,5.94,19.78" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M503.65,244.78s.84,14.26,8,18.07" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M496,245.11s.38,13.44,4.31,18.41" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M488.09,245.77s.11,12.89,3.67,19.3" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M479.68,247s1.71,13.65,4.3,18.55" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M471.58,248s-1.35,12.21,3.18,17.06" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <line x1="465.69" y1="267.54" x2="547.25" y2="260.8" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                </g>
+                <g>
+                  <polygon points="465.69 288.39 547.25 284.52 547.25 298.79 465.69 301.54 465.69 288.39" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M542.54,291.1s-7.42,13.69-2.42,21.49" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M533.31,291.76s-3.18,14.51,1.58,20.24" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M522.84,292.13s-2.8,14.55,4.43,19" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M513.11,292.82s-.65,16,4.68,20.12" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M504.14,293.63s-.07,14.28,6.79,18.53" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M496.5,293.49s-.46,13.43,3.15,18.64" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M488.54,293.64s-.7,12.88,2.45,19.49" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M480.07,294.33s.85,13.74,3.13,18.79" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M471.92,294.86S469.8,307,474,312.08" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <line x1="465.69" y1="313.13" x2="547.25" y2="312" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                </g>
+                <g>
+                  <polygon points="465.69 335.64 547.25 337 547.25 352.39 465.69 349.39 465.69 335.64" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M543.19,343.74s-8.39,13.11-4,21.25" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M533.94,343.73s-4.22,14.25.11,20.3" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M523.47,343.35s-3.84,14.31,3,19.27" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M513.71,343.34S512,358.8,517,363.25" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M504.7,343.5s-1.1,14.24,5.44,19" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M497.1,342.8s-1.44,13.37,1.79,18.82" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M489.15,342.38s-1.63,12.8,1,19.62" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M480.65,342.46s-.15,13.76,1.76,19" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M472.48,342.41s-3,11.91.85,17.32" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <line x1="465.69" y1="359.73" x2="547.25" y2="364.99" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                </g>
+                <g>
+                  <polygon points="465.69 380.07 547.25 386.06 547.25 399.92 465.69 392.08 465.69 380.07" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M543.71,393s-9.5,12.34-5.8,20.83" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M534.5,392.18s-5.45,13.82-1.66,20.23" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M524.1,390.89s-5.08,15.91,1.35,21.46" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M514.38,390s-3.19,15.73,1.43,20.6" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M505.39,389.39S501.88,404,508,409.25" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M497.88,388s-2.64,14.5.1,20.21" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M490,386.92s-2.74,12.6-.69,19.64" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M481.52,386.26s-1.34,13.69.1,19" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M473.39,385.49s-4.35,12.83-1.13,19" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <line x1="465.69" y1="404.41" x2="547.25" y2="414.95" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                </g>
+                <g>
+                  <polygon points="465.69 425.38 547.25 437.58 547.25 450.61 465.69 437.5 465.69 425.38" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M543.93,444.74s-10.38,11.6-7.31,20.35" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M534.8,443.25s-6.44,13.39-3.13,20.06" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M524.52,441.2s-6.07,13.51-.07,19.51" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M514.9,439.63s-4.33,15.46-.08,20.65" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M506,438.35s-3.36,13.88,2.33,19.6" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M498.58,436.45s-3.55,13-1.23,18.86" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M490.8,434.76s-3.65,12.37-2.11,19.54" style="fill: none;stroke: #ffe8c7;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M482.4,433.48s-2.34,13.56-1.29,19" style="fill: none;stroke: #1c1caf;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <path d="M474.34,432.12s-5.31,12.59-2.57,19" style="fill: none;stroke: #99ffd3;stroke-miterlimit: 10;stroke-width: 3px"/>
+                  <line x1="465.69" y1="449.96" x2="547.25" y2="465.09" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g>
+            <g style="clip-path: url(#clip-path-6)">
+              <g>
+                <line x1="395.99" y1="323.08" x2="636.65" y2="577.63" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="403.24" y1="316.23" x2="643.9" y2="570.77" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="410.49" y1="309.37" x2="651.15" y2="563.91" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="417.75" y1="302.51" x2="658.41" y2="557.06" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="425" y1="295.65" x2="665.66" y2="550.2" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="432.25" y1="288.8" x2="672.91" y2="543.34" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="439.51" y1="281.94" x2="680.17" y2="536.48" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="446.76" y1="275.08" x2="687.42" y2="529.63" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="454.01" y1="268.22" x2="694.67" y2="522.77" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="461.27" y1="261.36" x2="701.93" y2="515.91" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="468.52" y1="254.51" x2="709.18" y2="509.05" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="475.77" y1="247.65" x2="716.43" y2="502.2" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="483.03" y1="240.79" x2="723.69" y2="495.34" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="490.28" y1="233.93" x2="730.94" y2="488.48" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="497.54" y1="227.08" x2="738.19" y2="481.62" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="504.79" y1="220.22" x2="745.45" y2="474.76" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="512.04" y1="213.36" x2="752.7" y2="467.91" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="519.3" y1="206.5" x2="759.95" y2="461.05" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="526.55" y1="199.65" x2="767.21" y2="454.19" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="533.8" y1="192.79" x2="774.46" y2="447.33" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="541.06" y1="185.93" x2="781.71" y2="440.48" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="548.31" y1="179.07" x2="788.97" y2="433.62" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="555.56" y1="172.21" x2="796.22" y2="426.76" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="562.82" y1="165.36" x2="803.47" y2="419.9" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="570.07" y1="158.5" x2="810.73" y2="413.05" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="577.32" y1="151.64" x2="817.98" y2="406.19" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="584.58" y1="144.78" x2="825.23" y2="399.33" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="591.83" y1="137.93" x2="832.49" y2="392.47" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="599.08" y1="131.07" x2="839.74" y2="385.61" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="606.34" y1="124.21" x2="847" y2="378.76" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="613.59" y1="117.35" x2="854.25" y2="371.9" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="620.84" y1="110.5" x2="861.5" y2="365.04" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="628.1" y1="103.64" x2="868.76" y2="358.18" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="635.35" y1="96.78" x2="876.01" y2="351.33" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+                <line x1="642.6" y1="89.92" x2="883.26" y2="344.47" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 2px"/>
+              </g>
+            </g>
+            <polygon points="582.68 174.54 697.55 191.1 697.55 463.31 582.68 479.33 582.68 174.54" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path d="M324.13,38.49c-11,10.58-57.56,24.08-72.69,29.09-25.69,8.51-69.65,29-93.1,74.07-24.4,46.87-53.73,62.75-68.77,68-12.56,4.41-24.64,9.9-35.2,17.41C24.68,248.19-17,291.76,13.18,357.8c44.29,97.06,123.94,99.26,123.94,99.26s107.33,6.62,191,72.79c40,31.66,99.75,33,151.17,25.84,50.12-7,96.88-26.39,136.88-54.36,32.21-22.53,84.62-50,147.44-48.68a205.54,205.54,0,0,0,69.23-10.1c49.91-16.48,88-53.38,105.92-98.26,19.56-48.88,29.67-107-12-149.83-45.72-32.87-87.47-48.83-125.61-57.87-75-17.77-101.84-70.87-150.08-90-37.26-14.77-97.68-2.28-134.47-18.77C442.68-5.33,373.57-9.07,324.13,38.49Z" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 3px"/>
+  </g>
 </svg>

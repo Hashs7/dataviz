@@ -1,4 +1,9 @@
-import { CHANGE_INDEX_VUE, CHANGE_STUFF } from "../actions";
+import {
+    CHANGE_INDEX_VUE,
+    CHANGE_STUFF,
+    MAIL_AMOUNT,
+    MAIL_TYPE
+} from "../actions";
 
 /**
  *
@@ -17,6 +22,16 @@ export const current = (state = {}, action) => {
             return {
                 ...state,
                 stuffHover: action.index
+            };
+        case MAIL_AMOUNT:
+            return {
+                ...state,
+                mailAmount: action.amount
+            };
+        case MAIL_TYPE:
+            return {
+                ...state,
+                mailType: action.mailtype
             };
         default:
             return state;

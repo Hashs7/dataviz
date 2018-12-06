@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
 import MailLayout from "../components/pages/Mail/MailLayout";
-import {
-CHANGE_INDEX_VUE
-} from '../store/actions';
+import { CHANGE_INDEX_VUE } from '../store/actions';
 
 /**
  *

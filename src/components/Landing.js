@@ -23,7 +23,6 @@ const Landing = () => (
                 <PoseGroup>
                     <RouteContainer key="xp" >
                         <Switch location={location}>
-                            {console.log(location)}
                             <Route exact path="/" component={Home} key="home" />
                             <Route path="/pourquoi" component={DataCentersContainer} key="why" />
                             <Route path="/mail" component={Mail} key="mail" />

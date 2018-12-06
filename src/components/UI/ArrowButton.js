@@ -29,12 +29,13 @@ const StyledSVG = styled(SVG)`
     left: 0; right: 0;
     margin: auto;
     z-index: 10;
+    transform: ${props => props.direction ? `rotate(${props.direction})`: ''}
 `;
 
-const ArrowButton = ({ action }) => {
+const ArrowButton = ({ action, direction }) => {
     return (
         <Button onClick={action}>
-            <StyledSVG src="./assets/svg/arrow.svg"/>
+            <StyledSVG src="./assets/svg/arrow.svg" direction={direction}/>
         </Button>
     );
 };

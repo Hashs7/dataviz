@@ -2,7 +2,7 @@ import React from 'react';
 import AnimatedShape from '../../UI/Shape';
 import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
-import {STUFF} from "../../../constantes";
+import { DIRECTION, STUFF } from "../../../constantes";
 
 const SVGDot = styled(SVG)`
     position: absolute;
@@ -32,7 +32,7 @@ const Computer = styled(SVG)`
     width: 240px;
     bottom: 0;
     left: 0;
-    z-index: 3;
+    z-index: 4;
 `;
 
 const CloudContainer = styled.div`
@@ -50,7 +50,7 @@ const CloudBefore = styled(SVG)`
     right: -100px;
     height: 49%;
     width: 83vh;
-    z-index: 3;
+    z-index: 4;
 `;
 
 const Cloud = styled(SVG)`
@@ -103,11 +103,11 @@ const LegendCloud = styled(LegendContainer)`
     text-align: left;
 `;
 
-
 const DataCentersLayout = ({ vueIndex, stuffHover }) => {
     return (
         <div>
             <SVGDot src="./assets/svg/shapes/vue-2/shape-dot.svg" />
+
             <ComputerContainer>
                 <ComputerSubContainer>
                     <Computer src="./assets/svg/computer.svg" />
@@ -136,6 +136,7 @@ const DataCentersLayout = ({ vueIndex, stuffHover }) => {
 
             <AnimatedShape
                 in={vueIndex === 2 || vueIndex === 3}
+                direction={DIRECTION.TOP_RIGHT}
                 src="./assets/svg/shapes/vue-2/shape-orange.svg"
                 maxWidth="1052px"
                 width="55%"

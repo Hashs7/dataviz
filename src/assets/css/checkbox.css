@@ -1,0 +1,18 @@
+.check {
+    pointer-events: none;
+    display: block;
+    width: 28px;
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    margin: auto;
+    opacity: 0;
+}
+.checkbox:checked ~ .check {
+    opacity: 1;
+}
+.checkbox:checked ~ .check {
+    opacity: 1;
+}

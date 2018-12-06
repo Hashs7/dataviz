@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import styled from "styled-components";
 import SVG from "react-inlinesvg";
 import TweenMax, { Power1 } from "gsap/TweenMax";
@@ -19,11 +20,10 @@ const StyledSVG = styled(SVG)`
 
 const animate = {
     enter(target, direction, cb){
-        return TweenMax.from(target, 4.5, {
-            opacity: 0,
-            scaleX: 2,
-            scaleY: 3,
-            force3D: true,
+        const { x, y } = direction;
+        return TweenMax.from(target, 3, {
+            x,
+            y,
             ease: Power1.easeOut,
         })
     },
@@ -40,11 +40,14 @@ const animate = {
 class Shape extends React.Component {
     constructor(props){
         super(props);
+        this.dom = {};
         this.elRef = React.createRef();
     }
 
     componentDidMount(){
-        animate.enter(this.elRef.current, () => {});
+        this.dom.root = ReactDOM.findDOMNode(this);
+        animate.enter(this.dom.root, this.props.direction);
+        // animate.enter(this.elRef.current, () => {});
     }
 
     render() {
