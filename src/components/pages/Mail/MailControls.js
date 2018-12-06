@@ -5,7 +5,9 @@ import SVG from 'react-inlinesvg';
 import ArrowButton from '../../UI/ArrowButton';
 import { VUE } from '../../../store/actions';
 import { theme } from '../../../constantes';
+import { tween, easing } from 'popmotion';
 import '../../../assets/css/checkbox.css';
+import MailChart from "./MailChart";
 
 const Container = styled.div`
     position: absolute;
@@ -51,13 +53,14 @@ const Icon = styled.label`
     cursor: pointer;
 `;
 
-const IconValue = styled.span`
+const Notif = styled.span`
     position: absolute;
     top: -22px;
     right: -18px;
-    width: 70px;
+    padding: 0px 10px;
+    box-sizing: border-box;
     height: 44px;
-    line-height: 40px;
+    line-height: 34px;
     font-size: 21px;
     background-color: ${theme.color.orange}; 
     border: 3px solid #000;
@@ -91,6 +94,7 @@ class MailControls extends Component {
         this.state = {
             mailAmount: 0,
             mailType: '',
+            mailNotif: 1,
             helpAction: "En moyenne, combien de mails envoyez-vous par semaine ?"
         };
         this.handleOnChange = this.handleOnChange.bind(this);
@@ -99,7 +103,7 @@ class MailControls extends Component {
     }
 
     handleOnChange = (value) => {
-        this.setState({ mailAmount: value })
+        this.setState({ mailAmount: value });
     }
 
     nextAction(vue){
@@ -107,6 +111,12 @@ class MailControls extends Component {
             this.setState({ helpAction: "Quelle allure a votre messagerie ?" });
             this.props.changeVue(vue);
             this.props.changeMailAmount(this.state.mailAmount);
+            tween({
+                from: 1,
+                to: 1642,
+                duration: 2000,
+                ease: easing.easeOut,
+            }).start(v => this.setState({ mailNotif: Math.floor(v) }))
         }
 
         if(this.props.vueIndex === VUE.MAIL_TYPE){
@@ -162,7 +172,7 @@ class MailControls extends Component {
                             <StyledMailbox>
                                 <Icon htmlFor="not-clean">
                                     <SVG src="./assets/svg/mailbox.svg" />
-                                    <IconValue>1642</IconValue>
+                                    <Notif>{this.state.mailNotif}</Notif>
                                 </Icon>
                                 <StyledInput
                                     type="radio"
@@ -174,6 +184,11 @@ class MailControls extends Component {
                             </StyledMailbox>
                         </SelectContainer>
                     : null}
+
+                    {this.props.vueIndex === 6 ?
+                        <MailChart />
+                    : null}
+
                     {this.props.vueIndex === VUE.MAIL_QUANTITY || this.props.vueIndex === VUE.MAIL_TYPE ?
                         <ButtonContainer>
                             <ArrowButton action={() => this.nextAction(this.props.vueIndex + 1)} direction="-90deg"/>

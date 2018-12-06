@@ -67,4 +67,7 @@ tspan{
     user-select: none;
 }
 
-
+.VictoryContainer svg{
+    -webkit-filter: none !important;
+    filter: none !important;
+}

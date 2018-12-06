@@ -70,10 +70,8 @@ class MorphingShape extends Component {
     }
 
     morphShape(){
-        console.log('morphing')
         const { pathIndex } = this.state;
         const nextIndex = pathIndex + 1;
-        console.log(this.pathIds.length);
         this.setState({
             pathIndex: nextIndex > this.pathIds.length - 1 ? pathIndex : nextIndex
         });
@@ -99,11 +97,9 @@ class MorphingShape extends Component {
 
         console.log("update", this.props.event);
         if(this.state.pathIndex === 0){
-            console.log('first')
             setTimeout(this.morphShape, 400);
         }
         if(prevState.pathIndex === 1 && this.state.pathIndex === 1){
-            console.log('second')
             setTimeout(this.morphShape, 1700);
         }
     }

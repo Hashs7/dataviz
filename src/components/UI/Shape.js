@@ -63,11 +63,9 @@ const AnimatedShape = (props) => {
             in={props.in}
             timeout={1500}
             onEnter={node => {
-                console.log('entering')
                 animate.enter(node, props.direction, () => {});
             }}
             onExit={node => {
-                console.log('exit')
                 animate.leave(node, props.direction, () => {});
             }}
             mountOnEnter

@@ -4,9 +4,6 @@ import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
 import { theme, greenPath, bluePath, orangePath } from '../../constantes';
 import { VUE } from "../../store/actions";
-import posed from 'react-pose';
-import { tween, easing } from 'popmotion';
-import { interpolate } from 'flubber';
 import HomeLayout from "../pages/Home/HomeLayout";
 import DataCentersLayoutContainer from "../../containers/DataCentersLayoutContainer";
 import MailLayoutContainer from "../../containers/MailLayoutContainer";
@@ -37,13 +34,23 @@ const About = styled.button`
     color: ${props => props.color};
     transition: all .2s ease;
 `;
+
 const NextButton = styled.div`
     position: absolute;
     right: 100px;
     bottom: 80px;
     z-index: 6;
 `;
-// Vue 1
+
+const Logo = styled(SVG)`
+    position: relative;
+    display: block;
+    margin: 30px 0 0 70px;
+    width: 40px;
+    height: 40px;
+    z-index: 5;
+`;
+
 const SVGDot = styled(SVG)`
     position: absolute;
     right: -3px;
@@ -71,100 +78,9 @@ const SVGLine = styled(SVG)`
     height: 550px;
 `;
 
-const morphTransition = ({ from, to }) => (
-    tween({
-        from: 0,
-        to: 1,
-        duration: 1800,
-        ease: easing.circOut
-    }).pipe(interpolate(from, to))
-);
-
-
-
-const pathIdsGreen = Object.keys(greenPath);
-const pathIdsBlue = Object.keys(bluePath);
-
-const IconGreen = posed.path(
-    pathIdsGreen.reduce((config, id) => {
-        config[id] = {
-            d: greenPath[id],
-            transition: morphTransition
-        };
-        return config;
-    }, {})
-);
-
-const IconBlue = posed.path(
-    pathIdsBlue.reduce((config, id) => {
-        config[id] = {
-            d: bluePath[id],
-            transition: morphTransition
-        };
-
-        return config;
-    }, {})
-);
-
 class ShapesLayout extends React.Component {
     constructor(props){
         super(props);
-        this.state = {
-            pathIndex: props.vueIndex - 1,
-            styleSvgGreen: {
-                pointerEvents: 'none',
-                backfaceVisibility: 'hidden',
-                position: "absolute",
-                bottom: 0,
-                right: 0,
-                left: 'auto',
-                height: '100%',
-                margin: 'auto',
-                zIndex: 4,
-            },
-            styleSvgBlue: {
-                position: "absolute",
-                bottom: 0,
-                right: 0,
-                left: 'auto',
-                height: '100%',
-                margin: 'auto',
-                zIndex: 5,
-            },
-        };
-        this.morphShape = this.morphShape.bind(this);
-    }
-
-    morphShape(pathIds){
-        const { pathIndex } = this.state;
-        const nextIndex = pathIndex + 1;
-        this.setState({
-            pathIndex: nextIndex
-        });
-        if(nextIndex === 1){
-            this.setState({
-                styleSvgGreen: {
-                    pointerEvents: 'none',
-                    backfaceVisibility: 'hidden',
-                    right: 'auto',
-                    left: 0,
-                    position: "absolute",
-                    bottom: 0,
-                    height: '100%',
-                    margin: 'auto',
-                    zIndex: 5
-                }
-            });
-        }
-    }
-
-    componentDidUpdate(prevProps, prevState){
-        if(prevState.pathIndex === 0 && prevProps.vueIndex === 1){
-            setTimeout(this.morphShape, 400);
-        }
-        if(prevState.pathIndex === 0 && prevProps.vueIndex === 2){
-            setTimeout(this.morphShape, 1700);
-        }
     }
 
     render(){
@@ -173,15 +89,18 @@ class ShapesLayout extends React.Component {
         return (
             <Layout>
                 <About color={vueIndex !== 1 ? '#000' : '#FFF'}>à propos</About>
+                {vueIndex !== 1 ?
+                    <Logo src="./assets/svg/logo.svg"/>
+                : null}
 
                 {isVue(vueIndex, [INDEX, WHY, DISCOVER]) ?
                     <MorphingShape pathObj={greenPath} event={vueIndex === WHY} color={theme.color.green}/>
                 : null}
-                {isVue(vueIndex, [WHY, DISCOVER, MAIL_QUANTITY, MAIL_TYPE]) ?
+                {isVue(vueIndex, [WHY, DISCOVER, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA]) ?
                     <MorphingShape pathObj={bluePath} event={vueIndex === MAIL_QUANTITY} color={theme.color.blue}/>
                 : null}
                 {isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRAFIC]) ?
-                    <MorphingShape pathObj={orangePath} event={this.props.vueIndex === 6} color={theme.color.orange}/>
+                    <MorphingShape pathObj={orangePath} event={vueIndex === TRAFIC} color={theme.color.orange}/>
                 : null}
 
                 <HomeLayout in={this.props.vueIndex === 1}/>
@@ -215,9 +134,9 @@ class ShapesLayout extends React.Component {
                             <ArrowButton action={() => this.props.changeVue(MAIL_QUANTITY)}/>
                         </Link>
                     </NextButton>
-                    : null }
-                    
-                { isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE]) ?
+                : null }
+
+                { isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA]) ?
                     <MailLayoutContainer />
                 : null}
 
@@ -225,6 +144,6 @@ class ShapesLayout extends React.Component {
             </Layout>
         );
     }
-};
+}
 
 export default ShapesLayout;

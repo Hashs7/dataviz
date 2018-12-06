@@ -2,7 +2,9 @@ import React from 'react';
 import AnimatedShape from '../../UI/Shape';
 import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
-import {DIRECTION} from "../../../constantes";
+import { DIRECTION } from "../../../constantes";
+import { isVue } from "../../../methods";
+import { VUE } from "../../../store/actions";
 
 const SVGDot = styled(SVG)`
     position: absolute;
@@ -23,14 +25,15 @@ const Letters = styled(SVG)`
     z-index: 4;
 `;
 
-const DataCentersLayout = ({ vueIndex }) => {
+const MailLayout = ({ vueIndex }) => {
+    const {MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA} = VUE;
     return (
         <div>
             <SVGDot src="./assets/svg/shapes/vue-3/shape-dot.svg" />
             <Letters src="./assets/svg/shapes/vue-3/letters.svg" />
 
             <AnimatedShape
-                in={vueIndex === 4 || vueIndex === 5}
+                in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA])}
                 src="./assets/svg/shapes/vue-3/shape-green.svg"
                 direction={DIRECTION.BOTTOM_LEFT}
                 maxWidth="983px"
@@ -43,7 +46,7 @@ const DataCentersLayout = ({ vueIndex }) => {
             />
 
             <AnimatedShape
-                in={vueIndex === 4 || vueIndex === 5}
+                in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA])}
                 src="./assets/svg/shapes/vue-3/shape-blue.svg"
                 direction={DIRECTION.BOTTOM_RIGHT}
                 maxWidth="1192px"
@@ -54,8 +57,9 @@ const DataCentersLayout = ({ vueIndex }) => {
                 right="-3px"
                 zIndex={4}
             />
+
         </div>
     );
 };
 
-export default DataCentersLayout;
+export default MailLayout;
