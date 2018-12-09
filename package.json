@@ -60,6 +60,7 @@
     "redux-thunk": "^2.3.0",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
+    "snapsvg": "^0.5.1",
     "style-loader": "0.23.0",
     "styled-components": "^4.1.2",
     "terser-webpack-plugin": "1.1.0",
@@ -131,6 +132,7 @@
     ]
   },
   "devDependencies": {
+    "imports-loader": "^0.8.0",
     "raw-loader": "^0.5.1"
   }
 }

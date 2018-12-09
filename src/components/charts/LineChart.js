@@ -1,6 +1,6 @@
 import React from 'react';
 import { theme } from "../../constantes";
-import { VictoryChart, VictoryLine } from 'victory';
+import { VictoryChart, VictoryLine, VictoryVoronoiContainer, VictoryTooltip } from 'victory';
 import styled from "styled-components";
 import Transition from 'react-transition-group/Transition'
 import TweenMax, {Power1} from "gsap/TweenMax";
@@ -37,17 +37,38 @@ const PieChart = (props) => {
             unmountOnExit
         >
             <PieContainer>
-                <VictoryChart>
+                <VictoryChart
+                    domainPadding={{ x: 10, y: 50 }}
+                    containerComponent={
+                       <VictoryVoronoiContainer
+                           labelComponent={<VictoryTooltip/>}
+                           labels={(d) => `${d.x}, ${d.y}`}
+                       />
+                    }>
                     <VictoryLine
+                        style={{
+                            data: { stroke: theme.color.blue, strokeLinecap:"round"},
+                        }}
                         data={[
-                            { x: 2010, y: 10 },
-                            { x: 2011, y: 11 },
-                            { x: 2012, y: 10 },
-                            { x: 2013, y: 10 },
-                            { x: 2015, y: 15 },
-                            { x: 2021, y: 30 },
+                            { x: "2010", y: 10 },
+                            { x: "2011", y: 11 },
+                            { x: "2012", y: 10 },
+                            { x: "2013", y: 10 },
+                            { x: "2015", y: 15 },
+                            { x: "2019", y: 15 },
                         ]}
                     />
+                    <VictoryLine
+                        style={{
+                            data: { stroke: theme.color.blue, strokeDasharray: "12 6", strokeDashoffset: "180", strokeLinecap:"round" },
+                        }}
+                        data={[
+                            { x: "2019", y: 15 },
+                            { x: "2020", y: 20 },
+                            { x: "2021", y: 30 },
+                        ]}
+                    />
+
                 </VictoryChart>
             </PieContainer>
         </Transition>

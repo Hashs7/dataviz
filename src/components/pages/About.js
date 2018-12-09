@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from "../../constantes";
 import { ChartUnderline, Tips } from "../style/heading";
+import SVG from 'react-inlinesvg';
 
 const Container = styled.div`
     position: absolute;
@@ -42,11 +43,18 @@ const Title = styled.h3`
 const StyledUnderline = styled(ChartUnderline)`
     margin-top: 10px;
 `;
+
 const ListContainer = styled.ul`
     margin: 20px 0 40px 0;
 `;
 
+const CCI = styled(SVG)`
+    
+`;
+
+
 const About = (props) => {
+    //TODO add links
     return (
         <Container>
             <SubContainer>
@@ -59,19 +67,19 @@ const About = (props) => {
                 </TitleContainer>
                 <ListContainer>
                     <Tips>
-                        <a href="">Ademe</a>
+                        <a href="https://bit.ly/2EaxUxI" target="_blank" rel="noopener noreferrer">Ademe</a>
                     </Tips>
                     <Tips>
-                        <a href="">Green IT</a>
+                        <a href="" target="_blank" rel="noopener noreferrer">Green IT</a>
                     </Tips>
                     <Tips>
-                        Rapport “<a href="">ClickingClean</a>”, 2017, GreenPeace
+                        Rapport “<a href="http://www.clickclean.org/france/fr/" target="_blank" rel="noopener noreferrer">ClickingClean</a>”, 2017, GreenPeace
                     </Tips>
                     <Tips>
-                        “<a href="">Total Consumer Power Consumption Forecast</a>”, 2017, Dr. Anders S.G. Andrae
+                        “<a href="" target="_blank" rel="noopener noreferrer">Total Consumer Power Consumption Forecast</a>”, 2017, Dr. Anders S.G. Andrae
                     </Tips>
                     <Tips>
-                        Rapport “<a href="">The Global Internet Phenomena</a>”, 2018, Sandvine
+                        Rapport “<a href="https://bit.ly/2zNZBde" target="_blank" rel="noopener noreferrer">The Global Internet Phenomena</a>”, 2018, Sandvine
                     </Tips>
                 </ListContainer>
                 <TitleContainer>
@@ -86,6 +94,7 @@ const About = (props) => {
                 </ListContainer>
 
                 <p>Site réalisé dans le cadre d'un projet étudiant de data visualisation</p>
+
             </SubContainer>
         </Container>
     );

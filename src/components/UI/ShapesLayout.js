@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
-import {theme, greenPath, bluePath, orangePath, DIRECTION} from '../../constantes';
+import {theme, greenPath, bluePath, orangePath, bluePathSecond, DIRECTION} from '../../constantes';
 import { VUE } from "../../store/actions";
 import HomeLayout from "../pages/Home/HomeLayout";
 import DataCentersLayoutContainer from "../../containers/DataCentersLayoutContainer";
@@ -99,6 +99,14 @@ class ShapesLayout extends React.Component {
                     event={vueIndex === TRAFIC_BW}
                     color={theme.color.orange}/>
 
+                <MorphingShape
+                    in={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV, FUTUR])}
+                    pathObj={bluePathSecond}
+                    pathName="bluePathSecond"
+                    direction={DIRECTION.BOTTOM_RIGHT}
+                    event={vueIndex === FUTUR}
+                    color={theme.color.blue}/>
+
                 <HomeLayout in={vueIndex === 1}/>
 
 
@@ -134,7 +142,7 @@ class ShapesLayout extends React.Component {
 
                 {vueIndex === TRAFIC_SERV ?
                     <NextButton>
-                        <Link to="/avenir">
+                        <Link to="/a-venir">
                             <ArrowButton action={() => this.props.changeVue(FUTUR)}/>
                         </Link>
                     </NextButton>
@@ -142,7 +150,7 @@ class ShapesLayout extends React.Component {
 
                 {vueIndex === FUTUR ?
                     <NextButton>
-                        <Link to="/avenir">
+                        <Link to="/final">
                             <ArrowButton action={() => this.props.changeVue(FINAL)}/>
                         </Link>
                     </NextButton>

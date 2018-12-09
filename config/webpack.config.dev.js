@@ -129,6 +129,9 @@ module.exports = {
     runtimeChunk: true,
   },
   resolve: {
+    alias: {
+        snapsvg: 'snapsvg/dist/snap.svg.js',
+    },
     // This allows you to set a fallback for where Webpack should look for modules.
     // We placed these paths second because we want `node_modules` to "win"
     // if there are any conflicts. This matches Node resolution mechanism.
@@ -175,7 +178,10 @@ module.exports = {
     rules: [
       // Disable require.ensure as it's not a standard language feature.
       { parser: { requireEnsure: false } },
-
+      {
+          test: require.resolve('snapsvg/dist/snap.svg.js'),
+          use: 'imports-loader?this=>window,fix=>module.exports=0',
+      },
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
       {

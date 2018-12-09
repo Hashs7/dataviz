@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import posed from "react-pose";
 import { tween, easing } from 'popmotion';
 import {interpolate} from "flubber";
-import { greenPath, bluePath, orangePath } from '../../constantes';
+import {greenPath, bluePath, orangePath, bluePathSecond} from '../../constantes';
 import TweenMax, {Power1} from "gsap/TweenMax";
 import Transition from "react-transition-group/Transition";
+
 const pathIdsGreen = Object.keys(greenPath);
+const pathIdsBlueSecond = Object.keys(bluePathSecond);
 const pathIdsBlue = Object.keys(bluePath);
 const pathIdsOrange = Object.keys(orangePath);
 
@@ -63,6 +65,16 @@ const IconOrange = posed.path(
     pathIdsOrange.reduce((config, id) => {
         config[id] = {
             d: orangePath[id],
+            transition: morphTransition
+        };
+        return config;
+    }, {})
+);
+
+const IconBlueSecond = posed.path(
+    pathIdsBlueSecond.reduce((config, id) => {
+        config[id] = {
+            d: bluePathSecond[id],
             transition: morphTransition
         };
         return config;
@@ -159,6 +171,12 @@ class Shape extends Component {
                 return (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" style={this.state.styleSvg}>
                         <IconOrange style={{fill: this.props.color}} pose={this.pathIds[this.state.pathIndex]} />
+                    </svg>
+                );
+            case bluePathSecond:
+                return (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" style={this.state.styleSvg}>
+                        <IconBlueSecond style={{fill: this.props.color}} pose={this.pathIds[this.state.pathIndex]} />
                     </svg>
                 );
         }

@@ -33,9 +33,11 @@ const BtnMore = styled.button`
     font-size: 16px;
     font-weight: bold;
     font-family: 'Cera Basic', sans-serif;
-    transition: transform .2s ease;
-    &:hover {
-        transform: translateY(5px);
+    & .arrow{
+        transition: transform .25s ease;
+    }
+    &:hover .arrow{
+        transform: translateY(6px);
     }
 `;
 
@@ -88,7 +90,7 @@ class Bandwidth extends React.Component {
                     <MoreUnderline src="./assets/svg/wave-underline.svg"/>
                     <BtnMore onClick={() => this.props.changeVue(VUE.TRAFIC_SERV)}>
                         VOIR
-                        <Arrow src="./assets/svg/arrow.svg"/>
+                        <Arrow className="arrow" src="./assets/svg/arrow.svg"/>
                     </BtnMore>
                 </MoreContainer>
                 : null}

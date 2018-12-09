@@ -29,7 +29,7 @@ const Landing = () => (
                             <Route path="/pourquoi" component={DataCentersContainer} key="why" />
                             <Route path="/quelle-quantité" component={Mail} key="mail" />
                             <Route path="/par-qui" component={BandwidthContainer} key="bandwidth" />
-                            <Route path="/avenir" component={Energy} key="energy" />
+                            <Route path="/a-venir" component={Energy} key="energy" />
                         </Switch>
                     </RouteContainer>
                 </PoseGroup>

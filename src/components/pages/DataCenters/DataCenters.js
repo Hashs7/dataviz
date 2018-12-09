@@ -7,6 +7,7 @@ import {
 } from './DataCentersStyle';
 import { Title, Description, ChartTitle, ChartUnderline } from "../../style/heading";
 import { BoxOpacity } from '../../style/animation';
+import * as Snap from 'snapsvg';
 
 
 class DataCenters extends React.Component {
@@ -37,6 +38,11 @@ class DataCenters extends React.Component {
                 ' que de multiples data centers stockant tout le contenu d’Internet.' +
                 ' Ces équipements ainsi que vos ordinateurs et smartphones personnels génèrent du gaz à effet de serre.'
         });
+        this.scissorsAnim()
+    }
+
+    scissorsAnim(){
+
     }
 
     render(){
@@ -54,6 +60,7 @@ class DataCenters extends React.Component {
                 <Description>
                     {this.state.desc}
                 </Description>
+
 
                 {vueIndex === VUE.DISCOVER ?
                     <ChartTitle>
