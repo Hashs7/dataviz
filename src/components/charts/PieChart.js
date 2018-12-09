@@ -10,6 +10,9 @@ const PieContainer = styled.div`
     bottom: 60px;
     left: 368px;
     z-index: 5;
+    @media (max-height: 950px){
+        bottom: 30px;
+    }
 `;
 
 const animate = {

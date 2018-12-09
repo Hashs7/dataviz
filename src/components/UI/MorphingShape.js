@@ -3,10 +3,32 @@ import posed from "react-pose";
 import { tween, easing } from 'popmotion';
 import {interpolate} from "flubber";
 import { greenPath, bluePath, orangePath } from '../../constantes';
-
+import TweenMax, {Power1} from "gsap/TweenMax";
+import Transition from "react-transition-group/Transition";
 const pathIdsGreen = Object.keys(greenPath);
 const pathIdsBlue = Object.keys(bluePath);
 const pathIdsOrange = Object.keys(orangePath);
+
+const animate = {
+    enter(target, direction, duration = 3, dl = 1){
+        const { x, y } = direction;
+        console.log(duration, dl)
+        return TweenMax.from(target, duration, {
+            x,
+            y,
+            delay: dl,
+            ease: Power1.easeOut,
+        })
+    },
+    leave(target, direction, duration = 3){
+        const { x, y } = direction.opposite;
+        return TweenMax.to(target, duration, {
+            x,
+            y,
+            ease: Power1.easeOut,
+        })
+    }
+};
 
 const morphTransition = ({ from, to }) => (
     tween({
@@ -31,7 +53,7 @@ const IconGreen = posed.path(
     pathIdsGreen.reduce((config, id) => {
         config[id] = {
             d: greenPath[id],
-            transition: morphTransition
+            transition: morphTransition,
         };
         return config;
     }, {})
@@ -47,7 +69,7 @@ const IconOrange = posed.path(
     }, {})
 );
 
-class MorphingShape extends Component {
+class Shape extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -65,7 +87,6 @@ class MorphingShape extends Component {
             }
         };
         this.pathIds = Object.keys(this.props.pathObj);
-
         this.morphShape = this.morphShape.bind(this);
     }
 
@@ -75,9 +96,6 @@ class MorphingShape extends Component {
         this.setState({
             pathIndex: nextIndex > this.pathIds.length - 1 ? pathIndex : nextIndex
         });
-        if(nextIndex === 1){
-
-        }
     }
 
     componentDidUpdate(prevProps, prevState){
@@ -101,20 +119,17 @@ class MorphingShape extends Component {
                     }
                 });
             }, 400);
-
-
         }
         if(prevState.pathIndex === 1 && this.state.pathIndex === 1){
             setTimeout(this.morphShape, 1700);
             setTimeout(() => {
-                console.log('left: 0')
                 this.setState({
                     styleSvg: {
                         pointerEvents: 'none',
                         backfaceVisibility: 'hidden',
                         right: 'auto',
                         left: 0,
-                        transition: 'transform 0s ',
+                        transition: 'transform 0s',
                         position: "absolute",
                         bottom: 0,
                         height: '100%',
@@ -149,5 +164,33 @@ class MorphingShape extends Component {
         }
     }
 }
+
+const MorphingShape = (props) => {
+    let duration = 3000;
+
+    /*if(props.duration){
+        duration = props.duration*1000;
+    }*/
+
+    return (
+        <Transition
+            in={props.in}
+            timeout={duration}
+            onEnter={node => {
+                console.log('enter', node);
+                animate.enter(node, props.direction);
+            }}
+            onExit={node => {
+                console.log('leave', node);
+                animate.leave(node, props.direction);
+            }}
+            mountOnEnter
+            unmountOnExit
+        >
+            <Shape {...props}/>
+        </Transition>
+    )
+};
+
 
 export default MorphingShape;

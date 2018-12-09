@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import AnimatedTitle from '../../UI/AnimatedTitle';
 import { VUE } from '../../../store/actions/index';
 import SVG from 'react-inlinesvg';
+import { Title, Description, ChartTitle, ChartUnderline } from "../../style/heading";
 
 const Container = styled.div`
     max-width: 585px;
@@ -12,40 +13,51 @@ const Container = styled.div`
     text-align: left;
 `;
 
-const Title = styled.div`
-    font: 48px "Cera Basic", sans-serif;
-`;
-
 const TitleUnderline = styled(SVG)`
     display: block;
     width: 150px;
 `;
 
-const Description = styled.p`
+const StyledDescription = styled(Description)`
     max-width: 420px;
-    font: 20px 'Demos Next Pro';
-    line-height: 1.6;
 `;
 
-
-export const BarChartTitle = styled.p`
-    font: 28px 'Cera Basic';
-    font-weight: bold;
-    line-height: 1.25;
-`;
-
-export const PieChartUnderline = styled(SVG)`
+const Arrow = styled(SVG)`
     display: block;
-    width: 110px;
-    height: 10px;
+    margin: 6px auto 0 auto;
+    width: 20px;
 `;
+
+const BtnMore = styled.button`
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Cera Basic', sans-serif;
+    transition: transform .2s ease;
+    &:hover {
+        transform: translateY(5px);
+    }
+`;
+
+const MoreContainer = styled.div`
+    width: 230px;
+    text-align: center;
+    margin: 35px 0 0 80px;
+`;
+
+const MoreUnderline = styled(SVG)`
+    display:block
+    margin-bottom: 8px;
+    height: 7px;
+`;
+
 
 class Bandwidth extends React.Component {
     constructor(props){
         super(props);
         this.state = {
             txt: '',
-            desc: '…il n’y a pas que les mails. Le trafic d’Internet est constitué d’un large spectre de catégories et chacune est propulsée par différents services. Ses services sont pour certains opérés à l’aide d’énergie fossile.'
+            desc: '…il n’y a pas que les mails. Le trafic d’Internet est constitué d’un large spectre de catégories et chacune est propulsée par différents services. Ces services sont pour certains opérés à l’aide d’énergie fossile.'
         };
         this.discoverHandler = this.discoverHandler.bind(this);
     }
@@ -66,17 +78,27 @@ class Bandwidth extends React.Component {
                         {this.state.txt}
                     </AnimatedTitle>
                 </Title>
+
                 <TitleUnderline src="./assets/svg/wave-underline-double.svg"/>
-                <Description>
+                <StyledDescription>
                     {this.state.desc}
-                </Description>
-                <button onClick={() => this.props.changeVue(VUE.TRAFIC_SERV)}>Voir</button>
+                </StyledDescription>
+                {this.props.vueIndex === VUE.TRAFIC_BW ?
+                <MoreContainer>
+                    <MoreUnderline src="./assets/svg/wave-underline.svg"/>
+                    <BtnMore onClick={() => this.props.changeVue(VUE.TRAFIC_SERV)}>
+                        VOIR
+                        <Arrow src="./assets/svg/arrow.svg"/>
+                    </BtnMore>
+                </MoreContainer>
+                : null}
+
 
                 {this.props.vueIndex === VUE.TRAFIC_SERV ?
-                    <BarChartTitle>
+                    <ChartTitle>
                         Énergies employées dans le fonctionnement<br/>de… (2017)
-                        <PieChartUnderline src="./assets/svg/wave-line-right.svg"/>
-                    </BarChartTitle>
+                        <ChartUnderline src="./assets/svg/wave-line-right.svg"/>
+                    </ChartTitle>
                 : null}
 
 

@@ -31,7 +31,7 @@ class Home extends React.Component {
             this.setState({txt: 'Le saviez-vous ?'});
 
             this.timerSecond = setTimeout(() => {
-                this.setState({txt: 'Cet avion pollue plus que l’aviation civile !'})
+                this.setState({txt: "L'avion ci-dessous pollue plus que l’aviation civile !"})
             }, 4000)
         }, 500)
     }

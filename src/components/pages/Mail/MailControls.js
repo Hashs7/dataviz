@@ -8,6 +8,9 @@ import { theme } from '../../../constantes';
 import { tween, easing } from 'popmotion';
 import '../../../assets/css/checkbox.css';
 import MailChart from "./MailChart";
+import { BoxOpacity } from '../../style/animation';
+import {isVue} from "../../../methods";
+import { Tips } from '../../style/heading';
 
 const Container = styled.div`
     position: absolute;
@@ -51,19 +54,6 @@ const ConvertContainer = styled.div`
     color: #fff;
     & polyline {
         stroke: #fff !important;
-    }
-`;
-
-
-const Tips = styled.li`
-    position: relative;
-    font-weight: normal;
-    font-family: "Demos Next Pro", serif;
-    font-size: 20px;
-    &:before {
-        display: inline-block;
-        content: '—';
-        margin-right: 15px;
     }
 `;
 
@@ -181,7 +171,7 @@ class MailControls extends Component {
             60: '60 - 79',
             80: '>80',
         };
-
+        const userCO2 = (this.state.mailAmount + 10)*20;
         return (
             <Container>
                 <RelativeContainer>
@@ -189,6 +179,7 @@ class MailControls extends Component {
                         {this.state.helpAction}
                     </HelpAction>
                     {this.props.vueIndex === 4 ?
+                    <BoxOpacity pose={isVue(this.props.vueIndex, [VUE.MAIL_QUANTITY]) ? 'visibleDelay' : 'hidden'}>
                         <StyledSlider
                             className="mailSlider"
                             min={0}
@@ -198,8 +189,9 @@ class MailControls extends Component {
                             tooltip={false}
                             value={this.state.mailAmount}
                             onChange={this.handleOnChange}
-                            />
-                    : null}
+                        />
+                    </BoxOpacity> : null}
+
                     {this.props.vueIndex === 5 ?
                         <SelectContainer>
                             <StyledMailbox>
@@ -232,7 +224,7 @@ class MailControls extends Component {
 
                     {this.props.vueIndex === 6 ?
                         <ResultContainer>
-                            <p>Votre empreinte carbone mail est d'environ <strong>${this.state.footPrint}g</strong> de CO2 par semaine</p>
+                            <p>Votre empreinte carbone mail est d'environ <strong>{userCO2}g</strong> de CO2 par semaine</p>
                             <Lines src="./assets/svg/wave-line-right.svg"/>
                             <MailChart />
                             <ul style={{marginTop: 85}}>

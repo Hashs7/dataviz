@@ -6,6 +6,7 @@ import MailControlsContainer from '../../../containers/MailControlsContainer';
 import { VUE } from "../../../store/actions";
 import '../../../assets/css/range.css'
 import { connect } from 'react-redux';
+import {BoxOpacity} from "../../style/animation";
 
 const Title = styled.div`
     font: 48px "Cera Basic", sans-serif;
@@ -31,6 +32,9 @@ const TitleContainer = styled.div`
     & polyline {
         stroke: #fff;
     }
+    @media (max-height: 1060px) {
+        margin: 30px 0 0 200px;
+    }
 `;
 
 class Mail extends React.Component {
@@ -38,12 +42,19 @@ class Mail extends React.Component {
         super(props);
         this.state = {
             txt: '',
-            desc: 'Répondez aux questions  pour avoir une estimation de votre impact sur l’environnement.'
+            desc: '',
+            show: false
         };
     }
 
     componentDidMount(){
-        setTimeout(() => this.setState({txt: 'En quelle quantité ?'}), 1700);
+        setTimeout(() => {
+            this.setState({
+                txt: 'En quelle quantité ?',
+                desc: 'Répondez aux questions pour avoir une estimation de votre impact sur l’environnement.',
+                show: true
+            })
+        }, 1700);
     }
 
     render(){
@@ -55,12 +66,12 @@ class Mail extends React.Component {
                             {this.state.txt}
                         </AnimatedTitle>
                     </Title>
-                    <TitleUnderline src="./assets/svg/wave-underline-quantity.svg"/>
-                    {this.props.vueIndex === VUE.MAIL_DATA ? null :
-                        <Description>
-                            {this.state.desc}
-                        </Description>
-                    }
+                    <BoxOpacity pose={this.state.show ? 'visible' : 'hidden'}>
+                        <TitleUnderline src="./assets/svg/wave-underline-quantity.svg"/>
+                    </BoxOpacity>
+                    <Description>
+                        {this.state.desc}
+                    </Description>
                 </TitleContainer>
                 <MailControlsContainer />
             </div>

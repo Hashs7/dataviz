@@ -2,10 +2,10 @@ import React from 'react';
 import AnimatedShape from '../../UI/Shape';
 import { DIRECTION, STUFF } from "../../../constantes";
 import styled from "styled-components";
+import SVG from "react-inlinesvg";
 import PieChartBWContainer from "../../../containers/PieChartBWContainer";
-import { ChartTitle, ChartUnderline } from '../../style/heading';
 
-const Container = styled.svg`
+export const Container = styled.svg`
     position: absolute;
     left: 0;
     right: 0;
@@ -19,18 +19,33 @@ const Container = styled.svg`
     box-sizing: border-box;
 `;
 
-const PieChartTitle = styled(ChartTitle)`
+export const SVGWaves = styled(SVG)`
+    position: absolute;
+    width: 318px;
+    height: 250px;
+    z-index: 2;
+    bottom: 200px;
+    left: 500px;
+`;
+
+export const PieChartTitle = styled.p`
     position: absolute;
     z-index: 4;
     top: 560px;
     right: 200px;
+    font: 28px 'Cera Basic';
+    font-weight: bold;
+    line-height: 1;
 `;
 
-const PieChartUnderline = styled(ChartUnderline)`
-    margin: 0 0 0 auto;
+export const PieChartUnderline = styled(SVG)`
+    display: block;
+    margin-left: auto;
+    width: 110px;
+    height: 10px;
 `;
 
-class BandwidthLayout extends React.Component {
+class EnergyLayout extends React.Component {
     constructor(props){
         super(props);
         this.width = 0;
@@ -43,21 +58,12 @@ class BandwidthLayout extends React.Component {
 
     render(){
         const { vueIndex, stuffHover } = this.props;
-        //TODO changer la forme waves
+
         return (
             <div ref="svg">
-                <Container>
-                    <AnimatedShape
-                        in={vueIndex === 2}
-                        delay={2.3}
-                        src="./assets/svg/shapes/vue-2/shape-wave.svg"
-                        direction={DIRECTION.BOTTOM_LEFT}
-                        width="318px"
-                        height="250px"
-                        bottom="200px"
-                        left="500px"
-                        zIndex={2}
-                    />
+
+                <Container >
+                    <SVGWaves src="./assets/svg/shapes/vue-2/shape-wave.svg" />
                     <PieChartBWContainer width={this.width} />
 
                 </Container>
@@ -66,9 +72,10 @@ class BandwidthLayout extends React.Component {
                     <PieChartUnderline src="./assets/svg/wave-line-right.svg"/>
                 </PieChartTitle>
             </div>
+
         );
     }
 
 }
 
-export default BandwidthLayout;
+export default EnergyLayout;

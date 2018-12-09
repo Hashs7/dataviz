@@ -43,35 +43,67 @@ export const orangePath = {
 export const DIRECTION = {
     TOP_LEFT: {
         x: '-100%',
-        y: '-100%'
+        y: '-100%',
+        opposite: {
+            x: '100%',
+            y: '100%',
+        }
     },
     TOP_RIGHT: {
         x: '100%',
-        y: '-100%'
+        y: '-100%',
+        opposite: {
+            x: '-100%',
+            y: '100%',
+        }
     },
     BOTTOM_LEFT: {
         x: '-100%',
-        y: '100%'
+        y: '100%',
+        opposite: {
+            x: '100%',
+            y: '-100%',
+        }
     },
     BOTTOM_RIGHT: {
         x: '100%',
-        y: '100%'
+        y: '100%',
+        opposite: {
+            x: '-100%',
+            y: '-100%',
+        }
     },
     RIGHT: {
         x: '100%',
-        y: 0
+        y: 0,
+        opposite: {
+            x: '-100%',
+            y: 0,
+        }
     },
     LEFT: {
         x: '-100%',
-        y: 0
+        y: 0,
+        opposite: {
+            x: '100%',
+            y: 0,
+        }
     },
     TOP: {
         x: 0,
-        y: '-100%'
+        y: '-100%',
+        opposite: {
+            x: 0,
+            y: '100%',
+        }
     },
     BOTTOM: {
         x: 0,
-        y: '100%'
+        y: '100%',
+        opposite: {
+            x: 0,
+            y: '-100%',
+        }
     }
 };
 

@@ -21,6 +21,7 @@ const StyledSVG = styled(SVG)`
 const animate = {
     enter(target, direction, duration = 3, dl = 0){
         const { x, y } = direction;
+        console.log(duration, dl)
         return TweenMax.from(target, duration, {
             x,
             y,
@@ -28,7 +29,7 @@ const animate = {
             ease: Power1.easeOut,
         })
     },
-    leave(target, direction, duration = 1.5, cb){
+    leave(target, direction, duration = 1.5){
         const { x, y } = direction;
         return TweenMax.to(target, 1.5, {
             x,
@@ -47,6 +48,7 @@ class Shape extends React.Component {
 
     componentDidMount(){
         this.dom.root = ReactDOM.findDOMNode(this);
+        console.log(this.dom.root)
         animate.enter(this.dom.root, this.props.direction, this.props.duration, this.props.delay );
     }
 
@@ -61,20 +63,21 @@ const AnimatedShape = (props) => {
     let duration = 3000;
 
     if(props.duration){
-        duration = props.duration;
+        duration = props.duration*1000;
     }
     return (
         <Transition
             in={props.in}
             timeout={duration}
             onEnter={node => {
-                animate.enter(node, props.direction, () => {});
+                animate.enter(node, props.direction);
             }}
             onExit={node => {
+                console.log('leave', node)
                 if(props.noExit){
                     return;
                 }
-                animate.leave(node, props.direction, () => {});
+                animate.leave(node, props.direction);
             }}
             mountOnEnter
             unmountOnExit

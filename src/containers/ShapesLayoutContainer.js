@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import ShapesLayout from "../components/UI/ShapesLayout";
 import {
-CHANGE_INDEX_VUE
+    CHANGE_INDEX_VUE,
+    TOGGLE_MODAL
 } from '../store/actions';
 
 /**
@@ -11,7 +12,8 @@ CHANGE_INDEX_VUE
  */
 const mapStateToProps = state => {
     return {
-        vueIndex: state.current.vue
+        vueIndex: state.current.vue,
+        modalActive: state.current.modal
     }
 };
 
@@ -23,6 +25,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         changeVue: (i) => dispatch({type: CHANGE_INDEX_VUE, index: i}),
+        toggleModal: () => dispatch({type: TOGGLE_MODAL}),
     }
 };
 

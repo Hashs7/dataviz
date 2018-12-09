@@ -3,29 +3,10 @@ import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
 import AnimatedShape from '../../UI/Shape';
 
-export const Title = styled.div`
-    font: 48px "Cera Basic", sans-serif;
-`;
 
 export const TitleUnderline = styled(SVG)`
     display: block;
     width: 230px;
-`;
-
-export const Description = styled.p`
-    font: 20px 'Demos Next Pro';
-    line-height: 1.6;
-`;
-
-export const PieChartTitle = styled.p`
-    font: 28px 'Cera Basic';
-    font-weight: bold;
-    line-height: 1.25;
-`;
-
-export const PieChartUnderline = styled(SVG)`
-    display: block;
-    width: 110px;
 `;
 
 export const Container = styled.div`
@@ -37,6 +18,9 @@ export const Container = styled.div`
     & polyline{
         stroke: #000;
     }
+    @media (max-height: 1060px) {
+        margin: 50px 0 0 200px;
+    }
 `;
 
 export const SVGWaves = styled(SVG)`
@@ -46,16 +30,6 @@ export const SVGWaves = styled(SVG)`
     z-index: 2;
     bottom: 200px;
     left: 500px;
-`;
-
-export const SVGDot = styled(SVG)`
-    position: absolute;
-    top: -3px;
-    left: -15px;
-    display: block;
-    width: 71vh;
-    max-height: 928px;
-    z-index: 3;
 `;
 
 export const ComputerContainer = styled.div`
@@ -78,6 +52,10 @@ export const Computer = styled(SVG)`
     bottom: 0;
     left: 0;
     z-index: 4;
+`;
+
+export const CloudRelativeContainer = styled.div`
+    position: relative;
 `;
 
 export const CloudContainer = styled.div`
@@ -142,8 +120,8 @@ export const LegendWifi = styled(LegendContainer)`
 `;
 
 export const LegendCloud = styled(LegendContainer)`
-    top: 100px;
-    right: 750px;
-    z-index: 10;
+    top: 120px;
+    left: -80px;
+    z-index: -1;
     text-align: left;
 `;

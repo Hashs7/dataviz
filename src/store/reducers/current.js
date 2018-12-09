@@ -2,7 +2,8 @@ import {
     CHANGE_INDEX_VUE,
     CHANGE_STUFF,
     MAIL_AMOUNT,
-    MAIL_TYPE
+    MAIL_TYPE,
+    TOGGLE_MODAL
 } from "../actions";
 
 /**
@@ -32,6 +33,11 @@ export const current = (state = {}, action) => {
             return {
                 ...state,
                 mailType: action.mailtype
+            };
+        case TOGGLE_MODAL:
+            return {
+                ...state,
+                modal: !state.modal
             };
         default:
             return state;
