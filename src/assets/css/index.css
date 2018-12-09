@@ -13,6 +13,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
+strong{
+    font-weight: 900;
+}
+li{
+    list-style: none;
+}
+ul, p{
+    margin: 0;
+    padding: 0;
+}
+
 div{
   box-sizing: border-box;
 }
@@ -65,6 +76,10 @@ tspan{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.VictoryContainer {
+    transform: translateX(-70px);
 }
 
 .VictoryContainer svg{

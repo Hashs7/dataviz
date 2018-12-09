@@ -76,31 +76,53 @@ class MorphingShape extends Component {
             pathIndex: nextIndex > this.pathIds.length - 1 ? pathIndex : nextIndex
         });
         if(nextIndex === 1){
-            this.setState({
-                styleSvg: {
-                    pointerEvents: 'none',
-                    backfaceVisibility: 'hidden',
-                    right: 'auto',
-                    left: 0,
-                    position: "absolute",
-                    bottom: 0,
-                    height: '100%',
-                    margin: 'auto',
-                    zIndex: 4
-                }
-            });
+
         }
     }
 
     componentDidUpdate(prevProps, prevState){
         if(!this.props.event){ return }
-
-        console.log("update", this.props.event);
         if(this.state.pathIndex === 0){
-            setTimeout(this.morphShape, 400);
+            setTimeout(() => {
+                this.morphShape();
+                this.setState({
+                    styleSvg: {
+                        pointerEvents: 'none',
+                        backfaceVisibility: 'hidden',
+                        transform: 'scaleX(1.3)',
+                        transition: 'transform .2s ease',
+                        right: 0,
+                        left: 'auto',
+                        position: "absolute",
+                        bottom: 0,
+                        height: '100%',
+                        margin: 'auto',
+                        zIndex: 4
+                    }
+                });
+            }, 400);
+
+
         }
         if(prevState.pathIndex === 1 && this.state.pathIndex === 1){
             setTimeout(this.morphShape, 1700);
+            setTimeout(() => {
+                console.log('left: 0')
+                this.setState({
+                    styleSvg: {
+                        pointerEvents: 'none',
+                        backfaceVisibility: 'hidden',
+                        right: 'auto',
+                        left: 0,
+                        transition: 'transform 0s ',
+                        position: "absolute",
+                        bottom: 0,
+                        height: '100%',
+                        margin: 'auto',
+                        zIndex: 4
+                    }
+                });
+            }, 1700);
         }
     }
 

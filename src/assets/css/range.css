@@ -2,6 +2,7 @@
 * Rangeslider
 */
 .rangeslider {
+    font-weight: bold;
     border: 3px solid #000;
     margin: 38px 0 20px 0;
     position: relative;
@@ -85,9 +86,17 @@
     height: 16px;
     background-color: #000;
 }
-.rangeslider__labels .rangeslider__label-item:first-child:before{
+.mailSlider .rangeslider__labels .rangeslider__label-item:first-child:before{
     margin: 0 0 0 14px;
 }
-.rangeslider__labels .rangeslider__label-item:last-child:before{
+.mailSlider .rangeslider__labels .rangeslider__label-item:last-child:before{
     margin: 0 0 0 20px;
+}
+
+.chartSlider{
+    margin-top: -30px;
+    width: 255px;
+}
+.chartSlider .rangeslider__labels .rangeslider__label-item:last-child:before{
+    margin: 0 0 0 18px;
 }

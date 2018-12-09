@@ -1,152 +1,130 @@
 import React from 'react';
+import posed from 'react-pose';
 import AnimatedShape from '../../UI/Shape';
-import styled from 'styled-components';
-import SVG from 'react-inlinesvg';
 import { DIRECTION, STUFF } from "../../../constantes";
+import { isVue } from '../../../methods'
+import {
+    SVGWaves,
+    ComputerContainer, ComputerSubContainer, LegendComputer, Computer, LegendUnderline,
+    Wifi, LegendWifi,
+    CloudContainer, Cloud, LegendCloud
+} from './DataCentersStyle';
 
-const SVGDot = styled(SVG)`
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    width: 754px;
-    height: 928px;
-    z-index: 3;
-`;
+const BoxOpacity = posed.div({
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 300,
+            opacity: { type: 'tween' },
+        }
+    },
+    visibleDelay: {
+        opacity: 1,
+        transition: {
+            type: 'physics',
+            delay: 400
+        }
+    },
+    hidden: {
+        opacity: 0,
+        duration: 300,
+        transition: {
+            opacity: { type: 'tween' },
+        }
+    },
+})
 
-const ComputerContainer = styled.div`
-    width: 335px;
-    height: 265px;
-    position: absolute;
-    bottom: 130px;
-    right: 32%;
-`;
 
-const ComputerSubContainer = styled.div`
-    position: relative;
-    width: 100%;
-    height: 100%;
-`;
+class DataCentersLayout extends React.Component {
+    constructor(props){
+        super(props)
 
-const Computer = styled(SVG)`
-    position: absolute;
-    width: 240px;
-    bottom: 0;
-    left: 0;
-    z-index: 4;
-`;
+    }
 
-const CloudContainer = styled.div`
-    position: absolute;
-    top: 130px;
-    right: -100px;
-    height: 49%;
-    width: 83vh;
-    z-index: 5;
-`;
+    componentDidMount(){
 
-const CloudBefore = styled(SVG)`
-    position: absolute;
-    top: 130px;
-    right: -100px;
-    height: 49%;
-    width: 83vh;
-    z-index: 4;
-`;
+    }
 
-const Cloud = styled(SVG)`
-    width: 100%;
-    height: 100%;
-`;
 
-const Wifi = styled(SVG)`
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 118px;
-    transform: rotate(20deg);
-    z-index: 3;
-`;
+    render(){
+        const { vueIndex, stuffHover } = this.props;
 
-const LegendContainer = styled.div`
-    position: absolute;
-    font-size: 24px;
-    font-weight: bold;
-    opacity: ${props => props.visible ? '1' : '0'}
-    transition: opacity .2s ease-in-out;
-`;
+        return (
+            <div>
+                <AnimatedShape
+                    in={isVue(vueIndex, [2, 3])}
+                    delay={0.5}
+                    src="./assets/svg/shapes/vue-2/shape-dot.svg"
+                    direction={DIRECTION.TOP_LEFT}
+                    maxWidth="754px"
+                    width="71vh"
+                    maxHeight="928px"
+                    height="84vh"
+                    top="-3px"
+                    left="-15px"
+                    zIndex={3}
+                />
+                <BoxOpacity pose={isVue(vueIndex, [2, 3]) ? 'visibleDelay' : 'hidden'}>
+                    <SVGWaves src="./assets/svg/shapes/vue-2/shape-wave.svg" />
+                </BoxOpacity>
 
-const LegendUnderline = styled(SVG)`
-    display: block;
-    width: 230px;
-`;
+                <button onClick={this.discoverCloud}>wow</button>
 
-const LegendComputer = styled(LegendContainer)`
-    width: 335px;
-    right: 115px;
-    bottom: 48px;
-    text-align: right;
-    transform: translateX(100%);
-`;
+                <BoxOpacity pose={vueIndex === 3 ? 'visible' : 'hidden'}>
+                    <ComputerContainer>
+                        <ComputerSubContainer>
+                            <Computer src="./assets/svg/computer.svg" />
+                            <LegendComputer visible={stuffHover === STUFF.PERSO}>
+                                Equipements personnels
+                                <LegendUnderline src="./assets/svg/wave-underline.svg"/>
+                            </LegendComputer>
+                            <Wifi src="./assets/svg/wifi.svg" />
+                            <LegendWifi visible={stuffHover === STUFF.RESEAU}>
+                                Infrastructures réseaux
+                                <LegendUnderline src="./assets/svg/wave-underline.svg"/>
+                            </LegendWifi>
+                        </ComputerSubContainer>
+                    </ComputerContainer>
+                </BoxOpacity>
 
-const LegendWifi = styled(LegendContainer)`
-    width: 345px;
-    top: 38px;
-    right: 65px;
-    text-align: right;
-    transform: translateX(100%);
-`;
 
-const LegendCloud = styled(LegendContainer)`
-    top: 100px;
-    right: 750px;
-    z-index: 10;
-    text-align: left;
-`;
+                <AnimatedShape
+                    in={vueIndex === 2}
+                    delay={2.3}
+                    src="./assets/svg/shapes/vue-2/cloud.svg"
+                    direction={DIRECTION.RIGHT}
+                    width="83vh"
+                    height="49%"
+                    top="130px"
+                    right="-100px"
+                    zIndex={4}
+                    noExit
+                />
 
-const DataCentersLayout = ({ vueIndex, stuffHover }) => {
-    return (
-        <div>
-            <SVGDot src="./assets/svg/shapes/vue-2/shape-dot.svg" />
+                {vueIndex === 2 ? null :
+                    <CloudContainer>
+                        <Cloud src="./assets/svg/shapes/vue-2/cloud-after.svg" />
+                        <LegendCloud visible={stuffHover === STUFF.DATA}>
+                            Data centers
+                            <LegendUnderline src="./assets/svg/wave-underline.svg"/>
+                        </LegendCloud>
+                    </CloudContainer>
+                }
 
-            <ComputerContainer>
-                <ComputerSubContainer>
-                    <Computer src="./assets/svg/computer.svg" />
-                    <LegendComputer visible={stuffHover === STUFF.PERSO}>
-                        Equipements personnels
-                        <LegendUnderline src="./assets/svg/wave-underline.svg"/>
-                    </LegendComputer>
-                    <Wifi src="./assets/svg/wifi.svg" />
-                    <LegendWifi visible={stuffHover === STUFF.RESEAU}>
-                        Infrastructures réseaux
-                        <LegendUnderline src="./assets/svg/wave-underline.svg"/>
-                    </LegendWifi>
-                </ComputerSubContainer>
-            </ComputerContainer>
-
-            {vueIndex === 2 ?
-                <CloudBefore src="./assets/svg/shapes/vue-2/cloud.svg" /> :
-                <CloudContainer>
-                    <Cloud src="./assets/svg/shapes/vue-2/cloud-after.svg" />
-                    <LegendCloud visible={stuffHover === STUFF.DATA}>
-                        Data centers
-                        <LegendUnderline src="./assets/svg/wave-underline.svg"/>
-                    </LegendCloud>
-                </CloudContainer>
-            }
-
-            <AnimatedShape
-                in={vueIndex === 2 || vueIndex === 3}
-                direction={DIRECTION.TOP_RIGHT}
-                src="./assets/svg/shapes/vue-2/shape-orange.svg"
-                maxWidth="1052px"
-                width="55%"
-                height="274px"
-                top="-3px"
-                right="-3px"
-                zIndex="2"
-            />
-        </div>
-    );
-};
+                <AnimatedShape
+                    in={vueIndex === 2 || vueIndex === 3}
+                    direction={DIRECTION.TOP_RIGHT}
+                    src="./assets/svg/shapes/vue-2/shape-orange.svg"
+                    maxWidth="1052px"
+                    width="55%"
+                    height="274px"
+                    top="-3px"
+                    right="-3px"
+                    zIndex="2"
+                />
+            </div>
+        );
+    }
+}
 
 export default DataCentersLayout;

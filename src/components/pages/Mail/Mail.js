@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import AnimatedTitle from '../../UI/AnimatedTitle';
-import { VUE } from '../../../store/actions/index';
 import SVG from 'react-inlinesvg';
 import MailControlsContainer from '../../../containers/MailControlsContainer';
-
+import { VUE } from "../../../store/actions";
 import '../../../assets/css/range.css'
+import { connect } from 'react-redux';
 
 const Title = styled.div`
     font: 48px "Cera Basic", sans-serif;
@@ -13,7 +13,7 @@ const Title = styled.div`
 
 const TitleUnderline = styled(SVG)`
     display: block;
-    width: 230px;
+    width: 433px;
 `;
 
 const Description = styled.p`
@@ -26,9 +26,9 @@ const TitleContainer = styled.div`
     position: relative;
     text-align: left;
     z-index: 6;
-    margin: 180px 0 0 200px;
+    margin: 110px 0 0 200px;
     max-width: 450px;
-    & polyline{
+    & polyline {
         stroke: #fff;
     }
 `;
@@ -55,16 +55,28 @@ class Mail extends React.Component {
                             {this.state.txt}
                         </AnimatedTitle>
                     </Title>
-                    <TitleUnderline src="./assets/svg/wave-underline-double.svg"/>
-                    <Description>
-                        {this.state.desc}
-                    </Description>
+                    <TitleUnderline src="./assets/svg/wave-underline-quantity.svg"/>
+                    {this.props.vueIndex === VUE.MAIL_DATA ? null :
+                        <Description>
+                            {this.state.desc}
+                        </Description>
+                    }
                 </TitleContainer>
                 <MailControlsContainer />
-
             </div>
         );
     }
 }
 
-export default Mail;
+/**
+ *
+ * @param state
+ * @returns {{vueIndex: (number|boolean|*)}}
+ */
+const mapStateToProps = state => {
+    return {
+        vueIndex: state.current.vue,
+    }
+};
+
+export default connect(mapStateToProps, null)(Mail)

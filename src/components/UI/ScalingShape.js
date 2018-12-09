@@ -4,7 +4,7 @@ import styled from "styled-components";
 import SVG from "react-inlinesvg";
 import TweenMax, { Power1 } from "gsap/TweenMax";
 import Transition from 'react-transition-group/Transition'
-import {isDefined } from './../../methods';
+
 const StyledSVG = styled(SVG)`
     backface-visibility: hidden;
     position: absolute;
@@ -19,18 +19,16 @@ const StyledSVG = styled(SVG)`
 `;
 
 const animate = {
-    enter(target, direction, duration = 3, dl = 0){
-        const { x, y } = direction;
-        return TweenMax.from(target, duration, {
-            x,
-            y,
-            delay: dl,
+    enter(target, cb){
+        return TweenMax.from(target, 3, {
+            scaleX: 2,
+            scaleY: 3,
             ease: Power1.easeOut,
         })
     },
-    leave(target, direction, duration = 1.5, cb){
+    leave(target, direction, cb){
         const { x, y } = direction;
-        return TweenMax.to(target, 1.5, {
+        return TweenMax.to(target, 3, {
             x,
             y,
             ease: Power1.easeOut,
@@ -47,7 +45,8 @@ class Shape extends React.Component {
 
     componentDidMount(){
         this.dom.root = ReactDOM.findDOMNode(this);
-        animate.enter(this.dom.root, this.props.direction, this.props.duration, this.props.delay );
+        animate.enter(this.dom.root);
+        // animate.enter(this.elRef.current, () => {});
     }
 
     render() {
@@ -58,22 +57,14 @@ class Shape extends React.Component {
 }
 
 const AnimatedShape = (props) => {
-    let duration = 3000;
-
-    if(props.duration){
-        duration = props.duration;
-    }
     return (
         <Transition
             in={props.in}
-            timeout={duration}
+            timeout={1500}
             onEnter={node => {
                 animate.enter(node, props.direction, () => {});
             }}
             onExit={node => {
-                if(props.noExit){
-                    return;
-                }
                 animate.leave(node, props.direction, () => {});
             }}
             mountOnEnter

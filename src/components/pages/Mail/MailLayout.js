@@ -6,6 +6,14 @@ import { DIRECTION } from "../../../constantes";
 import { isVue } from "../../../methods";
 import { VUE } from "../../../store/actions";
 
+const SVGWave = styled(SVG)`
+    position: absolute;
+    width: 330px;
+    height: 230px;
+    bottom: 240px;
+    left: 60%;
+`;
+
 const SVGDot = styled(SVG)`
     position: absolute;
     max-width: 487px;
@@ -30,6 +38,7 @@ const MailLayout = ({ vueIndex }) => {
     return (
         <div>
             <SVGDot src="./assets/svg/shapes/vue-3/shape-dot.svg" />
+            <SVGWave src="./assets/svg/shapes/vue-3/shape-wave.svg" />
             <Letters src="./assets/svg/shapes/vue-3/letters.svg" />
 
             <AnimatedShape

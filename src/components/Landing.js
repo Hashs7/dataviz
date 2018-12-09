@@ -4,6 +4,7 @@ import Home from './pages/Home/Home'
 import Mail from './pages/Mail/Mail'
 import DataCentersContainer from '../containers/DataCentersContainer';
 import ShapesLayoutContainer from '../containers/ShapesLayoutContainer';
+import BandwidthContainer from '../containers/BandwidthContainer';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
 const RouteContainer = posed.div({
@@ -25,7 +26,8 @@ const Landing = () => (
                         <Switch location={location}>
                             <Route exact path="/" component={Home} key="home" />
                             <Route path="/pourquoi" component={DataCentersContainer} key="why" />
-                            <Route path="/mail" component={Mail} key="mail" />
+                            <Route path="/quelle-quantité" component={Mail} key="mail" />
+                            <Route path="/par-qui" component={BandwidthContainer} key="bandwidth" />
                         </Switch>
                     </RouteContainer>
                 </PoseGroup>

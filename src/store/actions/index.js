@@ -10,6 +10,8 @@ export const VUE = {
     MAIL_QUANTITY: 4,
     MAIL_TYPE: 5,
     MAIL_DATA: 6,
-    TRAFIC: 7,
-
+    TRAFIC_BW: 7,
+    TRAFIC_SERV: 8,
+    FUTUR: 9,
+    FINAL: 10
 };

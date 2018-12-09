@@ -1,44 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import AnimatedTitle from '../../UI/AnimatedTitle';
 import { VUE } from '../../../store/actions/index';
-import SVG from 'react-inlinesvg';
-
-const Title = styled.div`
-    font: 48px "Cera Basic", sans-serif;
-`;
-
-const TitleUnderline = styled(SVG)`
-    display: block;
-    width: 230px;
-`;
-
-const Description = styled.p`
-    font: 20px 'Demos Next Pro';
-    line-height: 1.6;
-`;
-
-const PieChartTitle = styled.p`
-    font: 28px 'Cera Basic';
-    font-weight: bold;
-    line-height: 1.25;
-`;
-
-const PieChartUnderline = styled(SVG)`
-    display: block;
-    width: 120px;
-`;
-
-const Container = styled.div`
-    position: relative;
-    text-align: left;
-    z-index: 6;
-    margin: 180px 0 0 200px;
-    max-width: 440px;
-    & polyline{
-        stroke: #000;
-    }
-`;
+import {
+    Container,
+    Title,
+    TitleUnderline,
+    Description,
+    PieChartTitle,
+    PieChartUnderline
+} from './DataCentersStyle';
 
 class DataCenters extends React.Component {
     constructor(props){
@@ -52,6 +22,7 @@ class DataCenters extends React.Component {
 
     componentDidMount(){
         setTimeout(() => this.setState({txt: 'Pourquoi ?'}), 1700);
+
     }
 
     discoverHandler(){

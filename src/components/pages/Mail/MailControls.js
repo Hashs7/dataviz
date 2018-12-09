@@ -12,10 +12,19 @@ import MailChart from "./MailChart";
 const Container = styled.div`
     position: absolute;
     width: 690px;
-    height: 400px;
+    height: 390px;
     left: 195px;
-    bottom: 110px;
+    bottom: 60px;
     z-index: 5;
+    @media (max-width: 1800px) {
+        left: 85px;
+    }
+`;
+
+const Lines = styled(SVG)`
+    display: inline-block;
+    width: 123px;
+    height: 10px;
 `;
 
 const ButtonContainer = styled.div`
@@ -27,6 +36,40 @@ const ButtonContainer = styled.div`
 const RelativeContainer = styled.div`
     position: relative;
     text-align: left;
+`;
+
+const Light = styled.p`
+    font-weight: normal;
+    font-size: 20px;
+`;
+
+const ConvertContainer = styled.div`
+    max-width: 220px;
+    position: absolute;
+    right: -220px;
+    bottom: 24px;
+    color: #fff;
+    & polyline {
+        stroke: #fff !important;
+    }
+`;
+
+
+const Tips = styled.li`
+    position: relative;
+    font-weight: normal;
+    font-family: "Demos Next Pro", serif;
+    font-size: 20px;
+    &:before {
+        display: inline-block;
+        content: '—';
+        margin-right: 15px;
+    }
+`;
+
+const ResultContainer = styled.div`
+    font-size: 28px;
+    font-weight: bold;
 `;
 
 const SelectContainer = styled.div`
@@ -106,25 +149,26 @@ class MailControls extends Component {
         this.setState({ mailAmount: value });
     }
 
-    nextAction(vue){
-        if(this.props.vueIndex === VUE.MAIL_QUANTITY) {
-            this.setState({ helpAction: "Quelle allure a votre messagerie ?" });
+    nextAction(vue) {
+        if (this.props.vueIndex === VUE.MAIL_QUANTITY) {
+            this.setState({helpAction: "Supprimez-vous vos messages lus et indésirables ?"});
             this.props.changeVue(vue);
             this.props.changeMailAmount(this.state.mailAmount);
             tween({
                 from: 1,
                 to: 1642,
-                duration: 2000,
+                duration: 2500,
                 ease: easing.easeOut,
-            }).start(v => this.setState({ mailNotif: Math.floor(v) }))
+            }).start(v => this.setState({mailNotif: Math.floor(v)}))
         }
 
-        if(this.props.vueIndex === VUE.MAIL_TYPE){
+        if (this.props.vueIndex === VUE.MAIL_TYPE) {
             this.props.changeVue(vue);
             this.props.changeMailType(this.state.mailType);
+            this.setState({helpAction: ""});
+
         }
     }
-
     checkboxHandler(e){
         this.setState({ mailType: e.target.id })
     }
@@ -146,6 +190,7 @@ class MailControls extends Component {
                     </HelpAction>
                     {this.props.vueIndex === 4 ?
                         <StyledSlider
+                            className="mailSlider"
                             min={0}
                             max={80}
                             step={20}
@@ -186,7 +231,20 @@ class MailControls extends Component {
                     : null}
 
                     {this.props.vueIndex === 6 ?
-                        <MailChart />
+                        <ResultContainer>
+                            <p>Votre empreinte carbone mail est d'environ <strong>${this.state.footPrint}g</strong> de CO2 par semaine</p>
+                            <Lines src="./assets/svg/wave-line-right.svg"/>
+                            <MailChart />
+                            <ul style={{marginTop: 85}}>
+                                <Tips>Privilégiez les messageries instantanées aux mails</Tips>
+                                <Tips>Supprimez vos mails lus et inutiles (spams et indésirables)</Tips>
+                            </ul>
+                            <ConvertContainer>
+                                <p>Soit environ<br/>10 allers-retours Paris - New York</p>
+                                <Lines src="./assets/svg/wave-line-right.svg"/>
+                                <Light>Pour un passager</Light>
+                            </ConvertContainer>
+                        </ResultContainer>
                     : null}
 
                     {this.props.vueIndex === VUE.MAIL_QUANTITY || this.props.vueIndex === VUE.MAIL_TYPE ?

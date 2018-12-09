@@ -6,49 +6,26 @@ import { theme } from '../../../constantes';
 import { assign } from "lodash";
 
 const Container = styled.div`
-    width: 505px;
+    width: 645px;
+    margin-top: -90px;
 `;
 
-
-// *
-// * Colors
-// *
-const colors = [
-    "#252525",
-    "#525252",
-    "#737373",
-    "#969696",
-    "#bdbdbd",
-    "#d9d9d9",
-    "#f0f0f0"
-];
-
-const charcoal = "#252525";
-const grey = "#969696";
-// *
-// * Typography
-// *
 const sansSerif = "'Gill Sans', 'Gill Sans MT', 'Seravek', 'Trebuchet MS', sans-serif";
 const letterSpacing = "normal";
 const fontSize = 14;
-// *
-// * Layout
-// *
+
 const baseProps = {
     width: 450,
     height: 300,
     padding: 50,
-    colorScale: colors
 };
-// *
-// * Labels
-// *
+
 const baseLabelStyles = {
     fontFamily: sansSerif,
     fontSize,
     letterSpacing,
     padding: 10,
-    fill: charcoal,
+    fill: '#000',
     stroke: "transparent"
 };
 
@@ -59,8 +36,8 @@ const themeChart = {
         style: {
             axis: {
                 fill: "transparent",
-                stroke: charcoal,
-                strokeWidth: 3,
+                stroke: 'transparent',
+                strokeWidth: '2px',
             },
             axisLabel: assign({}, centeredLabelStyles, {
                 padding: 25,
@@ -78,7 +55,6 @@ const themeChart = {
             tickLabels: baseLabelStyles
         }
     }, baseProps),
-
 };
 
 class MailChart extends Component {
@@ -98,7 +74,6 @@ class MailChart extends Component {
             emptyData : [
                 { x: ' ', y: 0 },
             ]
-
         };
         this.handleOnChange = this.handleOnChange.bind(this);
     }
@@ -117,31 +92,31 @@ class MailChart extends Component {
         return (
             <Container>
                 <VictoryChart
-                    height={190}
+                    height={170}
                     theme={themeChart}
                     origin={{ x: 1, y: 1 }}
-                    // domain={{x: [0, 3], y: [0, 1]}}
                 >
                     <VictoryStack
                         style={{
-                            data: { stroke: "black", strokeWidth: 3 }
+                            data: { stroke: "black", strokeWidth: '2px' }
                         }}
                         colorScale={[theme.color.orange, theme.color.blue, theme.color.white]}
                         animate={{
-                            duration: 1500,
+                            duration: 1200,
+                            onLoad: { duration: 500 }
                         }}>
                             <VictoryBar
-                                barWidth={50}
+                                barWidth={35}
                                 horizontal
                                 data={this.state.personalData}
                             />
                             <VictoryBar
-                                barWidth={50}
+                                barWidth={35}
                                 horizontal
                                 data={this.state.scale >= 2 ? this.state.countryData :  this.state.emptyData }
                             />
                             <VictoryBar
-                                barWidth={50}
+                                barWidth={35}
                                 horizontal
                                 data={this.state.scale >= 3 ? this.state.worldData :  this.state.emptyData }
                             />
@@ -149,6 +124,7 @@ class MailChart extends Component {
                 </VictoryChart>
 
                 <Slider
+                    className="chartSlider"
                     min={1}
                     max={3}
                     step={1}

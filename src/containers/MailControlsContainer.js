@@ -7,7 +7,7 @@ import {
 /**
  *
  * @param state
- * @returns {{vueIndex: *}}
+ * @returns {{vueIndex: (number|boolean|*)}}
  */
 const mapStateToProps = state => {
     return {

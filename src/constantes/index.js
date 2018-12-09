@@ -56,6 +56,22 @@ export const DIRECTION = {
     BOTTOM_RIGHT: {
         x: '100%',
         y: '100%'
+    },
+    RIGHT: {
+        x: '100%',
+        y: 0
+    },
+    LEFT: {
+        x: '-100%',
+        y: 0
+    },
+    TOP: {
+        x: 0,
+        y: '-100%'
+    },
+    BOTTOM: {
+        x: 0,
+        y: '100%'
     }
 };
 

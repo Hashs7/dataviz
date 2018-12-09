@@ -11,6 +11,7 @@ import PieChartContainer from "../../containers/PieChartContainer";
 import MorphingShape from './MorphingShape';
 import ArrowButton from './ArrowButton';
 import { isVue } from '../../methods';
+import BandwidthLayout from "../pages/Bandwidth/BandwidthLayout";
 
 const Layout = styled.div`
     position: relative;
@@ -51,32 +52,6 @@ const Logo = styled(SVG)`
     z-index: 5;
 `;
 
-const SVGDot = styled(SVG)`
-    position: absolute;
-    right: -3px;
-    bottom: -7px;
-    width: 445px;
-    height: 370px;
-    z-index: 5;
-`;
-
-const SVGWave = styled(SVG)`
-    position: absolute;
-    top: 11vw;
-    right: 10vw;
-    width: 365px;
-    height: 203px;
-`;
-
-const SVGLine = styled(SVG)`
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    z-index: 5;
-    max-width: 615px;
-    width: 30%;
-    height: 550px;
-`;
 
 class ShapesLayout extends React.Component {
     constructor(props){
@@ -85,7 +60,7 @@ class ShapesLayout extends React.Component {
 
     render(){
         const { vueIndex } = this.props;
-        const { INDEX, WHY, DISCOVER, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRAFIC } = VUE;
+        const { INDEX, WHY, DISCOVER, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRAFIC_BW, TRAFIC_SERV } = VUE;
         return (
             <Layout>
                 <About color={vueIndex !== 1 ? '#000' : '#FFF'}>à propos</About>
@@ -99,19 +74,13 @@ class ShapesLayout extends React.Component {
                 {isVue(vueIndex, [WHY, DISCOVER, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA]) ?
                     <MorphingShape pathObj={bluePath} event={vueIndex === MAIL_QUANTITY} color={theme.color.blue}/>
                 : null}
-                {isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRAFIC]) ?
-                    <MorphingShape pathObj={orangePath} event={vueIndex === TRAFIC} color={theme.color.orange}/>
+                {isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRAFIC_BW, TRAFIC_SERV]) ?
+                    <MorphingShape pathObj={orangePath} event={vueIndex === TRAFIC_BW} color={theme.color.orange}/>
                 : null}
 
-                <HomeLayout in={this.props.vueIndex === 1}/>
+                <HomeLayout in={vueIndex === 1}/>
 
-                {vueIndex === INDEX ?
-                    <div>
-                        <SVGDot src="./assets/svg/shapes/vue-1/shape-dot.svg" />
-                        <SVGLine src="./assets/svg/shapes/vue-1/shape-line.svg" />
-                        <SVGWave src="./assets/svg/shapes/vue-1/shape-wave.svg" />
-                    </div>
-                : null}
+
 
                 {isVue(vueIndex, [WHY, DISCOVER]) ?
                     <div>
@@ -120,9 +89,17 @@ class ShapesLayout extends React.Component {
                     </div>
                 : null}
 
+                { isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA]) ?
+                    <MailLayoutContainer />
+                : null}
+
+                { isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?
+                    <BandwidthLayout />
+                : null}
+
                 {vueIndex === DISCOVER ?
                     <NextButton>
-                        <Link to="/mail">
+                        <Link to="/quelle-quantité">
                             <ArrowButton action={() => this.props.changeVue(MAIL_QUANTITY)}/>
                         </Link>
                     </NextButton>
@@ -130,15 +107,19 @@ class ShapesLayout extends React.Component {
 
                 {vueIndex === MAIL_DATA ?
                     <NextButton>
-                        <Link to="/mail">
-                            <ArrowButton action={() => this.props.changeVue(MAIL_QUANTITY)}/>
+                        <Link to="/par-qui">
+                            <ArrowButton action={() => this.props.changeVue(TRAFIC_BW)}/>
                         </Link>
                     </NextButton>
                 : null }
 
-                { isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA]) ?
-                    <MailLayoutContainer />
-                : null}
+                {vueIndex === TRAFIC_SERV ?
+                    <NextButton>
+                        <Link to="/avenir">
+                            <ArrowButton action={() => this.props.changeVue(TRAFIC_BW)}/>
+                        </Link>
+                    </NextButton>
+                : null }
 
                 {this.props.children}
             </Layout>
