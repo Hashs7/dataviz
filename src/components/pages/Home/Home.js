@@ -1,14 +1,33 @@
 import React from 'react';
+import { Redirect } from 'react-router';
 import styled from 'styled-components';
 import AnimatedTitle from '../../UI/AnimatedTitle';
 import posed from 'react-pose';
-import ButtonContainer from '../../../containers/ButtonContainer';
+import Button from '../../UI/TextButton';
 import * as Snap from "snapsvg";
 import { theme } from "../../../constantes";
+import { VUE } from "../../../store/actions";
 
 const Title = posed.div({
     enter: { y: 0, opacity: 1 },
     exit: { y: 50, opacity: 0 }
+});
+
+const ButtonContainer = posed.div({
+    enter: {
+        y: 60,
+        opacity: 0,
+        transition: {
+            duration: 1000,
+        }
+    },
+    exit: {
+        y: -100,
+        opacity: 1,
+        transition: {
+            duration: 1000,
+        }
+    }
 });
 
 const StyledTitle = styled(Title)`
@@ -27,32 +46,48 @@ const LaunchPlane = styled.button`
     color: ${theme.color.blue}
 `;
 
-class Home extends React.Component {
-    constructor(props){
+class Home extends React.PureComponent {
+    constructor(props) {
         super(props);
         this.state = {
             txt: '',
+            button: 'Envoyer',
+            buttonEnter: false,
+            redirect: false
         };
         this.timer = () => {};
         this.timerSecond = () => {};
+        this.nextVue = this.nextVue.bind(this);
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.timer = setTimeout(() => {
             this.setState({txt: 'Le saviez-vous ?'});
 
             this.timerSecond = setTimeout(() => {
-                this.setState({txt: "L'avion ci-dessous pollue plus que l’aviation civile !"})
+                this.setState({txt: "L'avion ci-dessous pollue plus que l’aviation civile !" , buttonEnter: true})
             }, 4000)
         }, 500)
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
         clearTimeout(this.timer);
         clearTimeout(this.timerSecond);
     }
 
-    planeAnim(){
+    nextVue() {
+        const sound = new Audio("./assets/audio/send.mp3");
+        sound.play();
+
+        this.setState({ button: "Envoyé" });
+
+        setTimeout(() => {
+            this.setState({ redirect: true});
+            this.props.changeVue(VUE.WHY);
+        }, 1000)
+    }
+
+    planeAnim() {
         const snapC = Snap("#svgC");
 
         // SVG C - "Squiggly" Path
@@ -89,8 +124,8 @@ class Home extends React.Component {
 
         const triangleGroup = snapC.g( Plane1, Plane2, Plane3  ); // Group polyline
 
-        setTimeout( function() {
-            Snap.animate(0, lenC, function( value ) {
+        setTimeout(() => {
+            Snap.animate(0, lenC, ( value ) => {
                 let movePoint = myPathC.getPointAtLength( value );
                 triangleGroup.transform( 't' + parseInt(movePoint.x - 15) + ',' + parseInt( movePoint.y - 15) + 'r' + (movePoint.alpha - 90));
             }, 4500);
@@ -98,6 +133,10 @@ class Home extends React.Component {
     }
 
     render(){
+        if(this.state.redirect) {
+            console.log("redirect");
+            return <Redirect push to="/pourquoi" />;
+        }
         return (
             <div>
                 <StyledTitle>
@@ -107,12 +146,16 @@ class Home extends React.Component {
                 </StyledTitle>
 
                 {/*<LaunchPlane onClick={this.planeAnim}>Plane</LaunchPlane>*/}
-                <svg id="svgC" width="100%" height="100%" viewBox="0 0 620 120" preserveAspectRatio="xMidYMid meet">
 
+                <svg id="svgC" width="100%" height="100%" viewBox="0 0 620 120" preserveAspectRatio="xMidYMid meet">
                 </svg>
-                <ButtonContainer link="/pourquoi">
-                    Envoyer
+
+                <ButtonContainer pose={this.state.buttonEnter ? 'exit' : 'enter'}>
+                    <Button click={this.nextVue}>
+                        {this.state.button}
+                    </Button>
                 </ButtonContainer>
+
             </div>
         );
     }

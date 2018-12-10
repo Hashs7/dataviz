@@ -23,14 +23,15 @@ class DataCenters extends React.Component {
             show: false
         };
     }
+    componentWillMount(){
 
+    }
     componentDidMount(){
         setTimeout(() => {
             this.setState({
                 txt: 'Pourquoi ?',
                 show: true
             })
-            console.log('show')
         }, 1700);
     }
 

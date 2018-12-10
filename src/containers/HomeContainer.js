@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import TextButton from '../components/UI/TextButton';
+import Home from '../components/pages/Home/Home';
 import {
     CHANGE_INDEX_VUE
 } from '../store/actions';
@@ -26,4 +26,4 @@ const mapDispatchToProps = dispatch => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(TextButton)
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

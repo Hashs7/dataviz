@@ -88,7 +88,7 @@ class BandwidthLayout extends React.Component {
 
                 <Container>
                     <PieChartBWContainer width={this.width} height={this.height}/>
-                    <BoxPosed posed={isVue(vueIndex, [TRAFIC_SERV])}>
+                    <BoxPosed pose={isVue(vueIndex, [TRAFIC_SERV])}>
                         <LogoContainer>
                             <LogoService>
                                 <Logo src="./assets/svg/logo/yt.svg"/>

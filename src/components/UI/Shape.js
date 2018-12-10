@@ -4,7 +4,7 @@ import styled from "styled-components";
 import SVG from "react-inlinesvg";
 import TweenMax, { Power1 } from "gsap/TweenMax";
 import Transition from 'react-transition-group/Transition'
-import {isDefined } from './../../methods';
+
 const StyledSVG = styled(SVG)`
     backface-visibility: hidden;
     position: absolute;

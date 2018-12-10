@@ -1,8 +1,8 @@
 import React from 'react';
 import posed, { PoseGroup } from 'react-pose';
-import Home from './pages/Home/Home';
 import Mail from './pages/Mail/Mail';
 import Energy from './pages/Energy/Energy';
+import HomeContainer from '../containers/HomeContainer';
 import DataCentersContainer from '../containers/DataCentersContainer';
 import ShapesLayoutContainer from '../containers/ShapesLayoutContainer';
 import BandwidthContainer from '../containers/BandwidthContainer';
@@ -30,7 +30,7 @@ const Landing = () => (
                     <RouteContainer key={location.key ? location.key : "xp"} >
                         {console.log(location)}
                         <Switch location={location}>
-                            <Route exact path="/" component={Home} key="home" />
+                            <Route exact path="/" component={HomeContainer} key="home" />
                             <Route path="/pourquoi" component={DataCentersContainer} key="why" />
                             <Route path="/quelle-quantité" component={Mail} key="mail" />
                             <Route path="/par-qui" component={BandwidthContainer} key="bandwidth" />

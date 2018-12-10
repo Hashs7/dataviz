@@ -5,7 +5,7 @@ import SVG from 'react-inlinesvg';
 import { DIRECTION } from "../../../constantes";
 import { isVue } from "../../../methods";
 import { VUE } from "../../../store/actions";
-import {BoxOpacity} from "../../style/animation";
+import {BoxOpacity, BoxPosed} from "../../style/animation";
 
 const Letters = styled(SVG)`
     position: absolute;
@@ -33,17 +33,20 @@ const MailLayout = ({ vueIndex }) => {
                 zIndex={14}
             />
 
-            <AnimatedShape
-                in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA])}
-                src="./assets/svg/shapes/vue-3/shape-wave.svg"
-                direction={DIRECTION.LEFT}
-                delay={2.3}
-                width="330px"
-                height="230px"
-                bottom="240px"
-                left="41%"
-                zIndex={0}
-            />
+            <BoxPosed pose={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA]) ? 'enter' : 'exit'}>
+                <AnimatedShape
+                    in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA])}
+                    src="./assets/svg/shapes/vue-3/shape-wave.svg"
+                    direction={DIRECTION.LEFT}
+                    delay={2.3}
+                    width="330px"
+                    height="230px"
+                    bottom="240px"
+                    left="41%"
+                    zIndex={0}
+                />
+            </BoxPosed>
+
 
             <BoxOpacity pose={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA]) ? 'visibleDelay' : 'hidden'}>
                 <Letters src="./assets/svg/shapes/vue-3/letters.svg" />

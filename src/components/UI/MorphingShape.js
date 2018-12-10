@@ -14,7 +14,6 @@ const pathIdsOrange = Object.keys(orangePath);
 const animate = {
     enter(target, direction, duration = 3, dl = 1){
         const { x, y } = direction;
-        console.log(duration, dl)
         return TweenMax.from(target, duration, {
             x,
             y,
@@ -195,11 +194,9 @@ const MorphingShape = (props) => {
             in={props.in}
             timeout={duration}
             onEnter={node => {
-                console.log('enter', node);
                 animate.enter(node, props.direction);
             }}
             onExit={node => {
-                console.log('leave', node);
                 animate.leave(node, props.direction);
             }}
             mountOnEnter

@@ -7,10 +7,10 @@ import { VUE } from '../../../store/actions';
 import { theme } from '../../../constantes';
 import { tween, easing } from 'popmotion';
 import MailChart from "./MailChart";
-import { BoxTranslate } from '../../style/animation';
-import {isVue} from "../../../methods";
+import { isVue } from "../../../methods";
 import { Tips } from '../../style/heading';
 import '../../../assets/css/checkbox.css';
+import { BoxPosed } from "../../style/animation";
 
 const Container = styled.div`
     position: absolute;
@@ -38,6 +38,7 @@ const ButtonContainer = styled.div`
 
 const RelativeContainer = styled.div`
     position: relative;
+    height: 100%; 
     z-index: 1;
     text-align: left;
 `;
@@ -122,6 +123,25 @@ const StyledSlider = styled(Slider)`
     font-weight: bold;
 `;
 
+const IndexContainer = styled.div`
+    position: absolute;
+    left: 200px;
+    bottom: 90px;
+    text-align: center;
+`;
+
+const Index = styled.span`
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 20px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color: .3s ease;
+    background-color: ${props => props.isActive ? '#000' : "#FFF"}
+`;
+
 class MailControls extends Component {
     constructor(props){
         super(props);
@@ -140,28 +160,44 @@ class MailControls extends Component {
 
     handleOnChange = (value) => {
         this.setState({ mailAmount: value });
-    }
+    };
 
     nextAction(vue) {
-        if (this.props.vueIndex === VUE.MAIL_QUANTITY) {
-            this.setState({helpAction: "Supprimez-vous vos messages lus et indésirables ?"});
-            this.props.changeVue(vue);
-            this.props.changeMailAmount(this.state.mailAmount);
-            tween({
-                from: 1,
-                to: 1642,
-                duration: 2500,
-                ease: easing.easeOut,
-            }).start(v => this.setState({mailNotif: Math.floor(v)}))
-        }
-
-        if (this.props.vueIndex === VUE.MAIL_TYPE) {
-            this.props.changeVue(vue);
-            this.props.changeMailType(this.state.mailType);
-            this.setState({helpAction: ""});
-
+        switch(vue){
+            case VUE.MAIL_QUANTITY: {
+                this.props.changeVue(vue);
+                this.setState({helpAction: "En moyenne, combien de mails envoyez-vous par semaine ?"});
+                return;
+            }
+            case VUE.MAIL_TYPE: {
+                this.setState({helpAction: "Supprimez-vous vos messages lus et indésirables ?"});
+                this.props.changeVue(vue);
+                this.props.changeMailAmount(this.state.mailAmount);
+                tween({
+                    from: 1,
+                    to: 1642,
+                    duration: 2500,
+                    ease: easing.easeOut,
+                }).start(v => this.setState({mailNotif: Math.floor(v)}));
+                break;
+            }
+            case VUE.MAIL_DATA: {
+                this.props.changeVue(vue);
+                this.props.changeMailType(this.state.mailType);
+                this.setState({helpAction: ""});
+                break
+            }
+            default: break;
         }
     }
+
+    changeVueHandler(nextVue) {
+        if(nextVue === this.props.vueIndex){
+            return;
+        }
+        this.nextAction(nextVue);
+    }
+
     checkboxHandler(e){
         const userCO2 = ((this.state.mailAmount + 10)*10*4);
         this.setState({
@@ -179,13 +215,15 @@ class MailControls extends Component {
             60: '60 - 79',
             80: '>80',
         };
+        const vueIndex = this.props.vueIndex;
+
         return (
             <Container>
                 <RelativeContainer>
                     <HelpAction>
                         {this.state.helpAction}
                     </HelpAction>
-                    {isVue(this.props.vueIndex, [VUE.MAIL_QUANTITY]) ?
+                    {isVue(vueIndex, [VUE.MAIL_QUANTITY]) ?
                         <StyledSlider
                             className="mailSlider"
                             min={0}
@@ -198,7 +236,7 @@ class MailControls extends Component {
                         />
                     : null}
 
-                    {isVue(this.props.vueIndex, [VUE.MAIL_TYPE]) ?
+                    {isVue(vueIndex, [VUE.MAIL_TYPE]) ?
                         <SelectContainer>
                             <StyledMailbox>
                                 <Icon htmlFor="clean">
@@ -228,7 +266,7 @@ class MailControls extends Component {
                         </SelectContainer>
                     : null}
 
-                    {this.props.vueIndex === 6 ?
+                    {vueIndex === VUE.MAIL_DATA ?
                         <ResultContainer>
                             <p>Votre empreinte carbone mail est d'environ <strong>{this.state.userCO2}Kg</strong> de CO2 par mois</p>
                             <Lines src="./assets/svg/wave-line-right.svg"/>
@@ -245,11 +283,23 @@ class MailControls extends Component {
                         </ResultContainer>
                     : null}
 
-                    {this.props.vueIndex === VUE.MAIL_QUANTITY || this.props.vueIndex === VUE.MAIL_TYPE ?
+                    <BoxPosed pose={isVue(vueIndex, [VUE.MAIL_QUANTITY, VUE.MAIL_TYPE]) ? 'enter' : 'exit'}>
+                        <IndexContainer>
+                            <Index
+                                isActive={isVue(vueIndex, [VUE.MAIL_QUANTITY])}
+                                onClick={() => this.changeVueHandler(VUE.MAIL_QUANTITY)}/>
+                            <Index
+                                isActive={isVue(vueIndex, [VUE.MAIL_TYPE])}
+                                onClick={() => this.changeVueHandler(VUE.MAIL_TYPE)}/>
+                        </IndexContainer>
+                    </BoxPosed>
+
+
+                    {isVue(vueIndex, [VUE.MAIL_QUANTITY, VUE.MAIL_TYPE]) ?
                         <ButtonContainer>
                             <ArrowButton action={() => this.nextAction(this.props.vueIndex + 1)} direction="-90deg"/>
                         </ButtonContainer>
-                    : null}
+                    : null }
                 </RelativeContainer>
             </Container>
         );

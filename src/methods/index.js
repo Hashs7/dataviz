@@ -3,7 +3,6 @@ export const isVue = (current, active) => {
 };
 
 export const isDefined = (el) => {
-    console.log(el)
     if (typeof el === 'undefined' || el === null) {
         return null;
     }

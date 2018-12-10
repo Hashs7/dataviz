@@ -27,7 +27,7 @@ const About = styled.button`
     position: absolute; 
     top: 40px;
     right: 70px;
-    z-index: 10;
+    z-index: 20;
     cursor: pointer;
     font: 16px ${theme.font.second};
     font-weight: bold;
@@ -42,6 +42,16 @@ const NextButton = styled.div`
     right: 100px;
     bottom: 80px;
     z-index: 26;
+`;
+
+const LogoHome = styled(SVG)`
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 105px;
+    margin: auto;
+    width: 65px;
+    height: 65px;
 `;
 
 const Logo = styled(SVG)`
@@ -67,9 +77,11 @@ class ShapesLayout extends React.Component {
                 <About
                     onClick={toggleModal}
                     color={vueIndex !== 1 ? '#000' : '#FFF'}>à propos</About>
+
                 {vueIndex !== 1 ?
-                    <Logo src="./assets/svg/logo.svg"/>
-                : null}
+                    <Logo src="./assets/svg/logo.svg" /> :
+                    <LogoHome src="./assets/svg/logo.svg" />}
+
 
                 {modalActive ?
                     <AboutContainer />

@@ -3,11 +3,10 @@ import styled, { withTheme, ThemeProvider } from 'styled-components';
 import { theme } from '../../constantes';
 import { VUE } from '../../store/actions';
 import SVG from 'react-inlinesvg';
-import { Link } from "react-router-dom";
 
 const ButtonContainer = styled.div`
-    position: absolute;
-    bottom: 80px;
+    // position: absolute;
+    // bottom: 80px;
     left: 0;
     right: 0;
     display: flex;
@@ -67,14 +66,14 @@ const TextButton = (props) => {
     return (
         <ButtonContainer>
             <Lines src="./assets/svg/wave-line-left.svg"/>
-            <Link to={props.link}>
-                <StyledButton onClick={() => props.changeVue(VUE.WHY)}>
-                    <Text>
-                        {props.children}
-                    </Text>
-                    <Plane src="./assets/svg/paper-plane.svg"/>
-                </StyledButton>
-            </Link>
+
+            <StyledButton onClick={props.click}>
+                <Text>
+                    {props.children}
+                </Text>
+                <Plane src="./assets/svg/paper-plane.svg"/>
+            </StyledButton>
+
             <Lines src="./assets/svg/wave-line-right.svg"/>
         </ButtonContainer>
 

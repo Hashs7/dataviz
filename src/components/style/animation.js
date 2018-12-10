@@ -37,20 +37,18 @@ export const PosedContainer = posed.div({
 
 export const BoxPosed = posed.div({
     enter: {
-        x: 0,
         opacity: 1,
         staggerChildren: 50,
         transition: {
             duration: 1000,
-
             opacity: { type: 'tween', delay: 2000 },
         }
     },
     exit: {
-        x: -50,
         opacity: 0,
+        applyAtEnd: { display: 'none' },
         transition: {
-            duration: 1000,
+            duration: 200,
             opacity: { type: 'tween' },
         }
     }
@@ -70,7 +68,7 @@ export const BoxTranslate = posed.div({
         opacity: 0,
         applyAtEnd: { display: 'none' },
         transition: {
-            duration: 1000,
+            duration: 500,
             opacity: { type: 'tween' },
         }
     }
