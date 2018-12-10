@@ -48,8 +48,23 @@ const ListContainer = styled.ul`
     margin: 20px 0 40px 0;
 `;
 
+const LogoContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 385px;
+    height: 100px;
+    margin-top: 40px;
+`;
+
+const Gobelins = styled(SVG)`
+    width: 141px;
+    height: 100px;
+`;
+
 const CCI = styled(SVG)`
-    
+    width: 193px;
+    height: 60px;
 `;
 
 
@@ -95,6 +110,10 @@ const About = (props) => {
 
                 <p>Site réalisé dans le cadre d'un projet étudiant de data visualisation</p>
 
+                <LogoContainer>
+                    <Gobelins src="./assets/svg/logo/gobelins.svg" />
+                    <CCI src="./assets/svg/logo/cci.svg" />
+                </LogoContainer>
             </SubContainer>
         </Container>
     );

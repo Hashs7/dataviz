@@ -3,6 +3,13 @@ import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
 import AnimatedShape from '../../UI/Shape';
 
+export const CloudPath = styled.svg`
+    position: absolute;
+    left: -17px;
+    top: -8px;
+    z-index: 10;
+    width: 850px;
+`;
 
 export const TitleUnderline = styled(SVG)`
     display: block;
