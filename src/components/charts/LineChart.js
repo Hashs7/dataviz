@@ -26,7 +26,7 @@ const animate = {
 };
 
 const PieChart = (props) => {
-    const { enter, changeStuff} = props;
+    const { enter } = props;
     return (
         <Transition
             in={enter}
@@ -50,12 +50,16 @@ const PieChart = (props) => {
                             data: { stroke: theme.color.blue, strokeLinecap:"round"},
                         }}
                         data={[
-                            { x: "2010", y: 10 },
-                            { x: "2011", y: 11 },
-                            { x: "2012", y: 10 },
+                            { x: "2010", y: 11 },
+                            { x: "2011", y: 10 },
+                            { x: "2012", y: 11 },
                             { x: "2013", y: 10 },
-                            { x: "2015", y: 15 },
-                            { x: "2019", y: 15 },
+                            { x: "2014", y: 10 },
+                            { x: "2015", y: 10 },
+                            { x: "2016", y: 10 },
+                            { x: "2017", y: 10 },
+                            { x: "2018", y: 11 },
+                            { x: "2019", y: 11 },
                         ]}
                     />
                     <VictoryLine
@@ -63,9 +67,18 @@ const PieChart = (props) => {
                             data: { stroke: theme.color.blue, strokeDasharray: "12 6", strokeDashoffset: "180", strokeLinecap:"round" },
                         }}
                         data={[
-                            { x: "2019", y: 15 },
-                            { x: "2020", y: 20 },
-                            { x: "2021", y: 30 },
+                            { x: "2019", y: 11 },
+                            { x: "2020", y: 11 },
+                            { x: "2021", y: 11 },
+                            { x: "2022", y: 12 },
+                            { x: "2023", y: 12 },
+                            { x: "2024", y: 13 },
+                            { x: "2025", y: 14 },
+                            { x: "2026", y: 15 },
+                            { x: "2027", y: 16 },
+                            { x: "2028", y: 17 },
+                            { x: "2029", y: 19 },
+                            { x: "2030", y: 21 },
                         ]}
                     />
 

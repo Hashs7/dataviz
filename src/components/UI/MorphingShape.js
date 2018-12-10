@@ -95,7 +95,7 @@ class Shape extends Component {
                 bottom: 0,
                 height: '100%',
                 margin: 'auto',
-                zIndex: 4
+                zIndex: 14
             }
         };
         this.pathIds = Object.keys(this.props.pathObj);
@@ -127,7 +127,7 @@ class Shape extends Component {
                         bottom: 0,
                         height: '100%',
                         margin: 'auto',
-                        zIndex: 4
+                        zIndex: 14
                     }
                 });
             }, 400);
@@ -146,7 +146,7 @@ class Shape extends Component {
                         bottom: 0,
                         height: '100%',
                         margin: 'auto',
-                        zIndex: 4
+                        zIndex: 14
                     }
                 });
             }, 1700);

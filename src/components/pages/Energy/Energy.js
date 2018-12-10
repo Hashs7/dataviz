@@ -13,6 +13,7 @@ const Container = styled.div`
     z-index: 4;
     margin: 110px 0 0 200px;
     text-align: left;
+    color: #fff;
 `;
 
 const Title = styled.div`
@@ -49,7 +50,10 @@ class Energy extends React.Component {
     componentDidMount(){
         setTimeout(() => this.setState({
             txt: 'Une situation qui empire ?',
-            desc: 'Internet fait aujourd’hui parti intégrante de nos vies. Notre usage y est de plus en plus important mais quand sera t’il dans 5, 10 ans ?'
+            desc: 'Internet est aujourd’hui omniprésent dans notre quotidien\n' +
+                'Mais, avec l’émergence de technologies comme la voiture \n' +
+                'autonome ou les objets connectés, sa part énergétique\n' +
+                'risque de prendre encore plus d’importance.'
         }), 1700);
     }
 

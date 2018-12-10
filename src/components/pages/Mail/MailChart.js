@@ -58,18 +58,19 @@ const themeChart = {
 };
 
 class MailChart extends Component {
+    //TODO connect to store
     constructor(props){
         super(props);
         this.state = {
             scale: 1,
             personalData: [
-                { x: ' ', y: 9 },
+                { x: ' ', y: 0.8 },
             ],
             countryData:  [
-                { x: ' ', y: 78 },
+                { x: ' ', y: 420000000 },
             ],
             worldData:  [
-                { x: ' ', y: 7000 },
+                { x: ' ', y: 84300000000 },
             ],
             emptyData : [
                 { x: ' ', y: 0 },
@@ -102,8 +103,8 @@ class MailChart extends Component {
                         }}
                         colorScale={[theme.color.orange, theme.color.blue, theme.color.white]}
                         animate={{
-                            duration: 1200,
-                            onLoad: { duration: 500 }
+                            duration: 2000,
+                            onLoad: { duration: 1000 }
                         }}>
                             <VictoryBar
                                 barWidth={35}

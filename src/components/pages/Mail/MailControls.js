@@ -6,11 +6,11 @@ import ArrowButton from '../../UI/ArrowButton';
 import { VUE } from '../../../store/actions';
 import { theme } from '../../../constantes';
 import { tween, easing } from 'popmotion';
-import '../../../assets/css/checkbox.css';
 import MailChart from "./MailChart";
-import { BoxOpacity } from '../../style/animation';
+import { BoxTranslate } from '../../style/animation';
 import {isVue} from "../../../methods";
 import { Tips } from '../../style/heading';
+import '../../../assets/css/checkbox.css';
 
 const Container = styled.div`
     position: absolute;
@@ -38,6 +38,7 @@ const ButtonContainer = styled.div`
 
 const RelativeContainer = styled.div`
     position: relative;
+    z-index: 1;
     text-align: left;
 `;
 
@@ -128,6 +129,8 @@ class MailControls extends Component {
             mailAmount: 0,
             mailType: '',
             mailNotif: 1,
+            userCO2: 0,
+            carKm: 0,
             helpAction: "En moyenne, combien de mails envoyez-vous par semaine ?"
         };
         this.handleOnChange = this.handleOnChange.bind(this);
@@ -160,7 +163,12 @@ class MailControls extends Component {
         }
     }
     checkboxHandler(e){
-        this.setState({ mailType: e.target.id })
+        const userCO2 = ((this.state.mailAmount + 10)*10*4);
+        this.setState({
+            mailType: e.target.id,
+            userCO2: userCO2/1000,
+            carKm: Math.floor(userCO2/111)
+        })
     }
 
     render() {
@@ -171,15 +179,13 @@ class MailControls extends Component {
             60: '60 - 79',
             80: '>80',
         };
-        const userCO2 = (this.state.mailAmount + 10)*20;
         return (
             <Container>
                 <RelativeContainer>
                     <HelpAction>
                         {this.state.helpAction}
                     </HelpAction>
-                    {this.props.vueIndex === 4 ?
-                    <BoxOpacity pose={isVue(this.props.vueIndex, [VUE.MAIL_QUANTITY]) ? 'visibleDelay' : 'hidden'}>
+                    {isVue(this.props.vueIndex, [VUE.MAIL_QUANTITY]) ?
                         <StyledSlider
                             className="mailSlider"
                             min={0}
@@ -190,9 +196,9 @@ class MailControls extends Component {
                             value={this.state.mailAmount}
                             onChange={this.handleOnChange}
                         />
-                    </BoxOpacity> : null}
+                    : null}
 
-                    {this.props.vueIndex === 5 ?
+                    {isVue(this.props.vueIndex, [VUE.MAIL_TYPE]) ?
                         <SelectContainer>
                             <StyledMailbox>
                                 <Icon htmlFor="clean">
@@ -224,7 +230,7 @@ class MailControls extends Component {
 
                     {this.props.vueIndex === 6 ?
                         <ResultContainer>
-                            <p>Votre empreinte carbone mail est d'environ <strong>{userCO2}g</strong> de CO2 par semaine</p>
+                            <p>Votre empreinte carbone mail est d'environ <strong>{this.state.userCO2}Kg</strong> de CO2 par mois</p>
                             <Lines src="./assets/svg/wave-line-right.svg"/>
                             <MailChart />
                             <ul style={{marginTop: 85}}>
@@ -232,9 +238,9 @@ class MailControls extends Component {
                                 <Tips>Supprimez vos mails lus et inutiles (spams et indésirables)</Tips>
                             </ul>
                             <ConvertContainer>
-                                <p>Soit environ<br/>10 allers-retours Paris - New York</p>
+                                <p>Soit environ<br/>{this.state.carKm} km parcourus</p>
                                 <Lines src="./assets/svg/wave-line-right.svg"/>
-                                <Light>Pour un passager</Light>
+                                <Light>Pour un trajet en voiture</Light>
                             </ConvertContainer>
                         </ResultContainer>
                     : null}

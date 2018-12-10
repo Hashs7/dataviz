@@ -13,7 +13,7 @@ const Letters = styled(SVG)`
     height: 305px;
     top: 60px;
     left: 66vh;
-    z-index: 4;
+    z-index: 16;
 `;
 
 const MailLayout = ({ vueIndex }) => {
@@ -30,7 +30,7 @@ const MailLayout = ({ vueIndex }) => {
                 height="723px"
                 bottom="-3px"
                 right="-3px"
-                zIndex={4}
+                zIndex={14}
             />
 
             <AnimatedShape
@@ -44,6 +44,7 @@ const MailLayout = ({ vueIndex }) => {
                 left="41%"
                 zIndex={0}
             />
+
             <BoxOpacity pose={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA]) ? 'visibleDelay' : 'hidden'}>
                 <Letters src="./assets/svg/shapes/vue-3/letters.svg" />
             </BoxOpacity>
@@ -51,9 +52,10 @@ const MailLayout = ({ vueIndex }) => {
             <AnimatedShape
                 in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA])}
                 src="./assets/svg/shapes/vue-3/shape-green.svg"
-                delay={1.2}
-                direction={DIRECTION.BOTTOM_LEFT}
+                delay={1}
+                direction={DIRECTION.LEFT}
                 maxWidth="983px"
+                minWidth="950px"
                 maxHeight="683px"
                 width="65%"
                 height="fit-content"

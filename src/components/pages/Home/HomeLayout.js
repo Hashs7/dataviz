@@ -16,7 +16,7 @@ const HomeLayout = (props) => {
                 height="370px"
                 bottom="-7px"
                 right="-3px"
-                zIndex={5}
+                zIndex={15}
             />
 
             <AnimatedShape
@@ -24,8 +24,8 @@ const HomeLayout = (props) => {
                 delay={1.2}
                 src="./assets/svg/shapes/vue-1/shape-line.svg"
                 direction={DIRECTION.TOP_LEFT}
-                width="365px"
-                height="203px"
+                width="545px"
+                height="420px"
                 top="-3px"
                 left="-3px"
                 zIndex={5}
@@ -42,7 +42,6 @@ const HomeLayout = (props) => {
                 right="10vw"
             />
 
-
             <ScalingShape
                 in={props.in}
                 src="./assets/svg/shapes/vue-1/shape-blue-left.svg"
@@ -53,6 +52,7 @@ const HomeLayout = (props) => {
                 bottom="-3px"
                 left="-3px"
             />
+
             <ScalingShape
                 in={props.in}
                 src="./assets/svg/shapes/vue-1/shape-orange-top.svg"
@@ -63,6 +63,7 @@ const HomeLayout = (props) => {
                 top="-3px"
                 left="-3px"
             />
+
             <ScalingShape
                 in={props.in}
                 src="./assets/svg/shapes/vue-1/shape-blue-right.svg"
@@ -72,9 +73,8 @@ const HomeLayout = (props) => {
                 height="455px"
                 top="-3px"
                 right="-3px"
-                zIndex="5"
+                zIndex={15}
             />
-
         </div>
     );
 };

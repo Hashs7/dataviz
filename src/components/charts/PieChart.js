@@ -3,28 +3,31 @@ import { theme } from "../../constantes";
 import { VictoryPie } from 'victory';
 import styled from "styled-components";
 import Transition from 'react-transition-group/Transition'
-import TweenMax, {Power1} from "gsap/TweenMax";
+import TweenMax, { Power1 } from "gsap/TweenMax";
 
 const PieContainer = styled.div`
     position: absolute;
-    bottom: 60px;
+    bottom: 30px;
     left: 368px;
-    z-index: 5;
+    z-index: 15;
+    backface-visibily: hidden;
     @media (max-height: 950px){
-        bottom: 30px;
+        bottom: 0px;
     }
 `;
 
 const animate = {
     enter(target) {
-        return TweenMax.from(target, 1, {
+        return TweenMax.from(target, 0.5, {
             opacity: 0,
+            force3D: true,
             ease: Power1.easeOut,
         });
     },
     leave(target) {
-        return TweenMax.to(target, 1, {
+        return TweenMax.to(target, 0.5, {
             opacity: 0,
+            force3D: true,
             ease: Power1.easeOut,
         });
     }

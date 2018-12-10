@@ -4,13 +4,11 @@ import AnimatedTitle from '../../UI/AnimatedTitle';
 import { VUE } from '../../../store/actions/index';
 import SVG from 'react-inlinesvg';
 import { Title, Description, ChartTitle, ChartUnderline } from "../../style/heading";
+import { ContainerTitle } from "../../style/containers";
 
-const Container = styled.div`
+const Container = styled(ContainerTitle)`
     max-width: 585px;
-    position: relative;
-    z-index: 4;
-    margin: 110px 0 0 200px;
-    text-align: left;
+    z-index: 16;
 `;
 
 const TitleUnderline = styled(SVG)`
@@ -85,6 +83,7 @@ class Bandwidth extends React.Component {
                 <StyledDescription>
                     {this.state.desc}
                 </StyledDescription>
+
                 {this.props.vueIndex === VUE.TRAFIC_BW ?
                 <MoreContainer>
                     <MoreUnderline src="./assets/svg/wave-underline.svg"/>
@@ -95,15 +94,12 @@ class Bandwidth extends React.Component {
                 </MoreContainer>
                 : null}
 
-
                 {this.props.vueIndex === VUE.TRAFIC_SERV ?
                     <ChartTitle>
                         Énergies employées dans le fonctionnement<br/>de… (2017)
                         <ChartUnderline src="./assets/svg/wave-line-right.svg"/>
                     </ChartTitle>
                 : null}
-
-
             </Container>
         );
     }

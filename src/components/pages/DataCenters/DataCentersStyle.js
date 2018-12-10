@@ -5,10 +5,11 @@ import AnimatedShape from '../../UI/Shape';
 
 export const CloudPath = styled.svg`
     position: absolute;
-    left: -17px;
-    top: -8px;
-    z-index: 10;
-    width: 850px;
+    top: -22px;
+    right: 22px;
+    z-index: 16;
+    max-width: 950px;
+    width: 83vh;
 `;
 
 export const TitleUnderline = styled(SVG)`
@@ -19,7 +20,7 @@ export const TitleUnderline = styled(SVG)`
 export const Container = styled.div`
     position: relative;
     text-align: left;
-    z-index: 6;
+    z-index: 14;
     margin: 110px 0 0 200px;
     max-width: 440px;
     & polyline{
@@ -58,7 +59,7 @@ export const Computer = styled(SVG)`
     width: 240px;
     bottom: 0;
     left: 0;
-    z-index: 4;
+    z-index: 15;
 `;
 
 export const CloudRelativeContainer = styled.div`
@@ -71,7 +72,7 @@ export const CloudContainer = styled.div`
     right: -100px;
     height: 49%;
     width: 83vh;
-    z-index: 5;
+    z-index: 14;
 `;
 
 export const CloudBefore = styled(AnimatedShape)`
@@ -84,6 +85,8 @@ export const CloudBefore = styled(AnimatedShape)`
 `;
 
 export const Cloud = styled(SVG)`
+    position: relative;
+    z-index: 15;
     width: 100%;
     height: 100%;
 `;
@@ -102,7 +105,17 @@ export const LegendContainer = styled.div`
     font-size: 24px;
     font-weight: bold;
     opacity: ${props => props.visible ? '1' : '0'}
-    transition: opacity .2s ease-in-out;
+`;
+
+export const BtnScissors = styled.button`
+    cursor: pointer;
+    position: absolute;
+    left: 304px;
+    top: 0;
+    transform: rotate(-125deg);
+    width: 38px;
+    height: 34px;
+    z-index: 16;
 `;
 
 export const LegendUnderline = styled(SVG)`

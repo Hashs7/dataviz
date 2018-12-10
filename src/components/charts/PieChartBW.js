@@ -44,27 +44,50 @@ const PieChart = (props) => {
             unmountOnExit
         >
             <PieContainer className="DoublePie">
+                <VictorySharedEvents
+                    events={[{
+                        childName: ["pie", "bar"],
+                        target: "data",
+                        eventHandlers: {
+                            onMouseOver: () => {
+                                return [{
+                                    childName: ["pie", "bar"],
+                                    mutation: (props) => {
+                                        if(props.index === 4) {
+                                            return
+                                        }
+                                        return {
+                                            style: Object.assign({}, props.style, {opacity: 1, fill: "red"})
+                                        };
+                                    }
+                                }];
+                            },
+                            onMouseOut: () => {
+                                return [{
+                                    childName: ["pie", "bar"],
+                                    mutation: () => {
+                                        return null;
+                                    }
+                                }];
+                            }
+                        }
+                    }]}
+                >
                 <g transform={`translate(${props.width - 800}, 0), scale(1.5)`}>
                 <VictoryPie
                     standalone={false}
                     data={[
                         { x: "Vidéos 58%", y: 58 },
                         { x: "Web 17%", y: 17 },
+                        { x: "Autres 12%", y: 12 },
                         { x: "Jeux 8%", y: 8 },
-                        { x: "Socials 5%", y: 5 },
-                        { x: "Autres 12%", y: 12 }
+                        { x: "Socials 5%", y: 5 }
                     ]}
                     height={350}
-                    style={{
-                        data: { stroke: "#000", strokeWidth: 2 },
-                        labels: { fill: "transparent" }
-                    }}
+                    style={{data: { stroke: "#000", strokeWidth: 2 }, labels: { fill: "transparent" }}}
                     labelRadius={5}
-                    animate={{
-                        duration: 1200,
-                        onLoad: { duration: 500 }
-                    }}
-                    colorScale={[ theme.color.blue, theme.color.orange, theme.color.green, theme.color.white,  '#646464']}
+                    animate={{ duration: 1200, onLoad: { duration: 500 }}}
+                    colorScale={[ theme.color.blue, theme.color.orange, '#646464', theme.color.green, theme.color.white ]}
                     events={[{
                         target: "data",
                         eventHandlers: {
@@ -113,18 +136,17 @@ const PieChart = (props) => {
                         }
                     }]}
                 />
-                <g transform={"scale(1.35), translate(-52, -45)"}>
+                <g transform={"scale(1.35), rotate(-8 -150 520)"}>
                     {isVue(vueIndex, [VUE.TRAFIC_SERV]) ?
                         <OutPie
                             name="pie"
                             standalone={false}
                             data={[
+                                { x: "Facebook", y: 2 },
                                 { x: "Netflix", y: 15 },
                                 { x: "Youtube", y: 12 },
                                 { x: "Amazon Prime Video", y: 4 },
-                                { x: "empty", y: 52 },
-                                { x: "Facebook", y: 2 },
-                                { x: "empty2", y: 15 },
+                                { x: "empty", y: 67 }
                             ]}
                             height={350}
                             innerRadius={100}
@@ -137,7 +159,7 @@ const PieChart = (props) => {
                                 duration: 1200,
                                 onLoad: { duration: 500 }
                             }}
-                            colorScale={[ theme.color.black, '#FF2F4E', '#03ABE6', 'transparent',  '#4C7BE3', 'transparent']}
+                            colorScale={[ '#4F62CC', theme.color.black, '#FF2F4E', '#03ABE6', 'transparent', ]}
                             events={[{
                                 target: "data",
                                 eventHandlers: {
@@ -175,23 +197,20 @@ const PieChart = (props) => {
                                 }
                             }]}
                         />
-
                     : null}
                 </g>
                 </g>
 
-                <g
-                    transform={"translate(0, 462)"}
-                >
+                <g transform={`translate(80, ${props.height - 505})`}>
                 {isVue(vueIndex, [VUE.TRAFIC_SERV])  ?
                     <VictoryStack
                         standalone={false}
                         style={{
-                            data: { stroke: "black", strokeWidth: '2px', opacity: 0.8 }
+                            data: { stroke: "black", strokeWidth: '2px' }
                         }}
                         width={500}
                         domainPadding={{ y: -18 }}
-                        colorScale={[theme.color.orange, theme.color.green, theme.color.blue]}
+                        colorScale={[theme.color.orange, theme.color.green, theme.color.white]}
                         animate={{
                             duration: 1200,
                             onLoad: { duration: 500 }
@@ -202,15 +221,26 @@ const PieChart = (props) => {
                             horizontal
                             labels={(d) => `${d.y}%`}
                             padding={{ right: 20 }}
-                            style={{
-                                labels: { fill: "#000" }
-                            }}
-                            labelComponent={<VictoryLabel x={100}/>}
+                            style={{ labels: { fill: "#000" }}}
+                            events={[{
+                                target: "data",
+                                eventHandlers: {
+                                    onMouseEnter: () => ([{
+                                        target: "labels",
+                                        mutation: () =>  ({text: "Energie fossile", x: 200, dy: 35})
+                                    }]),
+                                    onMouseLeave: () => ([{
+                                        target: "labels",
+                                        mutation: (props) => ({text: props.data[props.index].y+'%'})
+                                    }]),
+                                }
+                            }]}
+                            labelComponent={<VictoryLabel x={100} />}
                             data={[
                                 { x: 'facebook', y: 31 },
-                                { x: 'amazon', y: 80 },
-                                { x: 'youtube', y: 39 },
                                 { x: 'netflix', y: 80 },
+                                { x: 'youtube', y: 39 },
+                                { x: 'amazon', y: 80 },
                             ]}
                         />
                         <VictoryBar
@@ -218,17 +248,27 @@ const PieChart = (props) => {
                             name="bar"
                             labels={(d) => `${d.y}%`}
                             padding={{ right: 20 }}
-                            style={{
-                                labels: { fill: "#000" }
-                            }}
+                            style={{labels: { fill: "#000" }}}
+                            events={[{
+                                target: "data",
+                                eventHandlers: {
+                                    onMouseEnter: () => ([{
+                                        target: "labels",
+                                        mutation: () =>  ({text: "Energie renouvelable", x: 190, dy: 35 })
+                                    }]),
+                                    onMouseLeave: () => ([{
+                                        target: "labels",
+                                        mutation: (props) => ({text: props.data[props.index].y+'%'})
+                                    }]),
+                                }
+                            }]}
                             horizontal
-                            labelComponent={<VictoryLabel x={390}/>}
-
+                            labelComponent={<VictoryLabel x={390} />}
                             data={[
                                 { x: 'facebook', y: 67 },
-                                { x: 'amazon', y: 17 },
-                                { x: 'youtube', y: 56 },
                                 { x: 'netflix', y: 17 },
+                                { x: 'youtube', y: 56 },
+                                { x: 'amazon', y: 17 },
                             ]}
                         />
                         <VictoryBar
@@ -236,22 +276,33 @@ const PieChart = (props) => {
                             name="bar"
                             labels={(d) => `${d.y}%`}
                             horizontal
-                            labelComponent={<VictoryLabel x={460}/>}
+                            labelComponent={<VictoryLabel x={460} />}
                             padding={{ right: 20 }}
-                            style={{
-                                labels: { fill: "#000" }
-                            }}
+                            style={{labels: { fill: "#000" }}}
+                            events={[{
+                                target: "data",
+                                eventHandlers: {
+                                    onMouseEnter: () => ([{
+                                        target: "labels",
+                                        mutation: () =>  ({text: "Inconnu", x: 220, dy: 35})
+                                    }]),
+                                    onMouseLeave: () => ([{
+                                        target: "labels",
+                                        mutation: (props) => ({text: props.data[props.index].y+'%'})
+                                    }]),
+                                }
+                            }]}
                             data={[
                                 { x: 'facebook', y: 2 },
-                                { x: 'amazon', y: 3 },
-                                { x: 'youtube', y: 5 },
                                 { x: 'netflix', y: 3 },
+                                { x: 'youtube', y: 5 },
+                                { x: 'amazon', y: 3 },
                             ]}
                         />
                     </VictoryStack>
                 : null}
                 </g>
-
+                </VictorySharedEvents>
             </PieContainer>
         </Transition>
     );

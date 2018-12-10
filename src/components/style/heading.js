@@ -13,6 +13,7 @@ export const Description = styled.p`
 `;
 
 export const ChartTitle =  styled.p`
+    margin-top: 30px;
     font: 28px 'Cera Basic';
     font-weight: bold;
     line-height: 1.2;

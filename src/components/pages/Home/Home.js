@@ -106,7 +106,7 @@ class Home extends React.Component {
                     </AnimatedTitle>
                 </StyledTitle>
 
-                <LaunchPlane onClick={this.planeAnim}>Plane</LaunchPlane>
+                {/*<LaunchPlane onClick={this.planeAnim}>Plane</LaunchPlane>*/}
                 <svg id="svgC" width="100%" height="100%" viewBox="0 0 620 120" preserveAspectRatio="xMidYMid meet">
 
                 </svg>

@@ -6,7 +6,7 @@ import MailControlsContainer from '../../../containers/MailControlsContainer';
 import { VUE } from "../../../store/actions";
 import '../../../assets/css/range.css'
 import { connect } from 'react-redux';
-import {BoxOpacity} from "../../style/animation";
+import {BoxOpacity, BoxPosed} from "../../style/animation";
 
 const Title = styled.div`
     font: 48px "Cera Basic", sans-serif;
@@ -26,7 +26,7 @@ const TitleContainer = styled.div`
     color: #fff;
     position: relative;
     text-align: left;
-    z-index: 6;
+    z-index: 16;
     margin: 110px 0 0 200px;
     max-width: 450px;
     & polyline {
@@ -66,14 +66,16 @@ class Mail extends React.Component {
                             {this.state.txt}
                         </AnimatedTitle>
                     </Title>
-                    <BoxOpacity pose={this.state.show ? 'visible' : 'hidden'}>
+                    <BoxPosed>
                         <TitleUnderline src="./assets/svg/wave-underline-quantity.svg"/>
-                    </BoxOpacity>
+                    </BoxPosed>
                     <Description>
                         {this.state.desc}
                     </Description>
                 </TitleContainer>
-                <MailControlsContainer />
+                <BoxPosed>
+                    <MailControlsContainer />
+                </BoxPosed>
             </div>
         );
     }

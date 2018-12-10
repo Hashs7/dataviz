@@ -41,7 +41,7 @@ const NextButton = styled.div`
     position: absolute;
     right: 100px;
     bottom: 80px;
-    z-index: 6;
+    z-index: 26;
 `;
 
 const Logo = styled(SVG)`
@@ -50,7 +50,7 @@ const Logo = styled(SVG)`
     margin: 30px 0 0 70px;
     width: 40px;
     height: 40px;
-    z-index: 5;
+    z-index: 20;
 `;
 
 

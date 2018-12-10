@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerTitle = styled.div`
     position: relative;
     text-align: left;
-    z-index: 6;
+    z-index: 16;
     margin: 110px 0 0 200px;
     & polyline {
         stroke: #000;

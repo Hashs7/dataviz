@@ -6,20 +6,26 @@ import {
     SVGWaves,
     ComputerContainer, ComputerSubContainer, CloudRelativeContainer, LegendComputer, Computer, LegendUnderline,
     Wifi, LegendWifi,
-    CloudContainer, Cloud, LegendCloud, CloudPath
+    CloudContainer, Cloud, LegendCloud, CloudPath, BtnScissors
 } from './DataCentersStyle';
 import { BoxOpacity } from '../../style/animation';
 import * as Snap from "snapsvg";
 import { VUE } from '../../../store/actions';
+import SVG from 'react-inlinesvg';
 
+class DataCentersLayout extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            scissors: false,
+        }
+        this.cutScissors = this.cutScissors.bind(this);
+    }
 
-const DataCentersLayout = (props) =>  {
-    const { vueIndex, stuffHover, changeVue } = props;
+    cutScissors() {
+        this.setState({scissors: false});
 
-
-    const cutScissors = () => {
         const snapC = Snap("#scissorsPath");
-        // SVG C - "Squiggly" Path
         const myPathC = snapC.path("M369.18,26.66A127.21,127.21,0,0,0,343,46.2c-11,10.58-57.56,24.08-72.7,29.09-25.69,8.51-69.65,29-93.1,74.06-24.39,46.88-53.73,62.76-68.77,68-12.55,4.41-24.64,9.9-35.2,17.41C43.55,255.9,1.92,299.47,32.05,365.51,76.34,462.57,156,464.77,156,464.77s107.34,6.62,191,72.79c40,31.66,99.75,33,151.17,25.84C548.28,556.39,595,537,635,509c32.22-22.53,84.62-50,147.44-48.68a205.6,205.6,0,0,0,69.24-10.1").attr({
             id: "squiggle",
             fill: "none",
@@ -28,10 +34,8 @@ const DataCentersLayout = (props) =>  {
             strokeMiterLimit: "10",
         });
 
-        // SVG C - Draw Path
         const lenC = myPathC.getTotalLength();
 
-        // SVG C - Animate Path
         myPathC.attr({
             strokeWidth: 0,
             fill: 'none',
@@ -42,92 +46,112 @@ const DataCentersLayout = (props) =>  {
 
         const ScissorsGroup = snapC.g( Scissors  );
 
-        setTimeout( function() {
-            Snap.animate(0, lenC, function( value ) {
+        setTimeout(() => {
+            Snap.animate(0, lenC, ( value ) => {
                 let movePoint = myPathC.getPointAtLength( value );
                 ScissorsGroup.transform( 't' + parseInt(movePoint.x - 375) + ',' + parseInt( movePoint.y - 25) + 'r' + (movePoint.alpha - 90));
-            }, 4500, null, () => changeVue(VUE.DISCOVER));
+            }, 2500, null, () => this.props.changeVue(VUE.DISCOVER));
         });
     };
 
-    return (
-        <div>
-            <AnimatedShape
-                in={isVue(vueIndex, [2, 3])}
-                delay={0.5}
-                src="./assets/svg/shapes/vue-2/shape-dot.svg"
-                direction={DIRECTION.TOP_LEFT}
-                maxWidth="754px"
-                width="71vh"
-                maxHeight="928px"
-                height="84vh"
-                top="-3px"
-                left="-15px"
-                zIndex={3}
-            />
+    componentDidMount(){
+        setTimeout(() => {
+            this.setState({scissors: true});
+        }, 1200)
+    }
 
-            <BoxOpacity pose={isVue(vueIndex, [2, 3]) ? 'visibleDelay' : 'hidden'}>
-                <SVGWaves src="./assets/svg/shapes/vue-2/shape-wave.svg" />
-            </BoxOpacity>
+    render() {
+        const { vueIndex, stuffHover } = this.props;
 
-            <BoxOpacity pose={vueIndex === 3 ? 'visible' : 'hidden'}>
-                <ComputerContainer>
-                    <ComputerSubContainer>
-                        <Computer src="./assets/svg/computer.svg" />
-                        <LegendComputer visible={stuffHover === STUFF.PERSO}>
-                            Equipements personnels
-                            <LegendUnderline src="./assets/svg/wave-underline.svg"/>
-                        </LegendComputer>
-                        <Wifi src="./assets/svg/wifi.svg" />
-                        <LegendWifi visible={stuffHover === STUFF.RESEAU}>
-                            Infrastructures réseaux
-                            <LegendUnderline src="./assets/svg/wave-underline.svg"/>
-                        </LegendWifi>
-                    </ComputerSubContainer>
-                </ComputerContainer>
-            </BoxOpacity>
-            <button style={{position: 'relative', zIndex: 10}} onClick={cutScissors}>découp ciso</button>
-            <CloudContainer>
-                <CloudRelativeContainer>
-                    <CloudPath id="scissorsPath" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 921.9 594.66">
-                    </CloudPath>
-                    <AnimatedShape
-                        in={vueIndex === 2}
-                        delay={2.3}
-                        src="./assets/svg/shapes/vue-2/cloud.svg"
-                        direction={DIRECTION.RIGHT}
-                        width="83vh"
-                        height="49%"
-                        top="0"
-                        right="0"
-                        zIndex={4}
-                        noExit
-                    />
-                    {vueIndex === 3 ?
-                      <div>
-                          <Cloud src="./assets/svg/shapes/vue-2/cloud-after.svg" />
-                          <LegendCloud visible={stuffHover === STUFF.DATA}>
-                              Data centers
-                              <LegendUnderline src="./assets/svg/wave-underline.svg"/>
-                          </LegendCloud>
-                      </div>
-                    : null}
-                </CloudRelativeContainer>
-            </CloudContainer>
-            <AnimatedShape
-                in={isVue(vueIndex, [2, 3])}
-                direction={DIRECTION.TOP_RIGHT}
-                delay={2}
-                src="./assets/svg/shapes/vue-2/shape-orange.svg"
-                maxWidth="1052px"
-                width="55%"
-                height="274px"
-                top="-3px"
-                right="-3px"
-                zIndex="2"
-            />
-        </div>
-    );
+        return (
+            <div>
+                <AnimatedShape
+                    in={isVue(vueIndex, [2, 3])}
+                    delay={0.5}
+                    src="./assets/svg/shapes/vue-2/shape-dot.svg"
+                    direction={DIRECTION.TOP_LEFT}
+                    maxWidth="754px"
+                    width="71vh"
+                    maxHeight="928px"
+                    height="84vh"
+                    top="-3px"
+                    left="-15px"
+                    zIndex={3}
+                />
+
+                <BoxOpacity pose={isVue(vueIndex, [2, 3]) ? 'visibleDelay' : 'hidden'} >
+                    <SVGWaves src="./assets/svg/shapes/vue-2/shape-wave.svg" />
+                </BoxOpacity>
+
+                <BoxOpacity pose={vueIndex === 3 ? 'visible' : 'hidden'}>
+                    <ComputerContainer>
+                        <ComputerSubContainer>
+                            <Computer src="./assets/svg/computer.svg" />
+                            <LegendComputer visible={stuffHover === STUFF.PERSO}>
+                                Equipements personnels
+                                <LegendUnderline src="./assets/svg/wave-underline.svg"/>
+                            </LegendComputer>
+                            <Wifi src="./assets/svg/wifi.svg" />
+                            <LegendWifi visible={stuffHover === STUFF.RESEAU}>
+                                Infrastructures réseaux
+                                <LegendUnderline src="./assets/svg/wave-underline.svg"/>
+                            </LegendWifi>
+                        </ComputerSubContainer>
+                    </ComputerContainer>
+                </BoxOpacity>
+                {vueIndex === 3 || vueIndex === 2 ?
+                <CloudContainer>
+                    <CloudRelativeContainer>
+                        <CloudPath id="scissorsPath" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 921.9 594.66">
+                        </CloudPath>
+                        <AnimatedShape
+                            in={vueIndex === 2}
+                            delay={2.3}
+                            src="./assets/svg/shapes/vue-2/cloud.svg"
+                            direction={DIRECTION.RIGHT}
+                            maxWidth="950px"
+                            width="83vh"
+                            height="49%"
+                            top="0"
+                            right="0"
+                            zIndex={15}
+                            noExit
+                        />
+
+                        {isVue(vueIndex, [2]) ?
+                            <BtnScissors onClick={this.cutScissors}>
+                                <SVG src="./assets/svg/shapes/vue-2/scissors-open.svg"/>
+                            </BtnScissors>
+                        : null}
+
+                        {vueIndex === 3 ?
+                            <div>
+                                <Cloud src="./assets/svg/shapes/vue-2/cloud-after.svg" />
+                                <LegendCloud visible={stuffHover === STUFF.DATA}>
+                                    Data centers
+                                    <LegendUnderline src="./assets/svg/wave-underline.svg"/>
+                                </LegendCloud>
+                            </div>
+                            : null}
+                    </CloudRelativeContainer>
+                </CloudContainer>
+                : null}
+
+                <AnimatedShape
+                    in={isVue(vueIndex, [2, 3])}
+                    direction={DIRECTION.TOP_RIGHT}
+                    delay={1}
+                    src="./assets/svg/shapes/vue-2/shape-orange.svg"
+                    maxWidth="1052px"
+                    width="55%"
+                    height="274px"
+                    top="-3px"
+                    right="-3px"
+                    zIndex="2"
+                />
+            </div>
+        )
+    }
 };
 
 export default DataCentersLayout;

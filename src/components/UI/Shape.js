@@ -21,7 +21,6 @@ const StyledSVG = styled(SVG)`
 const animate = {
     enter(target, direction, duration = 3, dl = 0){
         const { x, y } = direction;
-        console.log(duration, dl)
         return TweenMax.from(target, duration, {
             x,
             y,
@@ -48,7 +47,6 @@ class Shape extends React.Component {
 
     componentDidMount(){
         this.dom.root = ReactDOM.findDOMNode(this);
-        console.log(this.dom.root)
         animate.enter(this.dom.root, this.props.direction, this.props.duration, this.props.delay );
     }
 
@@ -73,7 +71,6 @@ const AnimatedShape = (props) => {
                 animate.enter(node, props.direction);
             }}
             onExit={node => {
-                console.log('leave', node)
                 if(props.noExit){
                     return;
                 }

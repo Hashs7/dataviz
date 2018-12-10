@@ -11,8 +11,12 @@ import { Route, Switch } from 'react-router-dom';
 const RouteContainer = posed.div({
     enter: {
         opacity: 1,
-        delay: 300,
         beforeChildren: true,
+        transition: {
+            duration: 3000,
+            delay: 1500,
+            opacity: { type: 'tween' },
+        }
     },
     exit: {
         opacity: 0
@@ -23,7 +27,8 @@ const Landing = () => (
     <Route render={({ location }) => (
         <ShapesLayoutContainer>
                 <PoseGroup>
-                    <RouteContainer key="xp" >
+                    <RouteContainer key={location.key ? location.key : "xp"} >
+                        {console.log(location)}
                         <Switch location={location}>
                             <Route exact path="/" component={Home} key="home" />
                             <Route path="/pourquoi" component={DataCentersContainer} key="why" />
