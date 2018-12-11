@@ -112,16 +112,7 @@ export const LegendContainer = styled.div`
     opacity: ${props => props.visible ? '1' : '0'}
 `;
 
-export const BtnScissors = styled.button`
-    cursor: pointer;
-    position: absolute;
-    left: 304px;
-    top: 0;
-    transform: rotate(-125deg);
-    width: 38px;
-    height: 34px;
-    z-index: 16;
-`;
+
 
 export const LegendUnderline = styled(SVG)`
     display: block;

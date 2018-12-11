@@ -1,14 +1,9 @@
 import React from 'react';
-import styled, { withTheme, ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import { theme } from '../../constantes';
-import { VUE } from '../../store/actions';
 import SVG from 'react-inlinesvg';
 
 const ButtonContainer = styled.div`
-    // position: absolute;
-    // bottom: 80px;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,13 +21,14 @@ const Plane = styled(SVG)`
     width: 30px;
     height: 23px;
     vertical-align: middle;
+    margin-left: 10px;
+
 `;
 
 const Text = styled.span`
     display: inline-block;
     height: 30px;
     line-height: 30px;
-    padding-right: 10px;
     vertical-align: middle;
 `;
 
@@ -63,6 +59,7 @@ const StyledButton = styled.button`
 `;
 
 const TextButton = (props) => {
+    console.log(props)
     return (
         <ButtonContainer>
             <Lines src="./assets/svg/wave-line-left.svg"/>
@@ -71,12 +68,13 @@ const TextButton = (props) => {
                 <Text>
                     {props.children}
                 </Text>
-                <Plane src="./assets/svg/paper-plane.svg"/>
+                {props.exit ? null :
+                    <Plane src="./assets/svg/paper-plane.svg"/>
+                }
             </StyledButton>
 
             <Lines src="./assets/svg/wave-line-right.svg"/>
         </ButtonContainer>
-
     );
 };
 

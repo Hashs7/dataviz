@@ -128,6 +128,7 @@ const IndexContainer = styled.div`
     left: 200px;
     bottom: 90px;
     text-align: center;
+    font-size: 18px;
 `;
 
 const Index = styled.span`
@@ -286,12 +287,14 @@ class MailControls extends Component {
 
                     <BoxPosed pose={isVue(vueIndex, [VUE.MAIL_QUANTITY, VUE.MAIL_TYPE]) ? 'enter' : 'exit'}>
                         <IndexContainer>
-                            <Index
+                            {isVue(vueIndex, [VUE.MAIL_QUANTITY]) ? '1/2' : '2/2'}
+
+                            {/*<Index
                                 isActive={isVue(vueIndex, [VUE.MAIL_QUANTITY])}
                                 onClick={() => this.changeVueHandler(VUE.MAIL_QUANTITY)}/>
                             <Index
                                 isActive={isVue(vueIndex, [VUE.MAIL_TYPE])}
-                                onClick={() => this.changeVueHandler(VUE.MAIL_TYPE)}/>
+                                onClick={() => this.changeVueHandler(VUE.MAIL_TYPE)}/>*/}
                         </IndexContainer>
                     </BoxPosed>
 

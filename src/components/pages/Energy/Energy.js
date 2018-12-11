@@ -6,6 +6,7 @@ import SVG from 'react-inlinesvg';
 import { theme } from '../../../constantes';
 import LineChart from '../../charts/LineChart';
 import { ChartTitle, ChartUnderline, Title } from "../../style/heading";
+import { ContainerTitle } from "../../style/containers";
 import { BoxPosed } from "../../style/animation";
 
 const ChartContainer = styled.div`
@@ -16,12 +17,8 @@ const ChartContainer = styled.div`
     text-align: left;
 `;
 
-const Container = styled.div`
+const Container = styled(ContainerTitle)`
     max-width: 595px;
-    position: relative;
-    z-index: 16;
-    margin: 110px 0 0 200px;
-    text-align: left;
     color: #fff;
 `;
 
@@ -39,9 +36,7 @@ const Color = styled.span`
     color: ${theme.color.blue};
 `;
 
-const StyledChartTitle = styled(ChartTitle)`
-    
-`;
+const StyledChartTitle = styled(ChartTitle)``;
 
 
 class Energy extends React.Component {

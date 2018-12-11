@@ -1,17 +1,50 @@
 import React from 'react';
 import AnimatedShape from '../../UI/Shape';
+import OpacityShape from '../../UI/OpacityShape';
 import { DIRECTION, STUFF } from "../../../constantes";
 import { isVue } from '../../../methods'
 import {
     SVGWaves,
     ComputerContainer, ComputerSubContainer, CloudRelativeContainer, LegendComputer, Computer, LegendUnderline,
     Wifi, LegendWifi,
-    CloudContainer, Cloud, LegendCloud, CloudPath, BtnScissors
+    CloudContainer, Cloud, LegendCloud, CloudPath,
 } from './DataCentersStyle';
 import { BoxOpacity } from '../../style/animation';
 import * as Snap from "snapsvg";
 import { VUE } from '../../../store/actions';
-import SVG from 'react-inlinesvg';
+import pose from "react-pose";
+import styled from "styled-components";
+
+
+const ScissorsOpacity = pose.button({
+    enter: {
+        opacity: 1,
+        transition: {
+            duration: 100,
+            opacity: { type: 'tween', delay: 2500 },
+        }
+    },
+    exit: {
+        opacity: 0,
+        applyAtEnd: { display: 'none' },
+        transition: {
+            duration: 100,
+            opacity: { type: 'tween' },
+        }
+    }
+})
+
+const BtnScissors = styled(ScissorsOpacity)`
+    cursor: pointer;
+    position: absolute;
+    left: 304px;
+    top: 0;
+    transform: rotate(-125deg);
+    width: 38px;
+    height: 34px;
+    z-index: 16;
+`;
+
 
 class DataCentersLayout extends React.Component {
     constructor(props){
@@ -99,7 +132,7 @@ class DataCentersLayout extends React.Component {
                         </ComputerSubContainer>
                     </ComputerContainer>
                 </BoxOpacity>
-                {vueIndex === 3 || vueIndex === 2 ?
+                {isVue(vueIndex, [2, 3]) ?
                 <CloudContainer>
                     <CloudRelativeContainer>
                         <CloudPath id="scissorsPath" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 921.9 594.66">
@@ -115,14 +148,22 @@ class DataCentersLayout extends React.Component {
                             top="0"
                             right="0"
                             zIndex={15}
-                            noExit
-                        />
-
-                        {isVue(vueIndex, [2]) ?
-                            <BtnScissors onClick={this.cutScissors}>
-                                <SVG src="./assets/svg/shapes/vue-2/scissors-open.svg"/>
-                            </BtnScissors>
-                        : null}
+                            noExit/>
+                        <div onClick={this.cutScissors}>
+                            <OpacityShape
+                                in={isVue(vueIndex, [2]) && this.state.scissors}
+                                delay={5.3}
+                                duration={0.1}
+                                src="./assets/svg/shapes/vue-2/scissors-open.svg"
+                                width="38px"
+                                height="34px"
+                                top="0"
+                                left="304px"
+                                zIndex={16}
+                                cursor="pointer"
+                                transform="rotate(-125deg)"
+                                noExit />
+                        </div>
 
                         {vueIndex === 3 ?
                             <div>

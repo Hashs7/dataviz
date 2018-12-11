@@ -35,11 +35,11 @@ const HomeLayout = (props) => {
                 in={props.in}
                 delay={0.5}
                 src="./assets/svg/shapes/vue-1/shape-wave.svg"
-                direction={DIRECTION.TOP_RIGHT}
+                direction={{x: '200%', y: '-200%'}}
                 width="365px"
                 height="203px"
-                top="11vw"
-                right="10vw"
+                top="200px"
+                right="100px"
             />
 
             <ScalingShape

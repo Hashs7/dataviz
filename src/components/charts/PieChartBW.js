@@ -11,7 +11,7 @@ const PieContainer = styled.svg`
     position: relative;
     width: 100%;
     height: 100%;
-    z-index: 5;
+    z-index: 25
 `;
 
 const OutPie = styled(VictoryPie)``;
@@ -20,6 +20,8 @@ const animate = {
     enter(target) {
         return TweenMax.from(target, 1, {
             opacity: 0,
+            x: '200%',
+            delay: 2,
             ease: Power1.easeOut,
         });
     },
@@ -52,6 +54,7 @@ const PieChart = (props) => {
                                 return [{
                                     childName: ["pie", "bar"],
                                     mutation: (props) => {
+                                        console.log('props', props)
                                         switch (props.index) {
                                             case 0:
                                                 return { style: Object.assign({}, props.style, {fill: "rgba(79, 98, 204, .8)", strokeWidth: 2, stroke: "#000"}) };
@@ -61,7 +64,7 @@ const PieChart = (props) => {
                                                 return { style: Object.assign({}, props.style, {fill: "rgba(255, 47, 78, .8)", strokeWidth: 2, stroke: "#000"}) };
                                             case 3:
                                                 return { style: Object.assign({}, props.style, {fill: "rgba(3, 171, 230, .8)", strokeWidth: 2, stroke: "#000"}) };
-                                            default:
+                                            case 4:
                                                 return;
                                         }
                                     }
@@ -165,42 +168,42 @@ const PieChart = (props) => {
                                 onLoad: { duration: 500 }
                             }}
                             colorScale={[ '#4F62CC', theme.color.black, '#FF2F4E', '#03ABE6', 'transparent', ]}
-                            events={[{
-                                target: "data",
-                                eventHandlers: {
-                                    onMouseEnter: () => {
-                                        return [{
-                                            target: "data",
-                                            mutation: (props) => {
-                                                return;
-                                                /*switch (props.index) {
-                                                    case 0:
-                                                        return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.blue }};
-                                                    case 1:
-                                                        return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.orange }};
-                                                    case 2:
-                                                        return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.white }};
-                                                    case 4:
-                                                        return { style: { stroke: "#000", strokeWidth: 2, fill: '#646464' }};*/
-                                                // }
-                                            }
-                                        }];
-                                    },
-                                    onMouseLeave: () => {
-                                        return [{
-                                            target: "data",
-                                            mutation: () => {
-                                                return {strokeWidth: 4}
-                                            }
-                                        }, {
-                                            target: "labels",
-                                            mutation: () => {
-                                                return { style: { fill: "transparent", fontSize: 32, } };
-                                            }
-                                        }];
-                                   }
-                                }
-                            }]}
+                            // events={[{
+                            //     target: "data",
+                            //     eventHandlers: {
+                            //         onMouseEnter: () => {
+                            //             return [{
+                            //                 target: "data",
+                            //                 mutation: (props) => {
+                            //                     // return;
+                            //                     switch (props.index) {
+                            //                         case 0:
+                            //                             return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.blue }};
+                            //                         case 1:
+                            //                             return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.orange }};
+                            //                         case 2:
+                            //                             return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.white }};
+                            //                         case 4:
+                            //                             return { style: { stroke: "#000", strokeWidth: 2, fill: '#646464' }};
+                            //                     }
+                            //                 }
+                            //             }];
+                            //         },
+                            //         onMouseLeave: () => {
+                            //             return [{
+                            //                 target: "data",
+                            //                 mutation: () => {
+                            //                     return {strokeWidth: 4}
+                            //                 }
+                            //             }, {
+                            //                 target: "labels",
+                            //                 mutation: () => {
+                            //                     return { style: { fill: "transparent", fontSize: 32, } };
+                            //                 }
+                            //             }];
+                            //        }
+                            //     }
+                            // }]}
                         />
                     : null}
                 </g>

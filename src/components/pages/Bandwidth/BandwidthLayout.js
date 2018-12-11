@@ -13,7 +13,7 @@ const Container = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 14;
+    z-index: 15;
     margin: auto;
     top: 0;
     bottom: 0;
@@ -107,37 +107,38 @@ class BandwidthLayout extends React.Component {
                     height="670px"
                     top="-3px"
                     right="-3px"
-                    zIndex={10}
+                    zIndex={4}
                 />
 
-                { isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?
-                <Container>
-                    <PieChartBWContainer width={this.width} height={this.height}/>
-                    <BoxPosed pose={isVue(vueIndex, [TRAFIC_SERV]) ? 'enter' : 'exit'}>
-                        <LogoContainer>
-                            <LogoService>
-                                <Logo src="./assets/svg/logo/amazon.svg"/>
-                            </LogoService>
-                            <LogoService>
-                                <Logo src="./assets/svg/logo/yt.svg"/>
-                            </LogoService>
-                            <LogoService>
-                                <Logo src="./assets/svg/logo/netflix.svg"/>
-                            </LogoService>
-                            <LogoService>
-                                <Logo src="./assets/svg/logo/fb.svg"/>
-                            </LogoService>
-                        </LogoContainer>
-                    </BoxPosed>
-                </Container>
+                {isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?
+                    <Container>
+                        <PieChartBWContainer width={this.width} height={this.height}/>
+                        <BoxPosed pose={isVue(vueIndex, [TRAFIC_SERV]) ? 'enter' : 'exit'}>
+                            <LogoContainer>
+                                <LogoService>
+                                    <Logo src="./assets/svg/logo/amazon.svg"/>
+                                </LogoService>
+                                <LogoService>
+                                    <Logo src="./assets/svg/logo/yt.svg"/>
+                                </LogoService>
+                                <LogoService>
+                                    <Logo src="./assets/svg/logo/netflix.svg"/>
+                                </LogoService>
+                                <LogoService>
+                                    <Logo src="./assets/svg/logo/fb.svg"/>
+                                </LogoService>
+                            </LogoContainer>
+                        </BoxPosed>
+                    </Container>
                 : null}
-                { isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?
+
+
+                <BoxPosed pose={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ? 'enter' : 'exit'}>
                     <PieChartTitle>
                         Trafic internet descendant mondial
                         <PieChartUnderline src="./assets/svg/wave-line-right.svg"/>
                     </PieChartTitle>
-                : null}
-
+                </BoxPosed>
             </div>
         );
     }

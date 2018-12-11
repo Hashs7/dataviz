@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import AnimatedTitle from '../../UI/AnimatedTitle';
 import posed from 'react-pose';
 import Button from '../../UI/TextButton';
-import * as Snap from "snapsvg";
-import { theme } from "../../../constantes";
+import lottie from 'lottie-web';
 import { VUE } from "../../../store/actions";
 
 const Title = posed.div({
@@ -22,13 +21,22 @@ const ButtonContainer = posed.div({
         }
     },
     exit: {
-        y: -100,
+        y: -94,
         opacity: 1,
         transition: {
             duration: 1000,
         }
     }
 });
+
+const StyledButton = styled(ButtonContainer)`
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 17;
+`;
 
 const StyledTitle = styled(Title)`
     margin: calc(50vh - 36px) 0 0 220px;
@@ -37,27 +45,23 @@ const StyledTitle = styled(Title)`
     font: 60px "Eksell", serif;
 `;
 
-const LaunchPlane = styled.button`
-    cursor: pointer;
-    position: relative;
-    z-index: 10;
-    padding: 5px 10px;
-    background-color: #FF0;
-    color: ${theme.color.blue}
+const Plane = styled.div`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    margin: auto;
+    z-index: 16; 
 `;
 
-class Home extends React.PureComponent {
+class EnterTitle extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             txt: '',
-            button: 'Envoyer',
-            buttonEnter: false,
-            redirect: false
         };
         this.timer = () => {};
         this.timerSecond = () => {};
-        this.nextVue = this.nextVue.bind(this);
     }
 
     componentDidMount() {
@@ -65,9 +69,13 @@ class Home extends React.PureComponent {
             this.setState({txt: 'Le saviez-vous ?'});
 
             this.timerSecond = setTimeout(() => {
-                this.setState({txt: "L'avion ci-dessous pollue plus que l’aviation civile !" , buttonEnter: true})
+                this.setState({txt: "L'avion ci-dessous pollue plus que l’aviation civile !"})
             }, 4000)
         }, 500)
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.state.txt !== nextState.txt;
     }
 
     componentWillUnmount() {
@@ -75,61 +83,60 @@ class Home extends React.PureComponent {
         clearTimeout(this.timerSecond);
     }
 
+    render(){
+        return (
+            <StyledTitle>
+                <AnimatedTitle size={60}>
+                    {this.state.txt}
+                </AnimatedTitle>
+            </StyledTitle>
+        );
+    }
+}
+
+class Home extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            button: 'Envoyer',
+            buttonEnter: false,
+            redirect: false,
+            planeAnim: false
+        };
+        this.plane = React.createRef();
+        this.timer = () => {};
+        this.nextVue = this.nextVue.bind(this);
+    }
+
+    componentDidMount() {
+        this.timer = setTimeout(() => {
+            this.setState({ buttonEnter: true})
+        }, 4500)
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.timer);
+    }
+
     nextVue() {
         const sound = new Audio("./assets/audio/send.mp3");
         sound.play();
 
-        this.setState({ button: "Envoyé" });
+        this.setState({ button: "Envoyé", planeAnim: true });
+        setTimeout(() => {
+            lottie.loadAnimation({
+                container: this.plane.current,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: './assets/avion.json'
+            });
+        }, 200);
 
         setTimeout(() => {
             this.setState({ redirect: true});
             this.props.changeVue(VUE.WHY);
-        }, 1000)
-    }
-
-    planeAnim() {
-        const snapC = Snap("#svgC");
-
-        // SVG C - "Squiggly" Path
-        const myPathC = snapC.path("M62.9 14.9c-25-7.74-56.6 4.8-60.4 24.3-3.73 19.6 21.6 35 39.6 37.6 42.8 6.2 72.9-53.4 116-58.9 65-18.2 191 101 215 28.8 5-16.7-7-49.1-34-44-34 11.5-31 46.5-14 69.3 9.38 12.6 24.2 20.6 39.8 22.9 91.4 9.05 102-98.9 176-86.7 18.8 3.81 33 17.3 36.7 34.6 2.01 10.2.124 21.1-5.18 30.1").attr({
-            id: "squiggle",
-            fill: "none",
-            strokeWidth: "4",
-            stroke: "#000",
-            strokeMiterLimit: "10",
-            strokeDasharray: "9 9",
-            strokeDashOffset: "988.01"
-        });
-
-        // SVG C - Draw Path
-        const lenC = myPathC.getTotalLength();
-
-        // SVG C - Animate Path
-        myPathC.attr({
-            stroke: '#fff',
-            strokeWidth: 4,
-            fill: 'none',
-            // Draw Path
-            "stroke-dasharray": "12 6",
-            "stroke-dashoffset": "180"
-        }).animate({"stroke-dashoffset": 10}, 4500);
-
-        // SVG C - Triangle (As Polyline)
-        const Plane1 = snapC.path("M0,10.27,29.81,0,8.4,15.68H0Z");
-        const Plane2 = snapC.path("M9.73,16.44,29.81,0,20.24,22.56l-7.2,0Z");
-        const Plane3 = snapC.path("M4.81,17.24H8.29L10,20.76,7.39,22.58H4.81Z");
-        Plane1.attr({ id: "plane1", fill: "#000" });
-        Plane2.attr({ id: "plane1", fill: "#000" });
-        Plane3.attr({ id: "plane1", fill: "#000" });
-
-        const triangleGroup = snapC.g( Plane1, Plane2, Plane3  ); // Group polyline
-
-        setTimeout(() => {
-            Snap.animate(0, lenC, ( value ) => {
-                let movePoint = myPathC.getPointAtLength( value );
-                triangleGroup.transform( 't' + parseInt(movePoint.x - 15) + ',' + parseInt( movePoint.y - 15) + 'r' + (movePoint.alpha - 90));
-            }, 4500);
-        });
+        }, 2000)
     }
 
     render(){
@@ -139,23 +146,15 @@ class Home extends React.PureComponent {
         }
         return (
             <div>
-                <StyledTitle>
-                    <AnimatedTitle size={60}>
-                        {this.state.txt}
-                    </AnimatedTitle>
-                </StyledTitle>
+                <EnterTitle />
 
-                {/*<LaunchPlane onClick={this.planeAnim}>Plane</LaunchPlane>*/}
+                <Plane ref={this.plane} />
 
-                <svg id="svgC" width="100%" height="100%" viewBox="0 0 620 120" preserveAspectRatio="xMidYMid meet">
-                </svg>
-
-                <ButtonContainer pose={this.state.buttonEnter ? 'exit' : 'enter'}>
-                    <Button click={this.nextVue}>
+                <StyledButton pose={this.state.buttonEnter ? 'exit' : 'enter'}>
+                    <Button click={this.nextVue} exit={this.state.planeAnim}>
                         {this.state.button}
                     </Button>
-                </ButtonContainer>
-
+                </StyledButton>
             </div>
         );
     }

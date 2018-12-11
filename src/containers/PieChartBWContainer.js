@@ -13,7 +13,6 @@ import {
 const mapStateToProps = state => {
     return {
         vueIndex: state.current.vue,
-        stuffHover: state.current.stuffHover
     }
 };
 
@@ -25,7 +24,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         changeVue: (i) => dispatch({type: CHANGE_INDEX_VUE, index: i}),
-        changeStuff: (i) => dispatch({type: CHANGE_STUFF, index: i}),
     }
 };
 

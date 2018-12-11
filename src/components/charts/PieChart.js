@@ -12,7 +12,7 @@ const PieContainer = styled.div`
     z-index: 15;
     backface-visibily: hidden;
     @media (max-height: 950px){
-        bottom: 0px;
+        bottom: -28px;
     }
 `;
 

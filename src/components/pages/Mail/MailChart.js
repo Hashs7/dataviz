@@ -58,19 +58,15 @@ const themeChart = {
 };
 
 class MailChart extends Component {
-    //TODO connect to store
     constructor(props){
         super(props);
         this.state = {
             scale: 1,
             personalData: [
-                { x: ' ', y: 0.8 },
+                { x: ' ', y: 18 },
             ],
             countryData:  [
-                { x: ' ', y: 420000000 },
-            ],
-            worldData:  [
-                { x: ' ', y: 84300000000 },
+                { x: ' ', y: 52.3 },
             ],
             emptyData : [
                 { x: ' ', y: 0 },
@@ -85,7 +81,7 @@ class MailChart extends Component {
 
     render() {
         const labels = {
-            1: 'Vous',
+            1: 'Moi',
             2: 'France',
             3: 'Monde',
         };
@@ -101,25 +97,20 @@ class MailChart extends Component {
                         style={{
                             data: { stroke: "black", strokeWidth: '2px' }
                         }}
-                        colorScale={[theme.color.orange, theme.color.blue, theme.color.white]}
+                        colorScale={[theme.color.orange, theme.color.white]}
                         animate={{
                             duration: 2000,
                             onLoad: { duration: 1000 }
                         }}>
                             <VictoryBar
-                                barWidth={35}
+                                barWidth={10}
                                 horizontal
                                 data={this.state.personalData}
                             />
                             <VictoryBar
-                                barWidth={35}
+                                barWidth={10}
                                 horizontal
-                                data={this.state.scale >= 2 ? this.state.countryData :  this.state.emptyData }
-                            />
-                            <VictoryBar
-                                barWidth={35}
-                                horizontal
-                                data={this.state.scale >= 3 ? this.state.worldData :  this.state.emptyData }
+                                data={this.state.countryData}
                             />
                     </VictoryStack>
                 </VictoryChart>

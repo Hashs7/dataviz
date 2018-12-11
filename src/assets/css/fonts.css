@@ -62,3 +62,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Demos Next Pro';
+    src: url('../fonts/subset-DemosNextPro-BlackItalic.woff2') format('woff2'),
+    url('../fonts/subset-DemosNextPro-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Demos Next Pro';
+    src: url('../fonts/subset-DemosNextPro-MediumItalic.woff2') format('woff2'),
+    url('../fonts/subset-DemosNextPro-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}

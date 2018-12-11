@@ -9,7 +9,6 @@ const PieContainer = styled.div`
     width: 550px;
     z-index: 5;
     display: inline;
-    
 `;
 
 const animate = {

@@ -4,7 +4,6 @@ import styled from "styled-components";
 import SVG from "react-inlinesvg";
 import TweenMax, { Power1 } from "gsap/TweenMax";
 import Transition from 'react-transition-group/Transition'
-import {isDefined } from './../../methods';
 const StyledSVG = styled(SVG)`
     backface-visibility: hidden;
     position: absolute;
@@ -16,6 +15,8 @@ const StyledSVG = styled(SVG)`
     width: ${props => props.width ? props.width : ""};
     height: ${props => props.height ? props.height : ""};
     z-index: ${props => props.zIndex ? props.zIndex : ""};
+    transform: ${props => props.transform ? props.transform : ""};
+    cursor: ${props => props.cursor ? props.cursor : ""};
 `;
 
 const animate = {
@@ -48,7 +49,7 @@ class Shape extends React.Component {
 
     render() {
         return (
-            <StyledSVG ref={ this.elRef } {...this.props}  />
+            <StyledSVG onClick={this.props.click} ref={ this.elRef } {...this.props}  />
         );
     }
 }
@@ -64,7 +65,7 @@ const OpacityShape = (props) => {
             in={props.in}
             timeout={duration}
             onEnter={node => {
-                animate.enter(node);
+                animate.enter(node, duration, props.delay);
             }}
             onExit={node => {
                 if(props.noExit){

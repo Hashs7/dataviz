@@ -9,8 +9,13 @@ import {
 import { Title, Description, ChartTitle, ChartUnderline } from "../../style/heading";
 import { isVue } from '../../../methods';
 import styled from 'styled-components';
-
-
+const StyledContainer = styled(Container)`
+    margin: 40px 0 0 170px;
+    max-width: 480px;
+    @media (max-height: 1060px) {
+        margin: 40px 0 0 170px;
+    }
+`;
 
 class DataCenters extends React.Component {
     constructor(props){
@@ -34,7 +39,7 @@ class DataCenters extends React.Component {
     render(){
         const vueIndex = this.props.vueIndex;
         return (
-            <Container>
+            <StyledContainer>
                 <Title>
                     <AnimatedTitle size={48} weight="bold">
                         {this.state.txt}
@@ -61,7 +66,7 @@ class DataCenters extends React.Component {
                     </StyledCharTitle>
                 : null}
 
-            </Container>
+            </StyledContainer>
         );
     }
 }
