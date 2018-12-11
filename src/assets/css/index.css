@@ -87,8 +87,7 @@ tspan{
 .VictoryContainer {
     transform: translateX(-70px);
 }
-
-.VictoryContainer svg{
-    /*-webkit-filter: none !important;*/
-    /*filter: none !important;*/
-}
+/*
+.coloredTitle div:first-child{
+    color: #1C1CAF;
+}*/

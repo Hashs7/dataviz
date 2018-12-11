@@ -11,7 +11,7 @@ import { isVue } from '../../../methods';
 import styled from 'styled-components';
 const StyledContainer = styled(Container)`
     margin: 40px 0 0 170px;
-    max-width: 480px;
+    max-width: 460px;
     @media (max-height: 1060px) {
         margin: 40px 0 0 170px;
     }
@@ -50,11 +50,12 @@ class DataCenters extends React.Component {
                         <TitleUnderline src="./assets/svg/wave-underline-double.svg"/>
                     : null}
                 <Description>
-                    {isVue(vueIndex, [2]) && this.state.show ?
-                        "Découpez le nuage à l’aide de votre curseur pour le découvrir."
+                    {isVue(vueIndex, [VUE.WHY]) && this.state.show ?
+                        "Clique sur les ciseaux pour découpez le nuage et le découvrir."
                     : null}
-                    {isVue(vueIndex, [3]) ?
-                        'De leur production jusqu’à la fin de leur utilisation, vos ordinateurs et smartphones polluent car ils sont fabriqués à partir de ressources non renouvelables. De plus, derrière Internet et le “Cloud” se cachent toute une infrastructure réseau avec de multiples data centers stockant tout le contenu d’Internet. Ces équipements doivent être constamment maintenus à basse température et consomme donc énormément d’énergie.'
+                    {isVue(vueIndex, [VUE.DISCOVER]) ?
+                        'Lors de la production et pendant leurs utilisations, vos ordinateurs et smartphones polluent car ils sont fabriqués à partir de ressources non renouvelables. Ils sont les pricipaux responsables de la pollution numérique.\n'+
+                        'De plus, derrière Internet et le “Cloud” se cachent des infrastructures réseaux avec de multiples data centers stockant tout le contenu d’Internet. Ces équipements doivent être refroidi en continu et consomment donc énormément d’énergie.'
                     : null}
                 </Description>
 

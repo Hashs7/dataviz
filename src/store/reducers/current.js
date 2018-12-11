@@ -1,6 +1,7 @@
 import {
     CHANGE_INDEX_VUE,
     CHANGE_STUFF,
+    CHANGE_SCALE,
     MAIL_AMOUNT,
     MAIL_TYPE,
     TOGGLE_MODAL
@@ -38,6 +39,11 @@ export const current = (state = {}, action) => {
             return {
                 ...state,
                 modal: !state.modal
+            };
+        case CHANGE_SCALE:
+            return {
+                ...state,
+                scale: action.index
             };
         default:
             return state;

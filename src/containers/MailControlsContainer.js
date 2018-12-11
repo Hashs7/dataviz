@@ -12,6 +12,7 @@ import {
 const mapStateToProps = state => {
     return {
         vueIndex: state.current.vue,
+        scale: state.current.scale
     }
 };
 

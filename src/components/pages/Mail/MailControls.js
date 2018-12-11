@@ -8,8 +8,8 @@ import { theme } from '../../../constantes';
 import { tween, easing } from 'popmotion';
 import MailChart from "./MailChart";
 import { isVue } from "../../../methods";
-import { Tips } from '../../style/heading';
 import '../../../assets/css/checkbox.css';
+import { ChartTitle, ChartUnderline } from '../../style/heading';
 import { BoxPosed } from "../../style/animation";
 
 const Container = styled.div`
@@ -130,7 +130,7 @@ const IndexContainer = styled.div`
     text-align: center;
     font-size: 18px;
 `;
-
+/*
 const Index = styled.span`
     display: inline-block;
     width: 14px;
@@ -142,7 +142,7 @@ const Index = styled.span`
     cursor: pointer;
     transition: background-color: .3s ease;
     background-color: ${props => props.isActive ? '#000' : "#FFF"}
-`;
+`;*/
 
 class MailControls extends Component {
     constructor(props){
@@ -270,13 +270,17 @@ class MailControls extends Component {
 
                     {vueIndex === VUE.MAIL_DATA ?
                         <ResultContainer>
-                            <p>Votre empreinte carbone mail est d'environ <strong>{this.state.userCO2}Kg</strong> de CO2 par mois</p>
-                            <Lines src="./assets/svg/wave-line-right.svg"/>
+                            {this.props.scale === 1 ?
+                                <ChartTitle>Votre empreinte carbone mail est d'environ <strong>{this.state.userCO2}Kg</strong> de CO2 par mois</ChartTitle>
+                            : null}
+                            {this.props.scale === 2 ?
+                                <ChartTitle>L’empreinte carbone du mail de la France est d'environ <strong>420 000 T</strong> de CO2 par mois</ChartTitle>
+                            : null}
+                            {this.props.scale === 3 ?
+                                <ChartTitle>L’empreinte carbone du mail mondiale est d'environ <strong>72 000 000 T</strong> de CO2 par mois</ChartTitle>
+                            : null}
+                            <ChartUnderline src="./assets/svg/wave-line-right.svg"/>
                             <MailChart />
-                            <ul style={{marginTop: 85}}>
-                                <Tips>Privilégiez les messageries instantanées aux mails</Tips>
-                                <Tips>Supprimez vos mails lus et inutiles (spams et indésirables)</Tips>
-                            </ul>
                             <ConvertContainer>
                                 <p>Soit environ<br/>{this.state.carKm} km parcourus</p>
                                 <Lines src="./assets/svg/wave-line-right.svg"/>

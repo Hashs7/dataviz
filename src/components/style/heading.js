@@ -7,7 +7,7 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.p`
-    font: 20px 'Demos Next Pro';
+    font: 16px 'Demos Next Pro';
     line-height: 1.6;
     margin-top: 15px;
 `;

@@ -16,14 +16,15 @@ const charPoses = {
     }
 };
 
-const AnimatedTitle = ({size, weight, children}) => {
-    const Title = styled.h2`
-        font-size: ${size}px;
-        font-weight: ${weight};
-        backface-visibility: hidden;
-    `;
+const Title = styled.h2`
+    font-size: ${props => props.size}px;
+    font-weight: ${props => props.weight};
+    backface-visibility: hidden;
+`;
+
+const AnimatedTitle = ({size, weight, colored, children}) => {
     return (
-        <Title>
+        <Title size={size} weight={weight} className={colored ? 'coloredTitle' : ''}>
             <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
                 {children}
             </SplitText>

@@ -59,6 +59,7 @@ class EnterTitle extends React.Component {
         super(props);
         this.state = {
             txt: '',
+            colored: false,
         };
         this.timer = () => {};
         this.timerSecond = () => {};
@@ -69,7 +70,7 @@ class EnterTitle extends React.Component {
             this.setState({txt: 'Le saviez-vous ?'});
 
             this.timerSecond = setTimeout(() => {
-                this.setState({txt: "L'avion ci-dessous pollue plus que l’aviation civile !"})
+                this.setState({txt: "L'avion ci-dessous pollue plus que l’aviation civile !", colored: true})
             }, 4000)
         }, 500)
     }
@@ -86,7 +87,7 @@ class EnterTitle extends React.Component {
     render(){
         return (
             <StyledTitle>
-                <AnimatedTitle size={60}>
+                <AnimatedTitle size={60} colored={this.state.colored}>
                     {this.state.txt}
                 </AnimatedTitle>
             </StyledTitle>
@@ -129,7 +130,7 @@ class Home extends React.Component {
                 renderer: 'svg',
                 loop: true,
                 autoplay: true,
-                path: './assets/avion.json'
+                path: './assets/avion-enter.json'
             });
         }, 200);
 
