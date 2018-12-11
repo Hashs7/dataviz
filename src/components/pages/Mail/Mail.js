@@ -7,6 +7,7 @@ import { VUE } from "../../../store/actions";
 import '../../../assets/css/range.css'
 import { connect } from 'react-redux';
 import { BoxPosed } from "../../style/animation";
+import { isVue } from "../../../methods";
 
 const Title = styled.div`
     font: 48px "Cera Basic", sans-serif;
@@ -51,13 +52,15 @@ class Mail extends React.Component {
         setTimeout(() => {
             this.setState({
                 txt: 'En quelle quantité ?',
-                desc: 'Répondez aux questions pour avoir une estimation de votre impact sur l’environnement.',
+                desc: 'Répondez aux questions  pour avoir une estimation de l’impact de vos mails sur l’environnement.',
                 show: true
             })
         }, 1700);
     }
 
     render(){
+        const vueIndex = this.props.vueIndex;
+
         return (
             <div>
                 <TitleContainer>
@@ -70,7 +73,10 @@ class Mail extends React.Component {
                         <TitleUnderline src="./assets/svg/wave-underline-quantity.svg"/>
                     </BoxPosed>
                     <Description>
-                        {this.state.desc}
+                        {isVue(vueIndex, [VUE.MAIL_QUANTITY, VUE.MAIL_TYPE] ) ? this.state.desc :
+                            'À l’échelle d’un utilisateur cet impact semble\n' +
+                            'dérisoire. Mais, à l’échelle mondiale, l’impact\n' +
+                            'est colossal.'}
                     </Description>
                 </TitleContainer>
                 <BoxPosed>

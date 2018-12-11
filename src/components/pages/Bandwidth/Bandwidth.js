@@ -59,7 +59,7 @@ class Bandwidth extends React.Component {
         super(props);
         this.state = {
             txt: '',
-            desc: '…il n’y a pas que les mails. Le trafic d’Internet est constitué d’un large spectre de catégories et chacune est propulsée par différents services. Ces services sont pour certains opérés à l’aide d’énergie fossile.',
+            desc: '…il n’y a pas que les mails. Le trafic d’Internet est divisé en plusieurs usages et chacun est propulsé par différents services. Ces services sont pour certains alimentés par de l’énergie fossile.',
             hasMore: true
         };
         this.discoverHandler = this.discoverHandler.bind(this);

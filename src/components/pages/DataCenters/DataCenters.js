@@ -53,9 +53,7 @@ class DataCenters extends React.Component {
                         "Découpez le nuage à l’aide de votre curseur pour le découvrir."
                     : null}
                     {isVue(vueIndex, [3]) ?
-                        'Car derrière Internet et des termes comme « Cloud » se cache toute une infrastructure réseau ainsi' +
-                        ' que de multiples data centers stockant tout le contenu d’Internet.' +
-                        ' Ces équipements ainsi que vos ordinateurs et smartphones personnels génèrent du gaz à effet de serre.'
+                        'De leur production jusqu’à la fin de leur utilisation, vos ordinateurs et smartphones polluent car ils sont fabriqués à partir de ressources non renouvelables. De plus, derrière Internet et le “Cloud” se cachent toute une infrastructure réseau avec de multiples data centers stockant tout le contenu d’Internet. Ces équipements doivent être constamment maintenus à basse température et consomme donc énormément d’énergie.'
                     : null}
                 </Description>
 
