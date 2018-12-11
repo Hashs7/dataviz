@@ -1,7 +1,7 @@
 const generateInitialState = () => {
     return {
         current: {
-            vue: 9,
+            vue: 1,
             modal: false
         }
     };

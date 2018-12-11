@@ -56,6 +56,9 @@ tspan{
 .PieChart svg{
     filter: drop-shadow( 0px 5px 0px #000 );
 }
+.PieShadow {
+    filter: drop-shadow( 0px 5px 0px #000 );
+}
 .VictoryContainer path {
     cursor: pointer;
     transition: stroke-width .2s ease-in;
@@ -78,6 +81,9 @@ tspan{
     user-select: none;
 }
 
+.LineChart .VictoryContainer {
+    transform: translateX(-58px);
+}
 .VictoryContainer {
     transform: translateX(-70px);
 }

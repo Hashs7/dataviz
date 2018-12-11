@@ -32,7 +32,7 @@ const animate = {
 };
 
 const PieChart = (props) => {
-    const { vueIndex, changeStuff} = props;
+    const { vueIndex } = props;
     return (
         <Transition
             in={isVue(vueIndex, [VUE.TRAFIC_BW, VUE.TRAFIC_SERV])  }
@@ -52,12 +52,18 @@ const PieChart = (props) => {
                                 return [{
                                     childName: ["pie", "bar"],
                                     mutation: (props) => {
-                                        if(props.index === 4) {
-                                            return
+                                        switch (props.index) {
+                                            case 0:
+                                                return { style: Object.assign({}, props.style, {fill: "rgba(79, 98, 204, .8)", strokeWidth: 2, stroke: "#000"}) };
+                                            case 1:
+                                                return { style: Object.assign({}, props.style, {fill: "rgba(0, 0, 0, .8)", strokeWidth: 2, stroke: "#000"}) };
+                                            case 2:
+                                                return { style: Object.assign({}, props.style, {fill: "rgba(255, 47, 78, .8)", strokeWidth: 2, stroke: "#000"}) };
+                                            case 3:
+                                                return { style: Object.assign({}, props.style, {fill: "rgba(3, 171, 230, .8)", strokeWidth: 2, stroke: "#000"}) };
+                                            default:
+                                                return;
                                         }
-                                        return {
-                                            style: Object.assign({}, props.style, {opacity: 1, fill: "red"})
-                                        };
                                     }
                                 }];
                             },
@@ -72,7 +78,7 @@ const PieChart = (props) => {
                         }
                     }]}
                 >
-                <g transform={`translate(${props.width - 800}, 0), scale(1.5)`}>
+                <g transform={`translate(${props.width - 800}, 0), scale(1.5)`} >
                 <VictoryPie
                     standalone={false}
                     data={[
@@ -100,11 +106,11 @@ const PieChart = (props) => {
                                             case 1:
                                                 return { style: { stroke: "#000", strokeWidth: 1, fill: theme.color.orange }};
                                             case 2:
-                                                return { style: { stroke: "#000", strokeWidth: 1, fill: theme.color.white }};
-                                            case 3:
-                                                return { style: { stroke: "#000", strokeWidth: 1, fill: theme.color.white }};
-                                            case 4:
                                                 return { style: { stroke: "#000", strokeWidth: 1, fill: '#646464' }};
+                                            case 3:
+                                                return { style: { stroke: "#000", strokeWidth: 1, fill: theme.color.green }};
+                                            case 4:
+                                                return { style: { stroke: "#000", strokeWidth: 1, fill: theme.color.white }};
                                         }
                                     }
                                 }, {
