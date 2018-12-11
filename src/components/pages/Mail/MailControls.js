@@ -135,6 +135,7 @@ const Index = styled.span`
     width: 14px;
     height: 14px;
     margin: 0 20px;
+    box-sizing: border-box;
     border: 3px solid #000;
     border-radius: 50%;
     cursor: pointer;

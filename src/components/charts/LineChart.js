@@ -1,9 +1,9 @@
 import React from 'react';
 import { theme } from "../../constantes";
-import { VictoryChart, VictoryLine, VictoryVoronoiContainer, VictoryTooltip } from 'victory';
+import { VictoryChart, VictoryLine, VictoryVoronoiContainer, VictoryTooltip, VictoryAxis, VictoryLabel } from 'victory';
 import styled from "styled-components";
 import Transition from 'react-transition-group/Transition'
-import TweenMax, {Power1} from "gsap/TweenMax";
+import TweenMax, { Power1 } from "gsap/TweenMax";
 
 const PieContainer = styled.div`
     width: 550px;
@@ -37,7 +37,9 @@ const PieChart = (props) => {
             unmountOnExit
         >
             <PieContainer>
+
                 <VictoryChart
+                    maxDomain={{ y: 20 }}
                     domainPadding={{ x: 10, y: 50 }}
                     containerComponent={
                        <VictoryVoronoiContainer
@@ -45,43 +47,84 @@ const PieChart = (props) => {
                            labels={(d) => `${d.x}, ${d.y}`}
                        />
                     }>
+
+                    <VictoryAxis
+                        tickValues={[2010, 2015, 2020, 2025, 2030]}
+                        domain={[2010, 2030]}
+                        width={400}
+                        height={400}
+                        style={{
+                            axis: {stroke: "#000", strokeWidth: 3},
+                            axisLabel: {fontSize: 20, padding: 30},
+                            ticks: {stroke: "#000", size: -5, strokeWidth: 3},
+                            tickLabels: {fontSize: 15, padding: 30}
+                        }}
+                        tickLabelComponent={<VictoryLabel dx={-10}/>}
+                    />
+                    <VictoryAxis
+                        style={{
+                            axis: {stroke: "#000", strokeWidth: 3},
+                            axisLabel: {fontSize: 20, padding: {top: 20}},
+                            ticks: {stroke: "#000", size: -5, strokeWidth: 3},
+                            tickLabels: {fontSize: 15, padding: 30}
+                        }}
+                        tickLabelComponent={<VictoryLabel dy={20}/>}
+                        dependentAxis
+                        orientation="left"
+                        tickValues={[0, 5, 10, 15, 20]}
+                        width={400}
+                        height={400}
+                        domain={[0, 20]}
+                        // offsetY={200}
+                    />
+
                     <VictoryLine
+                        height={400}
+                        // domain={{
+                        //     x: [2010, 2019],
+                        //     y: [9, 12]
+                        // }}
                         style={{
                             data: { stroke: theme.color.blue, strokeLinecap:"round"},
                         }}
                         data={[
-                            { x: "2010", y: 11 },
-                            { x: "2011", y: 10 },
-                            { x: "2012", y: 11 },
-                            { x: "2013", y: 10 },
-                            { x: "2014", y: 10 },
-                            { x: "2015", y: 10 },
-                            { x: "2016", y: 10 },
-                            { x: "2017", y: 10 },
-                            { x: "2018", y: 11 },
-                            { x: "2019", y: 11 },
+                            { x: 2010, y: 11 },
+                            { x: 2011, y: 10 },
+                            { x: 2012, y: 11 },
+                            { x: 2013, y: 10 },
+                            { x: 2014, y: 10 },
+                            { x: 2015, y: 10 },
+                            { x: 2016, y: 10 },
+                            { x: 2017, y: 10 },
+                            { x: 2018, y: 11 },
+                            { x: 2019, y: 11 },
                         ]}
                     />
                     <VictoryLine
+                        scale={{x: "year", y: "value"}}
+                        height={400}
+                        // domain={{
+                        //     x: [2019, 2030],
+                        //     y: [10, 22]
+                        // }}
                         style={{
                             data: { stroke: theme.color.blue, strokeDasharray: "12 6", strokeDashoffset: "180", strokeLinecap:"round" },
                         }}
                         data={[
-                            { x: "2019", y: 11 },
-                            { x: "2020", y: 11 },
-                            { x: "2021", y: 11 },
-                            { x: "2022", y: 12 },
-                            { x: "2023", y: 12 },
-                            { x: "2024", y: 13 },
-                            { x: "2025", y: 14 },
-                            { x: "2026", y: 15 },
-                            { x: "2027", y: 16 },
-                            { x: "2028", y: 17 },
-                            { x: "2029", y: 19 },
-                            { x: "2030", y: 21 },
+                            { x: 2019, y: 11 },
+                            { x: 2020, y: 11 },
+                            { x: 2021, y: 11 },
+                            { x: 2022, y: 12 },
+                            { x: 2023, y: 12 },
+                            { x: 2024, y: 13 },
+                            { x: 2025, y: 14 },
+                            { x: 2026, y: 15 },
+                            { x: 2027, y: 16 },
+                            { x: 2028, y: 17 },
+                            { x: 2029, y: 19 },
+                            { x: 2030, y: 21 },
                         ]}
                     />
-
                 </VictoryChart>
             </PieContainer>
         </Transition>

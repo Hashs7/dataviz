@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Transition from 'react-transition-group/Transition'
 import TweenMax, {Power1} from "gsap/TweenMax";
 import { VUE } from "../../store/actions";
-import {isVue} from "../../methods";
+import { isVue } from "../../methods";
 
 const PieContainer = styled.svg`
     position: relative;
@@ -14,8 +14,7 @@ const PieContainer = styled.svg`
     z-index: 5;
 `;
 
-const OutPie = styled(VictoryPie)`
-`;
+const OutPie = styled(VictoryPie)``;
 
 const animate = {
     enter(target) {

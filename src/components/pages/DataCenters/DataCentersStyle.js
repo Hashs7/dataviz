@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
 import AnimatedShape from '../../UI/Shape';
+import {ChartTitle} from "../../style/heading";
 
 export const CloudPath = styled.svg`
     position: absolute;
@@ -10,6 +11,10 @@ export const CloudPath = styled.svg`
     z-index: 16;
     max-width: 950px;
     width: 83vh;
+`;
+
+export const StyledCharTitle = styled(ChartTitle)`
+    margin-top: 28px;
 `;
 
 export const TitleUnderline = styled(SVG)`

@@ -7,7 +7,7 @@ import TweenMax, { Power1 } from "gsap/TweenMax";
 
 const PieContainer = styled.div`
     position: absolute;
-    bottom: 30px;
+    bottom: 0;
     left: 368px;
     z-index: 15;
     backface-visibily: hidden;

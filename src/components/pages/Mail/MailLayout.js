@@ -5,7 +5,7 @@ import SVG from 'react-inlinesvg';
 import { DIRECTION } from "../../../constantes";
 import { isVue } from "../../../methods";
 import { VUE } from "../../../store/actions";
-import {BoxOpacity, BoxPosed} from "../../style/animation";
+import { BoxOpacity, BoxPosed } from "../../style/animation";
 
 const Letters = styled(SVG)`
     position: absolute;

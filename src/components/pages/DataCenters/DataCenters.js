@@ -4,15 +4,13 @@ import { VUE } from '../../../store/actions/index';
 import {
     Container,
     TitleUnderline,
+    StyledCharTitle
 } from './DataCentersStyle';
 import { Title, Description, ChartTitle, ChartUnderline } from "../../style/heading";
-import { BoxOpacity } from '../../style/animation';
 import { isVue } from '../../../methods';
 import styled from 'styled-components';
 
-const StyledCharTitle = styled(ChartTitle)`
-    margin-top: 35px;
-`;
+
 
 class DataCenters extends React.Component {
     constructor(props){
@@ -23,9 +21,7 @@ class DataCenters extends React.Component {
             show: false
         };
     }
-    componentWillMount(){
 
-    }
     componentDidMount(){
         setTimeout(() => {
             this.setState({

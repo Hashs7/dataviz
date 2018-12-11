@@ -27,7 +27,6 @@ const Container = styled.div`
 
 const TitleUnderline = styled(SVG)`
     display: block;
-    width: 550px;
 `;
 
 const Description = styled.p`
