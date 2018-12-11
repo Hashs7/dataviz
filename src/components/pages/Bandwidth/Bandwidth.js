@@ -5,6 +5,8 @@ import { VUE } from '../../../store/actions/index';
 import SVG from 'react-inlinesvg';
 import { Title, Description, ChartTitle, ChartUnderline } from "../../style/heading";
 import { ContainerTitle } from "../../style/containers";
+import { BoxPosed } from "../../style/animation";
+
 
 const Container = styled(ContainerTitle)`
     max-width: 585px;
@@ -57,7 +59,8 @@ class Bandwidth extends React.Component {
         super(props);
         this.state = {
             txt: '',
-            desc: '…il n’y a pas que les mails. Le trafic d’Internet est constitué d’un large spectre de catégories et chacune est propulsée par différents services. Ces services sont pour certains opérés à l’aide d’énergie fossile.'
+            desc: '…il n’y a pas que les mails. Le trafic d’Internet est constitué d’un large spectre de catégories et chacune est propulsée par différents services. Ces services sont pour certains opérés à l’aide d’énergie fossile.',
+            hasMore: true
         };
         this.discoverHandler = this.discoverHandler.bind(this);
     }
@@ -68,31 +71,35 @@ class Bandwidth extends React.Component {
 
     discoverHandler(){
         this.props.changeVue(VUE.TRAFIC_SERV);
+        this.setState({hasMore: false})
     }
 
     render(){
         return (
             <Container>
-                <Title>
-                    <AnimatedTitle size={48} weight="bold">
-                        {this.state.txt}
-                    </AnimatedTitle>
-                </Title>
+                <BoxPosed>
+                    <Title>
+                        <AnimatedTitle size={48} weight="bold">
+                            {this.state.txt}
+                        </AnimatedTitle>
+                    </Title>
 
-                <TitleUnderline src="./assets/svg/wave-underline-double.svg"/>
-                <StyledDescription>
-                    {this.state.desc}
-                </StyledDescription>
+                    <TitleUnderline src="./assets/svg/wave-underline-double.svg"/>
+                    <StyledDescription>
+                        {this.state.desc}
+                    </StyledDescription>
+                </BoxPosed>
 
-                {this.props.vueIndex === VUE.TRAFIC_BW ?
-                <MoreContainer>
-                    <MoreUnderline src="./assets/svg/wave-underline.svg"/>
-                    <BtnMore onClick={() => this.props.changeVue(VUE.TRAFIC_SERV)}>
-                        VOIR
-                        <Arrow className="arrow" src="./assets/svg/arrow.svg"/>
-                    </BtnMore>
-                </MoreContainer>
-                : null}
+                <BoxPosed pose={this.state.hasMore ? 'enter' : 'exit'}>
+                    <MoreContainer>
+                        <MoreUnderline src="./assets/svg/wave-underline.svg"/>
+                        <BtnMore onClick={this.discoverHandler}>
+                            VOIR
+                            <Arrow className="arrow" src="./assets/svg/arrow.svg"/>
+                        </BtnMore>
+                    </MoreContainer>
+                </BoxPosed>
+
 
                 {this.props.vueIndex === VUE.TRAFIC_SERV ?
                     <ChartTitle>

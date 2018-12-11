@@ -5,35 +5,43 @@ import { VUE } from '../../../store/actions/index';
 import SVG from 'react-inlinesvg';
 import { theme } from '../../../constantes';
 import LineChart from '../../charts/LineChart';
-import { ChartTitle, ChartUnderline } from "../../style/heading";
+import { ChartTitle, ChartUnderline, Title } from "../../style/heading";
+import { BoxPosed } from "../../style/animation";
+
+const ChartContainer = styled.div`
+    max-width: 560px;
+    position: absolute;
+    top: 160px;
+    right: 110px;
+    text-align: left;
+`;
 
 const Container = styled.div`
     max-width: 595px;
     position: relative;
-    z-index: 4;
+    z-index: 16;
     margin: 110px 0 0 200px;
     text-align: left;
     color: #fff;
 `;
 
-const Title = styled.div`
-    font: 48px "Cera Basic", sans-serif;
-`;
-
 const TitleUnderline = styled(SVG)`
     display: block;
-    width: 150px;
+    width: 550px;
 `;
 
 const Description = styled.p`
-    max-width: 420px;
+    max-width: 550px;
     font: 20px 'Demos Next Pro';
     line-height: 1.6;
 `;
 
-
 const Color = styled.span`
     color: ${theme.color.blue};
+`;
+
+const StyledChartTitle = styled(ChartTitle)`
+    
 `;
 
 
@@ -50,7 +58,7 @@ class Energy extends React.Component {
     componentDidMount(){
         setTimeout(() => this.setState({
             txt: 'Une situation qui empire ?',
-            desc: 'Internet est aujourd’hui omniprésent dans notre quotidien\n' +
+            desc: 'Internet est aujourd’hui omniprésent dans notre quotidien.\n' +
                 'Mais, avec l’émergence de technologies comme la voiture \n' +
                 'autonome ou les objets connectés, sa part énergétique\n' +
                 'risque de prendre encore plus d’importance.'
@@ -63,25 +71,28 @@ class Energy extends React.Component {
 
     render(){
         return (
-            <Container>
-                <Title>
-                    <AnimatedTitle size={48} weight="bold">
-                        {this.state.txt}
-                    </AnimatedTitle>
-                </Title>
-                <TitleUnderline src="./assets/svg/wave-underline-double.svg"/>
-                <Description>
-                    {this.state.desc}
-                </Description>
+            <BoxPosed>
+                <Container>
+                    <Title>
+                        <AnimatedTitle size={48} weight="bold">
+                            {this.state.txt}
+                        </AnimatedTitle>
+                    </Title>
+                    <TitleUnderline src="./assets/svg/wave-underline-long.svg"/>
+                    <Description>
+                        {this.state.desc}
+                    </Description>
+                </Container>
 
-                <LineChart enter={true}/>
+                <ChartContainer>
+                    <LineChart enter={true}/>
 
-                <ChartTitle>
-                    Part de l'électricité mondiale consommée par <Color>Internet</Color> au fil des années
-                    <ChartUnderline src="./assets/svg/wave-line-right.svg"/>
-                </ChartTitle>
-
-            </Container>
+                    <ChartTitle>
+                        Part de l'électricité mondiale consommée par <Color>Internet</Color> au fil des années
+                        <ChartUnderline src="./assets/svg/wave-line-right.svg"/>
+                    </ChartTitle>
+                </ChartContainer>
+            </BoxPosed>
         );
     }
 }

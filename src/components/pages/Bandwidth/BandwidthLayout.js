@@ -24,7 +24,7 @@ const Container = styled.div`
 const PieChartTitle = styled(ChartTitle)`
     position: absolute;
     z-index: 14;
-    top: 560px;
+    top: 536px;
     right: 200px;
 `;
 
@@ -69,32 +69,57 @@ class BandwidthLayout extends React.Component {
     }
 
     render(){
-        const { vueIndex, stuffHover } = this.props;
-        const { TRAFIC_BW, TRAFIC_SERV} = VUE;
-        //TODO changer la forme waves
+        const { vueIndex } = this.props;
+        const { TRAFIC_BW, TRAFIC_SERV } = VUE;
+
         return (
-            <div ref="svg">
+            <div ref="svg" className="BandwidthLayout">
                 <AnimatedShape
-                    in={vueIndex === TRAFIC_BW}
-                    delay={2.3}
-                    src="./assets/svg/shapes/vue-2/shape-wave.svg"
-                    direction={DIRECTION.BOTTOM_LEFT}
-                    width="318px"
-                    height="250px"
-                    bottom="200px"
-                    left="500px"
+                    in={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}
+                    delay={2}
+                    src="./assets/svg/shapes/vue-4/shape-wave.svg"
+                    direction={DIRECTION.RIGHT}
+                    width="370px"
+                    height="175px"
+                    bottom="90px"
+                    right="132px"
                     zIndex={2}
                 />
 
+                <AnimatedShape
+                    in={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}
+                    delay={1.8}
+                    src="./assets/svg/shapes/vue-4/shape-line.svg"
+                    direction={DIRECTION.TOP_LEFT}
+                    width="490px"
+                    height="255px"
+                    top="-3px"
+                    left="380px"
+                    zIndex={20}
+                />
+
+                <AnimatedShape
+                    in={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}
+                    delay={1.8}
+                    src="./assets/svg/shapes/vue-4/shape-green.svg"
+                    direction={DIRECTION.TOP_RIGHT}
+                    width="530px"
+                    height="670px"
+                    top="-3px"
+                    right="-3px"
+                    zIndex={10}
+                />
+
+                { isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?
                 <Container>
                     <PieChartBWContainer width={this.width} height={this.height}/>
-                    <BoxPosed pose={isVue(vueIndex, [TRAFIC_SERV])}>
+                    <BoxPosed pose={isVue(vueIndex, [TRAFIC_SERV]) ? 'enter' : 'exit'}>
                         <LogoContainer>
                             <LogoService>
-                                <Logo src="./assets/svg/logo/yt.svg"/>
+                                <Logo src="./assets/svg/logo/amazon.svg"/>
                             </LogoService>
                             <LogoService>
-                                <Logo src="./assets/svg/logo/amazon.svg"/>
+                                <Logo src="./assets/svg/logo/yt.svg"/>
                             </LogoService>
                             <LogoService>
                                 <Logo src="./assets/svg/logo/netflix.svg"/>
@@ -104,13 +129,15 @@ class BandwidthLayout extends React.Component {
                             </LogoService>
                         </LogoContainer>
                     </BoxPosed>
-
                 </Container>
+                : null}
+                { isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?
+                    <PieChartTitle>
+                        Trafic internet descendant mondial
+                        <PieChartUnderline src="./assets/svg/wave-line-right.svg"/>
+                    </PieChartTitle>
+                : null}
 
-                <PieChartTitle>
-                    Trafic internet descendant mondial
-                    <PieChartUnderline src="./assets/svg/wave-line-right.svg"/>
-                </PieChartTitle>
             </div>
         );
     }

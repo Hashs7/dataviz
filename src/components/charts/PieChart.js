@@ -44,7 +44,7 @@ const PieChart = (props) => {
             mountOnEnter
             unmountOnExit
         >
-            <PieContainer>
+            <PieContainer className="PieChart">
                 <VictoryPie
                     data={[
                         { x: "47%", y: 47 },

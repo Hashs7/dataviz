@@ -2,17 +2,18 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
-import {theme, greenPath, bluePath, orangePath, bluePathSecond, DIRECTION} from '../../constantes';
 import { VUE } from "../../store/actions";
 import HomeLayout from "../pages/Home/HomeLayout";
+import EnergyLayout from "../pages/Energy/EnergyLayout";
+import BandwidthLayout from "../pages/Bandwidth/BandwidthLayout";
 import DataCentersLayoutContainer from "../../containers/DataCentersLayoutContainer";
 import MailLayoutContainer from "../../containers/MailLayoutContainer";
 import PieChartContainer from "../../containers/PieChartContainer";
+import AboutContainer from "../../containers/AboutContainer";
 import MorphingShape from './MorphingShape';
 import ArrowButton from './ArrowButton';
 import { isVue } from '../../methods';
-import BandwidthLayout from "../pages/Bandwidth/BandwidthLayout";
-import AboutContainer from "../../containers/AboutContainer";
+import {theme, greenPath, bluePath, orangePath, bluePathSecond, DIRECTION} from '../../constantes';
 
 const Layout = styled.div`
     position: relative;
@@ -131,10 +132,12 @@ class ShapesLayout extends React.Component {
                 : null}
 
                 <MailLayoutContainer />
+                <BandwidthLayout vueIndex={vueIndex} />
+                <EnergyLayout vueIndex={vueIndex} />
 
-                { isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?
-                    <BandwidthLayout />
-                : null}
+                {/*{ isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?*/}
+                    {/*<BandwidthLayout />*/}
+                {/*: null}*/}
 
                 {vueIndex === DISCOVER ?
                     <NextButton>

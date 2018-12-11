@@ -43,7 +43,7 @@ const PieChart = (props) => {
             mountOnEnter
             unmountOnExit
         >
-            <PieContainer className="DoublePie">
+            <PieContainer className="DoublePie PieChart">
                 <VictorySharedEvents
                     events={[{
                         childName: ["pie", "bar"],

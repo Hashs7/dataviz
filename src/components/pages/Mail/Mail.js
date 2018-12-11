@@ -6,7 +6,7 @@ import MailControlsContainer from '../../../containers/MailControlsContainer';
 import { VUE } from "../../../store/actions";
 import '../../../assets/css/range.css'
 import { connect } from 'react-redux';
-import {BoxOpacity, BoxPosed} from "../../style/animation";
+import { BoxPosed } from "../../style/animation";
 
 const Title = styled.div`
     font: 48px "Cera Basic", sans-serif;
