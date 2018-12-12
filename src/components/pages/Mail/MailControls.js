@@ -43,22 +43,6 @@ const RelativeContainer = styled.div`
     text-align: left;
 `;
 
-const Light = styled.p`
-    font-weight: normal;
-    font-size: 20px;
-`;
-
-const ConvertContainer = styled.div`
-    max-width: 220px;
-    position: absolute;
-    right: -220px;
-    bottom: 24px;
-    color: #fff;
-    & polyline {
-        stroke: #fff !important;
-    }
-`;
-
 const ResultContainer = styled.div`
     font-size: 28px;
     font-weight: bold;
@@ -281,11 +265,6 @@ class MailControls extends Component {
                             : null}
                             <ChartUnderline src="./assets/svg/wave-line-right.svg"/>
                             <MailChart />
-                            <ConvertContainer>
-                                <p>Soit environ<br/>{this.state.carKm} km parcourus</p>
-                                <Lines src="./assets/svg/wave-line-right.svg"/>
-                                <Light>Pour un trajet en voiture</Light>
-                            </ConvertContainer>
                         </ResultContainer>
                     : null}
 

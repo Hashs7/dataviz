@@ -128,7 +128,7 @@ class Home extends React.Component {
             lottie.loadAnimation({
                 container: this.plane.current,
                 renderer: 'svg',
-                loop: true,
+                loop: false,
                 autoplay: true,
                 path: './assets/avion-enter.json'
             });

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import posed from "react-pose";
 import { tween, easing } from 'popmotion';
 import {interpolate} from "flubber";
-import {greenPath, bluePath, orangePath, bluePathSecond} from '../../constantes';
+import {greenPath, bluePath, orangePath, bluePathSecond, orangePathSecond} from '../../constantes';
 import TweenMax, {Power1} from "gsap/TweenMax";
 import Transition from "react-transition-group/Transition";
 
@@ -10,6 +10,7 @@ const pathIdsGreen = Object.keys(greenPath);
 const pathIdsBlueSecond = Object.keys(bluePathSecond);
 const pathIdsBlue = Object.keys(bluePath);
 const pathIdsOrange = Object.keys(orangePath);
+const pathIdsOrangeSecond = Object.keys(orangePathSecond);
 
 const animate = {
     enter(target, direction, duration = 3, dl = 1){
@@ -80,6 +81,16 @@ const IconBlueSecond = posed.path(
     }, {})
 );
 
+const IconOrangeSecond = posed.path(
+    pathIdsOrangeSecond.reduce((config, id) => {
+        config[id] = {
+            d: orangePathSecond[id],
+            transition: morphTransition
+        };
+        return config;
+    }, {})
+);
+
 class Shape extends Component {
     constructor(props){
         super(props);
@@ -131,7 +142,7 @@ class Shape extends Component {
                 });
             }, 400);
         }
-        if(prevState.pathIndex === 1 && this.state.pathIndex === 1){
+        if(prevState.pathIndex === 1 && this.state.pathIndex === 1 && !this.props.oneTime){
             setTimeout(this.morphShape, 1700);
             setTimeout(() => {
                 this.setState({
@@ -176,6 +187,12 @@ class Shape extends Component {
                 return (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" style={this.state.styleSvg}>
                         <IconBlueSecond style={{fill: this.props.color}} pose={this.pathIds[this.state.pathIndex]} />
+                    </svg>
+                );
+            case orangePathSecond:
+                return (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" style={this.state.styleSvg}>
+                        <IconOrangeSecond style={{fill: this.props.color}} pose={this.pathIds[this.state.pathIndex]} />
                     </svg>
                 );
         }

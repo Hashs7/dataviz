@@ -3,9 +3,10 @@ import AnimatedShape from '../../UI/Shape';
 import { DIRECTION } from "../../../constantes";
 import styled from "styled-components";
 import SVG from "react-inlinesvg";
-import {isVue} from "../../../methods";
-import {VUE} from "../../../store/actions";
-import {BoxOpacity} from "../../style/animation";
+import { isVue } from "../../../methods";
+import { VUE } from "../../../store/actions";
+import { BoxPosed } from "../../style/animation";
+import OpacityShape from "../../UI/OpacityShape";
 
 export const ElectricPole = styled(SVG)`
     position: absolute;
@@ -20,20 +21,20 @@ const { FUTUR } = VUE;
 
 const EnergyLayout = ({ vueIndex }) => (
     <div>
-        <BoxOpacity pose={isVue(vueIndex, [FUTUR]) ? 'visibleDelay' : 'hidden'}>
+       {/* <BoxPosed pose={isVue(vueIndex, [FUTUR]) ? 'enter' : 'exit'}>
             <ElectricPole src="./assets/svg/shapes/vue-5/electric-pole.svg" />
-        </BoxOpacity>
+        </BoxPosed>*/}
 
         <AnimatedShape
             in={isVue(vueIndex, [FUTUR])}
-            delay={2}
-            src="./assets/svg/shapes/vue-5/shape-orange.svg"
-            direction={DIRECTION.BOTTOM_RIGHT}
-            width="665px"
-            height="450px"
-            bottom="-3px"
-            right="-3px"
-            zIndex={2}
+            delay={2.8}
+            src="./assets/svg/shapes/vue-5/electric-pole.svg"
+            direction={{x: 0, y: '160%'}}
+            width="640px"
+            height="425px"
+            bottom="64px"
+            left="312px"
+            zIndex={1}
         />
 
         <AnimatedShape
@@ -49,11 +50,11 @@ const EnergyLayout = ({ vueIndex }) => (
             zIndex={2}
         />
 
-        <AnimatedShape
+        <OpacityShape
             in={isVue(vueIndex, [FUTUR])}
             delay={2}
             src="./assets/svg/shapes/vue-5/shape-wave.svg"
-            direction={DIRECTION.RIGHT}
+            direction={DIRECTION.LEFT}
             width="420px"
             height="160px"
             top="18px"
@@ -66,8 +67,7 @@ const EnergyLayout = ({ vueIndex }) => (
             delay={2}
             src="./assets/svg/shapes/vue-5/shape-dot.svg"
             direction={DIRECTION.LEFT}
-            width="300px"
-            height="600px"
+            width="265px"
             bottom="-3px"
             left="-3px"
             zIndex={3}

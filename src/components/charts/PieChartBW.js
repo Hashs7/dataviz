@@ -20,8 +20,8 @@ const animate = {
     enter(target) {
         return TweenMax.from(target, 1, {
             opacity: 0,
-            x: '200%',
-            delay: 2,
+            x: '50%',
+            delay: 2.5,
             ease: Power1.easeOut,
         });
     },
@@ -34,10 +34,10 @@ const animate = {
 };
 
 const PieChart = (props) => {
-    const { vueIndex } = props;
+    const { vueIndex, enter } = props;
     return (
         <Transition
-            in={isVue(vueIndex, [VUE.TRAFIC_BW, VUE.TRAFIC_SERV])  }
+            in={enter}
             timeout={1500}
             onEnter={ node => animate.enter(node) }
             onExit={ node => animate.leave(node) }

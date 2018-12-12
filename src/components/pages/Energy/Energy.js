@@ -12,14 +12,15 @@ import { BoxPosed } from "../../style/animation";
 const ChartContainer = styled.div`
     max-width: 560px;
     position: absolute;
-    top: 160px;
-    right: 110px;
+    top: 140px;
+    right: 90px;
     text-align: left;
 `;
 
 const Container = styled(ContainerTitle)`
     max-width: 595px;
     color: #fff;
+    margin-left: 130px !important;
 `;
 
 const TitleUnderline = styled(SVG)`
@@ -37,7 +38,6 @@ const Color = styled.span`
 `;
 
 const StyledChartTitle = styled(ChartTitle)``;
-
 
 class Energy extends React.Component {
     constructor(props){

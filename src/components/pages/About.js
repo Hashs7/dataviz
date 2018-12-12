@@ -9,11 +9,21 @@ const Container = styled.div`
     left: 0; right: 0;
     top: 0; bottom: 0;
     margin: auto;
-    z-index: 25;
+    z-index: 28;
     width: 100vw;
     height: 100vh;
     padding: 100px;
     background-color: ${theme.color.blue};
+`;
+
+const Close = styled.button`
+    cursor: pointer;
+    position: absolute;
+    top: 130px;
+    right: 130px;
+    width: 40px;
+    height: 40px;
+    z-index: 28;
 `;
 
 const SubContainer = styled.div`
@@ -73,7 +83,9 @@ const About = (props) => {
     return (
         <Container>
             <SubContainer>
-                <button onClick={props.toggleModal}>Fermer</button>
+                <Close onClick={props.toggleModal}>
+                    <SVG src="./assets/svg/cross.svg"/>
+                </Close>
                 <TitleContainer>
                     <Title>
                         Sources
@@ -104,7 +116,7 @@ const About = (props) => {
                     </Title>
                 </TitleContainer>
                 <ListContainer>
-                    <Tips>Sulvan Batt</Tips>
+                    <Tips>Sulyvan Batt</Tips>
                     <Tips>Sébastien Hernoux</Tips>
                 </ListContainer>
 

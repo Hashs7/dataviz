@@ -2,6 +2,7 @@ import React from 'react';
 import posed, { PoseGroup } from 'react-pose';
 import Mail from './pages/Mail/Mail';
 import Energy from './pages/Energy/Energy';
+import Final from './pages/Final';
 import HomeContainer from '../containers/HomeContainer';
 import DataCentersContainer from '../containers/DataCentersContainer';
 import ShapesLayoutContainer from '../containers/ShapesLayoutContainer';
@@ -35,6 +36,7 @@ const Landing = () => (
                             <Route path="/quelle-quantité" component={Mail} key="mail" />
                             <Route path="/par-qui" component={BandwidthContainer} key="bandwidth" />
                             <Route path="/a-venir" component={Energy} key="energy" />
+                            <Route path="/final" component={Final} key="final" />
                         </Switch>
                     </RouteContainer>
                 </PoseGroup>

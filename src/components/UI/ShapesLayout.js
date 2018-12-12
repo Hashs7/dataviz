@@ -13,7 +13,7 @@ import AboutContainer from "../../containers/AboutContainer";
 import MorphingShape from './MorphingShape';
 import ArrowButton from './ArrowButton';
 import { isVue } from '../../methods';
-import {theme, greenPath, bluePath, orangePath, bluePathSecond, DIRECTION} from '../../constantes';
+import {theme, greenPath, bluePath, orangePath, bluePathSecond, orangePathSecond, DIRECTION} from '../../constantes';
 
 const Layout = styled.div`
     position: relative;
@@ -120,8 +120,16 @@ class ShapesLayout extends React.Component {
                     event={vueIndex === FUTUR}
                     color={theme.color.blue}/>
 
-                <HomeLayout in={vueIndex === 1}/>
+                <MorphingShape
+                    in={isVue(vueIndex, [FUTUR, FINAL])}
+                    pathObj={orangePathSecond}
+                    pathName="orangePathSecond"
+                    direction={DIRECTION.BOTTOM_RIGHT}
+                    event={vueIndex === FINAL}
+                    color={theme.color.orange}
+                    oneTime/>
 
+                <HomeLayout in={vueIndex === 1}/>
 
                 <DataCentersLayoutContainer enter={isVue(vueIndex, [WHY, DISCOVER])}/>
 
