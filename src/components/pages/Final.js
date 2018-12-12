@@ -4,8 +4,6 @@ import styled from "styled-components";
 import { ChartUnderline } from "../style/heading";
 import posed from "react-pose";
 
-const Container = styled.div``;
-
 const AbsoluteCenter = styled.div`
     position: absolute;
     top: 0;
@@ -59,7 +57,23 @@ const Title = styled.h3`
     font-weight: bold;
 `;
 
+const Info = styled.span`
+    position: absolute;
+    top: 10px;
+    right: -28px;
+    width: 22px;
+    line-height: 22px;
+    height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #000;
+    font-size: 14px;
+    font-family: 'Cera Basic',sans-serif;
+    font-weight: 900;
+`;
+
 const CO2 = styled.h2`
+    position: relative;
     display: block;
     font-size: 58px;
     font-family: 'Cera Basic', sans-serif;
@@ -74,6 +88,7 @@ class Final extends Component {
         super(props);
         this.plane = React.createRef();
     }
+
     componentDidMount(){
         setTimeout(() => {
             lottie.loadAnimation({
@@ -88,16 +103,20 @@ class Final extends Component {
 
     render() {
         return (
-            <Container>
+            <div>
                 <Plane ref={this.plane} />
                 <BoxPosed>
                     <ContentContainer>
                         <Title>Votre navigation sur ce site a généré</Title>
-                        <CO2>1,21g de CO2e</CO2>
+                        <CO2>1,21g de CO2e
+                            <a href="">
+                                <Info>i</Info>
+                            </a>
+                        </CO2>
                         <Underline src="./assets/svg/wave-line-right.svg"/>
                     </ContentContainer>
                 </BoxPosed>
-            </Container>
+            </div>
         );
     }
 }

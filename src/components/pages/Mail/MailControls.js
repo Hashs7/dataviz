@@ -8,26 +8,20 @@ import { theme } from '../../../constantes';
 import { tween, easing } from 'popmotion';
 import MailChart from "./MailChart";
 import { isVue } from "../../../methods";
-import '../../../assets/css/checkbox.css';
 import { ChartTitle, ChartUnderline } from '../../style/heading';
 import { BoxPosed } from "../../style/animation";
+import '../../../assets/css/checkbox.css';
 
 const Container = styled.div`
     position: absolute;
     width: 690px;
     height: 390px;
     left: 195px;
-    bottom: 60px;
+    bottom: 40px;
     z-index: 5;
     @media (max-width: 1800px) {
         left: 85px;
     }
-`;
-
-const Lines = styled(SVG)`
-    display: inline-block;
-    width: 123px;
-    height: 10px;
 `;
 
 const ButtonContainer = styled.div`
@@ -68,8 +62,23 @@ const StyledMailbox = styled.div`
     text-align: center;
 `;
 
+const Trash = styled(SVG)`
+    position: absolute;
+    bottom: 50px;
+    right: -10px;
+    width: 52px;
+    height: 66px;
+`;
+
 const Icon = styled.label`
     cursor: pointer;
+`;
+
+const Label = styled.span`
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
 `;
 
 const Notif = styled.span`
@@ -88,7 +97,7 @@ const Notif = styled.span`
 
 const StyledInput = styled.input`
     position: relative;
-    margin-top: 20px;
+    margin-top: 12px;
     width: 28px;
     height: 28px;
     border-radius: 5px;
@@ -109,24 +118,12 @@ const StyledSlider = styled(Slider)`
 
 const IndexContainer = styled.div`
     position: absolute;
-    left: 200px;
+    left: 238px;
     bottom: 90px;
     text-align: center;
+    font-weight: bold;
     font-size: 18px;
 `;
-/*
-const Index = styled.span`
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    margin: 0 20px;
-    box-sizing: border-box;
-    border: 3px solid #000;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color: .3s ease;
-    background-color: ${props => props.isActive ? '#000' : "#FFF"}
-`;*/
 
 class MailControls extends Component {
     constructor(props){
@@ -227,7 +224,9 @@ class MailControls extends Component {
                             <StyledMailbox>
                                 <Icon htmlFor="clean">
                                     <SVG src="./assets/svg/mailbox.svg" />
+                                    <Trash src="./assets/svg/trash.svg" />
                                 </Icon>
+                                <Label>Oui</Label>
                                 <StyledInput
                                     type="radio"
                                     name="mailbox"
@@ -241,6 +240,7 @@ class MailControls extends Component {
                                     <SVG src="./assets/svg/mailbox.svg" />
                                     <Notif>{this.state.mailNotif}</Notif>
                                 </Icon>
+                                <Label>Non</Label>
                                 <StyledInput
                                     type="radio"
                                     name="mailbox"
@@ -271,13 +271,6 @@ class MailControls extends Component {
                     <BoxPosed pose={isVue(vueIndex, [VUE.MAIL_QUANTITY, VUE.MAIL_TYPE]) ? 'enter' : 'exit'}>
                         <IndexContainer>
                             {isVue(vueIndex, [VUE.MAIL_QUANTITY]) ? '1/2' : '2/2'}
-
-                            {/*<Index
-                                isActive={isVue(vueIndex, [VUE.MAIL_QUANTITY])}
-                                onClick={() => this.changeVueHandler(VUE.MAIL_QUANTITY)}/>
-                            <Index
-                                isActive={isVue(vueIndex, [VUE.MAIL_TYPE])}
-                                onClick={() => this.changeVueHandler(VUE.MAIL_TYPE)}/>*/}
                         </IndexContainer>
                     </BoxPosed>
 

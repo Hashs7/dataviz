@@ -8,6 +8,7 @@ import '../../../assets/css/range.css'
 import { connect } from 'react-redux';
 import { BoxPosed } from "../../style/animation";
 import { isVue } from "../../../methods";
+import { Description } from "../../style/heading";
 
 const Title = styled.div`
     font: 48px "Cera Basic", sans-serif;
@@ -16,11 +17,6 @@ const Title = styled.div`
 const TitleUnderline = styled(SVG)`
     display: block;
     width: 433px;
-`;
-
-const Description = styled.p`
-    font: 20px 'Demos Next Pro';
-    line-height: 1.6;
 `;
 
 const TitleContainer = styled.div`

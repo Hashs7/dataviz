@@ -71,11 +71,6 @@ class DataCentersLayout extends React.Component {
 
         const lenC = myPathC.getTotalLength();
 
-        // myPathC.attr({
-        //     strokeWidth: 0,
-        //     fill: 'none',
-        // });
-
         const Scissors = snapC.path("M365.64,8a6,6,0,0,0,3.47,7.77,5.44,5.44,0,0,0,3.69.14L369.69,24h0l-.16.43c-.51-.09-1.06-.2-1.63-.32h0c-6.12-1.37-15.36-4.64-19.71-.65l11.95,2.13h0l1.07.19h0l7.34,1.32-2.55,7h0l-.37,1h0l-4.16,11.4c5.64-1.75,7.45-11.39,9.34-17.36h0c.18-.56.36-1.09.54-1.57l.46.08h0l8.58,1.39a5.43,5.43,0,0,0-1.73,3.25,6.11,6.11,0,0,0,12.07,1.94,5.9,5.9,0,0,0-5-6.91l-5.42-1h0l-8-1.43,2.77-7.62h0L377,12.08a5.9,5.9,0,0,0-3.47-7.77A6,6,0,0,0,365.64,8Zm19.92,21.11A4.28,4.28,0,0,1,384,37.49a4.37,4.37,0,0,1-3.64-5A4.29,4.29,0,0,1,385.56,29.06ZM372.81,5.9a4.23,4.23,0,0,1,2.58,5.48,4.28,4.28,0,0,1-5.58,2.75,4.35,4.35,0,0,1-2.48-5.65A4.19,4.19,0,0,1,372.81,5.9Z");
         Scissors.attr({ id: "scissors", fill: "#000", transform: 'rotate(130deg)' });
 
@@ -157,9 +152,9 @@ class DataCentersLayout extends React.Component {
                                 delay={5.3}
                                 duration={0.1}
                                 src="./assets/svg/shapes/vue-2/scissors-open.svg"
-                                width="38px"
-                                height="34px"
-                                top="0"
+                                width="35px"
+                                height="30px"
+                                top="-16px"
                                 left="304px"
                                 zIndex={16}
                                 cursor="pointer"

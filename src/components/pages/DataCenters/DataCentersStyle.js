@@ -6,8 +6,8 @@ import {ChartTitle} from "../../style/heading";
 
 export const CloudPath = styled.svg`
     position: absolute;
-    top: -22px;
-    right: 22px;
+    top: -20px;
+    right: 20px;
     z-index: 16;
     max-width: 950px;
     width: 83vh;

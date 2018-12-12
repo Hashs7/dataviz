@@ -27,7 +27,7 @@ const EnergyLayout = ({ vueIndex }) => (
 
         <AnimatedShape
             in={isVue(vueIndex, [FUTUR])}
-            delay={2.8}
+            delay={3.5}
             src="./assets/svg/shapes/vue-5/electric-pole.svg"
             direction={{x: 0, y: '160%'}}
             width="640px"

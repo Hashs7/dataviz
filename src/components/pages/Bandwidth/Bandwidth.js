@@ -7,7 +7,6 @@ import { Title, Description, ChartTitle, ChartUnderline } from "../../style/head
 import { ContainerTitle } from "../../style/containers";
 import { BoxPosed } from "../../style/animation";
 
-
 const Container = styled(ContainerTitle)`
     max-width: 585px;
     z-index: 16;
@@ -53,7 +52,6 @@ const MoreUnderline = styled(SVG)`
     height: 7px;
 `;
 
-
 class Bandwidth extends React.Component {
     constructor(props){
         super(props);
@@ -83,8 +81,7 @@ class Bandwidth extends React.Component {
                             {this.state.txt}
                         </AnimatedTitle>
                     </Title>
-
-                    <TitleUnderline src="./assets/svg/wave-underline-double.svg"/>
+                    <TitleUnderline src="./assets/svg/wave-but.svg"/>
                     <StyledDescription>
                         {this.state.desc}
                     </StyledDescription>

@@ -112,7 +112,9 @@ class BandwidthLayout extends React.Component {
                 />
 
                 <Container isVisible={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) }>
-                    <PieChartBWContainer width={this.width} height={this.height} enter={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}/>
+                    {isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?
+                        <PieChartBWContainer width={this.width} height={this.height} enter={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}/>
+                    : null}
                     <BoxPosed pose={isVue(vueIndex, [TRAFIC_SERV]) ? 'enter' : 'exit'}>
                         <LogoContainer>
                             <LogoService>

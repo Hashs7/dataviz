@@ -203,6 +203,9 @@ module.exports = {
     runtimeChunk: true,
   },
   resolve: {
+      alias: {
+          snapsvg: 'snapsvg/dist/snap.svg.js',
+      },
     // This allows you to set a fallback for where Webpack should look for modules.
     // We placed these paths second because we want `node_modules` to "win"
     // if there are any conflicts. This matches Node resolution mechanism.
@@ -249,7 +252,10 @@ module.exports = {
     rules: [
       // Disable require.ensure as it's not a standard language feature.
       { parser: { requireEnsure: false } },
-
+        {
+            test: require.resolve('snapsvg/dist/snap.svg.js'),
+            use: 'imports-loader?this=>window,fix=>module.exports=0',
+        },
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
       {
@@ -260,7 +266,7 @@ module.exports = {
             options: {
               formatter: require.resolve('react-dev-utils/eslintFormatter'),
               eslintPath: require.resolve('eslint'),
-              
+
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -293,7 +299,7 @@ module.exports = {
               customize: require.resolve(
                 'babel-preset-react-app/webpack-overrides'
               ),
-              
+
               plugins: [
                 [
                   require.resolve('babel-plugin-named-asset-import'),
@@ -331,7 +337,7 @@ module.exports = {
               cacheDirectory: true,
               // Save disk space when time isn't as important
               cacheCompression: true,
-              
+
               // If an error happens in a package, it's possible to be
               // because it was compiled. Thus, we don't want the browser
               // debugger to show the original code. Instead, the code

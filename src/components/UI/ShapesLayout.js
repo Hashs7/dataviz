@@ -55,13 +55,30 @@ const LogoHome = styled(SVG)`
     height: 65px;
 `;
 
-const Logo = styled(SVG)`
+const LogoContainer = styled.div`
     position: relative;
-    display: block;
+    z-index: 20;
     margin: 30px 0 0 70px;
+    width: 210px;
+    height: 40px;
+    color: ${props => props.white ? '#FFF' : '#000'};
+`;
+
+const Logo = styled(SVG)`
+    display: inline-block;
+    vertical-align: middle;
     width: 40px;
     height: 40px;
-    z-index: 20;
+`;
+
+const TitleLogo = styled.span`
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Cera Basic", sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
 `;
 
 
@@ -80,9 +97,12 @@ class ShapesLayout extends React.Component {
                     color={vueIndex !== 1 ? '#000' : '#FFF'}>à propos</About>
 
                 {vueIndex !== 1 ?
-                    <Logo src="./assets/svg/logo.svg" /> :
-                    <LogoHome src="./assets/svg/logo.svg" />}
-
+                    <LogoContainer white={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, FUTUR])}>
+                        <Logo src="./assets/svg/logo.svg" />
+                        <TitleLogo>World Wide Help</TitleLogo>
+                    </LogoContainer> :
+                    <LogoHome src="./assets/svg/logo.svg" />
+                }
 
                 {modalActive ?
                     <AboutContainer />
@@ -142,10 +162,6 @@ class ShapesLayout extends React.Component {
                 <MailLayoutContainer />
                 <BandwidthLayout vueIndex={vueIndex} />
                 <EnergyLayout vueIndex={vueIndex} />
-
-                {/*{ isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?*/}
-                    {/*<BandwidthLayout />*/}
-                {/*: null}*/}
 
                 {vueIndex === DISCOVER ?
                     <NextButton>

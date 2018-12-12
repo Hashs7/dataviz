@@ -1,9 +1,9 @@
 const generateInitialState = () => {
     return {
         current: {
-            vue: 1,
+            vue: 6,
             scale: 1,
-            mailAmount: 0,
+            mailAmount: 10,
             modal: false
         }
     };

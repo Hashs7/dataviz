@@ -97,13 +97,13 @@ const About = (props) => {
                         <a href="https://bit.ly/2EaxUxI" target="_blank" rel="noopener noreferrer">Ademe</a>
                     </Tips>
                     <Tips>
-                        <a href="" target="_blank" rel="noopener noreferrer">Green IT</a>
+                        <a href="https://www.greenit.fr/" target="_blank" rel="noopener noreferrer">Green IT</a>
                     </Tips>
                     <Tips>
                         Rapport “<a href="http://www.clickclean.org/france/fr/" target="_blank" rel="noopener noreferrer">ClickingClean</a>”, 2017, GreenPeace
                     </Tips>
                     <Tips>
-                        “<a href="" target="_blank" rel="noopener noreferrer">Total Consumer Power Consumption Forecast</a>”, 2017, Dr. Anders S.G. Andrae
+                        “<a href="https://www.researchgate.net/publication/320225452_Total_Consumer_Power_Consumption_Forecast" target="_blank" rel="noopener noreferrer">Total Consumer Power Consumption Forecast</a>”, 2017, Dr. Anders S.G. Andrae
                     </Tips>
                     <Tips>
                         Rapport “<a href="https://bit.ly/2zNZBde" target="_blank" rel="noopener noreferrer">The Global Internet Phenomena</a>”, 2018, Sandvine

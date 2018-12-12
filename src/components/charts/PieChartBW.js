@@ -54,16 +54,15 @@ const PieChart = (props) => {
                                 return [{
                                     childName: ["pie", "bar"],
                                     mutation: (props) => {
-                                        console.log('props', props)
                                         switch (props.index) {
                                             case 0:
-                                                return { style: Object.assign({}, props.style, {fill: "rgba(79, 98, 204, .8)", strokeWidth: 2, stroke: "#000"}) };
+                                                return { style: Object.assign({}, props.style, {fill: "rgba(79, 98, 204, .8)", strokeWidth: 2, stroke: "#000", opacity: 1}) };
                                             case 1:
-                                                return { style: Object.assign({}, props.style, {fill: "rgba(0, 0, 0, .8)", strokeWidth: 2, stroke: "#000"}) };
+                                                return { style: Object.assign({}, props.style, {fill: "rgba(0, 0, 0, .8)", strokeWidth: 2, stroke: "#000", opacity: 1}) };
                                             case 2:
-                                                return { style: Object.assign({}, props.style, {fill: "rgba(255, 47, 78, .8)", strokeWidth: 2, stroke: "#000"}) };
+                                                return { style: Object.assign({}, props.style, {fill: "rgba(255, 47, 78, .8)", strokeWidth: 2, stroke: "#000", opacity: 1}) };
                                             case 3:
-                                                return { style: Object.assign({}, props.style, {fill: "rgba(3, 171, 230, .8)", strokeWidth: 2, stroke: "#000"}) };
+                                                return { style: Object.assign({}, props.style, {fill: "rgba(3, 171, 230, .8)", strokeWidth: 2, stroke: "#000", opacity: 1}) };
                                             case 4:
                                                 return;
                                         }
@@ -81,7 +80,7 @@ const PieChart = (props) => {
                         }
                     }]}
                 >
-                <g transform={`translate(${props.width - 800}, 0), scale(1.5)`} >
+                <g transform={`translate(${props.width - 800}, 0), scale(1.5)`} className="firstPie">
                 <VictoryPie
                     standalone={false}
                     data={[
@@ -92,7 +91,7 @@ const PieChart = (props) => {
                         { x: "Socials 5%", y: 5 }
                     ]}
                     height={350}
-                    style={{data: { stroke: "#000", strokeWidth: 2 }, labels: { fill: "transparent" }}}
+                    style={{data: { stroke: "#000", strokeWidth: 2 }, labels: { fill: "transparent", fontSize: 10 }}}
                     labelRadius={5}
                     animate={{ duration: 1200, onLoad: { duration: 500 }}}
                     colorScale={[ theme.color.blue, theme.color.orange, '#646464', theme.color.green, theme.color.white ]}
@@ -121,9 +120,11 @@ const PieChart = (props) => {
                                     mutation: (props) => {
                                         switch (props.index) {
                                             case 0:
-                                                return { style: { fill: "#fff", fontSize: 20 }};
+                                                return { style: { fill: "#fff", fontSize: 16 }};
+                                            case 2:
+                                                return { style: { fill: "#fff", fontSize: 16 }};
                                             default:
-                                                return { style: { fill: "#000", fontSize: 20 }};
+                                                return { style: { fill: "#000", fontSize: 16 }};
                                         }
                                     }
                                 }];
@@ -137,7 +138,7 @@ const PieChart = (props) => {
                                 }, {
                                     target: "labels",
                                     mutation: () => {
-                                        return { style: { fill: "transparent", fontSize: 20, } };
+                                        return { style: { fill: "transparent", fontSize: 16, } };
                                     }
                                 }];
                             }
@@ -145,76 +146,44 @@ const PieChart = (props) => {
                     }]}
                 />
                 <g transform={"scale(1.35), rotate(-8 -150 520)"}>
-                    {isVue(vueIndex, [VUE.TRAFIC_SERV]) ?
-                        <OutPie
-                            name="pie"
-                            standalone={false}
-                            data={[
-                                { x: "Facebook", y: 2 },
-                                { x: "Netflix", y: 15 },
-                                { x: "Youtube", y: 12 },
-                                { x: "Amazon Prime Video", y: 4 },
-                                { x: "empty", y: 67 }
-                            ]}
-                            height={350}
-                            innerRadius={100}
-                            style={{
-                                data: { stroke: "#000", strokeWidth: 0 },
-                                labels: { fill: "transparent" }
-                            }}
-                            labelRadius={60}
-                            animate={{
-                                duration: 1200,
-                                onLoad: { duration: 500 }
-                            }}
-                            colorScale={[ '#4F62CC', theme.color.black, '#FF2F4E', '#03ABE6', 'transparent', ]}
-                            // events={[{
-                            //     target: "data",
-                            //     eventHandlers: {
-                            //         onMouseEnter: () => {
-                            //             return [{
-                            //                 target: "data",
-                            //                 mutation: (props) => {
-                            //                     // return;
-                            //                     switch (props.index) {
-                            //                         case 0:
-                            //                             return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.blue }};
-                            //                         case 1:
-                            //                             return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.orange }};
-                            //                         case 2:
-                            //                             return { style: { stroke: "#000", strokeWidth: 2, fill: theme.color.white }};
-                            //                         case 4:
-                            //                             return { style: { stroke: "#000", strokeWidth: 2, fill: '#646464' }};
-                            //                     }
-                            //                 }
-                            //             }];
-                            //         },
-                            //         onMouseLeave: () => {
-                            //             return [{
-                            //                 target: "data",
-                            //                 mutation: () => {
-                            //                     return {strokeWidth: 4}
-                            //                 }
-                            //             }, {
-                            //                 target: "labels",
-                            //                 mutation: () => {
-                            //                     return { style: { fill: "transparent", fontSize: 32, } };
-                            //                 }
-                            //             }];
-                            //        }
-                            //     }
-                            // }]}
-                        />
-                    : null}
+                    <OutPie
+                        name="pie"
+                        standalone={false}
+                        data={[
+                            { x: "Facebook", y: 2 },
+                            { x: "Netflix", y: 15 },
+                            { x: "Youtube", y: 12 },
+                            { x: "Amazon Prime Video", y: 4 },
+                            { x: "empty", y: 67 }
+                        ]}
+                        height={350}
+                        innerRadius={100}
+                        style={{
+                            data: {
+                                stroke: "#000",
+                                strokeWidth: 0,
+                                opacity: isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0},
+                            labels: { fill: "transparent" }
+                        }}
+                        labelRadius={60}
+                        animate={{
+                            duration: 1200,
+                            onLoad: { duration: 500 }
+                        }}
+                        colorScale={[ '#4F62CC', theme.color.black, '#FF2F4E', '#03ABE6', 'transparent' ]}
+                    />
                 </g>
                 </g>
 
                 <g transform={`translate(80, ${props.height - 505})`}>
-                {isVue(vueIndex, [VUE.TRAFIC_SERV])  ?
                     <VictoryStack
                         standalone={false}
                         style={{
-                            data: { stroke: "black", strokeWidth: '2px' }
+                            data: {
+                                stroke: "black",
+                                strokeWidth: '2px',
+                                opacity:  isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0
+                            }
                         }}
                         width={500}
                         domainPadding={{ y: -18 }}
@@ -229,7 +198,7 @@ const PieChart = (props) => {
                             horizontal
                             labels={(d) => `${d.y}%`}
                             padding={{ right: 20 }}
-                            style={{ labels: { fill: "#000" }}}
+                            style={{ labels: { fill: "#000", opacity:  isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0}}}
                             events={[{
                                 target: "data",
                                 eventHandlers: {
@@ -256,7 +225,7 @@ const PieChart = (props) => {
                             name="bar"
                             labels={(d) => `${d.y}%`}
                             padding={{ right: 20 }}
-                            style={{labels: { fill: "#000" }}}
+                            style={{labels: { fill: "#000", opacity:  isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0 }}}
                             events={[{
                                 target: "data",
                                 eventHandlers: {
@@ -286,7 +255,7 @@ const PieChart = (props) => {
                             horizontal
                             labelComponent={<VictoryLabel x={460} />}
                             padding={{ right: 20 }}
-                            style={{labels: { fill: "#000" }}}
+                            style={{labels: { fill: "#000", opacity: isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0 }}}
                             events={[{
                                 target: "data",
                                 eventHandlers: {
@@ -308,7 +277,6 @@ const PieChart = (props) => {
                             ]}
                         />
                     </VictoryStack>
-                : null}
                 </g>
                 </VictorySharedEvents>
             </PieContainer>

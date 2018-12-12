@@ -7,7 +7,7 @@ Gobelins Project - Dataviz
 
 Installing project and dependencies :
 
-    git clone git@github.com:Hashs7/data-viz.git
+    git clone git@github.com:Hashs7/dataviz.git
     cd dataviz
     npm i
 

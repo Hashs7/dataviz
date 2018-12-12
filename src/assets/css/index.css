@@ -82,10 +82,25 @@ tspan{
 }
 
 .LineChart .VictoryContainer {
-    transform: translateX(-58px);
+    transform: translateX(25px);
 }
 .VictoryContainer {
     transform: translateX(-70px);
+}
+.firstPie g text:nth-last-child(5){
+    transform: translateX(15px);
+}
+.firstPie g text:nth-last-child(4){
+     transform: translate(-28px,24px);
+ }
+.firstPie g text:nth-last-child(3){
+    transform: translate(-27px,-20px)
+}
+.firstPie g text:nth-last-child(2){
+    transform: translate(-80px,-112px)
+}
+.firstPie g text:nth-last-child(1){
+    transform: translate(-65px,-130px)
 }
 /*
 .coloredTitle div:first-child{

@@ -7,12 +7,12 @@ import TweenMax, { Power1 } from "gsap/TweenMax";
 
 const PieContainer = styled.div`
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 368px;
     z-index: 15;
     backface-visibily: hidden;
     @media (max-height: 950px){
-        bottom: -28px;
+        bottom: 0;
     }
 `;
 
@@ -33,6 +33,12 @@ const animate = {
     }
 };
 
+/**
+ *
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 const PieChart = (props) => {
     const { enter, changeStuff} = props;
     return (
@@ -111,7 +117,5 @@ const PieChart = (props) => {
         </Transition>
     );
 };
-
-
 
 export default PieChart;

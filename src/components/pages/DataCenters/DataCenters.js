@@ -6,7 +6,7 @@ import {
     TitleUnderline,
     StyledCharTitle
 } from './DataCentersStyle';
-import { Title, Description, ChartTitle, ChartUnderline } from "../../style/heading";
+import { Title, Description, ChartUnderline } from "../../style/heading";
 import { isVue } from '../../../methods';
 import styled from 'styled-components';
 const StyledContainer = styled(Container)`
@@ -51,11 +51,11 @@ class DataCenters extends React.Component {
                     : null}
                 <Description>
                     {isVue(vueIndex, [VUE.WHY]) && this.state.show ?
-                        "Clique sur les ciseaux pour découpez le nuage et le découvrir."
+                        "Clique sur les ciseaux pour découper le nuage et le découvrir."
                     : null}
                     {isVue(vueIndex, [VUE.DISCOVER]) ?
-                        'Lors de la production et pendant leurs utilisations, vos ordinateurs et smartphones polluent car ils sont fabriqués à partir de ressources non renouvelables. Ils sont les pricipaux responsables de la pollution numérique.\n'+
-                        'De plus, derrière Internet et le “Cloud” se cachent des infrastructures réseaux avec de multiples data centers stockant tout le contenu d’Internet. Ces équipements doivent être refroidi en continu et consomment donc énormément d’énergie.'
+                        'Lors de la production et pendant leurs utilisations, vos ordinateurs et smartphones polluent car ils sont fabriqués à partir de ressources non renouvelables. Ils sont les principaux responsables de la pollution numérique.\n'+
+                        'De plus, derrière Internet et le “ Cloud ” se cachent des infrastructures réseaux avec de multiples data centers stockant tout le contenu d’Internet. Ces équipements doivent être refroidi en continu et consomment donc énormément d’énergie.'
                     : null}
                 </Description>
 

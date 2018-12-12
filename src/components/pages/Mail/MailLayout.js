@@ -16,6 +16,12 @@ const Letters = styled(SVG)`
     z-index: 16;
 `;
 
+/**
+ *
+ * @param vueIndex
+ * @returns {*}
+ * @constructor
+ */
 const MailLayout = ({ vueIndex }) => {
     const {MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA} = VUE;
     return (
@@ -57,10 +63,8 @@ const MailLayout = ({ vueIndex }) => {
                 src="./assets/svg/shapes/vue-3/shape-green.svg"
                 delay={1}
                 direction={DIRECTION.LEFT}
-                maxWidth="983px"
-                minWidth="950px"
                 maxHeight="683px"
-                width="65%"
+                width="860px"
                 height="fit-content"
                 bottom="-3px"
                 left="-3px"
