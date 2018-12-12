@@ -136,8 +136,8 @@ class MailChart extends Component {
         return (
             <Container>
                 {this.state.scale !== 1 ?
-                    <Plane src="./assets/img/plane.svg"/> :
-                    <Car src="./assets/img/car.svg" carX={this.carKm}/>
+                    <Plane src="./assets/svg/ui/plane.svg"/> :
+                    <Car src="./assets/svg/ui/car.svg" carX={this.carKm}/>
                 }
                 {this.state.scale === 2 ?
                     <Multiplicator>x 1600</Multiplicator>

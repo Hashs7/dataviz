@@ -14,6 +14,7 @@ import MorphingShape from './MorphingShape';
 import ArrowButton from './ArrowButton';
 import { isVue } from '../../methods';
 import {theme, greenPath, bluePath, orangePath, bluePathSecond, orangePathSecond, DIRECTION} from '../../constantes';
+import TipContainer from "../../containers/TipContainer";
 
 const Layout = styled.div`
     position: relative;
@@ -82,6 +83,61 @@ const TitleLogo = styled.span`
 `;
 
 
+const ShapesMorphingLayout = ({vueIndex}) => {
+    const { INDEX, WHY, DISCOVER, TRANSITION_MAIL, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRANSITION_TRAFIC, TRAFIC_BW, TRAFIC_SERV, TRANSITION_ENERGY, FUTUR, FINAL } = VUE;
+
+    return (
+        <div>
+            <MorphingShape
+                in={isVue(vueIndex, [INDEX, WHY, DISCOVER])}
+                direction={DIRECTION.BOTTOM_RIGHT}
+                pathObj={greenPath}
+                pathName="greenPath"
+                event={vueIndex === WHY}
+                color={theme.color.green}/>
+
+            <MorphingShape
+                in={isVue(vueIndex, [WHY, DISCOVER, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRANSITION_MAIL])}
+                direction={DIRECTION.BOTTOM_RIGHT}
+                pathObj={bluePath}
+                pathName="bluePath"
+                event={vueIndex === TRANSITION_MAIL}
+                eventOut={isVue(vueIndex, [MAIL_QUANTITY])}
+                transition
+                color={theme.color.blue}/>
+
+            <MorphingShape
+                in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRAFIC_BW, TRAFIC_SERV, TRANSITION_TRAFIC])}
+                pathObj={orangePath}
+                pathName="orangePath"
+                transition
+                direction={DIRECTION.TOP_RIGHT}
+                event={vueIndex === TRANSITION_TRAFIC}
+                eventOut={isVue(vueIndex, [TRAFIC_BW])}
+                color={theme.color.orange}/>
+
+            <MorphingShape
+                in={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV, TRANSITION_ENERGY, FUTUR])}
+                pathObj={bluePathSecond}
+                pathName="bluePathSecond"
+                transition
+                direction={DIRECTION.BOTTOM_RIGHT}
+                event={vueIndex === TRANSITION_ENERGY}
+                eventOut={isVue(vueIndex, [FUTUR])}
+                color={theme.color.blue}/>
+
+            <MorphingShape
+                in={isVue(vueIndex, [FUTUR, FINAL])}
+                pathObj={orangePathSecond}
+                pathName="orangePathSecond"
+                direction={DIRECTION.BOTTOM_RIGHT}
+                event={vueIndex === FINAL}
+                color={theme.color.orange}
+                oneTime/>
+        </div>
+    );
+};
+
 class ShapesLayout extends React.Component {
     constructor(props){
         super(props);
@@ -89,15 +145,15 @@ class ShapesLayout extends React.Component {
 
     render(){
         const { vueIndex, modalActive, toggleModal } = this.props;
-        const { INDEX, WHY, DISCOVER, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRAFIC_BW, TRAFIC_SERV, FUTUR, FINAL } = VUE;
+        const { INDEX, WHY, DISCOVER, TRANSITION_MAIL, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRANSITION_TRAFIC, TRAFIC_BW, TRAFIC_SERV, TRANSITION_ENERGY, FUTUR, FINAL } = VUE;
         return (
             <Layout>
                 <About
                     onClick={toggleModal}
-                    color={vueIndex !== 1 ? '#000' : '#FFF'}>à propos</About>
+                    color={isVue(vueIndex, [INDEX, TRANSITION_MAIL, TRANSITION_ENERGY]) ? '#FFF' : '#000'}>à propos</About>
 
-                {vueIndex !== 1 ?
-                    <LogoContainer white={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, FUTUR])}>
+                {vueIndex !== INDEX ?
+                    <LogoContainer white={isVue(vueIndex, [TRANSITION_MAIL, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRANSITION_ENERGY, FUTUR])}>
                         <Logo src="./assets/svg/logo.svg" />
                         <TitleLogo>World Wide Help</TitleLogo>
                     </LogoContainer> :
@@ -107,49 +163,9 @@ class ShapesLayout extends React.Component {
                 {modalActive ?
                     <AboutContainer />
                 :null}
+                <ShapesMorphingLayout vueIndex={vueIndex}/>
 
-                <MorphingShape
-                    in={isVue(vueIndex, [INDEX, WHY, DISCOVER])}
-                    direction={DIRECTION.BOTTOM_RIGHT}
-                    pathObj={greenPath}
-                    pathName="greenPath"
-                    event={vueIndex === WHY}
-                    color={theme.color.green}/>
-
-                <MorphingShape
-                    in={isVue(vueIndex, [WHY, DISCOVER, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA])}
-                    direction={DIRECTION.BOTTOM_RIGHT}
-                    pathObj={bluePath}
-                    pathName="bluePath"
-                    event={vueIndex === MAIL_QUANTITY}
-                    color={theme.color.blue}/>
-
-                <MorphingShape
-                    in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRAFIC_BW, TRAFIC_SERV])}
-                    pathObj={orangePath}
-                    pathName="orangePath"
-                    direction={DIRECTION.TOP_RIGHT}
-                    event={vueIndex === TRAFIC_BW}
-                    color={theme.color.orange}/>
-
-                <MorphingShape
-                    in={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV, FUTUR])}
-                    pathObj={bluePathSecond}
-                    pathName="bluePathSecond"
-                    direction={DIRECTION.BOTTOM_RIGHT}
-                    event={vueIndex === FUTUR}
-                    color={theme.color.blue}/>
-
-                <MorphingShape
-                    in={isVue(vueIndex, [FUTUR, FINAL])}
-                    pathObj={orangePathSecond}
-                    pathName="orangePathSecond"
-                    direction={DIRECTION.BOTTOM_RIGHT}
-                    event={vueIndex === FINAL}
-                    color={theme.color.orange}
-                    oneTime/>
-
-                <HomeLayout in={vueIndex === 1}/>
+                <HomeLayout in={vueIndex === INDEX}/>
 
                 <DataCentersLayoutContainer enter={isVue(vueIndex, [WHY, DISCOVER])}/>
 
@@ -165,24 +181,24 @@ class ShapesLayout extends React.Component {
 
                 {vueIndex === DISCOVER ?
                     <NextButton>
-                        <Link to="/quelle-quantité">
-                            <ArrowButton action={() => this.props.changeVue(MAIL_QUANTITY)}/>
+                        <Link to="/conseil-equipement">
+                            <ArrowButton action={() => this.props.changeVue(TRANSITION_MAIL)}/>
                         </Link>
                     </NextButton>
                 : null }
 
                 {vueIndex === MAIL_DATA ?
                     <NextButton>
-                        <Link to="/par-qui">
-                            <ArrowButton action={() => this.props.changeVue(TRAFIC_BW)}/>
+                        <Link to="conseil-messagerie">
+                            <ArrowButton action={() => this.props.changeVue(TRANSITION_TRAFIC)}/>
                         </Link>
                     </NextButton>
                 : null }
 
                 {vueIndex === TRAFIC_SERV ?
                     <NextButton>
-                        <Link to="/a-venir">
-                            <ArrowButton action={() => this.props.changeVue(FUTUR)}/>
+                        <Link to="/conseil-services">
+                            <ArrowButton action={() => this.props.changeVue(TRANSITION_ENERGY)}/>
                         </Link>
                     </NextButton>
                 : null }

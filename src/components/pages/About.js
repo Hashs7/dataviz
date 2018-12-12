@@ -79,7 +79,6 @@ const CCI = styled(SVG)`
 
 
 const About = (props) => {
-    //TODO add links
     return (
         <Container>
             <SubContainer>

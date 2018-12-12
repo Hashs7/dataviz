@@ -56,7 +56,7 @@ class DataCentersLayout extends React.Component {
     }
 
     cutScissors() {
-        if(!isVue(this.props.vueIndex, [2, 3])){
+        if(!isVue(this.props.vueIndex, [VUE.WHY, VUE.DISCOVER])){
             return;
         }
         this.setState({scissors: false});

@@ -3,7 +3,7 @@ import posed from "react-pose";
 import { tween, easing } from 'popmotion';
 import {interpolate} from "flubber";
 import {greenPath, bluePath, orangePath, bluePathSecond, orangePathSecond} from '../../constantes';
-import TweenMax, {Power1} from "gsap/TweenMax";
+import TweenMax, { Power1 } from "gsap/TweenMax";
 import Transition from "react-transition-group/Transition";
 
 const pathIdsGreen = Object.keys(greenPath);
@@ -120,9 +120,27 @@ class Shape extends Component {
         });
     }
 
+    outMorphing(duration){
+        setTimeout(() => {
+            this.morphShape();
+            this.setState({
+                styleSvg: {
+                    pointerEvents: 'none',
+                    backfaceVisibility: 'hidden',
+                    right: 'auto',
+                    left: 0,
+                    transition: 'transform 0s',
+                    position: "absolute",
+                    bottom: 0,
+                    height: '100%',
+                    margin: 'auto',
+                    zIndex: 14
+                }
+            });
+        }, duration);
+    }
     componentDidUpdate(prevProps, prevState){
-        if(!this.props.event){ return }
-        if(this.state.pathIndex === 0){
+        if(this.state.pathIndex === 0 && this.props.event ){
             setTimeout(() => {
                 this.morphShape();
                 this.setState({
@@ -142,24 +160,15 @@ class Shape extends Component {
                 });
             }, 400);
         }
-        if(prevState.pathIndex === 1 && this.state.pathIndex === 1 && !this.props.oneTime){
-            setTimeout(this.morphShape, 1700);
-            setTimeout(() => {
-                this.setState({
-                    styleSvg: {
-                        pointerEvents: 'none',
-                        backfaceVisibility: 'hidden',
-                        right: 'auto',
-                        left: 0,
-                        transition: 'transform 0s',
-                        position: "absolute",
-                        bottom: 0,
-                        height: '100%',
-                        margin: 'auto',
-                        zIndex: 14
-                    }
-                });
-            }, 1700);
+        if(prevState.pathIndex === 1
+            && this.state.pathIndex === 1
+            && !this.props.oneTime
+            && !this.props.transition
+            && this.props.event ){
+            this.outMorphing(1700);
+        }
+        if(this.props.transition && this.props.eventOut){
+            this.outMorphing(200);
         }
     }
 

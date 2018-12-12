@@ -109,7 +109,7 @@ class Final extends Component {
                     <ContentContainer>
                         <Title>Votre navigation sur ce site a généré</Title>
                         <CO2>1,21g de CO2e
-                            <a href="">
+                            <a href="http://www.ecoindex.fr/resultatsv2/?id=31520">
                                 <Info>i</Info>
                             </a>
                         </CO2>

@@ -8,6 +8,7 @@ import SVG from 'react-inlinesvg';
 import { BoxPosed } from "../../style/animation";
 import { VUE } from "../../../store/actions";
 import { isVue } from "../../../methods";
+import posed from "react-pose";
 
 const Container = styled.div`
     position: absolute;
@@ -57,6 +58,23 @@ const Logo = styled(SVG)`
     height: 100%;
 `;
 
+const LogoPosed = posed.div({
+    enter: {
+        opacity: 1,
+        transition: {
+            opacity: { type: 'tween', duration: 200},
+        }
+    },
+    exit: {
+        opacity: 0,
+        applyAtEnd: { display: 'none' },
+        transition: {
+            duration: 200,
+            opacity: { type: 'tween' },
+        }
+    }
+});
+
 class BandwidthLayout extends React.Component {
     constructor(props){
         super(props);
@@ -77,7 +95,7 @@ class BandwidthLayout extends React.Component {
             <div ref="svg" className="BandwidthLayout">
                 <AnimatedShape
                     in={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}
-                    delay={2}
+                    delay={.7}
                     src="./assets/svg/shapes/vue-4/shape-wave.svg"
                     direction={DIRECTION.RIGHT}
                     width="370px"
@@ -89,7 +107,7 @@ class BandwidthLayout extends React.Component {
 
                 <AnimatedShape
                     in={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}
-                    delay={1.8}
+                    delay={.8}
                     src="./assets/svg/shapes/vue-4/shape-line.svg"
                     direction={DIRECTION.TOP_LEFT}
                     width="490px"
@@ -101,7 +119,7 @@ class BandwidthLayout extends React.Component {
 
                 <AnimatedShape
                     in={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}
-                    delay={1.8}
+                    delay={.8}
                     src="./assets/svg/shapes/vue-4/shape-green.svg"
                     direction={DIRECTION.TOP_RIGHT}
                     width="530px"
@@ -112,10 +130,8 @@ class BandwidthLayout extends React.Component {
                 />
 
                 <Container isVisible={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) }>
-                    {isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?
-                        <PieChartBWContainer width={this.width} height={this.height} enter={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}/>
-                    : null}
-                    <BoxPosed pose={isVue(vueIndex, [TRAFIC_SERV]) ? 'enter' : 'exit'}>
+                    <PieChartBWContainer width={this.width} height={this.height} enter={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}/>
+                    <LogoPosed pose={isVue(vueIndex, [TRAFIC_SERV]) ? 'enter' : 'exit'}>
                         <LogoContainer>
                             <LogoService>
                                 <Logo src="./assets/svg/logo/amazon.svg"/>
@@ -130,7 +146,7 @@ class BandwidthLayout extends React.Component {
                                 <Logo src="./assets/svg/logo/fb.svg"/>
                             </LogoService>
                         </LogoContainer>
-                    </BoxPosed>
+                    </LogoPosed>
                 </Container>
 
 

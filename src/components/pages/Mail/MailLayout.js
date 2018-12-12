@@ -30,7 +30,7 @@ const MailLayout = ({ vueIndex }) => {
                 in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA])}
                 src="./assets/svg/shapes/vue-3/shape-dot.svg"
                 direction={DIRECTION.RIGHT}
-                delay={2.3}
+                delay={1.3}
                 maxWidth="487px"
                 width="25%"
                 height="723px"
@@ -44,7 +44,7 @@ const MailLayout = ({ vueIndex }) => {
                     in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA])}
                     src="./assets/svg/shapes/vue-3/shape-wave.svg"
                     direction={DIRECTION.LEFT}
-                    delay={2.3}
+                    delay={1.3}
                     width="330px"
                     height="230px"
                     bottom="240px"
@@ -61,7 +61,7 @@ const MailLayout = ({ vueIndex }) => {
             <AnimatedShape
                 in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA])}
                 src="./assets/svg/shapes/vue-3/shape-green.svg"
-                delay={1}
+                delay={0.3}
                 direction={DIRECTION.LEFT}
                 maxHeight="683px"
                 width="860px"
@@ -75,7 +75,7 @@ const MailLayout = ({ vueIndex }) => {
                 in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA])}
                 src="./assets/svg/shapes/vue-3/shape-blue.svg"
                 direction={DIRECTION.RIGHT}
-                delay={1.5}
+                delay={0.5}
                 maxHeight="683px"
                 minHeight="385px"
                 width="64%"

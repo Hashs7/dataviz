@@ -21,13 +21,9 @@ const { FUTUR } = VUE;
 
 const EnergyLayout = ({ vueIndex }) => (
     <div>
-       {/* <BoxPosed pose={isVue(vueIndex, [FUTUR]) ? 'enter' : 'exit'}>
-            <ElectricPole src="./assets/svg/shapes/vue-5/electric-pole.svg" />
-        </BoxPosed>*/}
-
         <AnimatedShape
             in={isVue(vueIndex, [FUTUR])}
-            delay={3.5}
+            delay={2.5}
             src="./assets/svg/shapes/vue-5/electric-pole.svg"
             direction={{x: 0, y: '160%'}}
             width="640px"
@@ -39,7 +35,7 @@ const EnergyLayout = ({ vueIndex }) => (
 
         <AnimatedShape
             in={isVue(vueIndex, [FUTUR])}
-            delay={1.8}
+            delay={.5}
             src="./assets/svg/shapes/vue-5/shape-green.svg"
             direction={DIRECTION.LEFT}
             maxWidth="1110px"
@@ -52,7 +48,7 @@ const EnergyLayout = ({ vueIndex }) => (
 
         <OpacityShape
             in={isVue(vueIndex, [FUTUR])}
-            delay={2}
+            delay={1}
             src="./assets/svg/shapes/vue-5/shape-wave.svg"
             direction={DIRECTION.LEFT}
             width="420px"
@@ -64,7 +60,7 @@ const EnergyLayout = ({ vueIndex }) => (
 
         <AnimatedShape
             in={isVue(vueIndex, [FUTUR])}
-            delay={2}
+            delay={.7}
             src="./assets/svg/shapes/vue-5/shape-dot.svg"
             direction={DIRECTION.LEFT}
             width="265px"

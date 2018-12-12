@@ -11,7 +11,7 @@ export const BoxOpacity = posed.div({
     visible: {
         opacity: 1,
         transition: {
-            duration: 300,
+            duration: 10,
             opacity: { type: 'tween' },
         }
     },
@@ -25,7 +25,7 @@ export const BoxOpacity = posed.div({
     hidden: {
         opacity: 0,
         transition: {
-            duration: 300,
+            duration: 10,
             opacity: { type: 'tween' },
         }
     },
@@ -53,19 +53,19 @@ export const BoxPosed = posed.div({
         }
     }
 });
-
-export const BoxTranslate = posed.div({
+export const BoxTransition = posed.div({
     enter: {
-        x: 0,
         opacity: 1,
+        y: 0,
+        staggerChildren: 50,
         transition: {
-            duration: 1000,
-            opacity: { type: 'tween', delay: 2000 },
+            duration: 500,
+            opacity: { type: 'tween', delay: 1500 },
         }
     },
     exit: {
-        x: '-100%',
         opacity: 0,
+        y: 20,
         applyAtEnd: { display: 'none' },
         transition: {
             duration: 500,

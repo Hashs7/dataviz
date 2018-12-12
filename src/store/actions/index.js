@@ -9,11 +9,14 @@ export const VUE = {
     INDEX: 1,
     WHY: 2,
     DISCOVER: 3,
-    MAIL_QUANTITY: 4,
-    MAIL_TYPE: 5,
-    MAIL_DATA: 6,
-    TRAFIC_BW: 7,
-    TRAFIC_SERV: 8,
-    FUTUR: 9,
-    FINAL: 10
+    TRANSITION_MAIL: 4,
+    MAIL_QUANTITY: 5,
+    MAIL_TYPE: 6,
+    MAIL_DATA: 7,
+    TRANSITION_TRAFIC: 8,
+    TRAFIC_BW: 9,
+    TRAFIC_SERV: 10,
+    TRANSITION_ENERGY: 11,
+    FUTUR: 12,
+    FINAL: 13
 };

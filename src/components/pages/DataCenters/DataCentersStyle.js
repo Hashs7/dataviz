@@ -112,8 +112,6 @@ export const LegendContainer = styled.div`
     opacity: ${props => props.visible ? '1' : '0'}
 `;
 
-
-
 export const LegendUnderline = styled(SVG)`
     display: block;
     width: 230px;

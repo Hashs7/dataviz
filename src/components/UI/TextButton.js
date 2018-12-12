@@ -59,7 +59,6 @@ const StyledButton = styled.button`
 `;
 
 const TextButton = (props) => {
-    console.log(props)
     return (
         <ButtonContainer>
             <Lines src="./assets/svg/wave-line-left.svg"/>

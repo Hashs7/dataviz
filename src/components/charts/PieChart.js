@@ -18,7 +18,7 @@ const PieContainer = styled.div`
 
 const animate = {
     enter(target) {
-        return TweenMax.from(target, 0.5, {
+        return TweenMax.from(target, 0.1, {
             opacity: 0,
             force3D: true,
             ease: Power1.easeOut,
@@ -44,7 +44,7 @@ const PieChart = (props) => {
     return (
         <Transition
             in={enter === 3}
-            timeout={1500}
+            timeout={100}
             onEnter={ node => animate.enter(node) }
             onExit={ node => animate.leave(node) }
             mountOnEnter
@@ -63,7 +63,6 @@ const PieChart = (props) => {
                         labels: { fill: "transparent" }
                     }}
                     labelRadius={60}
-                    animate={{ duration: 2000 }}
                     colorScale={[ theme.color.blue, theme.color.orange, theme.color.white ]}
                     events={[{
                         target: "data",

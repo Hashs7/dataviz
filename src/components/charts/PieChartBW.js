@@ -54,6 +54,9 @@ const PieChart = (props) => {
                                 return [{
                                     childName: ["pie", "bar"],
                                     mutation: (props) => {
+                                        if(!isVue(vueIndex, [VUE.TRAFIC_SERV])){
+                                            return;
+                                        }
                                         switch (props.index) {
                                             case 0:
                                                 return { style: Object.assign({}, props.style, {fill: "rgba(79, 98, 204, .8)", strokeWidth: 2, stroke: "#000", opacity: 1}) };

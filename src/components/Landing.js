@@ -8,6 +8,7 @@ import DataCentersContainer from '../containers/DataCentersContainer';
 import ShapesLayoutContainer from '../containers/ShapesLayoutContainer';
 import BandwidthContainer from '../containers/BandwidthContainer';
 import { Route, Switch } from 'react-router-dom';
+import TipContainer from "../containers/TipContainer";
 
 const RouteContainer = posed.div({
     enter: {
@@ -20,7 +21,11 @@ const RouteContainer = posed.div({
         }
     },
     exit: {
-        opacity: 0
+        opacity: 0,
+        transition: {
+            duration: 500,
+            opacity: { type: 'tween' },
+        }
     }
 });
 
@@ -29,12 +34,20 @@ const Landing = () => (
         <ShapesLayoutContainer>
                 <PoseGroup>
                     <RouteContainer key={location.key ? location.key : "xp"} >
-                        {console.log(location)}
                         <Switch location={location}>
                             <Route exact path="/" component={HomeContainer} key="home" />
                             <Route path="/pourquoi" component={DataCentersContainer} key="why" />
+                            <Route path="/conseil-equipement"
+                                   render={() =>  <TipContainer id="equipement"/>}
+                            />
                             <Route path="/quelle-quantité" component={Mail} key="mail" />
+                            <Route path="/conseil-messagerie"
+                                   render={() =>  <TipContainer id="messagerie"/>}
+                            />
                             <Route path="/par-qui" component={BandwidthContainer} key="bandwidth" />
+                            <Route path="/conseil-services"
+                                   render={() =>  <TipContainer id="services"/>}
+                            />
                             <Route path="/a-venir" component={Energy} key="energy" />
                             <Route path="/final" component={Final} key="final" />
                         </Switch>
