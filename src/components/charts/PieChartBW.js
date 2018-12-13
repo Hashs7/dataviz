@@ -148,16 +148,16 @@ const PieChart = (props) => {
                         }
                     }]}
                 />
-                <g transform={"scale(1.35), rotate(-8 -150 520)"}>
+                <g transform={"scale(1.35), rotate(-8 -150 520)"} className="secondPie">
                     <OutPie
                         name="pie"
                         standalone={false}
                         data={[
-                            { x: "Facebook", y: 2 },
-                            { x: "Netflix", y: 15 },
-                            { x: "Youtube", y: 12 },
-                            { x: "Amazon Prime Video", y: 4 },
-                            { x: "empty", y: 67 }
+                            { x: "2%", y: 2 },
+                            { x: "15%", y: 15 },
+                            { x: "12%", y: 12 },
+                            { x: "4%", y: 4 },
+                            { x: "", y: 67 }
                         ]}
                         height={350}
                         innerRadius={100}
@@ -166,7 +166,7 @@ const PieChart = (props) => {
                                 stroke: "#000",
                                 strokeWidth: 0,
                                 opacity: isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0},
-                            labels: { fill: "transparent" }
+                            labels: { fill: isVue(vueIndex, [VUE.TRAFIC_SERV]) ? "#FFF" : "transparent", fontSize: 12 }
                         }}
                         labelRadius={60}
                         animate={{
@@ -201,7 +201,7 @@ const PieChart = (props) => {
                             horizontal
                             labels={(d) => `${d.y}%`}
                             padding={{ right: 20 }}
-                            style={{ labels: { fill: "#000", opacity:  isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0}}}
+                            style={{ labels: { fill: "#000", fontSize: 18, opacity:  isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0}}}
                             events={[{
                                 target: "data",
                                 eventHandlers: {
@@ -228,7 +228,7 @@ const PieChart = (props) => {
                             name="bar"
                             labels={(d) => `${d.y}%`}
                             padding={{ right: 20 }}
-                            style={{labels: { fill: "#000", opacity:  isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0 }}}
+                            style={{labels: { fill: "#000", fontSize: 18, opacity:  isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0 }}}
                             events={[{
                                 target: "data",
                                 eventHandlers: {
@@ -258,7 +258,7 @@ const PieChart = (props) => {
                             horizontal
                             labelComponent={<VictoryLabel x={460} />}
                             padding={{ right: 20 }}
-                            style={{labels: { fill: "#000", opacity: isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0 }}}
+                            style={{labels: { fill: "#000", fontSize: 18, opacity: isVue(vueIndex, [VUE.TRAFIC_SERV]) ? 1 : 0 }}}
                             events={[{
                                 target: "data",
                                 eventHandlers: {

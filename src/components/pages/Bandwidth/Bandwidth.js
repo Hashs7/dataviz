@@ -57,7 +57,7 @@ class Bandwidth extends React.Component {
         super(props);
         this.state = {
             txt: '',
-            desc: '…il n’y a pas que les mails. Le trafic d’Internet est divisé en plusieurs usages et chacun est propulsé par différents services. Ces services sont pour certains alimentés par de l’énergie fossile.',
+            desc: '…il n’y a pas que les mails. Le trafic d’Internet est divisé en plusieurs usages et chacun est porté par différents services. Ces services sont pour certains alimentés par de l’énergie fossile.',
             hasMore: true
         };
         this.discoverHandler = this.discoverHandler.bind(this);
@@ -100,7 +100,7 @@ class Bandwidth extends React.Component {
 
                 {this.props.vueIndex === VUE.TRAFIC_SERV ?
                     <ChartTitle>
-                        Énergies employées dans le fonctionnement<br/>de… (2017)
+                        Énergies employées dans le fonctionnement<br/>de … (2017)
                         <ChartUnderline src="./assets/svg/wave-line-right.svg"/>
                     </ChartTitle>
                 : null}

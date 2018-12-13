@@ -5,7 +5,7 @@ import { VUE } from '../../../store/actions/index';
 import SVG from 'react-inlinesvg';
 import { theme } from '../../../constantes';
 import LineChart from '../../charts/LineChart';
-import { ChartTitle, ChartUnderline, Title } from "../../style/heading";
+import { ChartTitle, ChartUnderline, Title, Description } from "../../style/heading";
 import { ContainerTitle } from "../../style/containers";
 import { BoxPosed } from "../../style/animation";
 
@@ -27,17 +27,13 @@ const TitleUnderline = styled(SVG)`
     display: block;
 `;
 
-const Description = styled.p`
+const StyledDescription = styled(Description)`
     max-width: 550px;
-    font: 20px 'Demos Next Pro';
-    line-height: 1.6;
 `;
 
 const Color = styled.span`
     color: ${theme.color.blue};
 `;
-
-const StyledChartTitle = styled(ChartTitle)``;
 
 class Energy extends React.Component {
     constructor(props){
@@ -73,9 +69,9 @@ class Energy extends React.Component {
                         </AnimatedTitle>
                     </Title>
                     <TitleUnderline src="./assets/svg/wave-underline-long.svg"/>
-                    <Description>
+                    <StyledDescription>
                         {this.state.desc}
-                    </Description>
+                    </StyledDescription>
                 </Container>
 
                 <ChartContainer>

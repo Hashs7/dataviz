@@ -102,7 +102,32 @@ tspan{
 .firstPie g text:nth-last-child(1){
     transform: translate(-65px,-130px)
 }
-/*
-.coloredTitle div:first-child{
+
+.secondPie g text:nth-last-child(5){
+    transform: translate(17px, -66px) rotate(6deg)
+}
+.secondPie g text:nth-last-child(4){
+    transform: translate(44px,-59px) rotate(6deg)
+}
+.secondPie g text:nth-last-child(3){
+    transform: translate(62px,-40px) rotate(7deg)
+}
+.secondPie g text:nth-last-child(2){
+    transform: translate(79px,-25px) rotate(10deg)
+}
+.secondPie g text:nth-last-child(1){
+    transform: translate(-65px,-130px)
+}
+
+.whiteSvg svg polyline{
+    stroke: #FFF !important;
+}
+
+.coloredTitle div:first-child div{
     color: #1C1CAF;
-}*/
+}
+
+/*.coloredTitle:first-child{*/
+    /*color: #000;*/
+/*}*/
+

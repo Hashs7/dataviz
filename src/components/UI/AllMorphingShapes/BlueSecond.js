@@ -9,12 +9,11 @@ import Transition from "react-transition-group/Transition";
 const pathIdsBlue = Object.keys(bluePathSecond);
 
 const animate = {
-    enter(target, direction, duration = 3, dl = 1){
+    enter(target, direction, duration = 1.5, dl = 0){
         const { x, y } = direction;
         return TweenMax.from(target, duration, {
             x,
             y,
-            delay: dl,
             ease: Power1.easeOut,
         })
     },
@@ -134,7 +133,7 @@ class Shape extends Component {
 }
 
 const Blue = (props) => {
-    let duration = 3000;
+    let duration = 1500;
 
     return (
         <Transition

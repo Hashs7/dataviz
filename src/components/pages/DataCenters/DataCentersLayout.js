@@ -140,7 +140,8 @@ class DataCentersLayout extends React.Component {
                             src="./assets/svg/shapes/vue-2/cloud.svg"
                             direction={DIRECTION.RIGHT}
                             maxWidth="950px"
-                            width="83vh"
+                            width="755px"
+                            // width="83vh"
                             height="49%"
                             top="0"
                             right="0"
@@ -154,11 +155,10 @@ class DataCentersLayout extends React.Component {
                                 src="./assets/svg/shapes/vue-2/scissors-open.svg"
                                 width="35px"
                                 height="30px"
-                                top="-16px"
+                                top="-15px"
                                 left="304px"
                                 zIndex={16}
                                 cursor="pointer"
-                                mediascissor
                                 transform="rotate(-125deg)"
                                 noExit />
                         </div>

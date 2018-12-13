@@ -97,7 +97,6 @@ const PieChart = (props) => {
                         ]}
                     />
                     <VictoryLine
-                        scale={{x: "year", y: "value"}}
                         height={500}
                         style={{
                             data: { stroke: theme.color.blue, strokeDasharray: "12 6", strokeDashoffset: "180", strokeLinecap:"round" },

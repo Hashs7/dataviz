@@ -10,7 +10,7 @@ export const CloudPath = styled.svg`
     right: 20px;
     z-index: 16;
     max-width: 950px;
-    width: 83vh;
+    width: 755px;
 `;
 
 export const StyledCharTitle = styled(ChartTitle)`
@@ -76,7 +76,7 @@ export const CloudContainer = styled.div`
     top: 130px;
     right: -100px;
     height: 49%;
-    width: 83vh;
+    width: 755px;
     z-index: 14;
 `;
 

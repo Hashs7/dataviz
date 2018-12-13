@@ -134,7 +134,7 @@ class MailControls extends Component {
         this.state = {
             mailAmount: 0,
             mailType: '',
-            mailNotif: 1640,
+            mailNotif: 1,
             userCO2: 0,
             carKm: 0,
             helpAction: "En moyenne, combien de mails envoyez-vous par semaine ?"
@@ -159,12 +159,12 @@ class MailControls extends Component {
                 this.setState({helpAction: "Supprimez-vous vos messages lus et indésirables ?"});
                 this.props.changeVue(vue);
                 this.props.changeMailAmount(this.state.mailAmount);
-                /*tween({
+                tween({
                     from: 1,
-                    to: 50,
+                    to: 1642,
                     duration: 2500,
                     ease: easing.easeOut,
-                }).start(v => this.setState({mailNotif: Math.floor(v)}));*/
+                }).start(v => this.setState({mailNotif: Math.floor(v)}));
                 break;
             }
             case VUE.MAIL_DATA: {
@@ -261,10 +261,10 @@ class MailControls extends Component {
                                 <ChartTitle>Votre empreinte carbone mail est d'environ <strong>{this.state.userCO2}Kg</strong> de CO2 par mois</ChartTitle>
                             : null}
                             {this.props.scale === 2 ?
-                                <ChartTitle>L’empreinte carbone du mail de la France est d'environ <strong>420 000 T</strong> de CO2 par mois</ChartTitle>
+                                <ChartTitle>L’empreinte carbone des mails de la France est d'environ <strong>420 000 T</strong> de CO2 par mois</ChartTitle>
                             : null}
                             {this.props.scale === 3 ?
-                                <ChartTitle>L’empreinte carbone du mail mondiale est d'environ <strong>72 000 000 T</strong> de CO2 par mois</ChartTitle>
+                                <ChartTitle>L’empreinte carbone des mails mondiaux est d'environ <strong>72 000 000 T</strong> de CO2 par mois</ChartTitle>
                             : null}
                             <ChartUnderline src="./assets/svg/wave-line-right.svg"/>
                             <MailChart />

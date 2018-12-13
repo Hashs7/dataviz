@@ -154,7 +154,7 @@ class BandwidthLayout extends React.Component {
 
                 <BoxPosed pose={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ? 'enter' : 'exit'}>
                     <PieChartTitle>
-                        Trafic internet descendant mondial
+                        Trafic internet mondial descendant
                         <PieChartUnderline src="./assets/svg/wave-line-right.svg"/>
                     </PieChartTitle>
                 </BoxPosed>

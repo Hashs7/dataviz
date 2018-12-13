@@ -135,7 +135,7 @@ const tipsContent = {
         height: 268,
         black: true,
         picto:"./assets/svg/ui/letters-tip.svg",
-        fact:"L’envoi de mail et leur stockage dans votre messagerie constitue une source importante d’émission C02.",
+        fact:"L’envoi de mails et leur stockage dans votre messagerie constitue une source importante d’émission C02.",
         tip:"Videz régulièrement votre boite mail et privilégiez des services de messageries instantanées."
     },
     services: {
@@ -159,7 +159,7 @@ const TipTransition = ({id, changeVue}) => {
             <TextContainer black={black}>
                 <Fact>{fact}</Fact>
                 <Tip>{tip}</Tip>
-                <Underline src="./assets/svg/wave-line-right.svg" black={black}/>
+                <Underline src="./assets/svg/wave-line-right.svg" black={black} className={black ? null : 'whiteSvg'}/>
                 <div>
                     <Link to={to}>
                         <ValidButton onClick={() => changeVue(tipsContent[id].vueIndex)}>
