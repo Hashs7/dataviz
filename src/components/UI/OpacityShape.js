@@ -17,6 +17,7 @@ const StyledSVG = styled(SVG)`
     z-index: ${props => props.zIndex ? props.zIndex : ""};
     transform: ${props => props.transform ? props.transform : ""};
     cursor: ${props => props.cursor ? props.cursor : ""};
+    top: ${props => props.mediascissor ? "42px" : null};
 `;
 
 const animate = {

@@ -158,6 +158,7 @@ class DataCentersLayout extends React.Component {
                                 left="304px"
                                 zIndex={16}
                                 cursor="pointer"
+                                mediascissor
                                 transform="rotate(-125deg)"
                                 noExit />
                         </div>

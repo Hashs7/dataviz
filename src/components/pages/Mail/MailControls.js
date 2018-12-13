@@ -22,6 +22,9 @@ const Container = styled.div`
     @media (max-width: 1800px) {
         left: 85px;
     }
+    @media (min-height: 1100px) {
+        bottom: 110px;
+    }
 `;
 
 const ButtonContainer = styled.div`

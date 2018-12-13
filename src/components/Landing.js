@@ -40,7 +40,7 @@ const Landing = () => (
                             <Route path="/conseil-equipement"
                                    render={() =>  <TipContainer id="equipement"/>}
                             />
-                            <Route path="/quelle-quantité" component={Mail} key="mail" />
+                            <Route path="/quelle-quantite" component={Mail} key="mail" />
                             <Route path="/conseil-messagerie"
                                    render={() =>  <TipContainer id="messagerie"/>}
                             />

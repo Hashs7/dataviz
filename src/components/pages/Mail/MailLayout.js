@@ -49,6 +49,7 @@ const MailLayout = ({ vueIndex }) => {
                     height="230px"
                     bottom="240px"
                     left="41%"
+                    mediawave
                     zIndex={0}
                 />
             </BoxPosed>
@@ -64,7 +65,8 @@ const MailLayout = ({ vueIndex }) => {
                 delay={0.3}
                 direction={DIRECTION.LEFT}
                 maxHeight="683px"
-                width="860px"
+                width="1132px"
+                maxWidth="70%"
                 height="fit-content"
                 bottom="-3px"
                 left="-3px"

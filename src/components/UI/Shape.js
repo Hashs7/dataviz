@@ -16,6 +16,9 @@ const StyledSVG = styled(SVG)`
     width: ${props => props.width ? props.width : ""};
     height: ${props => props.height ? props.height : ""};
     z-index: ${props => props.zIndex ? props.zIndex : ""};
+    @media (min-height: 1100px){
+        left: ${props => props.mediawave ? "610px;" : null}
+    }
 `;
 
 const animate = {

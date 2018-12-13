@@ -118,7 +118,7 @@ const Underline = styled(ChartUnderline)`
 const tipsContent = {
     equipement: {
         key: "equipement",
-        to: "/quelle-quantité",
+        to: "/quelle-quantite",
         vueIndex: VUE.MAIL_QUANTITY,
         width: 210,
         height: 305,
