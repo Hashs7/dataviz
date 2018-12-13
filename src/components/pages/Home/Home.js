@@ -142,7 +142,6 @@ class Home extends React.Component {
 
     render(){
         if(this.state.redirect) {
-            console.log("redirect");
             return <Redirect push to="/pourquoi" />;
         }
         return (

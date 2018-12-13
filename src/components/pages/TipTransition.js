@@ -152,7 +152,6 @@ const tipsContent = {
 }
 
 const TipTransition = ({id, changeVue}) => {
-    console.log('id', id)
     const {picto, fact, tip, to, link, height, width , black} = tipsContent[id];
     return (
         <Container height={height} >

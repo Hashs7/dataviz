@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import posed from "react-pose";
 import { tween, easing } from 'popmotion';
 import {interpolate} from "flubber";
-import { greenPath, orangePathSecond } from '../../constantes';
+import {bluePathSecond} from '../../../constantes';
 import TweenMax, { Power1 } from "gsap/TweenMax";
 import Transition from "react-transition-group/Transition";
 
-const pathIdsGreen = Object.keys(greenPath);
-const pathIdsOrangeSecond = Object.keys(orangePathSecond);
+const pathIdsBlue = Object.keys(bluePathSecond);
 
 const animate = {
     enter(target, direction, duration = 3, dl = 1){
@@ -38,20 +37,11 @@ const morphTransition = ({ from, to }) => (
     }).pipe(interpolate(from, to))
 );
 
-const IconGreen = posed.path(
-    pathIdsGreen.reduce((config, id) => {
-        config[id] = {
-            d: greenPath[id],
-            transition: morphTransition,
-        };
-        return config;
-    }, {})
-);
 
-const IconOrangeSecond = posed.path(
-    pathIdsOrangeSecond.reduce((config, id) => {
+const IconBlue = posed.path(
+    pathIdsBlue.reduce((config, id) => {
         config[id] = {
-            d: orangePathSecond[id],
+            d: bluePathSecond[id],
             transition: morphTransition
         };
         return config;
@@ -129,36 +119,23 @@ class Shape extends Component {
                 });
             }, 400);
         }
-        if(prevState.pathIndex === 1
-            && this.state.pathIndex === 1
-            && !this.props.oneTime
-            && this.props.event
-            && !this.props.transition){
-
-            this.outMorphing(1700);
+        if(this.props.transition && this.props.eventOut && this.state.pathIndex === 1 ){
+            this.outMorphing(200);
         }
     }
 
     render() {
-        switch(this.props.pathObj){
-            case greenPath:
-                return (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" style={this.state.styleSvg}>
-                        <IconGreen style={{fill: this.props.color}} pose={this.pathIds[this.state.pathIndex]} />
-                    </svg>
-                );
-            case orangePathSecond:
-                return (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" style={this.state.styleSvg}>
-                        <IconOrangeSecond style={{fill: this.props.color}} pose={this.pathIds[this.state.pathIndex]} />
-                    </svg>
-                );
-        }
+        return(
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" style={this.state.styleSvg}>
+                <IconBlue style={{fill: this.props.color}} pose={this.pathIds[this.state.pathIndex]} />
+            </svg>
+        )
     }
 }
 
-const MorphingShape = (props) => {
+const Blue = (props) => {
     let duration = 3000;
+
     return (
         <Transition
             in={props.in}
@@ -178,4 +155,4 @@ const MorphingShape = (props) => {
 };
 
 
-export default MorphingShape;
+export default Blue;

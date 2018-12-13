@@ -11,6 +11,9 @@ import MailLayoutContainer from "../../containers/MailLayoutContainer";
 import PieChartContainer from "../../containers/PieChartContainer";
 import AboutContainer from "../../containers/AboutContainer";
 import MorphingShape from './MorphingShape';
+import Blue from './AllMorphingShapes/Blue';
+import BlueSecond from './AllMorphingShapes/BlueSecond';
+import Orange from './AllMorphingShapes/Orange';
 import ArrowButton from './ArrowButton';
 import { isVue } from '../../methods';
 import {theme, greenPath, bluePath, orangePath, bluePathSecond, orangePathSecond, DIRECTION} from '../../constantes';
@@ -93,20 +96,22 @@ const ShapesMorphingLayout = ({vueIndex}) => {
                 direction={DIRECTION.BOTTOM_RIGHT}
                 pathObj={greenPath}
                 pathName="greenPath"
+                objName="greenObj"
                 event={vueIndex === WHY}
                 color={theme.color.green}/>
 
-            <MorphingShape
+            <Blue
                 in={isVue(vueIndex, [WHY, DISCOVER, MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRANSITION_MAIL])}
                 direction={DIRECTION.BOTTOM_RIGHT}
                 pathObj={bluePath}
                 pathName="bluePath"
+                objName="blueObj"
                 event={vueIndex === TRANSITION_MAIL}
                 eventOut={isVue(vueIndex, [MAIL_QUANTITY])}
                 transition
                 color={theme.color.blue}/>
 
-            <MorphingShape
+            <Orange
                 in={isVue(vueIndex, [MAIL_QUANTITY, MAIL_TYPE, MAIL_DATA, TRAFIC_BW, TRAFIC_SERV, TRANSITION_TRAFIC])}
                 pathObj={orangePath}
                 pathName="orangePath"
@@ -116,7 +121,7 @@ const ShapesMorphingLayout = ({vueIndex}) => {
                 eventOut={isVue(vueIndex, [TRAFIC_BW])}
                 color={theme.color.orange}/>
 
-            <MorphingShape
+            <BlueSecond
                 in={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV, TRANSITION_ENERGY, FUTUR])}
                 pathObj={bluePathSecond}
                 pathName="bluePathSecond"

@@ -123,7 +123,6 @@ class MailChart extends Component {
         }
         this.props.changeScale(value);
         this.setState({ scale: value, tickValues });
-        console.log('state', tickValues, value)
     }
 
     render() {
