@@ -139,7 +139,20 @@ class Shape extends Component {
             });
         }, duration);
     }
+
+    //TODO OOOOOOOO
+    shouldComponentUpdate(nextProps, nextState) {
+        if(this.state.pathIndex !== nextState.pathIndex){
+            return true;
+        }
+        if(this.props.event !== nextProps.event){
+            return true;
+        }
+        return this.props.eventOut !== nextProps.eventOut;
+    }
+
     componentDidUpdate(prevProps, prevState){
+        console.log('update')
         if(this.state.pathIndex === 0 && this.props.event ){
             setTimeout(() => {
                 this.morphShape();
@@ -163,8 +176,8 @@ class Shape extends Component {
         if(prevState.pathIndex === 1
             && this.state.pathIndex === 1
             && !this.props.oneTime
-            && !this.props.transition
-            && this.props.event ){
+            && this.props.event
+            && !this.props.transition){
             this.outMorphing(1700);
         }
         if(this.props.transition && this.props.eventOut){
@@ -173,6 +186,7 @@ class Shape extends Component {
     }
 
     render() {
+        console.log('mounting', this.props.color)
         switch(this.props.pathObj){
             case bluePath:
                 return (

@@ -131,7 +131,7 @@ class MailControls extends Component {
         this.state = {
             mailAmount: 0,
             mailType: '',
-            mailNotif: 1,
+            mailNotif: 1640,
             userCO2: 0,
             carKm: 0,
             helpAction: "En moyenne, combien de mails envoyez-vous par semaine ?"
@@ -156,12 +156,12 @@ class MailControls extends Component {
                 this.setState({helpAction: "Supprimez-vous vos messages lus et indésirables ?"});
                 this.props.changeVue(vue);
                 this.props.changeMailAmount(this.state.mailAmount);
-                tween({
+                /*tween({
                     from: 1,
-                    to: 1642,
+                    to: 50,
                     duration: 2500,
                     ease: easing.easeOut,
-                }).start(v => this.setState({mailNotif: Math.floor(v)}));
+                }).start(v => this.setState({mailNotif: Math.floor(v)}));*/
                 break;
             }
             case VUE.MAIL_DATA: {

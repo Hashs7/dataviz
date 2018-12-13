@@ -131,22 +131,24 @@ class BandwidthLayout extends React.Component {
 
                 <Container isVisible={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) }>
                     <PieChartBWContainer width={this.width} height={this.height} enter={isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV])}/>
-                    <LogoPosed pose={isVue(vueIndex, [TRAFIC_SERV]) ? 'enter' : 'exit'}>
-                        <LogoContainer>
-                            <LogoService>
-                                <Logo src="./assets/svg/logo/amazon.svg"/>
-                            </LogoService>
-                            <LogoService>
-                                <Logo src="./assets/svg/logo/yt.svg"/>
-                            </LogoService>
-                            <LogoService>
-                                <Logo src="./assets/svg/logo/netflix.svg"/>
-                            </LogoService>
-                            <LogoService>
-                                <Logo src="./assets/svg/logo/fb.svg"/>
-                            </LogoService>
-                        </LogoContainer>
-                    </LogoPosed>
+                    {isVue(vueIndex, [TRAFIC_BW, TRAFIC_SERV]) ?
+                        <LogoPosed pose={isVue(vueIndex, [TRAFIC_SERV]) ? 'enter' : 'exit'}>
+                            <LogoContainer>
+                                <LogoService>
+                                    <Logo src="./assets/svg/logo/amazon.svg"/>
+                                </LogoService>
+                                <LogoService>
+                                    <Logo src="./assets/svg/logo/yt.svg"/>
+                                </LogoService>
+                                <LogoService>
+                                    <Logo src="./assets/svg/logo/netflix.svg"/>
+                                </LogoService>
+                                <LogoService>
+                                    <Logo src="./assets/svg/logo/fb.svg"/>
+                                </LogoService>
+                            </LogoContainer>
+                        </LogoPosed>
+                    :null}
                 </Container>
 
 
