@@ -14,7 +14,7 @@ const PieContainer = styled.div`
     @media (max-height: 950px){
         bottom: 0;
     }
-    @media (min-height: 1100px){
+    @media (min-height: 1070px){
         bottom: 200px;
     }
 `;

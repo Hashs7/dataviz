@@ -48,7 +48,7 @@ const MailLayout = ({ vueIndex }) => {
                     width="330px"
                     height="230px"
                     bottom="240px"
-                    left="41%"
+                    left="50%"
                     mediawave
                     zIndex={0}
                 />

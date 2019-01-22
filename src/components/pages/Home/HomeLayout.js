@@ -39,7 +39,7 @@ const HomeLayout = (props) => {
                 width="365px"
                 height="203px"
                 top="200px"
-                right="100px"
+                right="220px"
             />
 
             <ScalingShape

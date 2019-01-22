@@ -55,7 +55,7 @@ class DataCenters extends React.Component {
                     : null}
                     {isVue(vueIndex, [VUE.DISCOVER]) ?
                         'Lors de la production et pendant leurs utilisations, vos ordinateurs et smartphones polluent car ils sont fabriqués à partir de ressources non renouvelables. Ils sont les principaux responsables de la pollution numérique.\n'+
-                        'De plus, derrière Internet et le “Cloud” se cachent des infrastructures réseaux avec de multiples “data centers” stockant tout le contenu d’Internet. Ces équipements doivent être refroidi en continu et consomment donc énormément d’énergie.'
+                        'De plus, derrière Internet et le “Cloud” se cachent des infrastructures réseaux avec de multiples “data centers” stockant tout le contenu d’Internet. Ces équipements doivent être refroidis en continu et consomment donc énormément d’énergie.'
                     : null}
                 </Description>
 
